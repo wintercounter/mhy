@@ -1,6 +1,6 @@
 {
   "name": "mhy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,6 @@
     "mhy": "index.js"
   },
   "dependencies": {
-    "app-root-path": "^2.1.0",
     "autoprefixer": "^8.6.3",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",
@@ -95,7 +94,6 @@
     "sass-loader": "7.0.3",
     "socket.io-client": "2.1.1",
     "style-loader": "0.21.0",
-    "tree-kill": "^1.2.0",
     "url-loader": "1.0.1",
     "url-search-params-polyfill": "4.0.0",
     "weakmap-polyfill": "^2.0.0",

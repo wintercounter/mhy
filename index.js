@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-const pm2 = require('pm2')
 const argv = require('yargs').argv
 const path = require('path')
-const kill = require('tree-kill');
 
 const pm2BinPath = path.resolve(__dirname, 'node_modules/pm2/bin/pm2')
 const pm2EcoPath = path.resolve(__dirname, 'config/ecosystem/ecosystem.config.js')
