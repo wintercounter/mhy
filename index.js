@@ -17,27 +17,31 @@ switch (task) {
 			pm2BinPath,
 			'start',
 			pm2EcoPath,
-		], { shell: true, stdio: 'inherit' })
-		let cmd2
-
+		])
 		cmd.on('exit', () => {
-			cmd2 = spawn('node', [
+			const cmd2 = spawn('node', [
 				pm2BinPath,
 				'monit'
 			], { shell: true, stdio: 'inherit' })
 			cmd2.on('data', data => console.log(data))
-		})
-		/**/
-		cmd.on('data', data => console.log(data))
-		//cmd2.on('data', data => console.log(data))
-		process.on('SIGINT', () => {
-			kill(cmd.pid)
-			cmd2 && kill(cmd2.pid)
-			require(pm2EcoPath).apps.forEach(({name}) => {
-				pm2.delete(name)
+			cmd2.on('exit', () => {
+				console.log('Shutting down...')
+				const promises = []
+				require(pm2EcoPath).apps.forEach(({name}) => {
+					const cmd = spawn('node', [
+						pm2BinPath,
+						'stop',
+						name
+					])
+					promises.push(new Promise(resolve => {
+						cmd.on('exit', resolve)
+					}))
+				})
+				Promise.all(promises).then(() => {
+					console.clear()
+					process.exit(2)
+				})
 			})
-			pm2.killDaemon()
-			setTimeout(()=>process.exit(2), 1000)
 		})
 		break
 	case undefined:

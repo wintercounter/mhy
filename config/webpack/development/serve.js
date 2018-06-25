@@ -1,8 +1,7 @@
 module.exports = () => ({
 	clipboard: false,
 	dev : {
-		publicPath: 'localhost',
-		logLevel: 'debug'
+		logLevel: 'warn'
 	},
 	port: 3000,
 	content: './public',
@@ -10,6 +9,6 @@ module.exports = () => ({
 		autoConfigure: true,
 		port: 3001
 	},
-	http2: true,
+	//http2: true, // unstable af
 	host: 'localhost'
 })
