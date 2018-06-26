@@ -1,6 +1,6 @@
 {
   "name": "mhy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -104,7 +104,7 @@
     "webpack-manifest-plugin": "^2.0.3",
     "webpack-serve": "^1.0.4",
     "webpack-strip-block": "0.2.0",
-    "whatwg-fetch": "2.0.4",
+    "whatwg-fetch": "^2.0.4",
     "worker-loader": "^2.0.0",
     "write-file-webpack-plugin": "4.3.2",
     "yargs": "^11.0.0"
