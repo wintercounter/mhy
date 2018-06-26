@@ -23,7 +23,7 @@ switch (task) {
 			], { shell: true, stdio: 'inherit' })
 			cmd2.on('data', data => console.log(data))
 			cmd2.on('exit', () => {
-				console.log('Shutting down...')
+				console.log('Shutting down... Please wait, stop smashing CTRL + C')
 				const promises = []
 				require(pm2EcoPath).apps.forEach(({name}) => {
 					const cmd = spawn('node', [

@@ -4,7 +4,6 @@ module.exports = () => ({
 		logLevel: 'warn'
 	},
 	port: 3000,
-	content: './public',
 	hot: {
 		autoConfigure: true,
 		port: 3001
