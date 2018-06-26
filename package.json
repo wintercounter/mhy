@@ -1,6 +1,6 @@
 {
   "name": "mhy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -108,5 +108,8 @@
     "worker-loader": "^2.0.0",
     "write-file-webpack-plugin": "4.3.2",
     "yargs": "^11.0.0"
+  },
+  "eslintConfig": {
+    "extends": "config/eslint"
   }
 }
