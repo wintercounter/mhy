@@ -1,0 +1,1 @@
+module.exports.default = require('../index').load('ecosystem')

@@ -1,1 +1,1 @@
-module.exports = () => 'source-map'
+module.exports.default = () => 'source-map'

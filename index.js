@@ -1,49 +1,34 @@
 #!/usr/bin/env node
 
-const argv = require('yargs').argv
-const path = require('path')
+import { argv } from 'yargs'
+import path from 'path'
 
-const pm2BinPath = path.resolve(__dirname, 'node_modules/pm2/bin/pm2')
-const pm2EcoPath = path.resolve(__dirname, 'config/ecosystem/ecosystem.config.js')
+import render from './ui'
 
+const ecoPath = path.resolve(__dirname, 'config/ecosystem/')
+const eco = require(ecoPath).default
 const task = argv._[0]
 
 switch (task) {
-	case 'dev':
-		const spawn = require('child_process').spawn
-		const cmd = spawn('node', [
-			pm2BinPath,
-			'start',
-			pm2EcoPath,
-		])
-		cmd.on('exit', () => {
-			const cmd2 = spawn('node', [
-				pm2BinPath,
-				'monit'
-			], { shell: true, stdio: 'inherit' })
-			cmd2.on('data', data => console.log(data))
-			cmd2.on('exit', () => {
-				console.log('Shutting down... Please wait, stop smashing CTRL + C')
-				const promises = []
-				require(pm2EcoPath).apps.forEach(({name}) => {
-					const cmd = spawn('node', [
-						pm2BinPath,
-						'stop',
-						name
-					])
-					promises.push(new Promise(resolve => {
-						cmd.on('exit', resolve)
-					}))
-				})
-				Promise.all(promises).then(() => {
-					console.clear()
-					process.exit(2)
-				})
-			})
-		})
-		break
+	case 'ui':
 	case undefined:
-		console.error('No task specified'); break
+		if (!Object.keys(eco).length) {
+			console.error('No UI Widgets are specified in the Ecosystem.')
+			process.exit(2)
+		}
+
+		// Run processes
+		const processes = Object.entries(eco)
+		.sort(([,{ order: ao = 0 }], [,{ order: bo = 0 }]) => ao - bo) // static order
+		.reduce((o, [name, Process]) => {
+			o[name] = new Process()
+			return o
+		}, {})
+
+		// Init magic
+		render(processes)
+
+		break
 	default:
 		console.error(`No such task: ${task}`)
 }

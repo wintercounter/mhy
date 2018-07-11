@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports.default = () => ({
 	vendor: [
 		'formdata-polyfill',
 		'babel-polyfill',

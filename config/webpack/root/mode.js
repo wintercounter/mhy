@@ -1,3 +1,3 @@
 const { environment } = require('../../')
 
-module.exports = () => environment
+module.exports.default = () => environment

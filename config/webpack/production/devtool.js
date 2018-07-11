@@ -1,1 +1,1 @@
-module.exports = () => 'nosources-source-map'
+module.exports.default = () => 'nosources-source-map'

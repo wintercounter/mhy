@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 
-module.exports = (plugins = []) => {
+module.exports.default = (plugins = []) => {
 	if (!process.env.WEBPACK_SERVE) {
 		plugins.push(
 			new ExtractTextPlugin({

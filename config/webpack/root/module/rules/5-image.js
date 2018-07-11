@@ -1,4 +1,4 @@
-module.exports = rules => [
+module.exports.default = rules => [
 	...rules,
 	{
 		test: /\.(gif|png|jpe?g)$/i,

@@ -35,7 +35,7 @@ const applyEntries = (module, env, o) => {
 				tmp[v] = tmp[v] || {}
 
 				if (Array.isArray(tmp[v])) {
-					tmp[v] = tmp = require(entry)(tmp[v])
+					tmp[v] = tmp = require(entry).default(tmp[v])
 				}
 				else {
 					tmp = tmp[v]
@@ -43,7 +43,7 @@ const applyEntries = (module, env, o) => {
 			}
 			else {
 				v = v.replace('.js', '')
-				tmp[v] = require(entry)(tmp[v])
+				tmp[v] = require(entry).default(tmp[v])
 			}
 		})
 	}

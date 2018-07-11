@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { indexTemplate } = require('../../')
 
-module.exports = (plugins = []) => plugins.concat([
+module.exports.default = (plugins = []) => plugins.concat([
 	new HtmlWebpackPlugin({
 		inject: true,
 		template: indexTemplate,

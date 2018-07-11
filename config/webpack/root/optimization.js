@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports.default = () => ({
 	splitChunks: {
 		chunks: 'async',
 		minSize: 30000,

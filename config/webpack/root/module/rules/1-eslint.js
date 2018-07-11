@@ -1,7 +1,7 @@
 const path = require('path')
 const { moduleHome } = require('../../../../')
 
-module.exports = (rules) => [
+module.exports.default = (rules) => [
 	...rules,
 	{
 		enforce: 'pre',

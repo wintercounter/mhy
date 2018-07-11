@@ -1,4 +1,4 @@
-module.exports = entry => {
+module.exports.default = entry => {
 	if (process.env.WEBPACK_SERVE) {
 		entry.vendor.push('webpack-dev-server-status-bar')
 	}

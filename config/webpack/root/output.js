@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = () => ({
+module.exports.default = () => ({
 	path: path.resolve(process.cwd(), 'build'),
 	filename: '[name].[hash:5].js',
 	publicPath: '',

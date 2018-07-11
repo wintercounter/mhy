@@ -1,7 +1,7 @@
 const path = require('path')
 const { moduleHome } = require('../../../../')
 
-module.exports = (rules) => [
+module.exports.default = (rules) => [
 	...rules,
 	{
 		test: /\.js$/,
@@ -12,27 +12,30 @@ module.exports = (rules) => [
 				loader: 'babel-loader',
 				options: {
 					plugins: [
-						'syntax-dynamic-import',
+						'@babel/plugin-syntax-dynamic-import',
 						'transform-remove-strict-mode',
-						'transform-class-properties',
-						'transform-object-assign',
-						'syntax-decorators',
-						'transform-decorators-legacy',
+						'@babel/plugin-proposal-class-properties',
+						'@babel/plugin-transform-object-assign',
+						['@babel/plugin-syntax-decorators', {
+							legacy: true
+						}],
 						'syntax-async-functions',
-						'transform-regenerator',
+						'@babel/plugin-transform-regenerator',
 						'transform-function-bind'
 					],
 					presets: [
-						[ 'env', {
+						[ '@babel/preset-env', {
 							targets: {
 								browsers: [
 									'last 2 versions',
 									'safari >= 7'
 								],
-								modules: false
+								esmodules: false
 							}
 						} ],
-						'stage-0'
+						[ '@babel/preset-stage-0', {
+							decoratorsLegacy: true
+						}]
 					]
 				}
 			}
