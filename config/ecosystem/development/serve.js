@@ -4,7 +4,7 @@ const Process = require('../../../lib/Process')
 
 const CmdServeCLI = [
 	'node',
-	path.resolve(moduleHome, 'node_modules/webpack-serve/cli.js'),
+	require.resolve('webpack-serve/lib/cli.js'),
 	'--config',
 	path.resolve(moduleHome, 'config/webpack/index.js')
 ]

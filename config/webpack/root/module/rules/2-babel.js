@@ -32,10 +32,7 @@ module.exports.default = (rules) => [
 								],
 								esmodules: false
 							}
-						} ],
-						[ '@babel/preset-stage-0', {
-							decoratorsLegacy: true
-						}]
+						} ]
 					]
 				}
 			}

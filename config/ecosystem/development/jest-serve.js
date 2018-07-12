@@ -6,7 +6,7 @@ const Process = require('../../../lib/Process')
 const onlyChangedFlag = '--onlyChanged'
 const getJestCLICmd = (flags = []) => [
 	'node',
-	path.resolve(moduleHome, 'node_modules/jest-cli/bin/jest.js'),
+	require.resolve('jest-cli/bin/jest.js'),
 	'--passWithNoTests',
 	`--config=${path.resolve(moduleHome, 'config/jest/index.js')}`,
 	...flags
@@ -14,7 +14,7 @@ const getJestCLICmd = (flags = []) => [
 
 const getJestServeCLICmd = (flags) => [
 	'node',
-	path.resolve(moduleHome, 'node_modules/chokidar-cli/index.js'),
+	require.resolve('chokidar-cli/index.js'),
 	`"src/**/*.js"`,
 	'-c',
 	`"${getJestCLICmd(flags).join(' ')}"`,

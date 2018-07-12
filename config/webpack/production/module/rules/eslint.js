@@ -1,5 +1,5 @@
 module.exports.default = rules => {
-	rules.find(({use}) => use[0].loader === 'eslint-loader')
+	rules.find(({use}) => use[0].loader.includes('eslint-loader'))
 		.use[0]
 		.options = {
 			failOnWarning: true,

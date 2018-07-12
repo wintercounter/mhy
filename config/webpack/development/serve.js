@@ -1,11 +1,12 @@
 module.exports.default = () => ({
 	clipboard: false,
-	dev : {
+	devMiddleware : {
 		logLevel: 'warn'
 	},
 	port: 3000,
-	hot: {
-		port: 3001
+	hotClient: {
+		port: 3001,
+		autoConfigure: false
 	},
 	//http2: true, // unstable af
 	host: 'localhost'

@@ -5,8 +5,7 @@ const { load, moduleHome } = require('../')
 module.exports = load('jest', {
 	setupTestFrameworkScriptFile: path.resolve(moduleHome, 'config/jest/setup.js'),
 	roots: [
-		path.resolve(moduleHome, 'src'),
-		path.resolve(process.cwd(), 'src'),
+		path.resolve(process.cwd(), 'src')
 	],
 	bail: true,
 	testRegex: '\\.(test|spec|integration)\\.jsx?$',

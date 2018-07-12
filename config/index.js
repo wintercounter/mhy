@@ -11,7 +11,10 @@ const json = fs.existsSync(packageJSON)
 const moduleHome = module.exports.moduleHome = path.resolve(__dirname, '../')
 const indexTemplatePath = 'src/index.html'
 const indexTemplatePathProject = path.resolve(process.cwd(), indexTemplatePath)
-const indexTemplatePathMhy = path.resolve(moduleHome, indexTemplatePath)
+let indexTemplatePathMhy = path.resolve(moduleHome, indexTemplatePath)
+indexTemplatePathMhy = fs.existsSync(indexTemplatePathMhy)
+	? indexTemplatePathMhy
+	: path.resolve(moduleHome, '../', indexTemplatePath)
 module.exports.indexTemplate = fs.existsSync(indexTemplatePathProject)
 	? indexTemplatePathProject
 	: indexTemplatePathMhy
