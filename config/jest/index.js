@@ -7,6 +7,9 @@ module.exports = load('jest', {
 	roots: [
 		path.resolve(process.cwd(), 'src')
 	],
+	transform: {
+		'^.+\\.jsx?$': require.resolve('./preprocess')
+	},
 	bail: true,
 	testRegex: '\\.(test|spec|integration)\\.jsx?$',
 	collectCoverage: false,

@@ -43,9 +43,12 @@ class JestServe extends Process {
 
 	// Feature test only
 	processLine(d) {
+		if (d.startsWith('change:')) {
+			this.emit('action', 'clear')
+		}
 		return d
-			.replace('PASS', '{green-bg}PASS{/green-bg}')
-			.replace('FAIL', '{red-bg}PASS{/red-bg}')
+			.replace('PASS', '{green-bg} PASS {/green-bg}')
+			.replace('FAIL', '{red-bg} FAIL {/red-bg}')
 	}
 
 	actions = [
