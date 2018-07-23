@@ -2,8 +2,9 @@ const path = require('path')
 const { moduleHome } = require('../../index')
 const Process = require('../../../lib/Process')
 
-
 const onlyChangedFlag = '--onlyChanged'
+const watchFlag = '--watch'
+const watchAllFlag = '--watchAll'
 const getJestCLICmd = (flags = []) => [
 	'node',
 	require.resolve('jest-cli/bin/jest.js'),
@@ -23,13 +24,21 @@ const getJestServeCLICmd = (flags) => [
 	'"node_modules"'
 ]
 
+const commandToUse = () => process.MHY_ENV === 'ui'
+	? getJestServeCLICmd
+	: getJestCLICmd
+
 class JestServe extends Process {
-	constructor() {
+	constructor(defaultAction = 'start') {
 		super()
-		this.run('start', { flags : [onlyChangedFlag] })
+		this.run(defaultAction)
 	}
 
-	onStart = ({name}, {flags}) => this.spawn(name, getJestServeCLICmd(flags))
+	onStart = ({name}, {flags = []}) => this.spawn(name, commandToUse()([...flags, onlyChangedFlag]))
+
+	onWatch = ({name}, {flags = []}) => this.spawn(name, commandToUse()([...flags, watchFlag]))
+
+	onWatchAll = ({name}, {flags = []}) => this.spawn(name, commandToUse()([...flags, watchAllFlag]))
 
 	onRunAll = async () => {
 		await this.kill('start')
@@ -70,6 +79,16 @@ class JestServe extends Process {
 			shortcut: 'a',
 			enabled: true,
 			onRun: this.onRunAll
+		},
+		{
+			name: 'watch',
+			enabled: true,
+			onRun: this.onWatch
+		},
+		{
+			name: 'watch-all',
+			enabled: true,
+			onRun: this.onWatchAll
 		}
 	]
 }
