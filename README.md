@@ -39,28 +39,28 @@ mhy jest-serve watch
 # Override configs in package.json
 ```
 {
-	...
-	"mhy": {
-		"webpack": {
-			"development": {
-				"serve": {
-					"port": 8080
-				}
-			}
-		}
-	},
-	...
+    ...
+    "mhy": {
+        "webpack": {
+            "development": {
+                "serve": {
+                    "port": 8080
+                }
+            }
+        }
+    },
+    ...
 }
 ```
 
 # Override eslint config
 ```
 {
-	...
-	"eslintConfig": {
+    ...
+    "eslintConfig": {
         "extends": "mhy/config/eslint"
     },
-	...
+    ...
 }
 ```
 
