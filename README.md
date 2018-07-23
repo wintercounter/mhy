@@ -21,6 +21,9 @@ anywhere, simply (or it's goal least...)
 
 # Usage
 ```
+// Install
+npm i mhy -g
+
 // Run ecosystem (ui) (default)
 mhy
 mhy ui
