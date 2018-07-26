@@ -22,7 +22,7 @@ anywhere, simply (or it's goal least...)
 # Usage
 ```
 // Install
-npm i mhy -g
+npm i @mhy/mhy -g
 
 // Run ecosystem (ui) (default)
 mhy
@@ -56,7 +56,7 @@ mhy jest-serve watch
 }
 ```
 
-# Override eslint config
+# Override eslint config in package.json
 ```
 {
     ...
@@ -76,5 +76,4 @@ mhy jest-serve watch
 
 # Examples
 
-# Always handle ./ vs ./dist
 # Always use require.resolve
