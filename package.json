@@ -1,12 +1,14 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.2.2",
+  "version": "0.2.5",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist",
+    "pub": "npm publish --access=public",
     "build": "mhy-build",
+    "prepublish": "npm run build",
     "test-jest-serve-cli": "babel-node C:\\Work\\Repos\\mhy\\node_modules\\jest-cli\\bin\\jest.js --passWithNoTests --config=C:\\Work\\Repos\\mhy\\config\\jest\\index.js --onlyChanged --watch"
   },
   "repository": {
@@ -36,7 +38,7 @@
     "@babel/preset-env": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0-beta.54",
     "@babel/preset-stage-0": "^7.0.0-beta.53",
-    "@mhy/config": "0.0.18",
+    "@mhy/config": "0.0.21",
     "autoprefixer": "^9.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8.2.6",
