@@ -1,12 +1,12 @@
 {
-  "name": "mhy",
-  "version": "0.2.0",
+  "name": "@mhy/mhy",
+  "version": "0.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node ./",
-    "build": "babel ./ --out-dir dist --config-file ./.babelrc --ignore node_modules,test --delete-dir-on-start",
+    "start": "node ./dist",
+    "build": "mhy-build",
     "test-jest-serve-cli": "babel-node C:\\Work\\Repos\\mhy\\node_modules\\jest-cli\\bin\\jest.js --passWithNoTests --config=C:\\Work\\Repos\\mhy\\config\\jest\\index.js --onlyChanged --watch"
   },
   "repository": {
@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0-beta.54",
     "@babel/preset-stage-0": "^7.0.0-beta.53",
+    "@mhy/config": "0.0.18",
     "autoprefixer": "^9.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8.2.6",
@@ -64,7 +65,6 @@
     "eslint-plugin-react": "7.10.0",
     "extract-text-webpack-plugin": "3.0.2",
     "faker": "4.1.0",
-    "fast-glob": "^2.2.2",
     "file-loader": "1.1.11",
     "formdata-polyfill": "^3.0.11",
     "html-webpack-plugin": "^3.2.0",
@@ -109,9 +109,8 @@
     "sass-loader": "7.0.3",
     "socket.io-client": "2.1.1",
     "style-loader": "0.21.0",
-    "tree-kill": "^1.2.0",
     "url-loader": "1.0.1",
-    "url-search-params-polyfill": "4.0.1",
+    "url-search-params-polyfill": "^4.0.1",
     "weakmap-polyfill": "^2.0.0",
     "webpack": "^4.16.0",
     "webpack-bundle-analyzer": "^2.13.1",
@@ -124,5 +123,8 @@
     "worker-loader": "^2.0.0",
     "write-file-webpack-plugin": "4.3.2",
     "yargs": "^12.0.1"
+  },
+  "devDependencies": {
+    "@mhy/build": "0.0.6"
   }
 }

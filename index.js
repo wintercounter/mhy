@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
 import { argv } from 'yargs'
-import path from 'path'
+import eco from '@mhy/config/dist/ecosystem'
 
 import render from './ui'
 
-const ecoPath = path.resolve(__dirname, 'config/ecosystem/')
-const eco = require(ecoPath).default
 const a = argv._
 const task = a[0]
 
