@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0-beta.54",
     "@babel/preset-stage-0": "^7.0.0-beta.53",
-    "@mhy/config": "^0.1.9",
+    "@mhy/config": "^0.1.10",
     "autoprefixer": "^9.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "8.2.6",
