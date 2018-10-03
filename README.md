@@ -1,6 +1,6 @@
 # THIS PROJECT IS IN ALPHA STAGE, USE AT YOUR OWN RISK. DOCUMENTATION ALSO IN PROGRESS, SOMETIMES IT JUST HAS KEYWORDS AS A REMINDER. PRs ARE WELCOME!
 
-MHY (my) is suppose to be a development environment. I just simply had enough of having multiple
+MHY (my) is suppose to be a development/production environment/compiler out-of the box. I just simply had enough of having multiple
 instances of the same npm packages on my machine, the need to setup a development environment,
 the need to configure a bunch of stuff, the need to store my scripts online somewhere if I
 want to quickly test something, the need to open up multiple terminals and start commands separately.
@@ -77,3 +77,11 @@ mhy jest-serve watch
 # Examples
 
 # Always use require.resolve
+
+# Eslint dev: warn; prod: error
+
+# Tasks
+- mhy config
+  - mhy config babel >> .babelrc
+  - mhy config webpack >> webpack.config.js
+- mhy build
