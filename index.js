@@ -2,13 +2,27 @@
 
 import { argv } from 'yargs'
 import eco from '@mhy/config/dist/ecosystem'
-
-import render from './ui'
+import { load } from '@mhy/config/dist'
 
 const a = argv._
 const task = a[0]
 
 switch (task) {
+    case 'config': {
+    	const config = a[1]
+		const format = argv.f || argv.format || 'js'
+        if (!config) {
+			console.error('No config specified!')
+			process.exit(2)
+        }
+        let result = JSON.stringify(load(config), null, 2)
+		if (format === 'js') {
+			result = `module.exports = module.exports.default = ${result}`
+		}
+        process.stdout.write(result)
+        process.exit(0)
+		break
+    }
 	case 'ui':
 	case undefined:
 		process.MHY_ENV = 'ui'
@@ -16,14 +30,17 @@ switch (task) {
 			console.error('No UI Widgets are specified in the Ecosystem.')
 			process.exit(2)
 		}
+		const { disabled = [] } = load('ui');
 		// Run processes
 		const processes = Object.entries(eco)
+		.filter(([key]) => !disabled.includes(key))
 		.sort(([,{ order: ao = 0 }], [,{ order: bo = 0 }]) => ao - bo) // static order
 		.reduce((o, [name, Process]) => {
 			o[name] = new Process()
 			return o
 		}, {})
 		// Init magic
+		const render = require('./ui').default
 		render(processes)
 		break
 	default:

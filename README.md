@@ -32,11 +32,21 @@ mhy ui
 mhy serve
 mhy run serve
 
-mhy jest-serve
-mhy run jest-serve
+mhy jest
+mhy run jest
 
 // Run specific process only with specific task
-mhy jest-serve watch
+mhy jest watch
+
+// Print out config
+mhy config webpack
+
+// Print out config in different format
+mhy config babel -f json
+mhy config babel --format=json
+
+// Print out config in different format and save into a file
+mhy config babel -f json >> .babelrc
 ```
 
 # Override configs in package.json
@@ -80,8 +90,40 @@ mhy jest-serve watch
 
 # Eslint dev: warn; prod: error
 
+# Prettier help
+
+# Enable/disable ui widgets
+
 # Tasks
 - mhy config
   - mhy config babel >> .babelrc
   - mhy config webpack >> webpack.config.js
 - mhy build
+
+# TODO
+- Update to postcss-preset-env
+- Storybook
+- docs mdx
+- Go back to webpack-dev-server
+- Structure recommendation docs
+
+# Features
+- Build UI / Multiple task, 1 command
+- Latest versions
+- Webpack
+- Webpack-dev-server
+- Webpack prod build
+- Babel build
+- Hot reload
+- CSS/SCSS Modules
+- Image-loader
+- Airbnb eslint
+- Prettier
+- Typescript
+- Worker-loader
+- Font-loader
+- Dev/prod
+- Built-in webpack aliases
+- Jest
+- webpack-status-bar
+- storybook
