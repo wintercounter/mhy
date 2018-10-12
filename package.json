@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,11 @@
     "pub": "npm publish --access=public",
     "build": "mhy-build",
     "prepublish": "npm run build",
+    "docker-build-image": "docker build -t mhy ./docker",
+    "docker-rm-image": "docker image rm mhy",
+    "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
+    "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
+    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:0.7.1&& docker push wintercounter/mhy:0.7.1",
     "test-jest-serve-cli": "babel-node C:\\Work\\Repos\\mhy\\node_modules\\jest-cli\\bin\\jest.js --passWithNoTests --config=C:\\Work\\Repos\\mhy\\config\\jest\\index.js --onlyChanged --watch"
   },
   "repository": {
@@ -41,7 +46,7 @@
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
-    "@mhy/config": "^0.7.2",
+    "@mhy/config": "^0.7.3",
     "@storybook/addon-a11y": "^3.4.11",
     "@storybook/addon-actions": "^3.4.11",
     "@storybook/addon-backgrounds": "^3.4.11",
@@ -89,7 +94,6 @@
     "eslint-plugin-jest": "^21.24.1",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "7.11.1",
-    "extract-text-webpack-plugin": "3.0.2",
     "faker": "4.1.0",
     "file-loader": "2.0.0",
     "formdata-polyfill": "^3.0.12",

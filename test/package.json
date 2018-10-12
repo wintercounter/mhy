@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "mhy serve",
+    "build": "NODE_ENV=production mhy webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "wintercounter",
