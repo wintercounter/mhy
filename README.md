@@ -1,113 +1,59 @@
-# THIS PROJECT IS IN ALPHA STAGE, USE AT YOUR OWN RISK. DOCUMENTATION ALSO IN PROGRESS, SOMETIMES IT JUST HAS KEYWORDS AS A REMINDER. PRs ARE WELCOME!
+# WARNING!
+> This documentation is not complete. It's in progress and it's a
+BETA version. Use the tool at your own risk. Sometimes you might only
+see keyword and code samples thrown in it. Pull requests are welcome!
 
-MHY (my) is suppose to be a development/production environment/compiler out-of the box. I just simply had enough of having multiple
-instances of the same npm packages on my machine, the need to setup a development environment,
-the need to configure a bunch of stuff, the need to store my scripts online somewhere if I
-want to quickly test something, the need to open up multiple terminals and start commands separately.
-This is MHY development environment, how I like it/want it to be, instantly,
-anywhere, simply (or it's goal least...)
+# Introduction
+MHY (my) is suppose to be a development/production environment/compiler
+ out-of the box. I just simply had enough of having multiple
+instances of the same npm packages on my machine, the need to setup
+a development environment,
+the need to configure a bunch of stuff, the need to store my scripts
+online somewhere if I want to quickly test something, the need to open
+up multiple terminals and start commands separately.
+This is MHY development environment, how I like it/want it to be,
+instantly, anywhere, simply (or it's goal least...)
 
 # Problems it tries to resolve
 - 0C
 - Out-of-the box
+- Portability
 - Simple config building/overriding
-- Use package.json for simple configs
+- Using package.json for simple configs
 - Boot templates
 - No more multiple installs
 - Single terminal to run all
 - Less boilerplate
 - UI
 - CLI
+- Unified linting
+- Faster deployments using prebuilt and public docker images
+- Providing commonly used packages
+
+# Install
+```
+npm i @mhy/mhy -g
+```
 
 # Usage
+## Command syntax
 ```
-// Install
-npm i @mhy/mhy -g
-
-// Run ecosystem (ui) (default)
-mhy
-mhy ui
-
-// Run specific process only with default task
-mhy serve
-mhy run serve
-
-mhy jest
-mhy run jest
-
-// Run specific process only with specific task
-mhy jest watch
-
-// Print out config
-mhy config webpack
-
-// Print out config in different format
-mhy config babel -f json
-mhy config babel --format=json
-
-// Print out config in different format and save into a file
-mhy config babel -f json >> .babelrc
+mhy [ui-panel|tool] [argument1] [argument2] [...]
 ```
 
-# Override configs in package.json
-```
-{
-    ...
-    "mhy": {
-        "webpack": {
-            "development": {
-                "serve": {
-                    "port": 8080
-                }
-            }
-        }
-    },
-    ...
-}
-```
+## @mhy tools
 
-# Override eslint config in package.json
-```
-{
-    ...
-    "eslintConfig": {
-        "extends": "mhy/config/eslint"
-    },
-    ...
-}
-```
+## Config & UI (ecosystem)
+[https://github.com/wintercounter/mhy-config](https://github.com/wintercounter/mhy-config)
 
-
-# Load configs/run tasks based on environment
-
-# Loading flow
-
-# Directory structure
-
-# Examples
-
-# Always use require.resolve
-
-# Eslint dev: warn; prod: error
-
-# Prettier help
-
-# Enable/disable ui widgets
-
-# Tasks
-- mhy config
-  - mhy config babel >> .babelrc
-  - mhy config webpack >> webpack.config.js
-- mhy build
+## Boot
+[https://github.com/wintercounter/mhy-boot](https://github.com/wintercounter/mhy-boot)
 
 # TODO
 - Update to postcss-preset-env
-- Storybook
-- docs mdx
-- Go back to webpack-dev-server
-- Structure recommendation docs
+- docs mdx (?)
 
-# Features
+# A big pile of features list
 - Build UI / Multiple task, 1 command
 - Latest versions
 - Webpack
@@ -128,3 +74,4 @@ mhy config babel -f json >> .babelrc
 - webpack-status-bar
 - storybook
 - Boot
+- And more I don't remember now...
