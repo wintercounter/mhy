@@ -3,11 +3,16 @@
 import { argv } from 'yargs'
 import eco from '@mhy/config/dist/ecosystem'
 import { load } from '@mhy/config/dist'
+import boot from '@mhy/boot'
 
 const a = argv._
 const task = a[0]
 
 switch (task) {
+	case 'boot': {
+		boot(a[1])
+		break
+	}
     case 'config': {
     	const config = a[1]
 		const format = argv.f || argv.format || 'js'

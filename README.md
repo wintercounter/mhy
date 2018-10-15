@@ -127,3 +127,4 @@ mhy config babel -f json >> .babelrc
 - Jest
 - webpack-status-bar
 - storybook
+- Boot
