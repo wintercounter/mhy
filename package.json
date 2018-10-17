@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -47,7 +47,7 @@
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
     "@mhy/boot": "^1.0.2",
-    "@mhy/config": "^0.7.6",
+    "@mhy/config": "^0.7.7",
     "@storybook/addon-a11y": "^4.0.0-alpha.25",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
     "@storybook/addon-backgrounds": "^4.0.0-alpha.25",
