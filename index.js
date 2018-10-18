@@ -8,7 +8,8 @@ const task = a[0]
 switch (task) {
 	case 'boot': {
 	    const boot = require('@mhy/boot')
-		boot(a[1])
+        const output = argv.o || argv.output
+		boot(a[1], a[2], output)
 		break
 	}
     case 'config': {
