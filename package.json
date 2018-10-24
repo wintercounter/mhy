@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "docker-rm-image": "docker image rm mhy",
     "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
     "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
-    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:0.9.3&& docker push wintercounter/mhy:0.9.3",
+    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:0.9.3&& docker push wintercounter/mhy:0.9.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
     "test-jest-serve-cli": "babel-node C:\\Work\\Repos\\mhy\\node_modules\\jest-cli\\bin\\jest.js --passWithNoTests --config=C:\\Work\\Repos\\mhy\\config\\jest\\index.js --onlyChanged --watch"
   },
   "repository": {
@@ -48,7 +48,7 @@
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
     "@mhy/boot": "^1.2.0",
-    "@mhy/config": "^0.9.5",
+    "@mhy/config": "^0.10.2",
     "@storybook/addon-a11y": "^4.0.0-alpha.25",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
     "@storybook/addon-backgrounds": "^4.0.0-alpha.25",
@@ -165,6 +165,7 @@
     "webpack-serve": "^2.0.2",
     "webpack-strip-block": "0.2.0",
     "whatwg-fetch": "^3.0.0",
+    "workbox-webpack-plugin": "^3.6.3",
     "worker-loader": "^2.0.0",
     "write-file-webpack-plugin": "4.4.1",
     "ws": "^6.1.0",
