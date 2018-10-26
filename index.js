@@ -32,15 +32,22 @@ switch (task) {
 	case undefined: {
         const load = require('@mhy/config').load
 	    const eco = load('ecosystem')
+        const [, ...onlyEcos] = a
+        const isOnlyEco = !!onlyEcos.length
         process.MHY_ENV = 'ui'
         if (!Object.keys(eco).length) {
             console.error('No UI Widgets are specified in the Ecosystem.')
             process.exit(2)
         }
-        const { disabled = [] } = load('ui');
+        const { disabled = [], enabled = [] } = load('ui');
+
         // Run processes
         const processes = Object.entries(eco)
-        .filter(([ key ]) => !disabled.includes(key))
+        .filter(([ key, Process ]) => (
+            (isOnlyEco && onlyEcos.includes(key))
+            || (!isOnlyEco && Process.isEnabled && !disabled.includes(key))
+            || (!isOnlyEco && !Process.isEnabled && enabled.includes(key))
+        ))
         .sort(([ , { order: ao = 0 } ], [ , { order: bo = 0 } ]) => ao - bo) // static order
         .reduce((o, [ name, Process ]) => {
             o[ name ] = new Process()

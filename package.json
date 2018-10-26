@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/index.js",
   "scripts": {
@@ -9,11 +9,12 @@
     "pub": "npm publish --access=public",
     "build": "mhy-build",
     "prepare": "npm run build",
+    "prepare:watch": "mhy-build --watch",
     "docker-build-image": "docker build --no-cache -t mhy ./docker",
     "docker-rm-image": "docker image rm mhy",
     "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
     "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
-    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:0.9.3&& docker push wintercounter/mhy:0.9.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
+    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:0.11.0&& docker push wintercounter/mhy:0.11.0&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
     "test-jest-serve-cli": "babel-node C:\\Work\\Repos\\mhy\\node_modules\\jest-cli\\bin\\jest.js --passWithNoTests --config=C:\\Work\\Repos\\mhy\\config\\jest\\index.js --onlyChanged --watch"
   },
   "repository": {
@@ -48,7 +49,7 @@
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
     "@mhy/boot": "^1.4.0",
-    "@mhy/config": "^0.11.1",
+    "@mhy/config": "^0.12.1",
     "@storybook/addon-a11y": "^4.0.0-alpha.25",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
     "@storybook/addon-backgrounds": "^4.0.0-alpha.25",
@@ -133,7 +134,7 @@
     "react-devtools-core": "^3.4.2",
     "react-dom": "^16.6.0",
     "react-hot-loader": "^4.3.11",
-    "react-redux": "^5.0.7",
+    "react-redux": "^5.1.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-prop-types": "^1.0.4",
