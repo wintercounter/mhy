@@ -10,29 +10,19 @@ class Dashboard extends Component {
 		active: 0
 	}
 
-	handleTab = () => {
+	handleTab = (char, event) => {
 		const { processes } = this.props
-		const newIndex = ++this.state.active
-		const newActiveEl = Object.keys(processes)[newIndex]
+		const newIndex = event.shift ? --this.state.active : ++this.state.active
+    const processesKeys = Object.keys(processes)
+		const newActiveEl = processesKeys[newIndex]
 		this.setState({
-			active: newActiveEl ? newIndex : 0
+			active: newActiveEl ? newIndex : (event.shift ? processesKeys.length - 1 : 0)
 		})
 	}
 
-  handleShiftTab = () => {
-    const { processes } = this.props
-    const newIndex = --this.state.active
-		const processesKeys = Object.keys(processes)
-    const newActiveEl = processesKeys[newIndex]
-    this.setState({
-      active: newActiveEl ? newIndex : processesKeys.length - 1
-    })
-  }
-
 	componentWillMount() {
 		const { screen, processes } = this.props
-		screen.key(['tab'], this.handleTab)
-		screen.key(['S-tab'], this.handleShiftTab)
+		screen.key(['S-tab', 'tab'], this.handleTab)
 		screen.key(['escape', 'q', 'C-c'], async () => {
 			for (const proc of Object.values(processes)) {
 				await proc.clean()
