@@ -13,14 +13,13 @@ switch (task) {
 		break
 	}
     case 'config': {
-        const load = require('@mhy/config').load
     	const config = a[1]
 		const format = argv.f || argv.format || 'js'
         if (!config) {
 			console.error('No config specified!')
 			process.exit(2)
         }
-        let result = JSON.stringify(load(config), null, 2)
+        let result = JSON.stringify(require(`@mhy/config/dist/${config}`), null, 2)
 		if (format === 'js') {
 			result = `module.exports = module.exports.default = ${result}`
 		}
