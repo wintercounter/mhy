@@ -77,12 +77,13 @@ export default class MhyBox extends Component {
 					<Loading />
 				}
 			</log>,
-			<Actions isListActive={isActive}
-					 name={name}
-					 total={total}
-					 screen={screen}
-					 index={index}
-					 process={process}
+			<Actions key="actions" 
+					isListActive={isActive}
+					name={name}
+					total={total}
+					screen={screen}
+					index={index}
+					process={process}
 			/>
 		]
 	}
