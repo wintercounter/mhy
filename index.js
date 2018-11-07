@@ -40,6 +40,20 @@ switch (task) {
         }
         const { disabled = [], enabled = [] } = load('ui');
 
+        const f = { ...argv }
+        delete f._;
+        delete f.$0;
+
+        const flags = []
+        const [ , , ...args ] = a
+        for (const [flag, value] of Object.entries(f)) {
+            flags.push(`-${flag}`)
+
+            if (value !== true) {
+                flags.push(value)
+            }
+        }
+
         // Run processes
         const processes = Object.entries(eco)
         .filter(([ key, Process ]) => (
@@ -49,7 +63,7 @@ switch (task) {
         ))
         .sort(([ , { order: ao = 0 } ], [ , { order: bo = 0 } ]) => ao - bo) // static order
         .reduce((o, [ name, Process ]) => {
-            o[ name ] = new Process()
+            o[ name ] = new Process({ args, flags })
             return o
         }, {})
         // Init magic
@@ -78,7 +92,21 @@ switch (task) {
             console.error(`No such process: ${proc}`)
             process.exit(2)
         }
-        (new Process(...args)).on('data', l => console.log(l))
+        const f = { ...argv }
+        delete f._;
+        delete f.$0;
+
+        const flags = []
+        for (const [flag, value] of Object.entries(f)) {
+            flags.push(`-${flag}`)
+
+            if (value !== true) {
+                flags.push(value)
+            }
+        }
+
+        (new Process({ args, flags }))
+            .on('data', l => console.log(l))
         break
     }
 }
