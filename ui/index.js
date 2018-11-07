@@ -19,9 +19,20 @@ class Dashboard extends Component {
 		})
 	}
 
+  handleShiftTab = () => {
+    const { processes } = this.props
+    const newIndex = --this.state.active
+		const processesKeys = Object.keys(processes)
+    const newActiveEl = processesKeys[newIndex]
+    this.setState({
+      active: newActiveEl ? newIndex : processesKeys.length - 1
+    })
+  }
+
 	componentWillMount() {
 		const { screen, processes } = this.props
 		screen.key(['tab'], this.handleTab)
+		screen.key(['S-tab'], this.handleShiftTab)
 		screen.key(['escape', 'q', 'C-c'], async () => {
 			for (const proc of Object.values(processes)) {
 				await proc.clean()
