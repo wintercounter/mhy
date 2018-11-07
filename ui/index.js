@@ -13,7 +13,7 @@ class Dashboard extends Component {
 	handleTab = (char, event) => {
 		const { processes } = this.props
 		const newIndex = event.shift ? --this.state.active : ++this.state.active
-    const processesKeys = Object.keys(processes)
+    		const processesKeys = Object.keys(processes)
 		const newActiveEl = processesKeys[newIndex]
 		this.setState({
 			active: newActiveEl ? newIndex : (event.shift ? processesKeys.length - 1 : 0)
