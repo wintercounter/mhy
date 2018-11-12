@@ -105,7 +105,17 @@ switch (task) {
             }
         }
 
-        (new Process({ args, flags }))
+        args = args.filter(arg => {
+            if (!Process.prototype[arg]) {
+                flags.push(arg)
+                return false
+            }
+            return true
+        })
+
+        console.log({ args, flags })
+
+        ;(new Process({ args, flags }))
             .on('data', l => console.log(l))
         break
     }
