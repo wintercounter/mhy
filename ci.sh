@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function check() {
+function check {
     if [ $? ]; then
       exit $?
     fi
