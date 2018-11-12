@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-function check {
-    if [ $? ]; then
-      exit $?
-    fi
+check() {
+	if [ "$1" != 0 ]
+	then
+		exit $1
+	fi
 }
 
 VERSION=`node -p -e "require('./package.json').version"`
@@ -25,6 +26,3 @@ docker tag mhy wintercounter/mhy:latest
 check
 docker push wintercounter/mhy:latest
 check
-
-
-
