@@ -14,7 +14,7 @@ check $?
 
 docker image rm mhy
 
-docker login -u "$DOCKER_LOGIN" -p "$DOCKER_PASS"
+echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
 check $?
 
 docker tag mhy wintercounter/mhy:${VERSION}
