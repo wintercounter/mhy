@@ -113,8 +113,6 @@ switch (task) {
             return true
         })
 
-        console.log({ args, flags })
-
         ;(new Process({ args, flags }))
             .on('data', l => console.log(l))
         break
