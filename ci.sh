@@ -12,9 +12,12 @@ VERSION=`node -p -e "require('./package.json').version"`
 npm pub
 check $?
 
+echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+check $?
+
 docker image rm mhy
 
-echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+docker build --no-cache -t mhy ./docker
 check $?
 
 docker tag mhy wintercounter/mhy:${VERSION}
