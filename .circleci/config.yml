@@ -41,4 +41,5 @@ jobs:
           name: Trigger deployment
           working_directory: ~/repo
           command: |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
             sh ./ci.sh
