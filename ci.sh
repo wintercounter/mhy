@@ -10,19 +10,19 @@ check() {
 VERSION=`node -p -e "require('./package.json').version"`
 
 npm pub
-check
+check $?
 
 docker image rm mhy
 
 echo $DOCKER_PASS | docker login -u $DOCKER_LOGIN --password-stdin
-check
+check $?
 
 docker tag mhy wintercounter/mhy:${VERSION}
-check
+check $?
 docker push wintercounter/mhy:${VERSION}
-check
+check $?
 
 docker tag mhy wintercounter/mhy:latest
-check
+check $?
 docker push wintercounter/mhy:latest
-check
+check $?
