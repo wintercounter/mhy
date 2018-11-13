@@ -47,7 +47,12 @@ switch (task) {
         const flags = []
         const [ , , ...args ] = a
         for (const [flag, value] of Object.entries(f)) {
-            flags.push(`-${flag}`)
+            if (flag.length > 1) {
+                flags.push(`--${flag}`)
+            }
+            else {
+                flags.push(`-${flag}`)
+            }
 
             if (value !== true) {
                 flags.push(value)
