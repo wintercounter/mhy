@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.15.30",
+  "version": "0.15.31",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/index.js",
   "scripts": {
@@ -162,6 +162,7 @@
     "jest-canvas-mock": "^1.1.0",
     "jest-cli": "^23.6.0",
     "jest-fetch-mock": "^1.7.4",
+    "jest-styled-components": "^6.3.1",
     "js-cookie": "2.2.0",
     "loader-utils": "1.1.0",
     "moment": "^2.22.2",
