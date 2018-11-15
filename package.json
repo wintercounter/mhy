@@ -199,6 +199,7 @@
     "redux-form": "^7.4.2",
     "redux-form-validators": "^2.7.2",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
     "redux-saga": "^0.16.2",
     "redux-thunk": "^2.3.0",
     "sass-loader": "7.1.0",
