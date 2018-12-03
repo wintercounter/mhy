@@ -78,12 +78,6 @@ switch (task) {
     }
 	default:
 	case 'run': {// mhy webpack
-        const load = require('@mhy/config').load
-        const eco = load('ecosystem')
-        if (task !== 'run' && !(task in eco)) {
-            console.error(`No such task: ${task}`)
-            process.exit(2)
-        }
         process.MHY_ENV = 'cli'
         let proc, args
         if (task === 'run') {
@@ -92,7 +86,8 @@ switch (task) {
         else {
             [ proc, ...args ] = a
         }
-        const Process = eco[ proc ]
+
+        const Process = require('@mhy/config').loadProcess(proc)
         if (!Process) {
             console.error(`No such process: ${proc}`)
             process.exit(2)
@@ -124,6 +119,7 @@ switch (task) {
 
         ;(new Process({ args, flags }))
             .on('data', l => console.log(l))
+
         break
     }
 }
