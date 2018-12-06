@@ -17,7 +17,7 @@ switch (task) {
 		const format = argv.f || argv.format || 'js'
         if (!config) {
 			console.error('No config specified!')
-			process.exit(2)
+			process.exit(1)
         }
         let result = JSON.stringify(require(`@mhy/config/dist/${config}`), null, 2)
 		if (format === 'js') {
@@ -36,7 +36,7 @@ switch (task) {
         process.MHY_ENV = 'ui'
         if (!Object.keys(eco).length) {
             console.error('No UI Widgets are specified in the Ecosystem.')
-            process.exit(2)
+            process.exit(1)
         }
         const { disabled = [], enabled = [] } = load('ui');
 
@@ -90,7 +90,7 @@ switch (task) {
         const Process = require('@mhy/config').loadProcess(proc)
         if (!Process) {
             console.error(`No such process: ${proc}`)
-            process.exit(2)
+            process.exit(1)
         }
         const f = { ...argv }
         delete f._;
@@ -117,8 +117,12 @@ switch (task) {
             return true
         })
 
-        ;(new Process({ args, flags }))
-            .on('data', l => console.log(l))
+        const p = new Process({ args, flags })
+        p.on('data', l => console.log(l))
+        p.on('error', e => {
+            console.log(e)
+            process.exit(1)
+        })
 
         break
     }

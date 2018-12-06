@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.18.6",
+  "version": "0.18.7",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/index.js",
   "scripts": {
@@ -51,7 +51,7 @@
     "@babel/register": "^7.0.0",
     "@mhy/boot": "^1.4.1",
     "@mhy/config": "^0.18.5",
-    "@mhy/process": "0.0.2",
+    "@mhy/process": "0.0.4",
     "@storybook/addon-a11y": "^4.0.7",
     "@storybook/addon-actions": "^4.0.7",
     "@storybook/addon-backgrounds": "^4.0.7",
