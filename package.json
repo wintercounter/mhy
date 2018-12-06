@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.18.13",
+  "version": "0.18.14",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/index.js",
   "scripts": {
