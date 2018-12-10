@@ -50,7 +50,7 @@
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
     "@mhy/boot": "^1.4.1",
-    "@mhy/config": "^0.19.5",
+    "@mhy/config": "^0.19.6",
     "@mhy/process": "0.0.11",
     "@storybook/addon-a11y": "^4.0.12",
     "@storybook/addon-actions": "^4.0.12",
