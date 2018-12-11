@@ -1,6 +1,6 @@
 {
   "name": "@mhy/mhy",
-  "version": "0.19.7",
+  "version": "0.19.8",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/index.js",
   "scripts": {
@@ -189,7 +189,7 @@
     "react-dom": "^16.6.3",
     "react-hot-loader": "^4.3.12",
     "react-intl": "^2.7.2",
-    "react-redux": "^6.0.0",
+    "react-redux": "4.4.9",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-prop-types": "^1.0.4",
