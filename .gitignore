@@ -63,3 +63,6 @@ typings/
 # customs
 .idea
 dist
+
+# generated configs
+tslint.json

@@ -1,0 +1,1 @@
+export RickAndMorty from './RickAndMorty'
