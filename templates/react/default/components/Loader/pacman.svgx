@@ -1,0 +1,123 @@
+<svg
+		width="200px"
+		height="200px"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 100 100"
+		preserveAspectRatio="xMidYMid"
+		class="lds-pacman"
+		style="background: none;"
+>
+	<g style="display:block">
+		<circle
+				cx="79.3617"
+				cy="50"
+				r="4"
+				fill="#fdc823"
+		>
+			<animate
+					attributeName="cx"
+					calcMode="linear"
+					values="95;35"
+					keyTimes="0;1"
+					dur="1"
+					begin="-0.67s"
+					repeatCount="indefinite"
+			/>
+			<animate
+					attributeName="fill-opacity"
+					calcMode="linear"
+					values="0;1;1"
+					keyTimes="0;0.2;1"
+					dur="1"
+					begin="-0.67s"
+					repeatCount="indefinite"
+			/>
+		</circle>
+		<circle
+				cx="39.7617"
+				cy="50"
+				r="4"
+				fill="#fdc823"
+		>
+			<animate
+					attributeName="cx"
+					calcMode="linear"
+					values="95;35"
+					keyTimes="0;1"
+					dur="1"
+					begin="-0.33s"
+					repeatCount="indefinite"
+			/>
+			<animate
+					attributeName="fill-opacity"
+					calcMode="linear"
+					values="0;1;1"
+					keyTimes="0;0.2;1"
+					dur="1"
+					begin="-0.33s"
+					repeatCount="indefinite"
+			/>
+		</circle>
+		<circle
+				cx="59.5617"
+				cy="50"
+				r="4"
+				fill="#fdc823"
+		>
+			<animate
+					attributeName="cx"
+					calcMode="linear"
+					values="95;35"
+					keyTimes="0;1"
+					dur="1"
+					begin="0s"
+					repeatCount="indefinite"
+			/>
+			<animate
+					attributeName="fill-opacity"
+					calcMode="linear"
+					values="0;1;1"
+					keyTimes="0;0.2;1"
+					dur="1"
+					begin="0s"
+					repeatCount="indefinite"
+			/>
+		</circle>
+	</g>
+	<g
+			transform="translate(-15 0)"
+	>
+		<path
+				d="M50 50L20 50A30 30 0 0 0 80 50Z"
+				fill="#eca611"
+				transform="rotate(36.8426 50 50)"
+		>
+			<animateTransform
+					attributeName="transform"
+					type="rotate"
+					calcMode="linear"
+					values="0 50 50;45 50 50;0 50 50"
+					keyTimes="0;0.5;1"
+					dur="1s"
+					begin="0s"
+					repeatCount="indefinite"
+			/>
+		</path>
+		<path
+				d="M50 50L20 50A30 30 0 0 1 80 50Z"
+				fill="#eca611"
+				transform="rotate(-36.8426 50 50)"
+		>
+			<animateTransform
+					attributeName="transform"
+					type="rotate"
+					calcMode="linear"
+					values="0 50 50;-45 50 50;0 50 50"
+					keyTimes="0;0.5;1"
+					dur="1s"
+					begin="0s"
+					repeatCount="indefinite"
+			/>
+		</path>
+	</g>
+</svg>

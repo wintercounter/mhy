@@ -1,0 +1,38 @@
+{
+  "name": "mhy-boot-react-default",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "mhy jest",
+    "start": "mhy",
+    "build": "NODE_ENV=production && mhy webpack",
+    "win:build": "set NODE_ENV=production&& mhy webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wintercounter/mhy-boot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "mhy": {
+    "ui": {
+      "root": {
+        "disabled": [
+          "tsc",
+          "jest", "// enzyme does not support new react memo() feature yet"
+        ]
+      }
+    },
+    "webpack": {
+      "development": {
+        "watchOptions": {
+          "ignored": [
+            "node_modules.(?!(dh-.*)).*",
+            "build"
+          ]
+        }
+      }
+    }
+  }
+}

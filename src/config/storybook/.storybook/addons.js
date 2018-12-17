@@ -1,0 +1,17 @@
+// Addons commented out does not need to be registered
+
+import '@storybook/addon-a11y/register'
+import '@storybook/addon-actions/register'
+//import '@storybook/addon-backgrounds/register'
+//import '@storybook/addon-centered/register'
+import '@storybook/addon-events/register'
+//import '@storybook/addon-graphql/register'
+//import '@storybook/addon-info/register'
+//import '@storybook/addon-jest/register'
+import '@storybook/addon-knobs/register'
+import '@storybook/addon-links/register'
+import '@storybook/addon-notes/register'
+import '@storybook/addon-options/register'
+//import '@storybook/addon-storyshots/register'
+//import '@storybook/addon-storysource/register'
+import '@storybook/addon-viewport/register'

@@ -1,0 +1,1 @@
+export default require('../config/index').loadConfig('ecosystem')
