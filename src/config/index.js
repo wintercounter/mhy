@@ -39,12 +39,27 @@ export const load = (module, defaults = {}) => {
 
 export const loadProcess = module => {
     const d = {}
-    applyEntries(module, 'root', d, path.join(__dirname, 'ecosystem', 'root', `${module}.js`))
-    applyEntries(module, environment, d, path.join(__dirname, 'ecosystem', environment, `${module}.js`))
+    applyEntries(
+        module,
+        'root',
+        d,
+        path.join(__dirname, 'ecosystem', 'root', `${module}.js`)
+    )
+    applyEntries(
+        module,
+        environment,
+        d,
+        path.join(__dirname, 'ecosystem', environment, `${module}.js`)
+    )
     return d[module]
 }
 
-const applyEntries = (module, env, o, defaultEntries = path.join(__dirname, module, env, '**/*')) => {
+const applyEntries = (
+    module,
+    env,
+    o,
+    defaultEntries = path.join(__dirname, module, env, '**/*')
+) => {
     let entries = glob.sync(defaultEntries, {
         ignore: ['index.js'],
         nodir: true
@@ -61,14 +76,14 @@ const applyEntries = (module, env, o, defaultEntries = path.join(__dirname, modu
                 tmp[v] = tmp[v] || {}
 
                 if (Array.isArray(tmp[v])) {
-                    tmp[v] = tmp = require(entry).default(tmp[v])
+                    tmp[v] = tmp = require(entry)(tmp[v])
                 } else {
                     tmp = tmp[v]
                 }
             } else {
                 // It's last item, require and execute default
                 v = v.replace('.js', '')
-                tmp[v] = require(entry).default(tmp[v])
+                tmp[v] = require(entry)(tmp[v])
             }
         })
     }

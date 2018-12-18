@@ -1,4 +1,4 @@
-const mhyWP = require('../../webpack').default
+const mhyWP = require('../../webpack')
 
 export default (baseConfig, env, defaultConfig) => {
     mhyWP.resolve.modules = [

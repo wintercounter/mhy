@@ -21,8 +21,8 @@ class StorybookStart extends Process {
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)
 
-        console.log(CmdStorybookStartCLI)
-        process.exit(0)
+        //console.log(CmdStorybookStartCLI)
+        //process.exit(0)
 
         this.run(defaultAction, rest)
     }

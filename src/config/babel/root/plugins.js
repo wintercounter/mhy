@@ -1,6 +1,6 @@
 let aliases
 try {
-    aliases = require('../../webpack').default.resolve.alias
+    aliases = require('../../webpack').resolve.alias
 } catch (e) {
     aliases = {}
 }

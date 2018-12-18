@@ -75,7 +75,8 @@ const argvToFlags = argv => {
     }, [])
 }
 
-const toCamelCase = str => str.replace(/\b-([a-z])/g, (_, char) => char.toUpperCase())
+const toCamelCase = str =>
+    str.replace(/\b-([a-z])/g, (_, char) => char.toUpperCase())
 
 //  // For my example I use a `set` to track unique emits.
 //  const items = new Set()
@@ -104,12 +105,13 @@ export default class Process extends EventEmitter {
 
     spawn(id, [bin, ...cmd]) {
         const p = spawn(bin, cmd, {
-            shell: false,
-            stdio: process.env.MHY_ENV === 'ui' ? 'pipe' : 'pipe'
+            shell: true,
+            stdio: process.env.MHY_ENV === 'ui' ? 'pipe' : 'inherit'
         })
         this.processes.set(id, p)
         p.stdout && p.stdout.on('data', this[_onData])
         p.stdout && p.stdout.on('error', this[_onError])
+        p.stderr && p.stderr.on('data', this[_onData])
         p.stderr && p.stderr.on('error', this[_onError])
 
         if (process.env.MHY_ENV === 'cli') {
@@ -121,7 +123,6 @@ export default class Process extends EventEmitter {
     }
 
     [_onData] = line => {
-        console.log('hurkaszalon', line.toString('utf8').trim())
         return this.log(line.toString('utf8').trim())
     }
 
@@ -130,8 +131,7 @@ export default class Process extends EventEmitter {
     }
 
     [_onError] = line => {
-        console.log('hurkaszalonerr', line.toString('utf8').trim())
-        return this.log(line.toString('utf8').trim(), 'error')
+        return this.log(line.toString('utf8').trim(), 'err')
     }
 
     processLine(d) {
