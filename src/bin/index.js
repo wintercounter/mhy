@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-
 import yargs from 'yargs'
-import { loadCommands } from '../process'
+import { loadCommands } from '@/processes'
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 process.env.MHY_ENV = 'cli'
@@ -20,6 +19,7 @@ yargs
         default: false,
         description: 'Show debug information'
     })
+    .recommendCommands()
 
 // Register commands
 try {
@@ -43,25 +43,7 @@ switch (task) {
         boot(a[1], a[2], output)
         break
     }
-    case 'config': {
-        const config = a[1]
-        const format = argv.f || argv.format || 'js'
-        if (!config) {
-            console.error('No config specified!')
-            process.exit(1)
-        }
-        let result = JSON.stringify(
-            require(`@mhy/config/dist/${config}`),
-            null,
-            2
-        )
-        if (format === 'js') {
-            result = `export default ${result}`
-        }
-        process.stdout.write(result)
-        process.exit(0)
-        break
-    }
+
     case 'ui':
     case undefined: {
         const load = require('@mhy/config').load

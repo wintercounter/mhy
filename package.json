@@ -1,10 +1,10 @@
 {
-  "name": "mhyd",
-  "version": "1.0.0",
+  "name": "mhy",
+  "version": "1.0.0-alpha.2",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
-    "test": "mhy jest",
+    "test": "mhyd jest",
     "start": "node ./dist",
     "pub": "npm publish --access=public",
     "build": "cross-env NODE_ENV=production mhy babel",
@@ -31,7 +31,49 @@
     "mhyd": "dist/bin/index.js"
   },
   "mhy": {
+    "mhy": {
+      "root": {
+        "defaultUiProcesses": [
+          {
+            "$match": {
+              "index": 1,
+              "value": {
+                "$remove": true
+              }
+            }
+          }
+        ]
+      }
+    },
     "babel": {
+      "development": {
+        "plugins": [
+          {
+            "$prepend": {
+              "$expression": "$params.require.resolve('chokidar')"
+            }
+          }
+        ],
+        "presets": [
+          {
+            "$match": {
+              "query": "$[?(@[0].includes('preset-env'))]",
+              "value": [
+                {
+                  "$match": {
+                    "index": 1,
+                    "value": {
+                      "targets": {
+                        "esmodules": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
       "production": {
         "plugins": [
           "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-add-module-exports\\lib\\index.js",
@@ -49,7 +91,32 @@
           "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-transform-function-bind\\lib\\index.js",
           "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-proposal-export-default-from\\lib\\index.js",
           "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-proposal-export-namespace-from\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\react-hot-loader\\babel.js"
+          [
+            "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-module-resolver\\lib\\index.js",
+            {
+              "root": [],
+              "alias": {
+                "@": "./src/",
+                "@assets": "./src/assets",
+                "@components": "./src/components",
+                "@configs": "./src/configs",
+                "@constants": "./src/constants",
+                "@core": "./src/core",
+                "@entities": "./src/entities",
+                "@fields": "./src/fields",
+                "@forms": "./src/forms",
+                "@layouts": "./src/layouts",
+                "@overlays": "./src/overlays",
+                "@pages": "./src/pages",
+                "@processes": "./src/processes",
+                "@resources": "./src/resources",
+                "@services": "./src/services",
+                "@styles": "./src/styles",
+                "@utils": "./src/utils",
+                "@validators": "./src/validators"
+              }
+            }
+          ]
         ],
         "presets": [
           [
@@ -76,42 +143,42 @@
     }
   },
   "dependencies": {
-    "@babel/cli": "^7.2.0",
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/plugin-syntax-decorators": "^7.2.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-flow-strip-types": "^7.2.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.2.3",
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/plugin-transform-regenerator": "^7.0.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
-    "@storybook/addon-a11y": "^4.1.2",
-    "@storybook/addon-actions": "^4.1.2",
-    "@storybook/addon-backgrounds": "^4.1.2",
-    "@storybook/addon-centered": "^4.1.2",
-    "@storybook/addon-events": "^4.1.2",
-    "@storybook/addon-graphql": "^4.1.2",
-    "@storybook/addon-info": "^4.1.2",
-    "@storybook/addon-jest": "^4.1.2",
-    "@storybook/addon-knobs": "^4.1.2",
-    "@storybook/addon-links": "^4.1.2",
-    "@storybook/addon-notes": "^4.1.2",
-    "@storybook/addon-options": "^4.1.2",
-    "@storybook/addon-storyshots": "^4.1.2",
-    "@storybook/addon-storysource": "^4.1.2",
-    "@storybook/addon-viewport": "^4.1.2",
-    "@storybook/addons": "^4.1.2",
-    "@storybook/cli": "^4.1.2",
-    "@storybook/core": "^4.1.2",
-    "@storybook/react": "^4.1.2",
+    "@storybook/addon-a11y": "^4.1.3",
+    "@storybook/addon-actions": "^4.1.3",
+    "@storybook/addon-backgrounds": "^4.1.3",
+    "@storybook/addon-centered": "^4.1.3",
+    "@storybook/addon-events": "^4.1.3",
+    "@storybook/addon-graphql": "^4.1.3",
+    "@storybook/addon-info": "^4.1.3",
+    "@storybook/addon-jest": "^4.1.3",
+    "@storybook/addon-knobs": "^4.1.3",
+    "@storybook/addon-links": "^4.1.3",
+    "@storybook/addon-notes": "^4.1.3",
+    "@storybook/addon-options": "^4.1.3",
+    "@storybook/addon-storyshots": "^4.1.3",
+    "@storybook/addon-storysource": "^4.1.3",
+    "@storybook/addon-viewport": "^4.1.3",
+    "@storybook/addons": "^4.1.3",
+    "@storybook/cli": "^4.1.3",
+    "@storybook/core": "^4.1.3",
+    "@storybook/react": "^4.1.3",
     "@types/autoprefixer": "^9.1.1",
     "@types/babel-core": "^6.25.5",
     "@types/blessed": "^0.1.10",
@@ -130,7 +197,7 @@
     "@types/loader-utils": "^1.1.3",
     "@types/moment-range": "^3.1.0",
     "@types/moment-timezone": "^0.5.9",
-    "@types/node": "^10.12.15",
+    "@types/node": "^10.12.18",
     "@types/node-sass": "^3.10.32",
     "@types/prettier": "^1.15.2",
     "@types/prop-types": "^15.5.8",
@@ -154,10 +221,10 @@
     "@types/webpack": "^4.4.21",
     "@types/webpack-bundle-analyzer": "^2.13.0",
     "@types/webpack-dev-server": "^3.1.1",
-    "@types/webpack-manifest-plugin": "^1.3.2",
+    "@types/webpack-manifest-plugin": "^2.0.0",
     "@types/webpack-serve": "^2.0.0",
     "@types/ws": "^6.0.1",
-    "@types/yargs": "^12.0.1",
+    "@types/yargs": "^12.0.2",
     "autoprefixer": "^9.4.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
@@ -174,6 +241,7 @@
     "babel-tape-runner": "^3.0.0",
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.8.9",
+    "chalk": "^2.4.1",
     "chokidar-cli": "^1.2.1",
     "concurrently": "^4.1.0",
     "copy-dir": "^0.4.0",
@@ -193,6 +261,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "7.11.1",
     "faker": "4.1.0",
+    "figures": "^2.0.0",
     "file-loader": "2.0.0",
     "formdata-polyfill": "^3.0.13",
     "fs-extra": "^7.0.1",
@@ -212,6 +281,8 @@
     "jest-fetch-mock": "^2.1.0",
     "jest-styled-components": "^6.3.1",
     "js-cookie": "2.2.0",
+    "json-colorizer": "^2.1.2",
+    "json-merger": "^1.0.1",
     "loader-utils": "1.1.0",
     "moment": "^2.23.0",
     "moment-range": "4.0.1",
@@ -227,19 +298,19 @@
     "prettier-loader": "^2.1.1",
     "prop-types": "^15.6.2",
     "qs": "^6.6.0",
-    "react": "^16.6.3",
+    "react": "^16.7.0",
     "react-blessed": "^0.5.0",
     "react-dev-utils": "^6.1.1",
     "react-devtools-core": "^3.4.3",
-    "react-dom": "^16.6.3",
-    "react-hot-loader": "^4.6.2",
+    "react-dom": "^16.7.0",
+    "react-hot-loader": "^4.6.3",
     "react-intl": "^2.7.2",
     "react-redux": "6.0.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-prop-types": "^1.0.4",
     "react-router-redux": "^5.0.0-alpha.6",
-    "react-test-renderer": "^16.6.3",
+    "react-test-renderer": "^16.7.0",
     "redux": "^4.0.1",
     "redux-action": "^1.2.2",
     "redux-devtools-extension": "^2.13.7",
@@ -267,7 +338,7 @@
     "url-loader": "^1.1.2",
     "url-search-params-polyfill": "^5.0.0",
     "weakmap-polyfill": "^2.0.0",
-    "webpack": "^4.27.1",
+    "webpack": "^4.28.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
