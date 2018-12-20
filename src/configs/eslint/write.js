@@ -5,7 +5,7 @@ import eslintConfig from '@/configs/eslint/index'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.JSON_NO_EXT,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, '.eslintrc', eslintConfig, format, overwrite)
 }

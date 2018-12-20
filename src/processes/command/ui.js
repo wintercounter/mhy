@@ -25,7 +25,7 @@ const commandHandler = argv => {
             ...loadEcosystem(process.env.NODE_ENV)
         }
         for (const name of Object.keys(processes)) {
-            mhyConfig.defaultUiProcesses.includes(name) &&
+            !mhyConfig.defaultUiProcesses.includes(name) &&
                 delete processes[name]
         }
     } else {

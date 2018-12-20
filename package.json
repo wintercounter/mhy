@@ -46,7 +46,7 @@
       }
     },
     "babel": {
-      "development": {
+      "developmenttest": {
         "plugins": [
           {
             "$prepend": {

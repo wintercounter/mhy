@@ -8,7 +8,6 @@ const CmdWebpackCLI = [
 ]
 
 class Webpack extends Process {
-    static isDefault = true
 
     constructor(args) {
         const { props: { defaultAction = 'start' } = {}, ...rest } = args

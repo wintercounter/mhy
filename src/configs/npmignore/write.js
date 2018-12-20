@@ -5,7 +5,7 @@ import npmignore from '@/configs/npmignore'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.RAW,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, '.npmignore', npmignore.join('\n'), format, overwrite)
 }

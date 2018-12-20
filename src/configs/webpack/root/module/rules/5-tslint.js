@@ -12,7 +12,7 @@ export default rules => [
         get options() {
             const configFile = path.resolve(__dirname, 'tslint.json')
             if (!fs.existsSync(configFile)) {
-                require('@/configs/tslint').writeConfig(__dirname)
+                require('@/configs/tslint/write')(__dirname)
             }
             return { configFile }
         }

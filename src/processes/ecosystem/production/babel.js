@@ -19,8 +19,6 @@ const getCmdBabelCLI = (flags = []) => [
 ]
 
 class Babel extends Process {
-    static isDefault = true
-
     constructor(args) {
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

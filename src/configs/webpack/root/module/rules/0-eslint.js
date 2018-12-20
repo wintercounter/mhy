@@ -4,7 +4,7 @@ import fs from 'fs'
 const getRules = rules => {
     const configFile = path.resolve(__dirname, '.eslintrc')
     if (!fs.existsSync(configFile)) {
-        require('@/configs/eslint').writeConfig(__dirname)
+        require('@/configs/eslint/write')(__dirname)
     }
 
     return [

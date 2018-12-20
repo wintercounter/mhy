@@ -1,7 +1,7 @@
 import yargs from 'yargs'
 
 export default function() {
-    return {}
+    return function() {}
 }
 
 yargs.command('config', 'do stuff', () => {})

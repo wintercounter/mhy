@@ -5,7 +5,7 @@ import gitignore from '@/configs/gitignore/index'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.RAW,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, '.gitignore', gitignore.join('\n'), format, overwrite)
 }

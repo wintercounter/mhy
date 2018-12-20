@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import Process from '@/processes'
+import FileTypes from '@/utils/fileTypes'
 
 const onlyChangedFlag = '--onlyChanged'
 const watchFlag = '--watch'
@@ -29,16 +30,13 @@ const getJestServeCLICmd = flags => [
 ]
 
 class Jest extends Process {
-    static isDefault = true
-
     get commandToUse() {
         return process.env.MHY_ENV === 'ui' ? getJestServeCLICmd : getJestCLICmd
     }
 
     constructor(args) {
-        if (!fs.existsSync(path.resolve(process.cwd(), '.babelrc'))) {
-            require('@/configs/babel').writeConfig()
-        }
+        const jestDir = path.dirname(require.resolve('@/configs/jest'))
+        require('@/configs/babel/write')(jestDir)
 
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

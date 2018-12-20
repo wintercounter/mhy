@@ -9,7 +9,7 @@ const writeFile = (
     filename,
     source,
     format = FileTypes.JS,
-    overwrite = false
+    overwrite = true
 ) => {
     filename = formatFilename(filename, format)
     source = formatSource(source, format)

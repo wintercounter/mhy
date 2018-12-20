@@ -5,7 +5,7 @@ import tslintConfig from '@/configs/tslint'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.JSON,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, 'tslint', tslintConfig, format, overwrite)
 }

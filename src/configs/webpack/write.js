@@ -5,7 +5,7 @@ import webpackConfig from '@/configs/webpack'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.JS,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, 'webpack.config', webpackConfig, format, overwrite)
 }

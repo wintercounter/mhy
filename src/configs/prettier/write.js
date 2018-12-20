@@ -5,7 +5,7 @@ import prettierConfig from '@/configs/prettier/index'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.JSON_NO_EXT,
-    overwrite = false
+    overwrite
 ) => {
     let filename
     switch (format) {

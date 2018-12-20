@@ -5,7 +5,7 @@ import babelConfig from '@/configs/babel/index'
 const writeConfig = (
     dir = __dirname,
     format = FileTypes.JSON_NO_EXT,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, '.babelrc', babelConfig, format, overwrite)
 }

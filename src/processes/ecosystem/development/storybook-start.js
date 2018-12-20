@@ -1,6 +1,6 @@
-import Process from '@/processes'
 import fs from 'fs'
 import path from 'path'
+import Process from '@/processes'
 
 const CmdStorybookStartCLI = [
     'node',
@@ -8,10 +8,9 @@ const CmdStorybookStartCLI = [
 ]
 
 class StorybookStart extends Process {
-    static isDefault = true
-
     constructor(args) {
         const storybookConfigPath = require.resolve('@/configs/storybook')
+        const storybookConfig = require(storybookConfigPath)
         const babelRcPath = path.resolve(
             storybookConfigPath.substring(
                 0,
@@ -20,10 +19,10 @@ class StorybookStart extends Process {
             '.storybook'
         )
         if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {
-            require('@/configs/babel').writeConfig(babelRcPath)
+            require('@/configs/babel/write')(babelRcPath)
         }
 
-        for (const [key, value] of Object.entries(start)) {
+        for (const [key, value] of Object.entries(storybookConfig.start)) {
             if (value !== null) {
                 CmdStorybookStartCLI.push(`--${key}`)
                 CmdStorybookStartCLI.push(value)
@@ -32,9 +31,6 @@ class StorybookStart extends Process {
 
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)
-
-        //console.log(CmdStorybookStartCLI)
-        //process.exit(0)
 
         this.run(defaultAction, rest)
     }

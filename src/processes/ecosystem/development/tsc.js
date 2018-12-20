@@ -11,11 +11,10 @@ const CmdTscCLI = [
 ]
 
 class Tsc extends Process {
-    static isDefault = true
 
     constructor(args) {
         if (!fs.existsSync(path.resolve(process.cwd(), 'tsconfig.json'))) {
-            require('@/configs/typescript').writeConfig()
+            require('@/configs/typescript/write')()
         }
 
         const { props: { defaultAction = 'start' } = {}, flags } = args

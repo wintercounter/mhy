@@ -16,21 +16,12 @@ const getEslintCLICmd = args => {
     return [
         'node',
         require.resolve('eslint/bin/eslint.js'),
-        `--config=${require.resolve('@/configs/prettier')}`,
-        '--write',
         ...flags,
         ...pattern
     ]
 }
 
-class Prettier extends Process {
-    static isDefault = false
-
-    get commandToUse() {
-        return process.env.MHY_ENV === 'ui'
-            ? getPrettierServeCLICmd
-            : getPrettierCLICmd
-    }
+class Eslint extends Process {
 
     constructor(args) {
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
@@ -38,22 +29,7 @@ class Prettier extends Process {
         this.run(defaultAction, { ...rest })
     }
 
-    onStart = ({ name }, args) => this.spawn(name, this.commandToUse(args))
-
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
-
-    // Feature test only
-    processLine(d) {
-        if (d.startsWith('change:')) {
-            this.emit('action', 'clear')
-        }
-        return d
-            .replace('PASS', '{green-bg} PASS {/green-bg}')
-            .replace('FAIL', '{red-bg} FAIL {/red-bg}')
-    }
+    onStart = ({ name }, args) => this.spawn(name, getEslintCLICmd(args))
 
     actions = [
         {
@@ -71,4 +47,4 @@ class Prettier extends Process {
     ]
 }
 
-export default () => Prettier
+export default () => Eslint

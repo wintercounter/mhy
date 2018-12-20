@@ -38,8 +38,6 @@ const getPrettierServeCLICmd = flags => [
 ]
 
 class Prettier extends Process {
-    static isDefault = false
-
     get commandToUse() {
         return process.env.MHY_ENV === 'ui'
             ? getPrettierServeCLICmd

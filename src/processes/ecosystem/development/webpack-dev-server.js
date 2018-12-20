@@ -8,8 +8,6 @@ const CmdWDSCLI = [
 ]
 
 class WDS extends Process {
-    static isDefault = true
-
     constructor(args) {
         const { props: { defaultAction = 'start' } = {}, flags } = args
         super(args)

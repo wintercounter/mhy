@@ -5,7 +5,7 @@ import tsconfig from '@/configs/typescript'
 const writeConfig = (
     dir = process.cwd(),
     format = FileTypes.JSON,
-    overwrite = false
+    overwrite
 ) => {
     return writeFile(dir, 'tsconfig', tsconfig, format, overwrite)
 }

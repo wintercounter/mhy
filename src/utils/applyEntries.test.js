@@ -7,7 +7,7 @@ describe('applyEntries', () => {
         const globPath = path.join(
             __dirname,
             '..',
-            'process',
+            'processes',
             'ecosystem',
             'root'
         )
