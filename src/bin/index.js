@@ -4,7 +4,7 @@ import { loadCommands } from '@/processes'
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 process.env.MHY_ENV = 'cli'
-process.env.MHY_LOCAL_DIR = 'mhy'
+process.env.MHY_LOCAL_DIR = '.mhy'
 
 yargs
     .usage('\nUsage:\n  mhy [command (process)] [process args] [mhy options]')

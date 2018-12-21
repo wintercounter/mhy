@@ -35,9 +35,10 @@ const applyJson = (module, env, o) => {
         return o
     }
 
-    return new jsonMerger().mergeObjects([o, j], {
-        params: { require }
-    })
+    return new jsonMerger({
+        params: { require },
+        strict: true
+    }).mergeObjects([o, j])
 }
 
 export default applyJson

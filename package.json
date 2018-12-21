@@ -1,6 +1,6 @@
 {
   "name": "mhy",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.5",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
@@ -282,7 +282,7 @@
     "jest-styled-components": "^6.3.1",
     "js-cookie": "2.2.0",
     "json-colorizer": "^2.1.2",
-    "json-merger": "^1.0.1",
+    "json-merger": "git+https://github.com/wintercounter/json-merger.git",
     "loader-utils": "1.1.0",
     "moment": "^2.23.0",
     "moment-range": "4.0.1",

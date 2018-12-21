@@ -16,31 +16,39 @@ export const loadEcosystem = (env = '') => {
     return processes
 }
 
-export const loadProcess = module => {
-    // TODO load local if exists
-    const p = path.join(
-        __dirname,
+export const loadProcess = (module, env = process.env.NODE_ENV) => {
+    const processLocal = path.join(
+        process.cwd(),
+        process.env.MHY_LOCAL_DIR,
+        'processes',
         'ecosystem',
-        process.env.NODE_ENV,
+        env,
         `${module}.js`
     )
-    if (!fs.existsSync(p)) {
+    const processLocalExists = fs.existsSync(processLocal)
+    const processMhy = path.join(__dirname, 'ecosystem', env, `${module}.js`)
+    const processMhyExists = fs.existsSync(processMhy)
+
+    if (processLocalExists) return require(processLocal)
+    else if (processMhyExists) return require(processMhy)
+    else {
         console.error(
-            `Unknown process '${module}' for the environment of '${
-                process.env.NODE_ENV
-            }'!`
+            `Unknown process '${module}' for the environment of '${env}'!`
         )
         process.exit(0)
     }
-    module = require(p)
-    return module
 }
 
 export const loadCommands = () => {
     applyEntries({}, path.join(__dirname, 'command'), '**/*.js')
     applyEntries(
         {},
-        path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'command'),
+        path.join(
+            process.cwd(),
+            process.env.MHY_LOCAL_DIR,
+            'processes',
+            'command'
+        ),
         '**/*.js'
     )
 }

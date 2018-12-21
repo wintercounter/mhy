@@ -22,7 +22,6 @@ const getEslintCLICmd = args => {
 }
 
 class Eslint extends Process {
-
     constructor(args) {
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

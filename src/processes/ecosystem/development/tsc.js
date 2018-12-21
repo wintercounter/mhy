@@ -11,7 +11,6 @@ const CmdTscCLI = [
 ]
 
 class Tsc extends Process {
-
     constructor(args) {
         if (!fs.existsSync(path.resolve(process.cwd(), 'tsconfig.json'))) {
             require('@/configs/typescript/write')()
