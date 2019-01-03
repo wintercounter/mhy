@@ -1,5 +1,3 @@
-# Installation
-
 ```
 npm i mhy -g
 ```

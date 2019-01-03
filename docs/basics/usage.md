@@ -1,5 +1,3 @@
-# Usage
-
 ## Command syntax
 
 ```bash

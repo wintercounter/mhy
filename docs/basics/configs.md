@@ -1,3 +1,1 @@
-# Configs
-
 Kon fings
