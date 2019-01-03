@@ -68,7 +68,9 @@ const handleWrite = (config, dir, format, overwrite) => {
         for (const { filename } of existed) {
             console.log(`    ${chalk.blue(figures.line)} ${filename}`)
         }
-        console.log('\nUse -o/--overwrite to force re-initialization.')
+        console.log(
+            '\nUse -o/--overwrite to force re-initialization of an already existing file.'
+        )
     }
 }
 
