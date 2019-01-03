@@ -17,6 +17,14 @@ development (like babel for webpack, jest and storybook).
 This is `mhy` own development environment, how I like it and want it to
 be, instantly, anywhere, simply.
 
+## A tool for simple
+- app/site development
+- package/library development
+- build process setup
+- project initialization
+- interoperability
+- configuration building
+
 ## Problems trying to solve
 - Zero-configuration
 - Out-of-the box
