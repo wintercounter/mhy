@@ -1,3 +1,5 @@
 {
-  "root": "docs"
+  "root": "docs",
+  "gitbook": ">= 3.0.0",
+  "plugins": ["api"]
 }
