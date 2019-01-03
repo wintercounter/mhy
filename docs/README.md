@@ -1,5 +1,8 @@
 # README.md
 
+## `mhy`?
+> Out-of-the box development environment.
+
 MHY (my) is suppose to be a development/production environment/compiler
  out-of the box. I just simply had enough of having multiple
 instances of the same npm packages on my machine, the need to setup
