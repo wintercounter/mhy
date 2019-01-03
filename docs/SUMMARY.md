@@ -2,6 +2,8 @@
 
 ### Basics
 
-* [Introduction23](introduction.md)
-* [Basics](basics.md)
+* [Installation](basics/installation.md)
+* [Usage](basics/usage.md)
+* [Configs](basics/configs.md)
+* [Processes](basics/processes.md)
 
