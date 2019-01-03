@@ -1,84 +1,59 @@
-# README
-
 ![mhy](https://img.shields.io/badge/-mhy-000000.svg?logo=dev.to&longCache=true&style=popout-square&colorA=000000&colorB=F80046&logoColor=ffffff&logoWidth=20&link=https://github.com/wintercounter/mhy)
 
-## WARNING!
+# WARNING!
+> This documentation is not complete. It's in progress and it's a
+BETA version. Use the tool at your own risk. Sometimes you might only
+see keyword and code samples thrown in it. Pull requests are welcome!
 
-> This documentation is not complete. It's in progress and it's a BETA version. Use the tool at your own risk. Sometimes you might only see keyword and code samples thrown in it. Pull requests are welcome!
+# Introduction
+MHY (my) is suppose to be a development/production environment/compiler
+ out-of the box. I just simply had enough of having multiple
+instances of the same npm packages on my machine, the need to setup
+a development environment,
+the need to configure a bunch of stuff, the need to store my scripts
+online somewhere if I want to quickly test something, the need to open
+up multiple terminals and start commands separately.
+This is MHY development environment, how I like it/want it to be,
+instantly, anywhere, simply (or it's goal least...)
 
-## Introduction
+# Problems it tries to resolve
+- 0C
+- Out-of-the box
+- Portability
+- Simple config building/overriding
+- Using package.json for simple configs
+- Boot templates
+- No more multiple installs
+- Single terminal to run all
+- Less boilerplate
+- UI
+- CLI
+- Unified linting
+- Faster deployments using prebuilt and public docker images
+- Providing commonly used packages
 
-MHY \(my\) is suppose to be a development/production environment/compiler out-of the box. I just simply had enough of having multiple instances of the same npm packages on my machine, the need to setup a development environment, the need to configure a bunch of stuff, the need to store my scripts online somewhere if I want to quickly test something, the need to open up multiple terminals and start commands separately. This is MHY development environment, how I like it/want it to be, instantly, anywhere, simply \(or it's goal least...\)
-
-## Problems it tries to resolve
-
-* 0C
-* Out-of-the box
-* Portability
-* Simple config building/overriding
-* Using package.json for simple configs
-* Boot templates
-* No more multiple installs
-* Single terminal to run all
-* Less boilerplate
-* UI
-* CLI
-* Unified linting
-* Faster deployments using prebuilt and public docker images
-* Providing commonly used packages
-
-## Install
-
-```text
+# Install
+```
 npm i @mhy/mhy -g
 ```
 
-## Usage
-
-### Command syntax
-
-```text
+# Usage
+## Command syntax
+```
 mhy [ui-panel|tool] [argument1] [argument2] [...]
 ```
 
-### @mhy tools
+## @mhy tools
 
-### Config & UI \(ecosystem\)
-
+## Config & UI (ecosystem)
 [https://github.com/wintercounter/mhy-config](https://github.com/wintercounter/mhy-config)
 
-### Boot
-
+## Boot
 [https://github.com/wintercounter/mhy-boot](https://github.com/wintercounter/mhy-boot)
 
-## TODO
-
-* Update to postcss-preset-env
-* docs mdx \(?\)
-
-## A big pile of features list
-
-* Build UI / Multiple task, 1 command
-* Latest versions
-* Webpack
-* Webpack-dev-server
-* Webpack prod build
-* Babel build
-* Hot reload
-* CSS/SCSS Modules
-* Image-loader
-* Airbnb eslint
-* Prettier
-* Typescript
-* Worker-loader
-* Font-loader
-* Dev/prod
-* Built-in webpack aliases
-* Jest
-* webpack-status-bar
-* storybook
-* Boot
-* And more I don't remember now...
+# TODO
+- Update to postcss-preset-env
+- docs mdx (?)
 
 # A big pile of features list
 - Build UI / Multiple task, 1 command
