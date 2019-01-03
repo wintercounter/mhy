@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/wintercounter/mhy#readme",
   "bin": {
-    "mhyd": "dist/bin/index.js"
+    "mhy": "dist/bin/index.js"
   },
   "mhy": {
     "mhy": {
@@ -46,14 +46,7 @@
       }
     },
     "babel": {
-      "developmenttest": {
-        "plugins": [
-          {
-            "$prepend": {
-              "$expression": "$params.require.resolve('chokidar')"
-            }
-          }
-        ],
+      "production": {
         "presets": [
           {
             "$match": {
@@ -64,6 +57,8 @@
                     "index": 1,
                     "value": {
                       "targets": {
+                        "node": true,
+                        "browsers": false,
                         "esmodules": true
                       }
                     }
@@ -72,72 +67,16 @@
               ]
             }
           }
-        ]
-      },
-      "production": {
-        "plugins": [
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-add-module-exports\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-macros\\dist\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-syntax-dynamic-import\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-transform-remove-strict-mode\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-proposal-class-properties\\lib\\index.js",
-          [
-            "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-syntax-decorators\\lib\\index.js",
-            {
-              "legacy": true
-            }
-          ],
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-syntax-async-functions\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-transform-function-bind\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-proposal-export-default-from\\lib\\index.js",
-          "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\plugin-proposal-export-namespace-from\\lib\\index.js",
-          [
-            "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\babel-plugin-module-resolver\\lib\\index.js",
-            {
-              "root": [],
-              "alias": {
-                "@": "./src/",
-                "@assets": "./src/assets",
-                "@components": "./src/components",
-                "@configs": "./src/configs",
-                "@constants": "./src/constants",
-                "@core": "./src/core",
-                "@entities": "./src/entities",
-                "@fields": "./src/fields",
-                "@forms": "./src/forms",
-                "@layouts": "./src/layouts",
-                "@overlays": "./src/overlays",
-                "@pages": "./src/pages",
-                "@processes": "./src/processes",
-                "@resources": "./src/resources",
-                "@services": "./src/services",
-                "@styles": "./src/styles",
-                "@utils": "./src/utils",
-                "@validators": "./src/validators"
-              }
-            }
-          ]
         ],
-        "presets": [
-          [
-            "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\preset-env\\lib\\index.js",
-            {
-              "targets": {
-                "esmodules": true
+        "plugins": [
+          {
+            "$match": {
+              "query": "$[?(@.includes('regenerator'))]",
+              "value": {
+                "$remove": true
               }
             }
-          ],
-          [
-            "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\preset-react\\lib\\index.js",
-            {}
-          ],
-          [
-            "C:\\Work\\nodejs\\node_modules\\@mhy\\mhy\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
-            {
-              "isTSX": true,
-              "allExtensions": true
-            }
-          ]
+          }
         ]
       }
     }
