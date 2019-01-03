@@ -33,7 +33,7 @@
   "mhy": {
     "mhy": {
       "root": {
-        "defaultUiProcesses": [
+        "ecosystem": [
           {
             "$match": {
               "index": 1,

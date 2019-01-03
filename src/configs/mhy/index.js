@@ -65,6 +65,8 @@ const mhyConfig = loadConfig('mhy', {
         const cwd = process.cwd()
         return {
             '@': pr(cwd, `${src}/`),
+
+            // Everything below here is deprecated!!!
             '@assets': pr(cwd, `${src}/assets/`),
             '@components': pr(cwd, `${src}/components/`),
             '@configs': pr(cwd, `${src}/configs/`),
@@ -84,7 +86,7 @@ const mhyConfig = loadConfig('mhy', {
             '@validators': pr(cwd, `${src}/validators/`)
         }
     },
-    defaultUiProcesses: ['webpack-dev-server', 'tsc', 'jest', 'storybook-start']
+    ecosystem: ['webpack-dev-server', 'tsc', 'jest', 'storybook-start']
 })
 
 export default mhyConfig
