@@ -11,10 +11,10 @@
 
 ### Processes
 
-#### Built-ins
+### Built-ins
 * [Built-ins](basics/built-ins.md)
 
-#### 3rd Party
+### 3rd Party
 * [3rd Party](basics/processes.md)
 
 ### Configs
