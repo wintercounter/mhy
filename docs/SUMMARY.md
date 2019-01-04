@@ -7,6 +7,8 @@
 * [Ecosystem](basics/eco.md)
 * [How does it work?](basics/how.md)
 
+---
+
 ### Built-ins
 * [config](processes/config.md)
 
