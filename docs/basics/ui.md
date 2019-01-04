@@ -1,5 +1,5 @@
 ---
-UI is a column based terminal GUI to display each processes output in
+description: UI is a column based terminal GUI to display each processes output in
 a single terminal instance. This tool needs to adjust the output of the
 ---
 
