@@ -5,6 +5,7 @@
 * [Usage](basics/usage.md)
 * [UI](basics/ui.md)
 * [Ecosystem](basics/eco.md)
+* [Customization](basics/customization.md)
 * [How does it work?](basics/how.md)
 
 ### Built-ins
@@ -36,6 +37,12 @@
 * [typescript](processes/babel.md)
 * [webpack](processes/babel.md)
 
+### Recipes and Examples
+* [Example 1](examples/troubleshooting.md)
+
 ### Others
+* [Troubleshooting](others/troubleshooting.md)
+* [FAQ](others/faq.md)
+* [Help](others/help.md)
 * [Todos](others/todos.md)
 
