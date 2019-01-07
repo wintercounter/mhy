@@ -2,8 +2,8 @@ import mhyConfig from '@/configs/mhy'
 import { loadConfig } from '@/utils'
 
 const gitignore = loadConfig('gitignore', [
-    'dist',
-    'build',
+    '/dist',
+    '/build',
     ...mhyConfig.defaultIgnoreList
 ])
 

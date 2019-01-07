@@ -3,9 +3,11 @@ import { loadConfig } from '@/utils'
 
 const npmignore = loadConfig('npmignore', [
     '.circleci',
-    'docker',
-    'src',
-    'build',
+    '/docker',
+    '/src',
+    '/build',
+    '/docs',
+    'book.json',
     ...mhyConfig.defaultIgnoreList
 ])
 

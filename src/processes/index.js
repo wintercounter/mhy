@@ -132,10 +132,10 @@ export default class Process extends EventEmitter {
         p.stdout && p.stdout.on('error', this[_onError])
         p.stderr && p.stderr.on('data', this[_onData])
         p.stderr && p.stderr.on('error', this[_onError])
+        p.on && p.on('data', this[_onData])
+        p.on && p.on('error', this[_onError])
 
         if (process.env.MHY_ENV === 'cli') {
-            p.on && p.on('data', this[_onData])
-            p.on && p.on('error', this[_onError])
             p.on && signUpForExit(p)
         }
         return p

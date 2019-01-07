@@ -2,13 +2,6 @@ import mhyConfig from '@/configs/mhy'
 const { HotModuleReplacementPlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const h = new HtmlWebpackPlugin({
-    inject: true,
-    template: mhyConfig.indexHtml
-})
-
-console.log(typeof h, h)
-
 export default (plugins = []) => {
     plugins = [
         new HtmlWebpackPlugin({
