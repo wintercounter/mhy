@@ -1,12 +1,12 @@
+# Usage
+
 ## Command syntax
 
 ```bash
 mhy [process|tool] [argument1] [argument2] [...]
 ```
 
-All arguments will be passed to the given process's CLI tool, just like
-you would use that tool by default - making `mhy` act as a wrapper for
-your command.
+All arguments will be passed to the given process's CLI tool, just like you would use that tool by default - making `mhy` act as a wrapper for your command.
 
 ```bash
 mhy jest -u
@@ -16,13 +16,14 @@ jest -u
 ```
 
 ## Configure
-You may change some behaviors of `mhy` and it's processes by changing
-the following config options under the key: `mhy`
 
-| Option  | Default | Details |
-| --- | --- | --- |
-| `defaultIndexHtml` | `process.cwd()/src/index.html` or `resources/index.html`  | Falls back to global if local not found. |
-| `srcFolder` | `src`  | Root folder to be used for sources. |
+You may change some behaviors of `mhy` and it's processes by changing the following config options under the key: `mhy`
+
+| Option | Default | Details |
+| :--- | :--- | :--- |
+| `defaultIndexHtml` | `process.cwd()/src/index.html` or `resources/index.html` | Falls back to global if local not found. |
+| `srcFolder` | `src` | Root folder to be used for sources. |
 | `defaultIgnoreList` | See: `src/configs/mhy` | - |
 | `defaultAliases` | `{ '@' : 'src' }` | Default aliases to be resolved. With the default solution you only need to use it as `@/components` for example. |
 | `ecosystem` | `['webpack-dev-server', 'tsc', 'jest', 'storybook-start']` | The default ecosystem to be loaded. |
+
