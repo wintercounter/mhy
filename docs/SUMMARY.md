@@ -8,7 +8,6 @@
 * [Usage](basics/usage.md)
 * [UI](basics/ui.md)
 * [Ecosystem](basics/eco.md)
-* [Customization](basics/customization.md)
 * [How does it work?](basics/how.md)
 
 ## Built-ins

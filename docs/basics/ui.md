@@ -20,3 +20,7 @@ mhy ui
 mhy ui [process1] [process2]
 ```
 
+{% hint style="info" %}
+Please note that using many UI processes at once can be performance heavy. You might need certain optimizations on large projects.
+{% endhint %}
+
