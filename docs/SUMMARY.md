@@ -12,9 +12,10 @@
 
 ## Built-ins
 
+* [boot](built-ins/boot.md)
 * [config](built-ins/config.md)
-* [ui](built-ins/ui.md)
 * [options](built-ins/options.md)
+* [ui](built-ins/ui.md)
 
 ## Processes
 
