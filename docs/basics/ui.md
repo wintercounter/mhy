@@ -24,3 +24,23 @@ mhy ui [process1] [process2]
 Please note that using many UI processes at once can be performance heavy. You might need certain optimizations on large projects.
 {% endhint %}
 
+## Key bindings
+
+It is possible to interact with each panels separately. Processes are allowed to have their own action in the form of a _button group_ at the bottom of the panel.
+
+### `Tab`
+
+Switch between panels. Use`Shift+Tab` to go backwards.
+
+### `Left/Right` arrows
+
+Chose action button.
+
+### Up/Down arrows
+
+Scroll content.
+
+### `Space/Enter`
+
+Run selected action.
+

@@ -52,5 +52,4 @@
 * [FAQ](others/faq.md)
 * [Help](others/help.md)
 * [Todos](others/todos.md)
-* [Sandbox](others/sandbox.md)
 
