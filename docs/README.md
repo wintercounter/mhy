@@ -1,5 +1,7 @@
 # Introduction
 
+![](.gitbook/assets/logo.png)
+
 ## `mhy`?
 
 > Out-of-the box development environment.
