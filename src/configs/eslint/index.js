@@ -16,7 +16,12 @@ const eslintConfig = loadConfig('eslint', {
     },
     parser: 'babel-eslint',
     plugins: ['react', 'jest'],
-    extends: ['airbnb', 'prettier', 'plugin:jest/recommended'],
+    extends: [
+        'airbnb',
+        'prettier',
+        'prettier/react',
+        'plugin:jest/recommended'
+    ],
     rules: {
         'jsx-a11y/media-has-caption': 0,
         'jsx-a11y/click-events-have-key-events': 0,
