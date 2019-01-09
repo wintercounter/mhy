@@ -6,6 +6,10 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 process.env.MHY_ENV = 'cli'
 process.env.MHY_LOCAL_DIR = '.mhy'
 
+if (process.argv.includes('--mhy-prod')) {
+    process.env.NODE_ENV = 'production'
+}
+
 yargs
     .usage('\nUsage:\n  mhy [command (process)] [process args] [mhy options]')
     .scriptName('')
@@ -18,6 +22,9 @@ yargs
     .option('mhy-debug', {
         default: false,
         description: 'Show debug information'
+    })
+    .option('mhy-prod', {
+        description: 'forces `process.env.NODE_ENV` to be "production"'
     })
     .recommendCommands()
 

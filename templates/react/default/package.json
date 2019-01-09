@@ -6,30 +6,17 @@
   "scripts": {
     "test": "mhy jest",
     "start": "mhy",
-    "build": "NODE_ENV=production && mhy webpack",
-    "win:build": "set NODE_ENV=production&& mhy webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wintercounter/mhy-boot.git"
+    "build": "mhy webpack --mhy-node-env=production"
   },
   "author": "",
   "license": "MIT",
   "mhy": {
-    "ui": {
+    "mhy": {
       "root": {
-        "disabled": [
-          "tsc",
-          "jest", "// enzyme does not support new react memo() feature yet"
-        ]
-      }
-    },
-    "webpack": {
-      "development": {
-        "watchOptions": {
-          "ignored": [
-            "node_modules.(?!(dh-.*)).*",
-            "build"
+        "ecosystem": {
+          "$replace": [
+            "webpack-dev-server",
+            "jest"
           ]
         }
       }

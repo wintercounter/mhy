@@ -1,5 +1,5 @@
 {
-  "name": "mhy",
+  "name": "mhyc",
   "version": "1.0.0-alpha.27",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/wintercounter/mhy#readme",
   "bin": {
-    "mhyd": "dist/bin/index.js"
+    "mhyc": "dist/bin/index.js"
   },
   "mhy": {
     "version": "1.0.0",

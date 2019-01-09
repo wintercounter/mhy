@@ -21,5 +21,8 @@ mhy --mhy-debug
 mhy --mhy-verbose
 ```
 
+## --mhy-prod
+
+Forces `process.env.NODE_ENV` to be `production`
 
 

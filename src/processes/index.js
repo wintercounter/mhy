@@ -53,7 +53,7 @@ export const loadCommands = () => {
     )
 }
 
-const mhyArgvList = ['$0', '_', 'mhy-verbose', 'mhy-debug']
+const mhyArgvList = ['$0', '_', 'mhy-verbose', 'mhy-debug', 'mhy-prod']
 
 export const buildMhyArgv = (argv, noFlags = []) => {
     argv = { ...argv }
