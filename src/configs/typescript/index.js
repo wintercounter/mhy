@@ -1,6 +1,5 @@
 import path from 'path'
 import fs from 'fs'
-import copydir from 'copy-dir'
 
 import { loadConfig } from '@/utils'
 import mhyConfig from '@/configs/mhy'
@@ -31,8 +30,8 @@ const tsconfig = loadConfig('typescript', {
             },
             {
                 '*': [
-                    path.resolve(_globalTypes, '../', '*'),
-                    path.resolve(process.cwd(), 'node_modules', '*')
+                    path.resolve(process.cwd(), 'node_modules', '*'),
+                    path.resolve(_globalTypes, '../', '*')
                 ]
             }
         )
@@ -42,28 +41,25 @@ const tsconfig = loadConfig('typescript', {
 })
 
 // Setup @types
-// Local exists
-if (fs.existsSync(_cwdTypes)) {
-    const isDirectory = source =>
-        fs.lstatSync(path.join(_globalTypes, source)).isDirectory()
-    const getDirectories = source => fs.readdirSync(source).filter(isDirectory)
+const isDirectory = source => dir =>
+    fs.lstatSync(path.join(source, dir)).isDirectory()
+const getDirectories = source =>
+    fs.readdirSync(source).filter(isDirectory(source))
 
-    getDirectories(_globalTypes).forEach(dir => {
-        // If dir not exists local
-        const dirPath = path.resolve(_cwdTypes, dir)
-        if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath)
-            copydir.sync(
-                path.resolve(_globalTypes, dir),
-                path.resolve(_cwdTypes, dir)
-            )
-        }
+// Set fixed types from mhy
+getDirectories(_globalTypes).forEach(dir => {
+    tsconfig.compilerOptions.paths[dir] = [path.resolve(_globalTypes, dir)]
+})
+
+// Local @types exists
+if (fs.existsSync(_cwdTypes)) {
+    // Set local types
+    getDirectories(_cwdTypes).forEach(dir => {
+        tsconfig.compilerOptions.paths[dir] = [path.resolve(_cwdTypes, dir)]
     })
+
+    // Set local as typeRoots
     tsconfig.compilerOptions.typeRoots = [_cwdTypes]
-}
-// Use mhy's if not types in local node_modules/@types yet
-else {
-    tsconfig.compilerOptions.typeRoots = [_globalTypes]
 }
 
 export default tsconfig

@@ -40,3 +40,5 @@ node_modules
 /.eslintrc
 /tsconfig.json
 /webpack.config.js
+/test
+/ci.sh

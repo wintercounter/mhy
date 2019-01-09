@@ -9,28 +9,11 @@ const fetchJson = () => {
     json = fs.existsSync(packageJSON) ? require(packageJSON).mhy || {} : {}
 }
 
-/*const applyJson = (module, env, o, j) => {
-    try {
-        j = j || json[module][env] || {}
-    } catch (e) {
-        return
-    }
-
-    for (const [k, v] of Object.entries(j)) {
-        if (!Array.isArray(v) && v instanceof Object) {
-            o[k] = o[k] || v || {}
-            applyJson(module, env, o[k] || {}, v)
-        } else {
-            o[k] = v
-        }
-    }
-}*/
-
 const applyJson = (module, env, o) => {
     let j
     try {
         !json && fetchJson()
-        j = json[module][env] || {}
+        j = json[module][env] || (Array.isArray(o) ? [] : {})
     } catch {
         return o
     }

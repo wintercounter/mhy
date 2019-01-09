@@ -1,6 +1,6 @@
 {
   "name": "mhy",
-  "version": "1.0.0-alpha.24",
+  "version": "1.0.0-alpha.27",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
@@ -45,6 +45,16 @@
           }
         ]
       }
+    },
+    "npmignore": {
+      "root": [
+        {
+          "$append": "/test"
+        },
+        {
+          "$append": "/ci.sh"
+        }
+      ]
     },
     "babel": {
       "production": {
@@ -193,7 +203,7 @@
     "copy-dir": "^0.4.0",
     "cross-env": "^5.2.0",
     "css-loader": "2.1.0",
-    "date-fns": "^2.0.0-alpha.25",
+    "date-fns": "^2.0.0-alpha.26",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",

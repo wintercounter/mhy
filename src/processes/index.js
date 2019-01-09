@@ -123,9 +123,11 @@ export default class Process extends EventEmitter {
     }
 
     spawn(id, [bin, ...cmd], stdio) {
+        stdio = stdio || (process.env.MHY_ENV === 'ui' ? 'pipe' : 'inherit')
+
         const p = spawn(bin, cmd, {
             shell: true,
-            stdio: stdio || (process.env.MHY_ENV === 'ui' ? 'pipe' : 'inherit')
+            stdio
         })
         this.processes.set(id, p)
         p.stdout && p.stdout.on('data', this[_onData])
@@ -138,6 +140,12 @@ export default class Process extends EventEmitter {
         if (process.env.MHY_ENV === 'cli') {
             p.on && signUpForExit(p)
         }
+
+        if (process.env.MHY_ENV === 'cli' && stdio === 'pipe') {
+            this.on('data', d => console.log(d))
+            this.on('err', d => console.error(d))
+        }
+
         return p
     }
 
