@@ -1,6 +1,6 @@
 # Introduction
 
-![](.gitbook/assets/logo.png)
+![](.gitbook/assets/logo%20%281%29.png)
 
 ## `mhy`?
 

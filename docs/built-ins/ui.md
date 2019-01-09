@@ -1,9 +1,3 @@
----
-description: >-
-  mhy's user interface is being made to ease the startup of multiple processes
-  in a single terminal window.
----
-
 # ui
 
 ## Usage
