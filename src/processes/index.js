@@ -97,23 +97,6 @@ const argvToFlags = (argv, noFlags = []) => {
 const toCamelCase = str =>
     str.replace(/\b-([a-z])/g, (_, char) => char.toUpperCase())
 
-//  // For my example I use a `set` to track unique emits.
-//  const items = new Set()
-
-//  const originalEmit = EventEmitter.prototype.emit;
-//  EventEmitter.prototype.emit = function (event, ...args) {
-
-//    // Do what you want here
-//    const id = this.constructor.name + ":" + event;
-//    if (!items.has(id)) {
-//      items.add(id);
-//      console.log(id, args[0]);
-//    }
-
-//    // And then call the original
-//    return originalEmit.call(event, ...args);
-//  }
-
 export default class Process extends EventEmitter {
     processes = new Map()
 
