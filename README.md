@@ -11,7 +11,7 @@ I hate the need to configure a bunch of configs/scripts, the need to open up mul
 This is `mhy` own development environment, how I like it and/or want it to be, instantly, anywhere, simply.
 
 # Documentation
-[](https://mhy.js.org)
+[https://mhy.js.org](https://mhy.js.org)
 
 # A tool for simple
 
