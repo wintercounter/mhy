@@ -1,5 +1,5 @@
 import React from 'react'
-import { Character } from '@components'
+import { Character } from '@/components'
 
 test('render a Character', () => {
     const wrapper = shallow(

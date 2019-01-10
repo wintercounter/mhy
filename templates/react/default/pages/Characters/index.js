@@ -11,8 +11,8 @@ import {
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-import { Character, IntersectionObserver, Loader } from '@components'
-import { Characters as CharactersEntity } from '@entities'
+import { Character, IntersectionObserver, Loader } from '@/components'
+import { Characters as CharactersEntity } from '@/entities'
 import { pageHeader } from './styles.scss'
 
 const Ul = styled.ul`

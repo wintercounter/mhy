@@ -1,5 +1,5 @@
 import produce from 'immer'
-import { GET_PENDING, GET_SUCCESS } from '@entities/Episodes'
+import { GET_PENDING, GET_SUCCESS } from '@/entities/Episodes'
 
 const defaultState = {
     byId: {},

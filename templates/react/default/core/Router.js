@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
 import { hot } from 'react-hot-loader'
 
-import { Main } from '@layouts'
-import { Characters, Episodes } from '@pages'
+import { Main } from '@/layouts'
+import { Characters, Episodes } from '@/pages'
 
 const WithLayout = ({ layout: Layout, component: Component, ...rest }) => (
     <Route

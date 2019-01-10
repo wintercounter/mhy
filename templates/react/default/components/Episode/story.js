@@ -1,7 +1,7 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf } from '@/storybook/react'
 
-import { Episode } from '@components'
+import { Episode } from '@/components'
 
 // Sections
 const components = storiesOf('Episode', module)

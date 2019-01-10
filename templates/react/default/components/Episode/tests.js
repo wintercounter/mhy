@@ -1,5 +1,5 @@
 import React from 'react'
-import { Episode } from '@components'
+import { Episode } from '@/components'
 
 test('render an Episode', () => {
     const wrapper = shallow(

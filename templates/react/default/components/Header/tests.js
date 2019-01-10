@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '@components'
+import { Header } from '@/components'
 
 test('render a header', () => {
     const wrapper = shallow(

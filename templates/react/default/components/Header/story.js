@@ -1,11 +1,11 @@
 import '@core/styles.global.scss'
 
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import { text, boolean } from '@storybook/addon-knobs'
+import { storiesOf } from '@/storybook/react'
+import { action } from '@/storybook/addon-actions'
+import { text, boolean } from '@/storybook/addon-knobs'
 
-import { Header } from '@components'
+import { Header } from '@/components'
 
 // Sections
 const components = storiesOf('Header', module)

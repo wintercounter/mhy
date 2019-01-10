@@ -1,4 +1,4 @@
-import { Mount } from '@core'
+import { Mount } from '@/core'
 
 const initialState = {}
 const root = document.querySelector('#root')

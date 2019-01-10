@@ -11,8 +11,8 @@ import {
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-import { Episode, IntersectionObserver, Loader } from '@components'
-import { Episodes as EpisodesEntity } from '@entities'
+import { Episode, IntersectionObserver, Loader } from '@/components'
+import { Episodes as EpisodesEntity } from '@/entities'
 import { pageHeader } from './styles.scss'
 
 const Ul = styled.ul`
