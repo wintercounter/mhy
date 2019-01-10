@@ -52,5 +52,5 @@
 * [Troubleshooting](others/troubleshooting.md)
 * [FAQ](others/faq.md)
 * [Help](others/help.md)
-* [Todos](others/todos.md)
+* [Development](others/development.md)
 

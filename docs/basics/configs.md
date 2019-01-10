@@ -1,1 +1,0 @@
-Kon fings
