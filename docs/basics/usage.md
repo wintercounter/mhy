@@ -35,3 +35,15 @@ on different parts of `mhy` which can be either `development` or
 the resource that's being available in every case, regardless of the
 current environment.
 
+## Docker
+
+With each version of `mhy` we're also releasing a Docker image containing the corresponding version. It can be used to speed up deployments and/or to prevent a local/global install on your host OS.
+
+```bash
+docker pull wintercounter/mhy
+docker run -it -v $(pwd):/app -w /app mhy mhy jest
+```
+
+### Docker Hub repository & versions
+https://hub.docker.com/r/wintercounter/mhy/tags
+
