@@ -45,7 +45,7 @@ This is `mhy` own development environment, how I like it and/or want it to be, i
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to thank you for their great logo.
 
-I also would like to thank to every developer's hard work which I'm using as dependency. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo here (128x128, 6 cell per row):
+I also would like to thank to every developer's hard work which I'm using as dependency. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo here (128x128, 5 cell per row):
 
 | [![wintercounter](.gitbook/assets/contributors/wintercounter.png)](https://github.com/wintercounter) |
 | --- |
