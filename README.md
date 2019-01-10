@@ -22,6 +22,14 @@ This is `mhy` own development environment, how I like it and/or want it to be, i
 * interoperability
 * configuration building
 
+# Quickstart
+```bash
+npm install mhy -g
+mkdir src
+echo "console.log('Hello mhy!')" > src/index.js
+mhy webpack-dev-server
+```
+
 # Problems trying to solve
 
 * Zero-configuration
@@ -49,4 +57,5 @@ I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to
 I also would like to thank to every developer's hard work which I'm using as dependency. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo here (128x128):
 
 [![wintercounter](docs/.gitbook/assets/contributors/wintercounter.png)](https://github.com/wintercounter)
+[![Andy1210](docs/.gitbook/assets/contributors/andy1210.png)](http://andy1210.com)
 
