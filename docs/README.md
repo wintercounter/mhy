@@ -53,7 +53,7 @@ mhy webpack-dev-server
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to thank you for their great logo.
 
-I also would like to thank to every developer's hard work which I'm using as dependency. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo here (128x128):
+I also would like to thank to every developer's hard work which I'm using as dependency. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo here (128x128, circle preferred):
 
 [![wintercounter](.gitbook/assets/contributors/wintercounter.png)](https://github.com/wintercounter)
 [![Andy1210](.gitbook/assets/contributors/andy1210.png)](http://andy1210.com)
