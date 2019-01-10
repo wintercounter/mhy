@@ -1,79 +1,43 @@
-![mhy](https://img.shields.io/badge/-mhy-000000.svg?logo=dev.to&longCache=true&style=popout-square&colorA=000000&colorB=F80046&logoColor=ffffff&logoWidth=20&link=https://github.com/wintercounter/mhy)
+![](docs/.gitbook/assets/logo.png)
 
-# WARNING!
-> This documentation is not complete. It's in progress and it's a
-BETA version. Use the tool at your own risk. Sometimes you might only
-see keyword and code samples thrown in it. Pull requests are welcome!
+# `mhy`?
 
-# Introduction
-MHY (my) is suppose to be a development/production environment/compiler
- out-of the box. I just simply had enough of having multiple
-instances of the same npm packages on my machine, the need to setup
-a development environment,
-the need to configure a bunch of stuff, the need to store my scripts
-online somewhere if I want to quickly test something, the need to open
-up multiple terminals and start commands separately.
-This is MHY development environment, how I like it/want it to be,
-instantly, anywhere, simply (or it's goal least...)
+> Out-of-the box development environment.
 
-# Problems it tries to resolve
-- 0C
-- Out-of-the box
-- Portability
-- Simple config building/overriding
-- Using package.json for simple configs
-- Boot templates
-- No more multiple installs
-- Single terminal to run all
-- Less boilerplate
-- UI
-- CLI
-- Unified linting
-- Faster deployments using prebuilt and public docker images
-- Providing commonly used packages
+`mhy` \(my\) is supposed to be a development/production environment/compiler/ecosystem _out-of-the_ box. I just simply had enough of having multiple instances of the same npm packages on my machine, and the need to setup a development environment each time I start a new project.
 
-# Install
-```
-npm i @mhy/mhy -g
-```
+I hate the need to configure a bunch of configs/scripts, the need to open up multiple terminals and start commands separately. I hate that I always have to align different configs to be able to start development \(like Babel for Webpack, Jest and Storybook\).
 
-# Usage
-## Command syntax
-```
-mhy [ui-panel|tool] [argument1] [argument2] [...]
-```
+This is `mhy` own development environment, how I like it and/or want it to be, instantly, anywhere, simply.
 
-## @mhy tools
+# Documentation
+[](https://mhy.js.org)
 
-## Config & UI (ecosystem)
-[https://github.com/wintercounter/mhy-config](https://github.com/wintercounter/mhy-config)
+# A tool for simple
 
-## Boot
-[https://github.com/wintercounter/mhy-boot](https://github.com/wintercounter/mhy-boot)
+* app/site development
+* package/library development
+* build process setup
+* project initialization
+* interoperability
+* configuration building
 
-# TODO
-- Update to postcss-preset-env
-- docs mdx (?)
+# Problems trying to solve
 
-# A big pile of features list
-- Build UI / Multiple task, 1 command
-- Latest versions
-- Webpack
-- Webpack-dev-server
-- Webpack prod build
-- Babel build
-- Hot reload
-- CSS/SCSS Modules
-- Image-loader
-- Airbnb eslint
-- Prettier
-- Typescript
-- Worker-loader
-- Font-loader
-- Dev/prod
-- Built-in webpack aliases
-- Jest
-- webpack-status-bar
-- storybook
-- Boot
-- And more I don't remember now...
+* Zero-configuration
+* Out-of-the box
+* Portability
+* Simple customization
+* Using package.json for any config options
+* Boot templates for easy starts
+* Package hell: No more multiple installs on the same machine
+* Single command and UI to run all necessary process
+* Less boilerplate
+* Shared configs across different tools
+* Faster deployments using pre-built and public docker images
+* Providing common/popular/standard packages
+* Up-to-date policy
+
+# Supported tools
+
+`mhy` is providing many common/popular packages out-of the box. There are continuous adjustments being made to the includes to match the most common needs and being able to develop without the need of your own `npm install` command ever again. The best is to check the dependencies of our `package.json` for the included packages, and I also advice you to check out our sources for more details.
