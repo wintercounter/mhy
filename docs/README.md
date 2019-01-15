@@ -1,6 +1,6 @@
 # Introduction
 
-![](.gitbook/assets/logo.png)
+![](.gitbook/assets/logo%20%282%29.png)
 
 ## `mhy`?
 
@@ -22,6 +22,7 @@ This is `mhy` own development environment, how I like it and/or want it to be, i
 * configuration building
 
 ## Quickstart
+
 ```bash
 npm install mhy -g
 mkdir src
@@ -52,41 +53,43 @@ mhy webpack-dev-server
 ## Contributors
 
 <table>
-  <tbody>
+  <thead>
     <tr>
-      <td align="center" valign="top">
-        <img width="128" height="128" src="https://github.com/wintercounter.png?s=128">
-        <br>
-        <a href="https://github.com/wintercounter">wintercounter</a>
+      <th style="text-align:center">
+        <p>
+          <img src="https://github.com/wintercounter.png?s=128" alt/>
+          <br /> <a href="https://github.com/wintercounter">wintercounter</a>
+        </p>
         <p>Core</p>
-      </td>
-      <td align="center" valign="top">
-        <img width="128" height="128" src="https://github.com/andy1210.png?s=128">
-        <br>
-        <a href="http://andy1210.com">Andy1210</a>
+      </th>
+      <th style="text-align:center">
+        <p>
+          <img src="https://github.com/andy1210.png?s=128" alt/>
+          <br /> <a href="http://andy1210.com">Andy1210</a>
+        </p>
         <p>Contributor, beta tester</p>
-      </td>
-     </tr>
-  </tbody>
-</table>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>## Credits ❤
 
-## Credits ❤
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
 I also would like to thank to every developer's hard work which I'm using as a dependency in `mhy`. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo and link.
 
 <table>
-  <tbody>
+  <thead>
     <tr>
-      <td align="center" valign="top">
-        <img width="128" height="128" src="https://github.com/wintercounter.png?s=128">
-        <br>
-        <a href="https://github.com/wintercounter">wintercounter</a>
+      <th style="text-align:left">
         <p>
-            while(!credits.length)<br>
-            console.log('Example')
+          <img src="https://github.com/wintercounter.png?s=128" alt/>
+          <br /> <a href="https://github.com/wintercounter">wintercounter</a>
         </p>
-      </td>
-     </tr>
-  </tbody>
+        <p>while(!credits.length)
+          <br />console.log('Example')</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
 </table>

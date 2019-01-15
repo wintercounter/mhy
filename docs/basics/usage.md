@@ -27,13 +27,9 @@ You may change some behaviors of `mhy` and it's processes by changing the follow
 | `defaultAliases` | `{ '@' : 'src' }` | Default aliases to be resolved. With the default solution you only need to use it as `@/components` for example. |
 | `ecosystem` | `['webpack-dev-server', 'tsc', 'jest', 'storybook-start']` | The default ecosystem to be loaded. |
 
-## NODE_ENV
+## NODE\_ENV
 
-The `process.env.NODE_ENV` variable is having different effects
-on different parts of `mhy` which can be either `development` or
-`production`. The term `root` in the hierarchy is always referring to
-the resource that's being available in every case, regardless of the
-current environment.
+The `process.env.NODE_ENV` variable is having different effects on different parts of `mhy` which can be either `development` or `production`. The term `root` in the hierarchy is always referring to the resource that's being available in every case, regardless of the current environment.
 
 ## Docker
 
@@ -45,5 +41,6 @@ docker run -it -v $(pwd):/app -w /app mhy mhy jest
 ```
 
 ### Docker Hub repository & versions
-https://hub.docker.com/r/wintercounter/mhy/tags
+
+[https://hub.docker.com/r/wintercounter/mhy/tags](https://hub.docker.com/r/wintercounter/mhy/tags)
 

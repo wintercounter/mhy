@@ -25,4 +25,3 @@ mhy --mhy-verbose
 
 Forces `process.env.NODE_ENV` to be `production`
 
-
