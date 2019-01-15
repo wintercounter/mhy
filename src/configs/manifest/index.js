@@ -2,9 +2,9 @@ import { loadConfig } from '@/utils'
 import path from 'path'
 
 export default loadConfig('manifest', {
-    name: 'Mhy Progressive Web App',
-    short_name: 'MhyPWA',
-    description: 'Mhy awesome Progressive Web App!',
+    name: 'mhy Progressive Web App',
+    short_name: 'mhyPWA',
+    description: 'mhy awesome Progressive Web App!',
     background_color: '#336699',
     crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
     icons: [

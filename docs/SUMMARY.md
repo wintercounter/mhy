@@ -45,11 +45,10 @@
 
 ## Recipes and Examples
 
-* [Example 1](recipes-and-examples/example-1.md)
+* [Coming soon...](recipes-and-examples/coming-soon.md)
 
 ## Others
 
-* [Troubleshooting](others/troubleshooting.md)
 * [FAQ](others/faq.md)
 * [Help](others/help.md)
 * [Development](others/development.md)
