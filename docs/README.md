@@ -81,7 +81,9 @@ mhy webpack-dev-server
       </td>
     </tr>
   </tbody>
-</table>## Credits ❤
+</table>
+
+## Credits ❤
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
@@ -90,16 +92,22 @@ I also would like to thank to every developer's hard work which I'm using as a d
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">
-        <p>
-          <img src="https://avatars0.githubusercontent.com/u/963776?v=4&amp;s=128"
-          alt/>
-          <br /> <a href="https://github.com/wintercounter">wintercounter</a>
-        </p>
-        <p>while(!credits.length)
-          <br />console.log('Example')</p>
-      </th>
+      <th style="text-align:center"></th>
+      <th style="text-align:center"></th>
     </tr>
   </thead>
-  <tbody></tbody>
+  <tbody>
+    <tr>
+      <td style="text-align:center">
+         <p>
+          <img src="https://avatars0.githubusercontent.com/u/963776?v=4&amp;s=128"
+          alt/>
+        </p>
+        <p><a href="https://github.com/wintercounter">wintercounter</a>
+        </p>
+        <p>while(!credits.length)
+                     <br />console.log('Example')</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
