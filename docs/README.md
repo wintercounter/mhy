@@ -53,43 +53,45 @@ mhy webpack-dev-server
 ## Contributors
 
 <table>
-  <thead>
+  <thead></thead>
+  <tbody>
     <tr>
-      <th style="text-align:center">
-        <p>
-          <img src="https://github.com/wintercounter.png?s=128" alt/>
-          <br /> <a href="https://github.com/wintercounter">wintercounter</a>
-        </p>
-        <p>Core</p>
-      </th>
-      <th style="text-align:center">
-        <p>
-          <img src="https://github.com/andy1210.png?s=128" alt/>
-          <br /> <a href="http://andy1210.com">Andy1210</a>
-        </p>
-        <p>Contributor, beta tester</p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>## Credits ❤
+       <td style="text-align:center">
+         <p>
+           <img src="https://avatars0.githubusercontent.com/u/963776?v=4&s=128" alt/>
+           <br /> <a href="https://github.com/wintercounter">wintercounter</a>
+         </p>
+         <p>Core</p>
+       </td>
+       <td style="text-align:center">
+         <p>
+           <img src="https://avatars0.githubusercontent.com/u/964291?v=4&s=128" alt/>
+           <br /> <a href="http://andy1210.com">Andy1210</a>
+         </p>
+         <p>Contributor, beta tester</p>
+       </td>
+     </tr>
+    </tbody>
+</table>
+
+## Credits ❤
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
 I also would like to thank to every developer's hard work which I'm using as a dependency in `mhy`. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo and link.
 
 <table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
+  <thead></thead>
+  <tbody>
+    <td>
+      <th style="text-align:center">
         <p>
-          <img src="https://github.com/wintercounter.png?s=128" alt/>
+          <img src="https://avatars0.githubusercontent.com/u/963776?v=4&s=128" alt/>
           <br /> <a href="https://github.com/wintercounter">wintercounter</a>
         </p>
         <p>while(!credits.length)
           <br />console.log('Example')</p>
       </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
+    </td>
+  </tbody>
 </table>
