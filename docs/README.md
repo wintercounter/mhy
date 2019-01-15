@@ -76,7 +76,7 @@ I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to
 I also would like to thank to every developer's hard work which I'm using as a dependency in `mhy`. It would be really hard to collect all those people, but in case you find your work in our `package.json`, please feel free to create a pull request and add your logo and link.
 
 <table>
-  <tbody>
+  <tbody style="text-align: center">
     <tr>
       <td align="center" valign="top">
         <img width="128" height="128" src="https://github.com/wintercounter.png?s=128">
