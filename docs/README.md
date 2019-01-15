@@ -83,15 +83,15 @@ I also would like to thank to every developer's hard work which I'm using as a d
 <table>
   <thead></thead>
   <tbody>
-    <td>
-      <th style="text-align:center">
+    <tr>
+      <td style="text-align:center">
         <p>
           <img src="https://avatars0.githubusercontent.com/u/963776?v=4&s=128" alt/>
           <br /> <a href="https://github.com/wintercounter">wintercounter</a>
         </p>
         <p>while(!credits.length)
           <br />console.log('Example')</p>
-      </th>
-    </td>
+      </td>
+    </tr>
   </tbody>
 </table>
