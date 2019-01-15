@@ -1,3 +1,11 @@
 {
-  "root": "docs"
+  "root": "docs",
+  "plugins": ["custom-js-css"],
+  "pluginsConfig": {
+    "custom-js-css": {
+      "css": [
+        "./styles/website.css"
+      ]
+    }
+  }
 }
