@@ -1,6 +1,6 @@
 # Introduction
 
-![](.gitbook/assets/logo-2.png)
+![](.gitbook/assets/logo-2%20%281%29.png)
 
 ## `mhy`?
 
@@ -81,9 +81,7 @@ mhy webpack-dev-server
       </td>
     </tr>
   </tbody>
-</table>
-
-## Credits ❤
+</table>## Credits ❤
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
@@ -93,20 +91,19 @@ I also would like to thank to every developer's hard work which I'm using as a d
   <thead>
     <tr>
       <th style="text-align:center"></th>
-      <th style="text-align:center"></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:center">
-         <p>
+        <p>
           <img src="https://avatars0.githubusercontent.com/u/963776?v=4&amp;s=128"
           alt/>
         </p>
         <p><a href="https://github.com/wintercounter">wintercounter</a>
         </p>
         <p>while(!credits.length)
-                     <br />console.log('Example')</p>
+          <br />console.log('Example')</p>
       </td>
     </tr>
   </tbody>
