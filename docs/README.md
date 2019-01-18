@@ -81,7 +81,9 @@ mhy webpack-dev-server
       </td>
     </tr>
   </tbody>
-</table>## Credits ❤
+</table>
+
+## Credits ❤
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
