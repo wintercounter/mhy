@@ -39,7 +39,7 @@ The current `default` template is a React project and it contains the following 
 mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output path]
 ```
 
-* `technology`: what technology should boot `@mhy/boot` boot.
+* `technology`: what tech should be used.
   * `default`: react
 * `tempalte`: what template should be loaded.
   * `default`: default
