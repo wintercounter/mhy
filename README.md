@@ -27,7 +27,7 @@ This is `mhy` own development environment, how I like it and/or want it to be, i
 npm install mhy -g
 mkdir src
 echo "console.log('Hello mhy!')" > src/index.js
-mhy webpack-dev-server
+mhy wds
 ```
 
 # Problems trying to solve

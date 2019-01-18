@@ -56,4 +56,5 @@
 * [FAQ](others/faq.md)
 * [Help](others/help.md)
 * [Development](others/development.md)
+* [Suggest a library](others/suggest.md)
 
