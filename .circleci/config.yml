@@ -18,12 +18,6 @@ jobs:
       - setup_remote_docker
       - checkout
 
-      - run:
-          name: Install dependencies
-          working_directory: ~/repo
-          command: |
-            npm i
-
       - deploy:
           name: Trigger deployment
           working_directory: ~/repo
