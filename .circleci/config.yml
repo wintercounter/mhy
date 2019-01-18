@@ -22,7 +22,7 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            sudo npm i --unsafe-perm=true mhy@latest -g
+            npm i && sudo npm i --unsafe-perm=true mhy@latest -g
 
       - deploy:
           name: Trigger deployment
