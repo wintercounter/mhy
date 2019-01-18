@@ -41,7 +41,7 @@ mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output 
 
 * `technology`: what tech should be used.
   * `default`: react
-* `tempalte`: what template should be loaded.
+* `template`: what template should be loaded.
   * `default`: default
 * `-o, --output`: path where the template should be booted.
   * `default`: src
