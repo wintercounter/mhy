@@ -1,6 +1,6 @@
 {
   "name": "mhy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "docker-rm-image": "docker image rm mhy",
     "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
     "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
-    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.0&& docker push wintercounter/mhy:1.0.0&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
+    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
     "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
     "deploy": "npm pub && npm run docker"
   },
