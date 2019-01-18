@@ -1,13 +1,13 @@
 {
   "name": "mhy",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
     "test": "mhyd jest",
     "start": "node ./dist",
     "pub": "npm publish --access=public",
-    "build": "cross-env NODE_ENV=production mhyd babel",
+    "build": "cross-env NODE_ENV=production mhy babel",
     "prepare": "npm run build",
     "docker-build-image": "docker build --no-cache -t mhy ./docker",
     "docker-rm-image": "docker image rm mhy",

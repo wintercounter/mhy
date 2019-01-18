@@ -9,6 +9,7 @@ check() {
 
 VERSION=`node -p -e "require('./package.json').version"`
 
+npm i mhy@latest -g
 npm pub
 check $?
 
