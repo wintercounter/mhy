@@ -10,13 +10,19 @@ jobs:
         - master
     docker:
     # specify the version you desire here
-    - image: wintercounter/mhy:latest
+    - image: circleci/node:latest
 
     working_directory: ~/repo
 
     steps:
       - setup_remote_docker
       - checkout
+
+      - run:
+          name: Install dependencies
+          working_directory: ~/repo
+          command: |
+            npm i mhy@latest
 
       - deploy:
           name: Trigger deployment
