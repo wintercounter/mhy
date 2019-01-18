@@ -13,7 +13,7 @@ const commandHandler = argv => {
 
 export default () => {
     yargs.command(
-        'tsc',
+        ['tsc', 'ts'],
         'run TypeScript Compiler for type checking and generating d.ts files',
         () => {},
         commandHandler

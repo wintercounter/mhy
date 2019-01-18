@@ -43,6 +43,10 @@
 * [typescript](configs/typescript.md)
 * [webpack](configs/webpack.md)
 
+## IDE setup
+
+* [WebStorm & PHPStorm](ide-setup/storm.md)
+
 ## Recipes and Examples
 
 * [Coming soon...](recipes-and-examples/coming-soon.md)

@@ -1,7 +1,8 @@
 import React from 'react'
+import { oneOfType, object, func } from 'prop-types'
 import { history as historyType } from 'react-router-prop-types'
 import { Switch, Route } from 'react-router-dom'
-import { ConnectedRouter } from 'react-router-redux'
+import { ConnectedRouter } from 'connected-react-router'
 import { hot } from 'react-hot-loader'
 
 import { Main } from '@/layouts'
@@ -17,6 +18,11 @@ const WithLayout = ({ layout: Layout, component: Component, ...rest }) => (
         )}
     />
 )
+
+WithLayout.propTypes = {
+    layout: oneOfType([object, func]).isRequired,
+    component: oneOfType([object, func]).isRequired
+}
 
 const WithHotLayout = hot(module)(WithLayout)
 

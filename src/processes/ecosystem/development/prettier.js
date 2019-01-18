@@ -63,8 +63,6 @@ class Prettier extends Process {
             this.emit('action', 'clear')
         }
         return d
-            .replace('PASS', '{green-bg} PASS {/green-bg}')
-            .replace('FAIL', '{red-bg} FAIL {/red-bg}')
     }
 
     actions = [

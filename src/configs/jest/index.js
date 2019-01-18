@@ -26,7 +26,11 @@ const jestConfig = loadConfig('jest', {
         '\\.(s?css|less)$': 'identity-obj-proxy',
         '\\.(svgx?)$': path.resolve(__dirname, 'mocks/react-null.js')
     },
-    collectCoverageFrom: ['**/*.js']
+    collectCoverageFrom: ['**/*.js'],
+    watchPlugins:
+        process.env.MHY_ENV === 'ui'
+            ? [path.resolve(__dirname, 'mhyWatchPlugin')]
+            : []
 })
 
 export default jestConfig

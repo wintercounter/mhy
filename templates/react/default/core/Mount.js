@@ -8,8 +8,8 @@ import createHistory from 'history/createBrowserHistory'
 import { Shell, Store } from '@/core'
 
 const Mount = (el, initialState) => {
-    const store = Store(initialState)
     const history = createHistory()
+    const store = Store(initialState, history)
 
     ReactDOM.render(
         <Provider store={store}>

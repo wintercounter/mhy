@@ -8,5 +8,10 @@ const commandHandler = argv => {
 }
 
 export default () => {
-    yargs.command('babel', 'compile src using Babel', () => {}, commandHandler)
+    yargs.command(
+        ['babel', 'bb'],
+        'compile src using Babel',
+        () => {},
+        commandHandler
+    )
 }

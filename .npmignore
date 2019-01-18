@@ -42,3 +42,4 @@ node_modules
 /webpack.config.js
 /test
 /ci.sh
+/.gitbook

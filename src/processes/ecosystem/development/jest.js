@@ -1,12 +1,10 @@
-import fs from 'fs'
 import path from 'path'
 import Process from '@/processes'
-import FileTypes from '@/utils/fileTypes'
 
-const onlyChangedFlag = '--onlyChanged'
 const watchFlag = '--watch'
 const watchAllFlag = '--watchAll'
-const getJestCLICmd = (flags = []) => [
+
+const getJestCLICmd = flags => [
     'node',
     require.resolve('jest-cli/bin/jest.js'),
     '--passWithNoTests',
@@ -15,25 +13,7 @@ const getJestCLICmd = (flags = []) => [
     ...flags
 ]
 
-const getJestServeCLICmd = flags => [
-    'node',
-    require.resolve('chokidar-cli/index.js'),
-    `"src/**/*.js"`,
-    `"src/**/*.jsx"`,
-    `"src/**/*.ts"`,
-    `"src/**/*.tsx"`,
-    '--command',
-    `"${getJestCLICmd(flags).join(' ')}"`,
-    '--initial',
-    '--ignore',
-    '"/node_modules|.d.ts|dist|build/"'
-]
-
 class Jest extends Process {
-    get commandToUse() {
-        return process.env.MHY_ENV === 'ui' ? getJestServeCLICmd : getJestCLICmd
-    }
-
     constructor(args) {
         const jestDir = path.dirname(require.resolve('@/configs/jest'))
         require('@/configs/babel/write')(jestDir)
@@ -44,31 +24,16 @@ class Jest extends Process {
     }
 
     onStart = ({ name }, { flags = [] }) =>
-        this.spawn(name, this.commandToUse(flags))
-
-    onWatch = ({ name }, { flags = [] }) =>
-        this.spawn(name, this.commandToUse([...flags, watchFlag]))
+        this.spawn(
+            name,
+            getJestCLICmd([
+                ...flags,
+                process.env.MHY_ENV === 'ui' ? watchFlag : ''
+            ])
+        )
 
     onWatchAll = ({ name }, { flags = [] }) =>
-        this.spawn(name, this.commandToUse([...flags, watchAllFlag]))
-
-    onRunAll = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
-
-    onOnlyChanged = async () => {
-        await this.kill('start')
-        this.run('start', { flags: [onlyChangedFlag] })
-    }
-
-    // Feature test only
-    processLine(d) {
-        if (d.startsWith('change:')) {
-            this.emit('action', 'clear')
-        }
-        return d
-    }
+        this.spawn(name, getJestCLICmd([...flags, watchAllFlag]))
 
     actions = [
         {
@@ -77,26 +42,15 @@ class Jest extends Process {
             onRun: this.onStart
         },
         {
-            name: 'changed',
-            label: 'Only Changed',
-            shortcut: 'c',
+            name: 'only-changed',
+            label: 'Only changed',
             enabled: true,
-            onRun: this.onOnlyChanged
-        },
-        {
-            name: 'all',
-            label: 'Run All',
-            shortcut: 'a',
-            enabled: true,
-            onRun: this.onRunAll
-        },
-        {
-            name: 'watch',
-            enabled: true,
-            onRun: this.onWatch
+            onRun: this.onStart
         },
         {
             name: 'watch-all',
+            label: 'All',
+            shortcut: 'a',
             enabled: true,
             onRun: this.onWatchAll
         }

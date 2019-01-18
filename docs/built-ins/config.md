@@ -79,9 +79,9 @@ webpack
 |- index.js
 ```
 
-`mhy` will recursively load all configuartion values from the directory structure recursively.
+`mhy` will recursively load all configuration values from the directory structure recursively.
 
-Filenames are becoming keys in the final object and folder are becoming arrays.
+File names are becoming keys in the final object and folders are becoming arrays.
 
 #### Example
 
@@ -177,6 +177,10 @@ module.exports = current => {
 ```
 
 {% hint style="info" %}
-Please note that there will be no code transformations applied to your custom config files. Only use syntaxes/features that are available in your current NodeJS version.
+Please note that there will be no code transformations applied to your custom config files. Only use syntax/features that are available in your current NodeJS version.
 {% endhint %}
+
+##### Local processes/commands
+
+Using this method you can have your own, local processes/commands as well. More info on this is about to come, stay tuned!
 

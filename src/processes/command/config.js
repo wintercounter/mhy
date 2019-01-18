@@ -103,11 +103,11 @@ const fetchWriters = (config = []) => {
 export default () => {
     yargs
         .command(
-            'config',
+            ['config', 'c'],
             'write out to cwd all available configs (shorthand to --init)'
         )
         .command(
-            'config [config...]',
+            ['config [config...]', 'c [config...]'],
             'init/print out specified configs only',
             yargs => {
                 yargs

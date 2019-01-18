@@ -9,7 +9,7 @@ const commandHandler = argv => {
 
 export default () => {
     yargs.command(
-        'webpack-dev-server',
+        ['webpack-dev-server', 'wds'],
         'run webpack-dev-server',
         () => {},
         commandHandler

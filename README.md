@@ -1,4 +1,4 @@
-![](docs/.gitbook/assets/logo.png)
+![](docs/.gitbook/assets/logo-2.png)
 
 # `mhy`?
 

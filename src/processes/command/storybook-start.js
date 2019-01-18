@@ -9,7 +9,7 @@ const commandHandler = argv => {
 
 export default () => {
     yargs.command(
-        'storybook-start',
+        ['storybook-start', 'sb-start'],
         'run storybook server',
         () => {},
         commandHandler

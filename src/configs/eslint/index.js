@@ -131,6 +131,13 @@ const eslintConfig = loadConfig('eslint', {
         'no-undefined': 0,
         'no-unused-vars': 1,
         'no-use-before-define': 0,
+        'no-param-reassign': [
+            'error',
+            {
+                props: true,
+                ignorePropertyModificationsFor: ['draft', 'draftState'] // added to support immer
+            }
+        ],
 
         'handle-callback-err': 1,
         'no-mixed-requires': 0,

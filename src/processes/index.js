@@ -145,6 +145,10 @@ export default class Process extends EventEmitter {
     }
 
     processLine(d) {
+        if (d.startsWith('mhy:ui:clear')) {
+            this.emit('action', 'clear')
+            return ''
+        }
         return d
     }
 

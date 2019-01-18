@@ -23,7 +23,7 @@ export default (plugins = []) => {
     plugins = plugins.concat(new GenerateSW())
 
     if (fs.existsSync(swSrc)) {
-        new InjectManifest({ swSrc })
+        plugins.push(new InjectManifest({ swSrc }))
     }
 
     return plugins.concat([
