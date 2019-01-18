@@ -22,7 +22,7 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            npm i mhy@latest
+            npm i mhy@latest -g
 
       - deploy:
           name: Trigger deployment
