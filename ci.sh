@@ -13,7 +13,7 @@ VERSION_LATEST=`npm view mhy version`
 echo version:${VERSION}
 echo version_latest:${VERSION_LATEST}
 
-if [ ${VERSION} == ${VERSION_LATEST} ]
+if [ ${VERSION} = ${VERSION_LATEST} ]
 then
     exit 0
 fi
