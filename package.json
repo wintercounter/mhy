@@ -1,10 +1,10 @@
 {
   "name": "mhy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
-    "test": "mhyd jest",
+    "test": "mhy jest",
     "start": "node ./dist",
     "pub": "npm publish --access=public",
     "build": "cross-env NODE_ENV=production mhy babel",

@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import mhyConfig from '@/configs/mhy'
 
 export default (defaults = []) => [
@@ -22,15 +24,11 @@ export default (defaults = []) => [
         require.resolve('babel-plugin-module-resolver'),
         {
             root: [],
-            alias: Object.entries(mhyConfig.defaultAliases).reduce(function(
-                acc,
-                [k]
-            ) {
-                const isDist = process.env.NODE_ENV === 'production'
+            alias: Object.entries(mhyConfig.defaultAliases).reduce(function(acc, [k]) {
+                const isDist = fs.existsSync(path.resolve(process.cwd(), 'dist'))
                 acc[k] = k.replace('@', `./${isDist ? 'dist' : 'src'}/`)
                 return acc
-            },
-            {})
+            }, {})
         }
     ]
 ]
