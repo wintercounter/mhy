@@ -46,17 +46,13 @@
       }
     },
     "npmignore": {
-      "root": [
-        {
-          "$append": "/test"
-        },
-        {
-          "$append": "/ci.sh"
-        },
-        {
-          "$append": "/.gitbook"
-        }
-      ]
+      "root": {
+        "$concat": [
+          "/test",
+          "/ci.sh",
+          "/.gitbook"
+        ]
+      }
     },
     "babel": {
       "production": {
@@ -242,7 +238,7 @@
     "jest-styled-components": "^6.3.1",
     "js-cookie": "2.2.0",
     "json-colorizer": "^2.1.2",
-    "json-merger": "^1.0.2",
+    "json-merger": "^1.1.0",
     "loader-utils": "1.2.3",
     "moment": "^2.23.0",
     "moment-range": "4.0.1",
