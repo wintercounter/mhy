@@ -11,7 +11,7 @@ const getCmdBabelCLI = (flags = []) => [
     '--config-file',
     require.resolve('@/configs/babel'),
     '--ignore',
-    'node_modules,test,tests,dist,temp,tmp',
+    ['node_modules', 'test', 'tests', 'dist', 'temp', 'build', 'tmp', '**/*.d.ts'].join(','),
     '--delete-dir-on-start',
     '--extensions',
     '.js,.jsx,.ts,.tsx',
@@ -42,27 +42,27 @@ class Babel extends Process {
 const handleCompileSuccess = line => {
     if (!line.includes('Successfully')) return
 
-    copyDir.sync(
-        path.resolve(process.cwd(), 'src'),
-        path.resolve(process.cwd(), 'dist'),
-        function(stat, filepath, filename) {
-            if (stat === 'file') {
-                if (filename.endsWith('.d.ts')) {
-                    return true
-                }
-                if (
-                    filename.endsWith('ts') ||
-                    filename.endsWith('tsx') ||
-                    filename.endsWith('js') ||
-                    filename.endsWith('jsx')
-                ) {
-                    return false
-                }
+    copyDir.sync(path.resolve(process.cwd(), 'src'), path.resolve(process.cwd(), 'dist'), function(
+        stat,
+        filepath,
+        filename
+    ) {
+        if (stat === 'file') {
+            if (filename.endsWith('.d.ts')) {
                 return true
+            }
+            if (
+                filename.endsWith('ts') ||
+                filename.endsWith('tsx') ||
+                filename.endsWith('js') ||
+                filename.endsWith('jsx')
+            ) {
+                return false
             }
             return true
         }
-    )
+        return true
+    })
 }
 
 const getBabel = () => Babel
