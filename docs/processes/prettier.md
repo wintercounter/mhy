@@ -24,7 +24,7 @@ mhy prettier
 
 #### On another directory
 ```bash
-mhy prettier another_direcoroty
+mhy prettier another_directory
 ```
 
 
