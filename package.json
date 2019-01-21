@@ -15,7 +15,8 @@
     "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
     "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
     "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
-    "deploy": "npm pub && npm run docker"
+    "deploy": "npm pub && npm run docker",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -309,5 +310,8 @@
     "write-file-webpack-plugin": "4.5.0",
     "ws": "^6.1.2",
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "standard-version": "^4.4.0"
   }
 }
