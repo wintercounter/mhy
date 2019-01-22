@@ -18,7 +18,7 @@ It's really hard to define what `mhy` \(my\) is, because it tries to create a un
 
 ## Using `mhy` you'll have
 
-* a **Zero-configuration** environment **out-of-the-box**.
+* a **zero-configuration** environment **out-of-the-box**.
 * a **portable** codebase without any `npm install`.
 * **simple customization** if you don't favor the default settings.
 * **package.json based customization** for any configs value `mhy` provides.
