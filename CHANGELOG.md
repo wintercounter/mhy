@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/wintercounter/mhy/compare/v1.2.0...v1.2.1) (2019-01-22)
+
+
+### Bug Fixes
+
+* **docs:** fix what GitBook is messing up ([843ed56](https://github.com/wintercounter/mhy/commit/843ed56))
+* **docs:** wrong `boot` description ([ef78019](https://github.com/wintercounter/mhy/commit/ef78019))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/wintercounter/mhy/compare/v1.0.7...v1.2.0) (2019-01-22)
 
