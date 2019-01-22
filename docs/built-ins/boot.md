@@ -1,6 +1,7 @@
 # boot
-
+---
 description: This tool will let you initialize codebase from a template.
+---
 
 ## Templates
 
@@ -16,20 +17,12 @@ The current `default` template is a React project and it contains the following 
 * `entities`: HTTP code related directory
 * `fields`: app specific form fields directory
 * `forms`: app specific forms and business logic directory
-* `layouts`: is a container for a page to represent different
-
-  states of an application
-
+* `layouts`: is a container for a page to represent different states of an application
 * `overlays`: basically containers to construct a overlay's structure.
 * `pages`: basically containers to construct a page's structure.
-* `services`: a base service implementation which you build your APIs
-
-  on.
-
+* `services`: a base service implementation which you build your APIs on.
 * `validators`: custom validator function usually for `react-redux-form`
-* `index.js`: files are being used to export sub-modules for
-
-  easier/simplier/nicer imports.
+* `index.js`: files are being used to export sub-modules for easier/simplier/nicer imports.
 
 ## How to use it
 
