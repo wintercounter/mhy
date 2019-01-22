@@ -2,7 +2,9 @@
 
 ## Help
 
-Help yourself!
+### TypeScript
 
-Just kidding! This section supposed to be updated soon with more extensive content.
+#### Errors after updating `mhy` to the latest version.
+Use `mhy config typescript -io` to regenerate your `tsconfig.json` file. You might also need an IDE restart.
+
 
