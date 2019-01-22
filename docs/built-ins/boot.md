@@ -1,8 +1,6 @@
 # boot
 
-description: This tool with let you start a new codebases in the
-
-## current from a template.
+description: This tool will let you initialize codebase from a template.
 
 ## Templates
 
