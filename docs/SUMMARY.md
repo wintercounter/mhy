@@ -10,38 +10,34 @@
 * [Ecosystem](basics/eco.md)
 * [How does it work?](basics/how.md)
 
-## Built-ins
-
-* [boot](built-ins/boot.md)
-* [config](built-ins/config.md)
-* [options](built-ins/options.md)
-* [ui](built-ins/ui.md)
-
-## Processes
-
-* [babel](processes/babel.md)
-* [eslint](processes/eslint.md)
-* [jest](processes/jest.md)
-* [prettier](processes/prettier.md)
-* [storybook-start](processes/storybook-start.md)
-* [tsc](processes/tsc.md)
-* [webpack](processes/webpack.md)
-* [webpack-dev-server](processes/webpack-dev-server.md)
-
-## Configs
-
-* [babel](configs/babel.md)
-* [eslint](configs/eslint.md)
-* [gitignore](configs/gitignore.md)
-* [jest](configs/jest.md)
-* [manifest](configs/manifest.md)
-* [mhy](configs/mhy.md)
-* [npmignore](configs/npmignore.md)
-* [prettier](configs/prettier.md)
-* [storybook](configs/storybook.md)
-* [tslint](configs/tslint.md)
-* [typescript](configs/typescript.md)
-* [webpack](configs/webpack.md)
+## Tools
+* [Built-ins]()
+  * [boot](built-ins/boot.md)
+  * [config](built-ins/config.md)
+  * [options](built-ins/options.md)
+  * [ui](built-ins/ui.md)
+* [Processes]()
+  * [babel](processes/babel.md)
+  * [eslint](processes/eslint.md)
+  * [jest](processes/jest.md)
+  * [prettier](processes/prettier.md)
+  * [storybook-start](processes/storybook-start.md)
+  * [tsc](processes/tsc.md)
+  * [webpack](processes/webpack.md)
+  * [webpack-dev-server](processes/webpack-dev-server.md)
+* [Configs]()
+ * [babel](configs/babel.md)
+ * [eslint](configs/eslint.md)
+ * [gitignore](configs/gitignore.md)
+ * [jest](configs/jest.md)
+ * [manifest](configs/manifest.md)
+ * [mhy](configs/mhy.md)
+ * [npmignore](configs/npmignore.md)
+ * [prettier](configs/prettier.md)
+ * [storybook](configs/storybook.md)
+ * [tslint](configs/tslint.md)
+ * [typescript](configs/typescript.md)
+ * [webpack](configs/webpack.md)
 
 ## IDE setup
 

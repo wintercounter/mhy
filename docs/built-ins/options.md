@@ -23,5 +23,5 @@ mhy --mhy-verbose
 
 ## --mhy-prod
 
-Forces `process.env.NODE_ENV` to be `production`
+Forces `process.env.NODE_ENV` to be `production`.
 
