@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import blessed from 'blessed'
 import { render } from 'react-blessed'
+const readline = require('readline')
 
 let screen
 
@@ -55,11 +56,7 @@ class Dashboard extends Component {
         const processesKeys = Object.keys(processes)
         const newActiveEl = processesKeys[newIndex]
         this.setState({
-            active: newActiveEl
-                ? newIndex
-                : event.shift
-                ? processesKeys.length - 1
-                : 0
+            active: newActiveEl ? newIndex : event.shift ? processesKeys.length - 1 : 0
         })
     }
 
@@ -154,6 +151,7 @@ class MhyBox extends Component {
             }
         })
         proc.on('data', d => {
+            if (!this.refs.log) return
             this.refs.log.add(d)
 
             if (!hasRows) {
@@ -225,15 +223,7 @@ class Loading extends Component {
     render() {
         const { position } = this.state
 
-        return (
-            <box
-                top="center"
-                left={`${position}%`}
-                width="40%"
-                height="10%+1"
-                style={{ bg: 'cyan' }}
-            />
-        )
+        return <box top="center" left={`${position}%`} width="40%" height="10%+1" style={{ bg: 'cyan' }} />
     }
 }
 
@@ -248,11 +238,7 @@ class Actions extends Component {
         const { isListActive } = this.props
         const { selectedIndex } = this.state
         const isFocused = index === selectedIndex
-        const color = !isListActive
-            ? 'transparent'
-            : isFocused
-            ? 'green'
-            : 'transparent'
+        const color = !isListActive ? 'transparent' : isFocused ? 'green' : 'transparent'
         return {
             style: {
                 bg: color
