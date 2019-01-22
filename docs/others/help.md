@@ -1,6 +1,9 @@
 # Help
 
 ## Help
+---
+description: Experienced/resolve any issues? Help your fellow developers and make a PR to this page with your solution! Thank you!
+---
 
 ### TypeScript
 
