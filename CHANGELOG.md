@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/wintercounter/mhy/compare/v1.0.7...v1.1.0) (2019-01-22)
+
+
+### Bug Fixes
+
+* **boot:** accidentally replaced import package name ([1492bd1](https://github.com/wintercounter/mhy/commit/1492bd1))
+* **ui:** check if ref exists before adding line ([33ea152](https://github.com/wintercounter/mhy/commit/33ea152))
+
+
+### Features
+
+* **ci:** don't try to publish if version did not change ([730ad8b](https://github.com/wintercounter/mhy/commit/730ad8b))
+
+
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/wintercounter/mhy/compare/v1.1.1...v1.0.7) (2019-01-21)
 
