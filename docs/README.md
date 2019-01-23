@@ -9,7 +9,7 @@
   <a href="https://www.npmjs.com/package/mhy"><img src="https://img.shields.io/npm/l/mhy.svg" alt="License"></a>
 </p>
 
-<h2 align="center">mhy <a target="_blank" href="https://twitter.com/intent/tweet?text=Try%20out%20%23mhy%20as%20your%20new%20JavaScript%20development%20environment.%20https%3A%2F%2Fmhy.js.org&hashtags=mhy,webpack,babel,jest,typescript,frontend,developers,javascript,html"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" /></h2>
+<h2 align="center">mhy <a target="_blank" href="https://twitter.com/intent/tweet?text=Try%20out%20%23mhy%20as%20your%20new%20JavaScript%20development%20environment.%20https%3A%2F%2Fmhy.js.org&hashtags=mhy,webpack,babel,jest,typescript,frontend,developers,javascript,html"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" /></a></h2>
 
 <p align="center">An <i>out-of-the</i> box <strong>multi-purpose</strong> toolbox and development environment.</p>
 
