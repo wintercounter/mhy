@@ -1,6 +1,6 @@
 # storybook
 
-## prettier
+## storybook
 
 > Currently only `start` options are available. Support for standalone Storybook build will come soon\)\*\[\]:
 
@@ -9,6 +9,19 @@
 ```bash
 # Print config to console
 mhy config storybook
+```
+
+## Overriding from `package.json`
+```json
+{
+    "mhy": {
+        "storybook": {
+            "start": {
+                "port": 3500
+            }
+        }
+    }
+}
 ```
 
 ## Used by
