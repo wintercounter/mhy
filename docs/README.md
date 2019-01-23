@@ -1,8 +1,25 @@
 # Introduction
 
-## `mhy`?
+<p align="center"><a href="https://mhy.js.org" target="_blank"><img width="100" src="https://github.com/wintercounter/mhy/raw/master/docs/.gitbook/assets/logo-2.png" alt="Vue logo"></a></p>
 
->  An _out-of-the_ box **multi-purpose** toolbox and development environment.
+<p align="center">
+  <a href="https://circleci.com/gh/wintercounter/mhy/tree/master"><img src="https://img.shields.io/circleci/project/github/wintercounter/mhy/master.svg" alt="Build Status"></a>
+  <a href="https://npmcharts.com/compare/mhy?minimal=true"><img src="https://img.shields.io/npm/dm/mhy.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/mhy"><img src="https://img.shields.io/npm/v/mhy.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/mhy"><img src="https://img.shields.io/npm/l/mhy.svg" alt="License"></a>
+</p>
+
+<h2 align="center">mhy <a target="_blank" href="https://twitter.com/intent/tweet?text=Try%20out%20%23mhy%20as%20your%20new%20JavaScript%20development%20environment.%20https%3A%2F%2Fmhy.js.org&hashtags=mhy,webpack,babel,jest,typescript,frontend,developers,javascript,html"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" /></h2>
+
+<p align="center">An <i>out-of-the</i> box <strong>multi-purpose</strong> toolbox and development environment.</p>
+
+<p align="center">
+    <a href="https://mhy.js.org" target=_blank>mhy.js.org</a>
+</p>
+
+---
+
+## What is `mhy`?
 
 It's really hard to define what `mhy` \(my\) is, because it tries to create a unified developer experience for any stage of your project:
 * a pre-configured **development environment** to not waste time with the set-up when starting a new project or just need a quick playground.
