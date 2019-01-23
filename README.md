@@ -11,13 +11,13 @@
 
 <h2 align="center">mhy <a target="_blank" href="https://twitter.com/intent/tweet?text=Try%20out%20%23mhy%20as%20your%20new%20JavaScript%20development%20environment.%20https%3A%2F%2Fmhy.js.org&hashtags=mhy,webpack,babel,jest,typescript,frontend,developers,javascript,html"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" /></a></h2>
 
-<p align="center">An <i>out-of-the</i> box <strong>multi-purpose</strong> toolbox and development environment.</p>
+<p align="center">A <strong>zero-config</strong>, <strong>out-of-the-box</strong>, <strong>multi-purpose</strong> <i>toolbox</i> and <i>development environment</i>.</p>
 
 <p align="center"><a href="https://mhy.js.org" target=_blank>mhy.js.org</a></p>
 
 ---
 
-# What is `mhy`?
+## Summary
 
 It's really hard to define what `mhy` \(my\) is, because it tries to create a unified developer experience for any stage of your project:
 * a pre-configured **development environment** to not waste time with the set-up when starting a new project or just need a quick playground.
@@ -45,31 +45,40 @@ It's really hard to define what `mhy` \(my\) is, because it tries to create a un
 
 > Note that `mhy`'s focus is on client side currently, but server side features are about to come.
 
-## Quick-start examples
+## Setup
 
-## Install `mhy` globally
+### Install
 ```bash
 npm install mhy -g
 ```
 
-### Start a new project serving with `webpack-dev-server` configured for Babel and React
+### Start a new project
+Creates an empty project with a single `index.js` file that is being served using `webpack-dev-server` _(wds)_ pre-configured with **Babel** and **React**.
 ```bash
 mkdir src
 echo "console.log('Hello mhy!')" > src/index.js
 mhy wds
 ```
 
-### Compile codebase as a library for production use
+### Compile library
+Create a production ready library. From the `src` folder it creates a complied `dist` folder.
 ```bash
 mhy babel --mhy-prod
 ```
 
-### Start the default ecosystem in a single terminal (Jest, Webpack Dev Server, TypeScript compiler, Storybook)
+### Build bundle
+Create a production ready bundle for you website/app using pre-configured **Webpack**. From the `src` folder it creates a `build` folder with your bundle ready to be served supporting many popular features/loaders.
+```bash
+mhy webpack --mhy-prod
+```
+
+### Start the default ecosystem
+It'll run Jest, Webpack Dev Server, TypeScript compiler, Storybook at once in a single Terminal UI (TUI).
 ```bash
 mhy
 ```
-
-> Form the `src` folder it creates a complied `dist` folder.
+### That's not all
+> These are only a few examples from all the possibilities `mhy` provides. Start exploring on https://mhy.js.org
 
 ## Supported packages
 
@@ -118,3 +127,6 @@ I also would like to thank to every developer's hard work which I'm using as a d
   </tbody>
 </table>
 
+---
+
+<p align="center">🌟 PLEASE STAR THIS REPO IF YOU FOUND SOMETHING INTERESTING! 🌟</p>
