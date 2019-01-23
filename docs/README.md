@@ -13,9 +13,7 @@
 
 <p align="center">An <i>out-of-the</i> box <strong>multi-purpose</strong> toolbox and development environment.</p>
 
-<p align="center">
-    <a href="https://mhy.js.org" target=_blank>mhy.js.org</a>
-</p>
+<p align="center"><a href="https://mhy.js.org" target=_blank>mhy.js.org</a></p>
 
 ---
 
