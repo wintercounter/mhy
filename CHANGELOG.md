@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/wintercounter/mhy/compare/v1.2.2...v1.3.0) (2019-01-24)
+
+
+### Bug Fixes
+
+* **babel:** add Storybook also as exception ([499076a](https://github.com/wintercounter/mhy/commit/499076a))
+* **babel:** only resolve module if it's not being run by Webpack ([6192439](https://github.com/wintercounter/mhy/commit/6192439))
+
+
+### Features
+
+* **mhy:** add full support for custom 'src', 'dist' and 'build' folders ([132c82e](https://github.com/wintercounter/mhy/commit/132c82e))
+* **mhyConfig:** add `distFolder` and `buildFolder` keys ([b2bbf16](https://github.com/wintercounter/mhy/commit/b2bbf16))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/wintercounter/mhy/compare/v1.2.1...v1.2.2) (2019-01-23)
 
