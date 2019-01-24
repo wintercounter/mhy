@@ -1,17 +1,20 @@
 import path from 'path'
-import Process from '@/processes'
 import copyDir from 'copy-dir'
+import Process from '@/processes'
+import mhyConfig from '@/configs/mhy'
 
 const getCmdBabelCLI = (flags = []) => [
     'node',
     require.resolve('@babel/cli/bin/babel.js'),
-    path.resolve(process.cwd(), 'src'),
+    path.resolve(process.cwd(), mhyConfig.srcFolder),
     '--out-dir',
-    'dist',
+    mhyConfig.distFolder,
     '--config-file',
     require.resolve('@/configs/babel'),
     '--ignore',
-    ['node_modules', 'test', 'tests', 'dist', 'temp', 'build', 'tmp', '**/*.d.ts'].join(','),
+    ['node_modules', 'test', 'tests', 'temp', 'tmp', '**/*.d.ts', mhyConfig.distFolder, mhyConfig.buildFolder].join(
+        ','
+    ),
     '--delete-dir-on-start',
     '--extensions',
     '.js,.jsx,.ts,.tsx',
@@ -42,27 +45,27 @@ class Babel extends Process {
 const handleCompileSuccess = line => {
     if (!line.includes('Successfully')) return
 
-    copyDir.sync(path.resolve(process.cwd(), 'src'), path.resolve(process.cwd(), 'dist'), function(
-        stat,
-        filepath,
-        filename
-    ) {
-        if (stat === 'file') {
-            if (filename.endsWith('.d.ts')) {
+    copyDir.sync(
+        path.resolve(process.cwd(), mhyConfig.srcFolder),
+        path.resolve(process.cwd(), mhyConfig.distFolder),
+        function(stat, filepath, filename) {
+            if (stat === 'file') {
+                if (filename.endsWith('.d.ts')) {
+                    return true
+                }
+                if (
+                    filename.endsWith('ts') ||
+                    filename.endsWith('tsx') ||
+                    filename.endsWith('js') ||
+                    filename.endsWith('jsx')
+                ) {
+                    return false
+                }
                 return true
-            }
-            if (
-                filename.endsWith('ts') ||
-                filename.endsWith('tsx') ||
-                filename.endsWith('js') ||
-                filename.endsWith('jsx')
-            ) {
-                return false
             }
             return true
         }
-        return true
-    })
+    )
 }
 
 const getBabel = () => Babel

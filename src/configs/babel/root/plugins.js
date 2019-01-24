@@ -28,7 +28,10 @@ export default (defaults = []) => {
                 root: [],
                 alias: Object.entries(mhyConfig.defaultAliases).reduce(function(acc, [k]) {
                     // If it's compiled directly with babel, use dist folder
-                    acc[k] = k.replace('@', `./${process.argv.some(v => v.includes('babel')) ? 'dist' : 'src'}/`)
+                    acc[k] = k.replace(
+                        '@',
+                        `./${process.argv.some(v => v.includes('babel')) ? mhyConfig.distFolder : mhyConfig.srcFolder}/`
+                    )
                     return acc
                 }, {})
             }

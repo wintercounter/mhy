@@ -1,4 +1,5 @@
 import path from 'path'
+import mhyConfig from '@/configs/mhy'
 
 const getUse = (isModules = true) => [
     {
@@ -34,7 +35,7 @@ const getUse = (isModules = true) => [
                 new Set([
                     path.resolve(__dirname, '../../../../../../node_modules'),
                     path.resolve(process.cwd(), 'node_modules'),
-                    path.resolve(process.cwd(), 'src')
+                    path.resolve(process.cwd(), mhyConfig.srcFolder)
                 ])
             )
         }

@@ -6,8 +6,8 @@ const getOptions = test => ({
     include: Array.from(
         new Set([
             // Make items unique
-            path.join(moduleHome, 'src'),
-            path.join(process.cwd(), 'src')
+            path.join(moduleHome, 'srcF'),
+            path.join(process.cwd(), 'srcF')
         ])
     ),
     loader: require.resolve('prettier-loader'),

@@ -1,11 +1,13 @@
 import fs from 'fs'
 import path from 'path'
 
+import webpack from 'webpack'
 import WebpackManifestPlugin from 'webpack-manifest-plugin'
 import WebpackPwaManifestPlugin from 'webpack-pwa-manifest'
 import { GenerateSW, InjectManifest } from 'workbox-webpack-plugin'
 
 import manifest from '@/configs/manifest'
+import mhyConfig from '@/configs/mhy'
 
 const defaultSwPath = require.resolve('@/resources/sw')
 const projectSwPath = path.resolve(process.cwd(), 'src/sw.js')
@@ -30,6 +32,9 @@ export default (plugins = []) => {
         new WebpackPwaManifestPlugin(manifest),
         new WebpackManifestPlugin({
             fileName: './manifest.webpack.json'
+        }),
+        new webpack.DefinePlugin({
+            mhy: JSON.stringify(mhyConfig)
         })
     ])
 }
