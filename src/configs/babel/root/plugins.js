@@ -20,8 +20,8 @@ export default (defaults = []) => {
         require.resolve('@babel/plugin-proposal-export-default-from'),
         require.resolve('@babel/plugin-proposal-export-namespace-from')
     ]
-    // Webpack is resolving modules on it's own
-    if (!process.argv.some(v => v.includes('webpack'))) {
+    // Webpack is resolving modules on it's own (storybook uses Webpack also)
+    if (!process.argv.some(v => !!v.match(/(webpack|storybook)/))) {
         r.push([
             require.resolve('babel-plugin-module-resolver'),
             {
