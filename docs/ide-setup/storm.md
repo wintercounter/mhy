@@ -2,13 +2,22 @@
 
 ## WebStorm and PHPStorm
 
+### Search for global `node_modules` folder (GLOBAL_NODE_MODULES)
+1. Use the `which mhy` (`where mhy` on Windows) command to find the path to the `mhy` executable file.
+2. The _global_ `node_modules` folder should be around there somewhere. It varies between different systems, maybe it is right next to it, maybe inside a `lib` directory next to it or the upper levels.
+3. Inside the _global_ `node_modules` folder, you'll find `mhy/node_modules`. The path to that directory is what we will need.
+
+### Generate every possible config files
+```bash
+mhy config
+
+// Use -o to overwrite existing files
+```
+
 ### `node_modules` resolution
 Since you're using modules coming from `mhy`, you need to tell the IDE to include a `node_modules` folder outside your project's directory.
 
-1. Find `mhy`'s `node_modules`. In case you don't know where it is being installed:
-    1. Use the `which mhy` (`where mhy` on Windows) command to find the path to the `mhy` executable file.
-    2. The _global_ `node_modules` folder should be around there somewhere. It varies between different systems, maybe it is right next to it, maybe inside a `lib` directory next to it or the upper levels.
-    3. Inside the _global_ `node_modules` folder, you'll find `mhy/node_modules`. The path to that directory is what we need.
+1. Find `GLOBAL_NODE_MODULES/mhy/node_modules'
 2. Add the path at `File > Settings > Directories` and mark it as `Excluded` and `Resource root`.
 
 ### Alias resolution
@@ -25,10 +34,32 @@ While it's possible to add watchers without the `Prettier plugin`, the plugin si
 4. Create watcher by clicking the `+` sign.
 5. Select `prettier`
 6. Set `Scope` to `Current file` which is more optimal.
+7. Set `Program` to `GLOBAL_NODE_MODULES/mhy/node_modules/.bin/prettier` (add `.cmd` on Windows).
 7. Save with `OK`.
 8. **(Optional)** You might want to add change the `Level` of the watcher to `Global` to be able to re-use it across projects.
 
 > Unfortunately you'll need to create watcher for each `File Type` you want the IDE to watch. By default it was creating it only for JavaScript. Most probably you want to add `jsx, ts, tsx` watcher also. Do this with copying the watcher and change the `File Type`.
+
+### TypeScript
+> Step 0: If it's necessary, please do `npm i` first for your project, only create `tsconfig.json` file after that. This is important to avoid duplicated `@types` to be loaded.
+
+1. **ONLY** in case you don't have `tsconfig.json` file yet: `mhy config typescript -i`
+2. Go to `File > Settings > Language & Frameworks > TypeScript`
+3. For `TypeScript` set `GLOBAL_NODE_MODULES/mhy/node_modules/typescript`
+
+> Note that in `mhy` TypeScript is only being used to perform type-checks and to generate `.d.ts` files. You don't need to enable compilation, that is being done by Babel.
+
+### ESLint
+1. **ONLY** in case you don't have `.eslintrc` file yet: `mhy config eslint -i`
+2. Go to `File > Settings > Language & Frameworks > JavaScript > Code Quality Tools > ESLint`
+3. `Enable`
+4. For `ESLint package` set `GLOBAL_NODE_MODULES/mhy/node_modules/eslint`
+
+### TSLint
+1. **ONLY** in case you don't have `tsconfig.json` file yet: `mhy config tslint -i`
+2. Go to `File > Settings > Language & Frameworks > JavaScript > TSLint`
+3. `Enable`
+4. For `TSLint package` set `GLOBAL_NODE_MODULES/mhy/node_modules/tslint`
 
 ### Tips
 1. Disable automatic `package.json` dependency inspection.
