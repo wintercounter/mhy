@@ -17,7 +17,7 @@ mhy config
 ### `node_modules` resolution
 Since you're using modules coming from `mhy`, you need to tell the IDE to include a `node_modules` folder outside your project's directory.
 
-1. Find `GLOBAL_NODE_MODULES/mhy/node_modules'
+1. Find `GLOBAL_NODE_MODULES/mhy/node_modules`
 2. Add the path at `File > Settings > Directories` and mark it as `Excluded` and `Resource root`.
 
 ### Alias resolution
