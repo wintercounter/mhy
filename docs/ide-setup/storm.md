@@ -28,6 +28,7 @@ Alias resolution is done by Webpack. You only need to have a `webpack.config.js`
 
 ### Prettier (for automatic formatting on save; recommended)
 While it's possible to add watchers without the `Prettier plugin`, the plugin simply helps you with pre-filling the necessary fields with the necessary values for your watcher.
+
 1. Install `Prettier plugin` from `File > Settings > Plugins`
 2. Restart IDE
 3. Go to `File > Settings > Tools > File Watchers`
@@ -35,8 +36,8 @@ While it's possible to add watchers without the `Prettier plugin`, the plugin si
 5. Select `prettier`
 6. Set `Scope` to `Current file` which is more optimal.
 7. Set `Program` to `GLOBAL_NODE_MODULES/mhy/node_modules/.bin/prettier` (add `.cmd` on Windows).
-7. Save with `OK`.
-8. **(Optional)** You might want to add change the `Level` of the watcher to `Global` to be able to re-use it across projects.
+8. Save with `OK`.
+9. **(Optional)** You might want to add change the `Level` of the watcher to `Global` to be able to re-use it across projects.
 
 > Unfortunately you'll need to create watcher for each `File Type` you want the IDE to watch. By default it was creating it only for JavaScript. Most probably you want to add `jsx, ts, tsx` watcher also. Do this with copying the watcher and change the `File Type`.
 
