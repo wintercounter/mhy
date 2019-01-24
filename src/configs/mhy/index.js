@@ -21,6 +21,8 @@ const mhyConfig = loadConfig('mhy', {
             : this.defaultIndexHtml
     },
     srcFolder: 'src',
+    distFolder: 'dist',
+    buildFolder: 'build',
     defaultIgnoreList: [
         '/logs',
         '*.log',
