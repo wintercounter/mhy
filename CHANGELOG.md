@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.1"></a>
+## [1.3.1](https://github.com/wintercounter/mhy/compare/v1.3.0...v1.3.1) (2019-01-25)
+
+
+### Bug Fixes
+
+* **jest:** check for space after keywords ([b11ac95](https://github.com/wintercounter/mhy/commit/b11ac95))
+* **jest:** transform modules with export also ([3cb8adc](https://github.com/wintercounter/mhy/commit/3cb8adc))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/wintercounter/mhy/compare/v1.2.2...v1.3.0) (2019-01-24)
 
