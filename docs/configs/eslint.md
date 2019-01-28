@@ -1,7 +1,5 @@
 # eslint
 
-## eslint
-
 [https://eslint.org/docs/user-guide/configuring](https://eslint.org/docs/user-guide/configuring)
 
 ```bash

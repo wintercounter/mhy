@@ -1,7 +1,5 @@
 # npmignore
 
-## npmignore
-
 [https://docs.npmjs.com/misc/developers\#keeping-files-out-of-your-package](https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package)
 
 ```bash

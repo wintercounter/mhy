@@ -1,7 +1,5 @@
 # babel
 
-## babel
-
 - Environment: `production`
 - Alias: `bb`
 - By default it uses the whole `src` directory.
@@ -11,7 +9,7 @@
 
 > Should be used usually to generate production files for libraries.
 
-### Default command
+## Default command
 ```bash
 babel ./src --out-dir dist \
     --config-file mhy/configs/babel \
@@ -20,29 +18,29 @@ babel ./src --out-dir dist \
     --extensions .js,.jsx,.ts,.tsx
 ```
 
-### CLI Options
+## CLI Options
 https://babeljs.io/docs/en/babel-cli
 
-### Examples
+## Examples
 
-#### Default CLI
+### Default CLI
 ```bash
 mhy babel --mhy-prod
 # or
 NODE_ENV=production mhy bb
 ```
 
-#### mhy UI
+### mhy UI
 ```bash
 mhy ui babel --mhy-prod
 ```
 
-#### Start with watcher
+### Start with watcher
 ```bash
 mhy babel --watch --mhy-prod
 ```
 
-#### Only transform one file
+### Only transform one file
 ```bash
 mhy babel script.js --mhy-prod
 mhy babel script.js --mhy-prod --out-file script-compiled.js

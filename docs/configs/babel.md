@@ -1,7 +1,5 @@
 # babel
 
-## babel
-
 [https://babeljs.io/docs/en/options](https://babeljs.io/docs/en/options)
 
 ```bash

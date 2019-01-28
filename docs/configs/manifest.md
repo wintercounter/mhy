@@ -4,8 +4,6 @@
 
 Used by `webpack` to generate `manifest.json` WebApp Manifest file.
 
-## manifest
-
 ```bash
 # Print config to console
 mhy config manifest

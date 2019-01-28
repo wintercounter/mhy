@@ -1,7 +1,5 @@
 # tslint
 
-## tslint
-
 [https://palantir.github.io/tslint/rules/](https://palantir.github.io/tslint/rules/)
 
 ```bash

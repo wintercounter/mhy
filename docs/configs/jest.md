@@ -1,7 +1,5 @@
 # jest
 
-## jest
-
 [https://jestjs.io/docs/en/configuration.html](https://jestjs.io/docs/en/configuration.html)
 
 ```bash

@@ -1,7 +1,5 @@
 # storybook
 
-## storybook
-
 > Currently only `start` options are available. Support for standalone Storybook build will come soon\)\*\[\]:
 
 [https://storybook.js.org/configurations/cli-options/](https://storybook.js.org/configurations/cli-options/)

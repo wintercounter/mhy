@@ -1,7 +1,5 @@
 # webpack
 
-## webpack
-
 [https://webpack.js.org/configuration/](https://webpack.js.org/configuration/)
 
 ```bash
