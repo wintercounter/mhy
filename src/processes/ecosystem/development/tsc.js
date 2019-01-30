@@ -2,12 +2,12 @@ import path from 'path'
 import Process from '@/processes'
 import fs from 'fs'
 
-const CmdTscCLI = [
+const getCmdTscCLI = flags => [
     'node',
     require.resolve('typescript/lib/tsc.js'),
-    process.env.MHY_ENV === 'ui' ? '-w' : '',
     '--project',
-    path.resolve(process.cwd(), 'tsconfig.json')
+    path.resolve(process.cwd(), 'tsconfig.json'),
+    ...flags
 ]
 
 class Tsc extends Process {
@@ -21,7 +21,12 @@ class Tsc extends Process {
         this.run(defaultAction, { flags })
     }
 
-    onStart = ({ name }) => this.spawn(name, CmdTscCLI)
+    onStart = ({ name }, { flags = [] }) => {
+        if (process.env.MHY_ENV === 'ui' && !flags.includes('-w') && !flags.includes('--watch')) {
+            flags.push('-w')
+        }
+        this.spawn(name, getCmdTscCLI(flags))
+    }
 
     onRestart = async () => {
         await this.kill('start')
