@@ -1,10 +1,11 @@
 import Process from '@/processes'
 
-const CmdWebpackCLI = [
+const getCmdWebpackCLI = flags => [
     'node',
     require.resolve('webpack-cli/bin/cli.js'),
     '--config',
-    require.resolve('@/configs/webpack')
+    require.resolve('@/configs/webpack'),
+    ...flags
 ]
 
 class Webpack extends Process {
@@ -14,25 +15,13 @@ class Webpack extends Process {
         this.run(defaultAction, { ...rest })
     }
 
-    onStart = ({ name }) => this.spawn(name, CmdWebpackCLI)
-
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
+    onStart = ({ name }, { flags = [] }) => this.spawn(name, getCmdWebpackCLI(flags))
 
     actions = [
         {
             name: 'start',
             enabled: true,
             onRun: this.onStart
-        },
-        {
-            name: 'restart',
-            label: 'Restart',
-            shortcut: 'r',
-            enabled: true,
-            onRun: this.onRestart
         }
     ]
 }
