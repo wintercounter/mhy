@@ -4,20 +4,16 @@ import fs from 'fs'
 import { loadConfig } from '@/utils'
 import mhyConfig from '@/configs/mhy'
 
-// Add valid CWD_SRC for require.context (needs to be literal)
-const configPath = path.resolve(__dirname, './.storybook/config.js')
-fs.readFile(configPath, 'utf8', function(err, data) {
-    if (err) {
-        return console.log(err)
-    }
-    const result = data.replace(/require\.context\('(.*?)'/g, function(match, param) {
-        return match.replace(param, path.resolve(process.cwd(), mhyConfig.srcFolder).replace(/\\/g, '/'))
-    })
+const setSrcFolder = () => {
+    const data = fs
+        .readFileSync(path.resolve(__dirname, '_config.js'), 'utf8')
+        .replace("'src'", JSON.stringify(path.resolve(process.cwd(), mhyConfig.srcFolder)))
+    fs.writeFileSync(path.resolve(__dirname, '.storybook', 'config.js'), data, 'utf8')
+}
 
-    fs.writeFile(configPath, result, 'utf8', function(err) {
-        if (err) return console.log(err)
-    })
-})
+// Whenever this config is being called, we will create a fresh config.js file with the correct
+// src folder name, because Webpack needs to be able to statically analyze it
+setSrcFolder()
 
 export default loadConfig('storybook', {
     start: {
