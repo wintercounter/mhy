@@ -8,22 +8,5 @@ const commandHandler = argv => {
 }
 
 export default () => {
-    yargs
-        .command(
-            'jest',
-            'run jest once for all tests',
-            () => {},
-            commandHandler
-        )
-        .command(
-            'jest [...pattern]',
-            'run jest once for tests with matching pattern',
-            yargs => {
-                yargs.positional('pattern', {
-                    describe: 'jest file pattern',
-                    type: 'string'
-                })
-            },
-            commandHandler
-        )
+    yargs.command('jest', 'run jest', () => {}, commandHandler)
 }
