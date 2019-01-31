@@ -9,9 +9,7 @@ const getPrettierCLICmd = args => {
 
     // It's a file/path, use that
     if (!pattern.length) {
-        pattern.push(
-            `"${path.resolve(process.cwd(), 'src/**/*.{js,jsx,ts,tsx}')}"`
-        )
+        pattern.push(`"${path.resolve(process.cwd(), 'src/**/*.{js,jsx,ts,tsx}')}"`)
     }
     return [
         'node',
@@ -39,9 +37,7 @@ const getPrettierServeCLICmd = flags => [
 
 class Prettier extends Process {
     get commandToUse() {
-        return process.env.MHY_ENV === 'ui'
-            ? getPrettierServeCLICmd
-            : getPrettierCLICmd
+        return process.env.MHY_ENV === 'ui' ? getPrettierServeCLICmd : getPrettierCLICmd
     }
 
     constructor(args) {

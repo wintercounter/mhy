@@ -2,20 +2,14 @@ import fs from 'fs'
 import path from 'path'
 import Process from '@/processes'
 
-const CmdStorybookStartCLI = [
-    'node',
-    require.resolve('@storybook/react/bin/index.js')
-]
+const CmdStorybookStartCLI = ['node', require.resolve('@storybook/react/bin/index.js')]
 
 class StorybookStart extends Process {
     constructor(args) {
         const storybookConfigPath = require.resolve('@/configs/storybook')
         const storybookConfig = require(storybookConfigPath)
         const babelRcPath = path.resolve(
-            storybookConfigPath.substring(
-                0,
-                storybookConfigPath.lastIndexOf(path.sep)
-            ),
+            storybookConfigPath.substring(0, storybookConfigPath.lastIndexOf(path.sep)),
             '.storybook'
         )
         if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {

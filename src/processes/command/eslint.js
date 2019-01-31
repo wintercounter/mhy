@@ -9,12 +9,7 @@ const commandHandler = argv => {
 
 export default () => {
     yargs
-        .command(
-            'eslint',
-            'run eslint once for all files',
-            () => {},
-            commandHandler
-        )
+        .command('eslint', 'run eslint once for all files', () => {}, commandHandler)
         .command(
             'eslint [...pattern]',
             'run eslint once for files with matching pattern',

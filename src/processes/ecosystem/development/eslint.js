@@ -9,16 +9,9 @@ const getEslintCLICmd = args => {
 
     // It's a file/path, use that
     if (!pattern.length) {
-        pattern.push(
-            `"${path.resolve(process.cwd(), 'src/**/*.{js,jsx,ts,tsx}')}"`
-        )
+        pattern.push(`"${path.resolve(process.cwd(), 'src/**/*.{js,jsx,ts,tsx}')}"`)
     }
-    return [
-        'node',
-        require.resolve('eslint/bin/eslint.js'),
-        ...flags,
-        ...pattern
-    ]
+    return ['node', require.resolve('eslint/bin/eslint.js'), ...flags, ...pattern]
 }
 
 class Eslint extends Process {

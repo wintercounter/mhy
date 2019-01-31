@@ -9,11 +9,7 @@ const formatSource = (source, format) => {
         case FileTypes.TSX:
             return `export default ${JSON.stringify(source, null, 4)}`
         case FileTypes.JS:
-            return `module.exports = module.exports.default = ${JSON.stringify(
-                source,
-                null,
-                4
-            )}`
+            return `module.exports = module.exports.default = ${JSON.stringify(source, null, 4)}`
         case FileTypes.JSON:
         case FileTypes.JSON_NO_EXT:
             return JSON.stringify(source, null, 2)

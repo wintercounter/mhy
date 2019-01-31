@@ -9,12 +9,7 @@ const commandHandler = argv => {
 
 export default () => {
     yargs
-        .command(
-            'prettier',
-            'run prettier once for supported files',
-            () => {},
-            commandHandler
-        )
+        .command('prettier', 'run prettier once for supported files', () => {}, commandHandler)
         .command(
             'prettier [pattern...]',
             'run prettier once for the matching pattern',

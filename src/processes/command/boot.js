@@ -4,19 +4,13 @@ import yargs from 'yargs'
 
 // mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output path]
 const commandHandler = ({ technology, template, output }) => {
-    const source = path.resolve(
-        __dirname,
-        '../../../',
-        `templates/${technology}/${template}`
-    )
+    const source = path.resolve(__dirname, '../../../', `templates/${technology}/${template}`)
     const destination = path.resolve(process.cwd(), output)
 
     fse.copy(source, destination, function(err) {
         if (err) {
             console.error(`mhy:boot:${technology}:${template}`)
-            console.error(
-                `An error occurred while copying the source to the destination: ${destination}`
-            )
+            console.error(`An error occurred while copying the source to the destination: ${destination}`)
             console.error(err)
             return
         }

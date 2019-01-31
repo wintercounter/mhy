@@ -32,25 +32,14 @@ export const loadProcess = (module, env = process.env.NODE_ENV) => {
     if (processLocalExists) return require(processLocal)
     else if (processMhyExists) return require(processMhy)
     else {
-        console.error(
-            `Unknown process '${module}' for the environment of '${env}'!`
-        )
+        console.error(`Unknown process '${module}' for the environment of '${env}'!`)
         process.exit(0)
     }
 }
 
 export const loadCommands = () => {
     applyEntries({}, path.join(__dirname, 'command'), '**/*.js')
-    applyEntries(
-        {},
-        path.join(
-            process.cwd(),
-            process.env.MHY_LOCAL_DIR,
-            'processes',
-            'command'
-        ),
-        '**/*.js'
-    )
+    applyEntries({}, path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'processes', 'command'), '**/*.js')
 }
 
 const mhyArgvList = ['$0', '_', 'mhy-verbose', 'mhy-debug', 'mhy-prod']
@@ -78,24 +67,27 @@ export const buildMhyArgv = (argv, noFlags = []) => {
     const returnObj = {
         mhyArgv,
         argv,
-        flags: argvToFlags(argv, noFlags)
+        flags: argvToFlags(argv, mhyArgv, noFlags)
     }
     return returnObj
 }
 
-const argvToFlags = (argv, noFlags = []) => {
-    return Object.keys(argv).reduce((acc, k) => {
-        if (noFlags.includes(k)) return acc
-        acc.push(`--${k}`)
-        if (argv[k] !== true) {
-            acc.push(argv[k])
-        }
-        return acc
-    }, [])
+const argvToFlags = (argv, mhyArgv, noFlags = []) => {
+    const [, ...names] = mhyArgv._
+    return [
+        ...Object.keys(argv).reduce((acc, k) => {
+            if (noFlags.includes(k)) return acc
+            acc.push(`--${k}`)
+            if (argv[k] !== true) {
+                acc.push(argv[k])
+            }
+            return acc
+        }, []),
+        ...names
+    ]
 }
 
-const toCamelCase = str =>
-    str.replace(/\b-([a-z])/g, (_, char) => char.toUpperCase())
+const toCamelCase = str => str.replace(/\b-([a-z])/g, (_, char) => char.toUpperCase())
 
 export default class Process extends EventEmitter {
     processes = new Map()

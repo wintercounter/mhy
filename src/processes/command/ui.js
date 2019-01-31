@@ -8,11 +8,7 @@ const commandHandler = argv => {
     argv.process = argv.process || []
 
     if (!argv.process.length && argv._.length) {
-        console.error(
-            `Unknown process '${argv._[0]}' for the environment of '${
-                process.env.NODE_ENV
-            }'!`
-        )
+        console.error(`Unknown process '${argv._[0]}' for the environment of '${process.env.NODE_ENV}'!`)
         process.exit(0)
     }
 
@@ -44,11 +40,7 @@ const commandHandler = argv => {
 export default () => {
     yargs
         .command('$0', 'alias to `ui`', f => f, commandHandler)
-        .command(
-            'ui',
-            'start all default processes with-in UI using current NODE_ENV',
-            commandHandler
-        )
+        .command('ui', 'start all default processes with-in UI using current NODE_ENV', commandHandler)
         .command(
             'ui [process...]',
             'run specific process(es) with-in UI',

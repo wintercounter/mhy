@@ -4,21 +4,10 @@ import fs from 'fs'
 import { loadConfig } from '@/utils'
 
 const mhyConfig = loadConfig('mhy', {
-    defaultIndexHtml: path.resolve(
-        __dirname,
-        '../..',
-        'resources',
-        'index.html'
-    ),
+    defaultIndexHtml: path.resolve(__dirname, '../..', 'resources', 'index.html'),
     get indexHtml() {
-        const projectIndexHtml = path.resolve(
-            process.cwd(),
-            this.srcFolder,
-            'index.html'
-        )
-        return fs.existsSync(projectIndexHtml)
-            ? projectIndexHtml
-            : this.defaultIndexHtml
+        const projectIndexHtml = path.resolve(process.cwd(), this.srcFolder, 'index.html')
+        return fs.existsSync(projectIndexHtml) ? projectIndexHtml : this.defaultIndexHtml
     },
     srcFolder: 'src',
     distFolder: 'dist',

@@ -8,10 +8,5 @@ const commandHandler = argv => {
 }
 
 export default () => {
-    yargs.command(
-        ['webpack', 'wp'],
-        'compile src using Webpack',
-        () => {},
-        commandHandler
-    )
+    yargs.command(['webpack', 'wp'], 'compile src using Webpack', () => {}, commandHandler)
 }

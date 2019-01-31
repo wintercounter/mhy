@@ -1,22 +1,12 @@
 import { loadConfig } from '@/utils'
 
 const tslintConfig = loadConfig('tslint', {
-    extends: [
-        'tslint:recommended',
-        'tslint-config-airbnb',
-        'tslint-react',
-        'tslint-config-prettier'
-    ],
+    extends: ['tslint:recommended', 'tslint-config-airbnb', 'tslint-react', 'tslint-config-prettier'],
     rules: {
         'max-line-length': {
             options: [120]
         },
-        'variable-name': [
-            true,
-            'ban-keywords',
-            'check-format',
-            'allow-pascal-case'
-        ],
+        'variable-name': [true, 'ban-keywords', 'check-format', 'allow-pascal-case'],
         semicolon: [true, 'never'],
         'no-arg': true,
         'no-bitwise': true,

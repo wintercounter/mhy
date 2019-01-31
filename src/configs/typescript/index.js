@@ -29,10 +29,7 @@ const tsconfig = loadConfig('typescript', {
                 return acc
             },
             {
-                '*': [
-                    path.resolve(process.cwd(), 'node_modules', '*'),
-                    path.resolve(_globalTypes, '../', '*')
-                ]
+                '*': [path.resolve(process.cwd(), 'node_modules', '*'), path.resolve(_globalTypes, '../', '*')]
             }
         )
     },
@@ -41,10 +38,8 @@ const tsconfig = loadConfig('typescript', {
 })
 
 // Setup @types
-const isDirectory = source => dir =>
-    fs.lstatSync(path.join(source, dir)).isDirectory()
-const getDirectories = source =>
-    fs.readdirSync(source).filter(isDirectory(source))
+const isDirectory = source => dir => fs.lstatSync(path.join(source, dir)).isDirectory()
+const getDirectories = source => fs.readdirSync(source).filter(isDirectory(source))
 
 // Set fixed types from mhy
 getDirectories(_globalTypes).forEach(dir => {

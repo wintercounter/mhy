@@ -23,17 +23,11 @@ class Jest extends Process {
         this.run(defaultAction, { ...rest })
     }
 
-    onStart = ({ name }, { flags = [] }) =>
-        this.spawn(
-            name,
-            getJestCLICmd([
-                ...flags,
-                process.env.MHY_ENV === 'ui' ? watchFlag : ''
-            ])
-        )
+    onStart = ({ name }, { flags = [] }) => {
+        this.spawn(name, getJestCLICmd([...flags, process.env.MHY_ENV === 'ui' ? watchFlag : '']))
+    }
 
-    onWatchAll = ({ name }, { flags = [] }) =>
-        this.spawn(name, getJestCLICmd([...flags, watchAllFlag]))
+    onWatchAll = ({ name }, { flags = [] }) => this.spawn(name, getJestCLICmd([...flags, watchAllFlag]))
 
     actions = [
         {

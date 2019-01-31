@@ -4,13 +4,7 @@ import formatSource from '@/utils/formatSource'
 import formatFilename from '@/utils/formatFilename'
 import FileTypes from '@/utils/fileTypes'
 
-const writeFile = (
-    dir,
-    filename,
-    source,
-    format = FileTypes.JS,
-    overwrite = true
-) => {
+const writeFile = (dir, filename, source, format = FileTypes.JS, overwrite = true) => {
     filename = formatFilename(filename, format)
     source = formatSource(source, format)
 
