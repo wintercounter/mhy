@@ -7,3 +7,4 @@ ENV PATH=$PATH:/home/node/.npm-global/bin
 USER node
 RUN mkdir ~/.npm-global
 RUN npm i mhy@latest -g
+RUN chmod 0777 -R ~/.npm-global
