@@ -23,9 +23,10 @@ const tsconfig = loadConfig('typescript', {
         baseUrl: path.resolve(process.cwd(), mhyConfig.srcFolder),
         paths: Object.entries(mhyConfig.defaultAliases).reduce(
             function(acc, [k]) {
-                const folder = k.replace('@', ``)
-                acc[k] = [`${folder}/index`]
-                acc[`${k}/*`] = [`${folder}/*`]
+                let folder = k.replace('@', ``)
+                folder = folder ? `${folder}/` : ''
+                acc[k] = [`${folder}index`]
+                acc[`${k}/*`] = [`${folder}*`]
                 return acc
             },
             {
