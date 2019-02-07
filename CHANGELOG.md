@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/wintercounter/mhy/compare/v1.3.7...v1.4.0) (2019-02-07)
+
+
+### Features
+
+* **mhy:** add verbose logging of the command about to be run ([0b37fc8](https://github.com/wintercounter/mhy/commit/0b37fc8))
+
+
+
 <a name="1.3.7"></a>
 ## [1.3.7](https://github.com/wintercounter/mhy/compare/v1.3.6...v1.3.7) (2019-02-05)
 
