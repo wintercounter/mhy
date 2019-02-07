@@ -1,6 +1,6 @@
 # package.json-overrides
 
-Using `json-merger`'s syntax you have powerful ways to customize configs without _JavaScript_ directly in you `package.json` files. There can be some really exotic cases tho. This is a place to collect some of these solutions.
+Using `json-merger`'s syntax you have powerful ways to customize configs without _JavaScript_ directly in your `package.json` files. There can be some really exotic cases tho. This is a place to collect some of these solutions.
 
 ## Extend `.npmignore` with custom file names
 
