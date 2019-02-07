@@ -45,7 +45,8 @@
 
 ## Recipes and Examples
 
-* [Coming soon...](recipes-and-examples/coming-soon.md)
+* [package.json overrides](recipes-and-examples/package.json-overrides.md)
+* [Add your own](recipes-and-examples/add-your-own.md)
 
 ## Others
 
