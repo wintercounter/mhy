@@ -10,6 +10,14 @@ if (process.argv.includes('--mhy-prod')) {
     process.env.NODE_ENV = 'production'
 }
 
+if (process.argv.includes('--mhy-verbose')) {
+    process.env.MHY_VERBOSE = true
+}
+
+if (process.argv.includes('--mhy-debug')) {
+    process.env.MHY_DEBUG = true
+}
+
 yargs
     .usage('\nUsage:\n  mhy [command (process)] [process args] [mhy options]')
     .scriptName('')

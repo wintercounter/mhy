@@ -100,6 +100,11 @@ export default class Process extends EventEmitter {
     spawn(id, [bin, ...cmd], stdio) {
         stdio = stdio || (process.env.MHY_ENV === 'ui' ? 'pipe' : 'inherit')
 
+        if (process.env.MHY_VERBOSE) {
+            console.log(`mhy verbose :: Command about to be run:`)
+            console.log(`mhy verbose :: ${bin} ${cmd.join(' ')}`)
+        }
+
         const p = spawn(bin, cmd, {
             shell: true,
             stdio
