@@ -6,6 +6,8 @@ description: >-
 
 # config
 
+- Alias: `c`
+
 ## Initialize
 
 `mhy` is able to generate your config files for your environment. Use it to initialize your environment in your IDE/Editor.
