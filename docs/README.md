@@ -25,7 +25,7 @@ It's really hard to define what `mhy` \(my\) is, because it tries to create a un
 * an **ecosystem** to be able to run different task together at once, connected together perfectly.
 * a **toolbox** help your work with the most common tasks.
 * a **solution for littering** your machine with the same npm package over and over again.
-* a **config management** tool make necessary changes faster at a single place.
+* a **config management** tool to make necessary changes faster at a single place.
 * an **interoperable environment** to be shared across multiple projects and ensure they are being build on the same principles/stack.
 
 > `mhy` helps you to be able to focus on your code again rather then the tech behind it.
