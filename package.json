@@ -1,7 +1,7 @@
 {
-  "name": "mhy",
+  "name": "mhyd",
   "version": "1.4.0",
-  "description": "A zero-config out-of-the-box development enviroment how I like it. So it's m(h)y environment!",
+  "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
     "test": "mhy jest",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/wintercounter/mhy#readme",
   "bin": {
-    "mhy": "dist/bin/index.js"
+    "mhyd": "dist/bin/index.js"
   },
   "mhy": {
     "mhy": {
@@ -43,6 +43,18 @@
               }
             }
           }
+        ]
+      }
+    },
+    "jest": {
+      "root": {
+        "roots": {
+          "$concat": [
+            "<rootDir>/test"
+          ]
+        },
+        "setupFiles": [
+          "<rootDir>/test/setup.js"
         ]
       }
     },
@@ -254,6 +266,7 @@
     "postcss-preset-env": "^6.5.0",
     "prettier": "^1.16.1",
     "prettier-loader": "^2.1.1",
+    "promisify-child-process": "^3.1.0",
     "prop-types": "^15.6.2",
     "qs": "^6.6.0",
     "react": "^16.7.0",
