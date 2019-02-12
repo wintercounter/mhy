@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.1"></a>
+## [1.4.1](https://github.com/wintercounter/mhy/compare/v1.4.0...v1.4.1) (2019-02-12)
+
+
+### Bug Fixes
+
+* **jest:** make `rootDir` to be `cwd` ([de76929](https://github.com/wintercounter/mhy/commit/de76929))
+* revert rename ([e24380b](https://github.com/wintercounter/mhy/commit/e24380b))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/wintercounter/mhy/compare/v1.3.7...v1.4.0) (2019-02-07)
 
