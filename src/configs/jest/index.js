@@ -5,6 +5,7 @@ import mhyConfig from '@/configs/mhy'
 
 const jestConfig = loadConfig('jest', {
     setupTestFrameworkScriptFile: path.resolve(__dirname, './setup.js'),
+    rootDir: process.cwd(),
     roots: [path.resolve(process.cwd(), mhyConfig.srcFolder)],
     watchPathIgnorePatterns: ['__.*__'],
     moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
