@@ -31,11 +31,15 @@ yargs
     .version(false)
     .option('mhy-verbose', {
         default: false,
-        description: 'Show more info than usual'
+        description: 'Show more info than usual',
+        choices: [false, true],
+        type: 'boolean'
     })
     .option('mhy-debug', {
         default: false,
-        description: 'Show debug information'
+        description: 'Show debug information',
+        choices: [false, true],
+        type: 'boolean'
     })
     .option('mhy-prod', {
         description: 'forces `process.env.NODE_ENV` to be "production"'

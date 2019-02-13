@@ -35,10 +35,11 @@ export default () => {
                     type: 'string',
                     default: 'default'
                 })
-                .option('--output', {
+                .option('output', {
                     alias: 'o',
                     default: 'src',
-                    description: 'Output directory'
+                    description: 'Output directory',
+                    type: 'string'
                 })
         },
         commandHandler

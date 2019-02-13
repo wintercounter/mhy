@@ -90,23 +90,26 @@ export default () => {
                     describe: 'config file to load',
                     type: 'string'
                 })
-                .option('--dir', {
+                .option('dir', {
                     alias: 'd',
                     default: process.cwd(),
                     description: 'Output directory'
                 })
-                .option('--init', {
+                .option('init', {
                     alias: 'i',
                     default: false,
-                    description: 'Output directory',
-                    choices: [false, true, 'vscode']
+                    description: 'Initialize (create) config file',
+                    choices: [false, true],
+                    type: 'boolean'
                 })
-                .option('--overwrite', {
+                .option('overwrite', {
                     alias: 'o',
                     default: false,
-                    description: 'Overwrite existing files'
+                    description: 'Overwrite existing files',
+                    choices: [false, true],
+                    type: 'boolean'
                 })
-                .option('--format', {
+                .option('format', {
                     alias: 'f',
                     default: undefined,
                     description: 'Output format',
