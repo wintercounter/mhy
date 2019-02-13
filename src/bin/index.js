@@ -19,8 +19,9 @@ if (process.argv.includes('--mhy-debug')) {
     process.env.MHY_DEBUG = true
 }
 
-if (process.argv.includes('--mhy-debug')) {
-    process.env.MHY_DEBUG = true
+if (process.argv.includes('--mhy-version')) {
+    console.log(require(path.resolve(__dirname, '../../package.json')).version)
+    process.exit(0)
 }
 
 yargs
@@ -39,7 +40,6 @@ yargs
     .option('mhy-prod', {
         description: 'forces `process.env.NODE_ENV` to be "production"'
     })
-    .version('--mhy-version', 'desc', require(path.resolve(__dirname, '../../package.json')).version)
     .recommendCommands()
 
 // Register commands
