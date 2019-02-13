@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.1"></a>
+## [1.7.1](https://github.com/wintercounter/mhy/compare/v1.7.0...v1.7.1) (2019-02-13)
+
+
+### Bug Fixes
+
+* **mhy:** update commands for braking changes of yargs ([d721d92](https://github.com/wintercounter/mhy/commit/d721d92))
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/wintercounter/mhy/compare/v1.6.1...v1.7.0) (2019-02-13)
 
