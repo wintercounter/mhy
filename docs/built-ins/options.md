@@ -28,7 +28,7 @@ Forces `process.env.NODE_ENV` to be `production`.
 ## --mhy-version
 
 ```bash
-# log out mhy's currently install version
+# show mhy's currently installed version
 mhy --mhy-version
 ```
 
