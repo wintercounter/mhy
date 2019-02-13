@@ -41,8 +41,8 @@ yargs
         choices: [false, true],
         type: 'boolean'
     })
-    .option('mhy-prod', {
-        description: 'forces `process.env.NODE_ENV` to be "production"'
+    .option('mhy-version', {
+        description: `Show the currently used version of mhy`
     })
     .recommendCommands()
 
