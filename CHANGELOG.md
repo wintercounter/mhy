@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/wintercounter/mhy/compare/v1.6.0...v1.6.1) (2019-02-13)
+
+
+### Bug Fixes
+
+* **mhy:** refakt `--mhy-version` flag ([60e7377](https://github.com/wintercounter/mhy/commit/60e7377))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/wintercounter/mhy/compare/v1.5.0...v1.6.0) (2019-02-13)
 
