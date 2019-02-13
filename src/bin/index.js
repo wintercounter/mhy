@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import path from 'path'
 import yargs from 'yargs'
 import { loadCommands } from '@/processes'
 
@@ -12,6 +13,10 @@ if (process.argv.includes('--mhy-prod')) {
 
 if (process.argv.includes('--mhy-verbose')) {
     process.env.MHY_VERBOSE = true
+}
+
+if (process.argv.includes('--mhy-debug')) {
+    process.env.MHY_DEBUG = true
 }
 
 if (process.argv.includes('--mhy-debug')) {
@@ -34,6 +39,7 @@ yargs
     .option('mhy-prod', {
         description: 'forces `process.env.NODE_ENV` to be "production"'
     })
+    .version('--mhy-version', 'desc', require(path.resolve(__dirname, '../../package.json')).version)
     .recommendCommands()
 
 // Register commands

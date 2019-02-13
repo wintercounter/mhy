@@ -25,3 +25,10 @@ mhy --mhy-verbose
 
 Forces `process.env.NODE_ENV` to be `production`.
 
+## --mhy-version
+
+```bash
+# log out mhy's currently install version
+mhy --mhy-version
+```
+
