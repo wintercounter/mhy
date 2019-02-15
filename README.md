@@ -5,6 +5,7 @@
   <a href="https://npmcharts.com/compare/mhy?minimal=true"><img src="https://img.shields.io/npm/dm/mhy.svg" alt="Downloads"></a>
   <a href="https://david-dm.org/wintercounter/mhy" title="dependencies status"><img src="https://david-dm.org/wintercounter/mhy/status.svg"/></a>
   <a href="https://github.com/prettier/prettier" rel="nofollow"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="code style: prettier"></a>
+  <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits"></a>
   <a href="https://www.npmjs.com/package/mhy"><img src="https://img.shields.io/npm/v/mhy.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/mhy"><img src="https://img.shields.io/npm/l/mhy.svg" alt="License"></a>
 </p>
