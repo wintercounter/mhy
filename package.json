@@ -16,7 +16,9 @@
     "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
     "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
     "deploy": "npm pub && npm run docker",
-    "release": "standard-version && conventional-github-releaser -t"
+    "release": "standard-version && conventional-github-releaser -t",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
@@ -326,6 +328,7 @@
     "yargs": "^13.1.0"
   },
   "devDependencies": {
+    "all-contributors-cli": "^6.1.1",
     "conventional-github-releaser": "^3.1.2",
     "standard-version": "^4.4.0"
   }

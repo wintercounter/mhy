@@ -85,26 +85,12 @@ mhy
 
 `mhy` is providing many common/popular packages. There are continuous adjustments being made to the includes to match the most common needs and being able to develop without the need of your own `npm install` command ever again. It's in plan to accurately list these on the site, for now the best is to check the dependencies of our `package.json` for the included packages, and I also advice you to check out our sources for more details.
 
-## Contributors
+## Contributors ✨
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top">
-        <img width="128" height="128" src="https://github.com/wintercounter.png?s=128">
-        <br>
-        <a href="https://github.com/wintercounter">wintercounter</a>
-        <p>Core</p>
-      </td>
-      <td align="center" valign="top">
-        <img width="128" height="128" src="https://github.com/andy1210.png?s=128">
-        <br>
-        <a href="http://andy1210.com">Andy1210</a>
-        <p>Contributor, beta tester</p>
-      </td>
-     </tr>
-  </tbody>
-</table>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="http://andy1210.com"><img src="https://avatars0.githubusercontent.com/u/964291?v=4" width="100px;" alt="Andy1210"/><br /><sub><b>Andy1210</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/issues?q=author%3AAndy1210" title="Bug reports">🐛</a></td></tr></table>
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Credits ❤
 

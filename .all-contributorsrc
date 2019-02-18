@@ -1,0 +1,24 @@
+{
+  "projectName": "mhy",
+  "projectOwner": "wintercounter",
+  "files": [
+    "README.md",
+    "docs/README.md"
+  ],
+  "imageSize": 100,
+  "contributorsPerLine": 7,
+  "types": {},
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Andy1210",
+      "name": "Andy1210",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/964291?v=4",
+      "profile": "http://andy1210.com",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "repoType": "github"
+}
