@@ -1,22 +1,29 @@
 import path from 'path'
 import fse from 'fs-extra'
 import yargs from 'yargs'
+import { merge } from 'lodash'
 
 // mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output path]
-const commandHandler = ({ technology, template, output }) => {
+const commandHandler = async ({ technology, template, output }) => {
     const source = path.resolve(__dirname, '../../../', `templates/${technology}/${template}`)
     const destination = path.resolve(process.cwd(), output)
 
-    fse.copy(source, destination, function(err) {
-        if (err) {
-            console.error(`mhy:boot:${technology}:${template}`)
-            console.error(`An error occurred while copying the source to the destination: ${destination}`)
-            console.error(err)
-            return
-        }
-        console.log(`mhy:boot:${technology}:${template}`)
-        console.log(`Completed successfully into: ${destination}`)
-    })
+    try {
+        await fse.copy(source, destination, { overwrite: false })
+        await fse.writeJson(
+            './package.json',
+            merge(require(path.resolve(source, 'package.json')), require(path.resolve(destination, 'package.json'))),
+            {
+                spaces: 2
+            }
+        )
+    } catch (err) {
+        console.error(`mhy:boot:${technology}:${template}`)
+        console.error(`An error occurred while copying the source to the destination: ${destination}`)
+        console.error(err)
+        return
+    }
+    console.log(`Completed successfully into: ${destination}`)
 }
 
 export default () => {
@@ -37,7 +44,7 @@ export default () => {
                 })
                 .option('output', {
                     alias: 'o',
-                    default: 'src',
+                    default: '',
                     description: 'Output directory',
                     type: 'string'
                 })
