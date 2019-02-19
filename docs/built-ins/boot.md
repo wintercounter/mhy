@@ -13,7 +13,7 @@ mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output 
   * `default`: react
 * `template`: what template should be loaded.
   * `default`: default
-* `-o, --output`: path where the template should be booted.
+* `-o, --output`: path where the template should be boot.
   * `default`: ''
 
 Examples:
@@ -28,11 +28,13 @@ mhy boot react
 mhy boot -o xproject/path/src
 ```
 
+> Your `package.json` will be extended with the necessary changes you might need to run the template. If it doesn't exists, it'll be created for you.
+
 ## Available Templates
 
 ### React Minimal
 
-A minimal code to Render a single react component.
+A minimal code to render a single React component.
 
 ```sh
 mhy boot react minimal
