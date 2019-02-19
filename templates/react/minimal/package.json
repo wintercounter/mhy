@@ -1,0 +1,25 @@
+{
+  "name": "mhy-boot-react-simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "mhy jest",
+    "start": "mhy",
+    "build": "mhy wp --mhy-prod"
+  },
+  "author": "",
+  "license": "MIT",
+  "mhy": {
+    "mhy": {
+      "root": {
+        "ecosystem": {
+          "$replace": [
+            "webpack-dev-server",
+            "jest"
+          ]
+        }
+      }
+    }
+  }
+}
