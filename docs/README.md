@@ -81,18 +81,15 @@ mhy
 
 ## Supported packages
 
-`mhy` is providing many common/popular packages. There are continuous adjustments being made to the includes to match the most common needs and being able to develop without the need of your own `npm install` command ever again. It's in plan to accurately list these on the site, for now the best is to check the dependencies of our `package.json` for the included packages, and I also advice you to check out our sources for more details.
+`mhy` is providing many common/popular packages _out-of-the_box. There are continuous adjustments being made to the includes to match the most common needs and being able to develop without the need of your own `npm install` command ever again.
 
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="http://andy1210.com"><img src="https://avatars0.githubusercontent.com/u/964291?v=4" width="100px;" alt="Andy1210"/><br /><sub><b>Andy1210</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/issues?q=author%3AAndy1210" title="Bug reports">🐛</a> <a href="https://github.com/wintercounter/mhy/commits?author=Andy1210" title="Tests">⚠️</a></td></tr></table>
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+<table><tr><td align="center"><a href="http://andy1210.com"><img src="https://avatars0.githubusercontent.com/u/964291?v=4" width="100px;" alt="Andy1210"/><br /><sub><b>Andy1210</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/issues?q=author%3AAndy1210" title="Bug reports">🐛</a> <a href="https://github.com/wintercounter/mhy/commits?author=Andy1210" title="Tests">⚠️</a></td></tr></table><!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ❤ Thank you all! ❤
-
-<!-- Extra comment to fix parsing -->
 
 ## Credits ❤
 
