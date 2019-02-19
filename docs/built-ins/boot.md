@@ -3,13 +3,50 @@
 description: This tool will let you initialize codebase from a template.
 ---
 
-## Templates
+## Usage
 
-Currently `boot` has a simple `default` template available, but we're looking forward on having more templates available in the long run.
+```bash
+mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output path]
+```
 
-### React Default Template
+* `technology`: what tech should be used.
+  * `default`: react
+* `template`: what template should be loaded.
+  * `default`: default
+* `-o, --output`: path where the template should be booted.
+  * `default`: ''
 
-The current `default` template is a React project and it contains the following structure:
+Examples:
+
+```bash
+mhy boot react default -o myProject
+# or
+mhy boot
+# or
+mhy boot react
+# or
+mhy boot -o xproject/path/src
+```
+
+## Available Templates
+
+### React Minimal
+
+A minimal code to Render a single react component.
+
+```sh
+mhy boot react minimal
+```
+
+### React Default
+
+A complete example codebase with _Redux_, _async rendering_, _API calls_ and _Service Worker_.
+
+```sh
+mhy boot react
+```
+
+#### Structure
 
 * `components`: components directory
 * `config`: app configuration directory
@@ -23,29 +60,4 @@ The current `default` template is a React project and it contains the following 
 * `services`: a base service implementation which you build your APIs on.
 * `validators`: custom validator function usually for `react-redux-form`
 * `index.js`: files are being used to export sub-modules for easier/simplier/nicer imports.
-
-## How to use it
-
-```bash
-mhy boot [technology:react|vue|...] [template:default|...] [-o,--output: output path]
-```
-
-* `technology`: what tech should be used.
-  * `default`: react
-* `template`: what template should be loaded.
-  * `default`: default
-* `-o, --output`: path where the template should be booted.
-  * `default`: src
-
-Examples:
-
-```bash
-mhy boot react default -o src
-# or
-mhy boot
-# or
-mhy boot react
-# or
-mhy boot -o xproject/path/src
-```
 
