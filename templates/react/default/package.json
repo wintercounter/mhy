@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mhy jest",
     "start": "mhy",
-    "build": "mhy webpack --mhy-node-env=production"
+    "build": "mhy wp --mhy-prod"
   },
   "author": "",
   "license": "MIT",
