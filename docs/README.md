@@ -78,8 +78,6 @@ It'll run Jest, Webpack Dev Server, TypeScript compiler, Storybook at once in a 
 ```bash
 mhy
 ```
-### That's not all
-> These are only a few examples from all the possibilities `mhy` provides. Start exploring on https://mhy.js.org
 
 ## Supported packages
 
@@ -94,7 +92,7 @@ mhy
 
 ❤ Thank you all! ❤
 
-## Credits ❤
+## Credits
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
