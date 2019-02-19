@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/wintercounter/mhy/compare/v1.7.1...v1.8.0) (2019-02-19)
+
+
+### Bug Fixes
+
+* **boot:** CLI description ([64d0496](https://github.com/wintercounter/mhy/commit/64d0496))
+* **docs:** emoji issues ([8dc7f41](https://github.com/wintercounter/mhy/commit/8dc7f41))
+
+
+### Features
+
+* **boot:** add minimal react template ([fd99447](https://github.com/wintercounter/mhy/commit/fd99447))
+* **boot:** add support for package.json merging ([fbab132](https://github.com/wintercounter/mhy/commit/fbab132))
+* **boot:** prepare directory structure for boot changes ([58d8f85](https://github.com/wintercounter/mhy/commit/58d8f85))
+
+
+
 <a name="1.7.1"></a>
 ## [1.7.1](https://github.com/wintercounter/mhy/compare/v1.7.0...v1.7.1) (2019-02-13)
 
