@@ -22,7 +22,7 @@ const commandHandler = ({ technology, template, output }) => {
 export default () => {
     yargs.command('boot', 'initialize a new codebase from a template').command(
         'boot [technology] [template]',
-        'init/print out specified configs only',
+        'initialize a template',
         yargs => {
             yargs
                 .positional('technology', {
