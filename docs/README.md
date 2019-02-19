@@ -92,7 +92,9 @@ mhy
 
 ❤ Thank you all! ❤
 
-## Credits
+<!-- Extra comment to fix parsing -->
+
+## Credits ❤
 
 I'm using Webpack's logo to build an `M` shape from multiple blocks. I'd like to say **Thank You** for their great logo.
 
