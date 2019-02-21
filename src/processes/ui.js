@@ -4,6 +4,12 @@ import { render } from 'react-blessed'
 
 let screen
 
+global.MHY_UI_ACTION = 'action'
+global.MHY_UI_ACTION_CLEAR = 'clear'
+global.MHY_UI_ACTION_DATA = 'data'
+global.MHY_UI_ACTION_UPDATE = 'update'
+global.MHY_UI_ACTION_FUNCTION = 'function'
+
 const renderProcesses = (processes = {}) => {
     screen = blessed.screen({
         autoPadding: true,
@@ -144,12 +150,12 @@ class MhyBox extends Component {
         process.env.MHY_UI_SUCCESS = true
         const { process: proc, index } = this.props
         const { hasRows } = this.state
-        proc.on('action', action => {
-            if (action === 'clear') {
+        proc.on(MHY_UI_ACTION, action => {
+            if (action === MHY_UI_ACTION_CLEAR) {
                 this.refs.log.setContent('')
             }
         })
-        proc.on('data', d => {
+        proc.on(MHY_UI_ACTION_DATA, d => {
             if (!this.refs.log) return
             this.refs.log.add(d)
 

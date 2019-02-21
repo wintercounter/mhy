@@ -56,7 +56,7 @@ class Prettier extends Process {
     // Feature test only
     processLine(d) {
         if (d.startsWith('change:')) {
-            this.emit('action', 'clear')
+            this.emit(MHY_UI_ACTION, MHY_UI_ACTION_CLEAR)
         }
         return d
     }
