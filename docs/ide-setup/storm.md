@@ -53,12 +53,9 @@ While it's possible to add watchers without the `Prettier plugin`, the plugin si
 2. Go to `File > Settings > Language & Frameworks > JavaScript > Code Quality Tools > ESLint`
 3. `Enable`
 4. For `ESLint package` set `GLOBAL_NODE_MODULES/mhy/node_modules/eslint`
-
-## TSLint
-1. **ONLY** in case you don't have `tsconfig.json` file yet: `mhy config tslint -i`
-2. Go to `File > Settings > Language & Frameworks > JavaScript > TSLint`
-3. `Enable`
-4. For `TSLint package` set `GLOBAL_NODE_MODULES/mhy/node_modules/tslint`
+5. Go to `Help > Find Action` and type `registry`
+6. Click the first result (`Registry...`)
+7. Scroll down to `eslint.additional.file.extensions` and set `js,jsx,ts,tsx` as value.
 
 ## Tips
 1. Disable automatic `package.json` dependency inspection.

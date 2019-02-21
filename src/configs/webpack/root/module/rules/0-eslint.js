@@ -11,7 +11,7 @@ const getRules = rules => {
         ...rules,
         {
             enforce: 'pre',
-            test: /\.jsx?$/,
+            test: /\.[jt]sx?$/,
             loader: require.resolve('eslint-loader'),
             include: /src/,
             exclude: /node_modules|dist|build/,

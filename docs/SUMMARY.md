@@ -35,7 +35,6 @@
  * [npmignore](configs/npmignore.md)
  * [prettier](configs/prettier.md)
  * [storybook](configs/storybook.md)
- * [tslint](configs/tslint.md)
  * [typescript](configs/typescript.md)
  * [webpack](configs/webpack.md)
 

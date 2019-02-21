@@ -7,7 +7,10 @@ My original plan was to make a simple tool that can run all MY(!) processes at o
 
 You can always follow our continuous TODO list here: [https://github.com/wintercounter/mhy/issues/1](https://github.com/wintercounter/mhy/issues/1)
 
+## How can I use another version of a certain package?
+`mhy` will try to resolve packages first in your project's `node_modules` folder. Simply install your own version as usual.
+
 ## Why no more question?
 
-I have more important things to do now :\)
+Feel free to add your own!
 

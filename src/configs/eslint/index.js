@@ -1,6 +1,8 @@
+import fs from 'fs'
+import path from 'path'
 import { loadConfig } from '@/utils'
 
-const eslintConfig = loadConfig('eslint', {
+const defaults = {
     env: {
         node: true,
         browser: true,
@@ -198,6 +200,36 @@ const eslintConfig = loadConfig('eslint', {
         'no-bitwise': 2,
         'no-plusplus': 0
     }
-})
+}
+
+const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
+if (fs.existsSync(tsconfigPath)) {
+    defaults.parser = '@typescript-eslint/parser'
+    defaults.parserOptions.project = tsconfigPath
+    defaults.plugins.push('@typescript-eslint')
+    defaults.extends.push('plugin:@typescript-eslint/recommended')
+    defaults.extends.push('prettier/@typescript-eslint')
+    defaults.rules = {
+        ...defaults.rules,
+
+        // Extras
+        '@typescript-eslint/interface-name-prefix': [1, 'always'],
+        '@typescript-eslint/explicit-function-return-type': 0,
+        'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+
+        // Conflicting
+        'react/prop-types': 0,
+
+        // Duplicates
+        'no-shadow': 0,
+        'no-unused-vars': 0,
+
+        // Temporarily disabled
+        'no-useless-constructor': 0,
+        'react/prefer-stateless-function': 0
+    }
+}
+
+const eslintConfig = loadConfig('eslint', defaults)
 
 export default eslintConfig

@@ -45,7 +45,6 @@ const mhyConfig = loadConfig('mhy', {
         '/prettier.json',
         '/.prettierrc',
         '/jest.config.js',
-        '/tslint.json',
         '/.eslintrc',
         '/tsconfig.json',
         '/webpack.config.js'
