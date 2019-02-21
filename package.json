@@ -258,6 +258,7 @@
     "json-colorizer": "^2.1.2",
     "json-merger": "^1.1.0",
     "loader-utils": "1.2.3",
+    "module-alias": "^2.2.0",
     "moment": "^2.24.0",
     "moment-range": "4.0.1",
     "moment-timezone": "0.5.23",

@@ -55,6 +55,7 @@ const mhyConfig = loadConfig('mhy', {
         const cwd = process.cwd()
         return {
             '@': pr(cwd, `${src}/`),
+            '@/mhy': pr(__dirname, '../../'), // dist
 
             // Everything below here is deprecated!!!
             '@assets': pr(cwd, `${src}/assets/`),

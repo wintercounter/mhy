@@ -2,6 +2,11 @@
 import path from 'path'
 import yargs from 'yargs'
 import { loadCommands } from '@/processes'
+import { addPath, addAlias } from 'module-alias'
+
+// Register dist with alias and mhy's node_modules as module source so custom JS files can use it loaded through mhy
+addAlias('@/mhy', path.resolve(__dirname, '../'))
+addPath(path.resolve(__dirname, '../../node_modules'))
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 process.env.MHY_ENV = 'cli'
