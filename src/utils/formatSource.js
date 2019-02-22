@@ -1,4 +1,4 @@
-import FileTypes from '@utils/fileTypes'
+import FileTypes from '@/utils/fileTypes'
 
 const formatSource = (source, format) => {
     switch (format) {
