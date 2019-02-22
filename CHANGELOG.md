@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/wintercounter/mhy/compare/v1.8.1...v1.9.0) (2019-02-22)
+
+
+### Bug Fixes
+
+* **docs:** try to fix gitbook parsing issue ([90b0eb3](https://github.com/wintercounter/mhy/commit/90b0eb3))
+* **docs:** try to fix gitbook parsing issue - revert ([9c01df2](https://github.com/wintercounter/mhy/commit/9c01df2))
+* **docs:** try to fix gitbook parsing issue [#2](https://github.com/wintercounter/mhy/issues/2) ([09323dc](https://github.com/wintercounter/mhy/commit/09323dc))
+* **docs:** try to fix gitbook parsing issue [#3](https://github.com/wintercounter/mhy/issues/3) ([2073b27](https://github.com/wintercounter/mhy/commit/2073b27))
+* **docs:** try to fix gitbook parsing issue [#4](https://github.com/wintercounter/mhy/issues/4) ([48defd4](https://github.com/wintercounter/mhy/commit/48defd4))
+* **docs:** try to fix gitbook parsing issue [#5](https://github.com/wintercounter/mhy/issues/5) ([1e4f398](https://github.com/wintercounter/mhy/commit/1e4f398))
+* **docs:** try to fix gitbook parsing issue [#5](https://github.com/wintercounter/mhy/issues/5) ([7dbdf28](https://github.com/wintercounter/mhy/commit/7dbdf28))
+* **docs:** try to fix gitbook parsing issue [#6](https://github.com/wintercounter/mhy/issues/6) ([2abb2ca](https://github.com/wintercounter/mhy/commit/2abb2ca))
+
+
+### Features
+
+* **eslint:** BREAKING CHANGE: remove TSLint completely and add support for ESLint for TS ([a1960a5](https://github.com/wintercounter/mhy/commit/a1960a5))
+* add support for custom command/ecosystem files ([d0becf0](https://github.com/wintercounter/mhy/commit/d0becf0))
+
+
+
 <a name="1.8.1"></a>
 ## [1.8.1](https://github.com/wintercounter/mhy/compare/v1.8.0...v1.8.1) (2019-02-19)
 
