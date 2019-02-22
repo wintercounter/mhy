@@ -30,8 +30,10 @@ const handleWrite = (config, dir, format, overwrite) => {
         process.stdout.write(`\r Writing configs ${results.length + 1}/${modules.length}`)
         results.push(writeConfig(dir, format, overwrite))
     }
-    process.stdout.clearLine()
-    process.stdout.cursorTo(0)
+    try {
+        process.stdout.clearLine()
+        process.stdout.cursorTo(0)
+    } catch {}
 
     const existed = results.filter(({ isExisted }) => isExisted)
     const overwritten = results.filter(({ isOverwritten }) => isOverwritten)
