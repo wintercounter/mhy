@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.9.3"></a>
+## [1.9.3](https://github.com/wintercounter/mhy/compare/v1.9.2...v1.9.3) (2019-02-22)
+
+
+### Bug Fixes
+
+* constant placements [#2](https://github.com/wintercounter/mhy/issues/2) ([4e4383f](https://github.com/wintercounter/mhy/commit/4e4383f))
+
+
+
 <a name="1.9.2"></a>
 ## [1.9.2](https://github.com/wintercounter/mhy/compare/v1.9.1...v1.9.2) (2019-02-22)
 
