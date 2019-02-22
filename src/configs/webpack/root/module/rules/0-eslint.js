@@ -1,11 +1,9 @@
 import path from 'path'
-import fs from 'fs'
+import FileTypes from '@/utils/fileTypes'
 
 const getRules = rules => {
     const configFile = path.resolve(__dirname, '.eslintrc')
-    if (!fs.existsSync(configFile)) {
-        require('@/configs/eslint/write')(__dirname)
-    }
+    require('@/configs/eslint/write')(__dirname, FileTypes.JSON_NO_EXT, true)
 
     return [
         ...rules,
