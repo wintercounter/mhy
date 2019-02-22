@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import path from 'path'
 import yargs from 'yargs'
+import '@/utils/globals'
 import { loadCommands } from '@/processes'
 import { addPath, addAlias } from 'module-alias'
 

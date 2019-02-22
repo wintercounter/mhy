@@ -10,12 +10,6 @@ const _onData = Symbol()
 const _onError = Symbol()
 const instances = new Set()
 
-global.MHY_UI_ACTION = 'action'
-global.MHY_UI_ACTION_CLEAR = 'clear'
-global.MHY_UI_ACTION_DATA = 'data'
-global.MHY_UI_ACTION_UPDATE = 'update'
-global.MHY_UI_ACTION_FUNCTION = 'function'
-
 export const loadEcosystem = (env = '') => {
     const processes = {}
     applyEntries(processes, path.join(__dirname, 'ecosystem', env), '**/*.js')
