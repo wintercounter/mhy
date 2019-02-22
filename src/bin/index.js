@@ -12,12 +12,6 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 process.env.MHY_ENV = 'cli'
 process.env.MHY_LOCAL_DIR = '.mhy'
 
-global.MHY_UI_ACTION = 'action'
-global.MHY_UI_ACTION_CLEAR = 'clear'
-global.MHY_UI_ACTION_DATA = 'data'
-global.MHY_UI_ACTION_UPDATE = 'update'
-global.MHY_UI_ACTION_FUNCTION = 'function'
-
 if (process.argv.includes('--mhy-prod')) {
     process.env.NODE_ENV = 'production'
 }
