@@ -3,6 +3,7 @@ import path from 'path'
 import EventEmitter from 'events'
 import { spawn } from 'child_process'
 import tk from 'tree-kill'
+import '@/utils/globals'
 
 import { applyEntries } from '@/utils'
 
@@ -143,7 +144,7 @@ export default class Process extends EventEmitter {
 
     processLine(d) {
         if (d.startsWith('mhy:ui:clear')) {
-            this.emit(MHY_UI_ACTION, MHY_UI_ACTION_CLEAR)
+            this.emit(process.env.MHY_UI_ACTION, process.env.MHY_UI_ACTION_CLEAR)
             return ''
         }
         return d
@@ -151,7 +152,7 @@ export default class Process extends EventEmitter {
 
     run(name, props = {}) {
         const action = this.actions.find(({ name: n }) => n === name)
-        this.emit(MHY_UI_ACTION, MHY_UI_ACTION_CLEAR)
+        this.emit(process.env.MHY_UI_ACTION, process.env.MHY_UI_ACTION_CLEAR)
         this.log(`{blue-fg}Running action ${name}{/blue-fg}`)
         action.onRun(action, props)
     }

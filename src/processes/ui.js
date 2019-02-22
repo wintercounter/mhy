@@ -144,12 +144,12 @@ class MhyBox extends Component {
         process.env.MHY_UI_SUCCESS = true
         const { process: proc, index } = this.props
         const { hasRows } = this.state
-        proc.on(MHY_UI_ACTION, action => {
-            if (action === MHY_UI_ACTION_CLEAR) {
+        proc.on(process.env.MHY_UI_ACTION, action => {
+            if (action === process.env.MHY_UI_ACTION_CLEAR) {
                 this.refs.log.setContent('')
             }
         })
-        proc.on(MHY_UI_ACTION_DATA, d => {
+        proc.on(process.env.MHY_UI_ACTION_DATA, d => {
             if (!this.refs.log) return
             this.refs.log.add(d)
 
