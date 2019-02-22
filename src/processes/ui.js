@@ -4,12 +4,6 @@ import { render } from 'react-blessed'
 
 let screen
 
-global.MHY_UI_ACTION = 'action'
-global.MHY_UI_ACTION_CLEAR = 'clear'
-global.MHY_UI_ACTION_DATA = 'data'
-global.MHY_UI_ACTION_UPDATE = 'update'
-global.MHY_UI_ACTION_FUNCTION = 'function'
-
 const renderProcesses = (processes = {}) => {
     screen = blessed.screen({
         autoPadding: true,
