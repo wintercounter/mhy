@@ -55,26 +55,7 @@ const mhyConfig = loadConfig('mhy', {
         const cwd = process.cwd()
         return {
             '@': pr(cwd, `${src}/`),
-            '@/mhy': pr(__dirname, '../../'), // dist
-
-            // Everything below here is deprecated!!!
-            '@assets': pr(cwd, `${src}/assets/`),
-            '@components': pr(cwd, `${src}/components/`),
-            '@configs': pr(cwd, `${src}/configs/`),
-            '@constants': pr(cwd, `${src}/constants/`),
-            '@core': pr(cwd, `${src}/core/`),
-            '@entities': pr(cwd, `${src}/entities/`),
-            '@fields': pr(cwd, `${src}/fields/`),
-            '@forms': pr(cwd, `${src}/forms/`),
-            '@layouts': pr(cwd, `${src}/layouts/`),
-            '@overlays': pr(cwd, `${src}/overlays/`),
-            '@pages': pr(cwd, `${src}/pages/`),
-            '@processes': pr(cwd, `${src}/processes/`),
-            '@resources': pr(cwd, `${src}/resources/`),
-            '@services': pr(cwd, `${src}/services/`),
-            '@styles': pr(cwd, `${src}/styles/`),
-            '@utils': pr(cwd, `${src}/utils/`),
-            '@validators': pr(cwd, `${src}/validators/`)
+            '@/mhy': pr(__dirname, '../../') // dist
         }
     },
     ecosystem: ['webpack-dev-server', 'tsc', 'jest', 'storybook-start']
