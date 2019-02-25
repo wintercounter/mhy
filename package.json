@@ -233,6 +233,7 @@
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "^1.2.0",
     "faker": "4.1.0",
     "figures": "^2.0.0",
     "file-loader": "3.0.1",

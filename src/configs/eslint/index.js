@@ -37,6 +37,7 @@ const defaults = {
         'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
         'react/no-did-update-set-state': 0,
         'react/forbid-foreign-prop-types': 0,
+        'react-hooks/rules-of-hooks': 'error',
 
         'import/no-unresolved': 0,
         'import/no-extraneous-dependencies': 0,
