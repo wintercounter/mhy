@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.10.0"></a>
+# [1.10.0](https://github.com/wintercounter/mhy/compare/v1.9.111...v1.10.0) (2019-02-25)
+
+
+### Features
+
+* **eslint:** add `"react-hooks/rules-of-hooks": "error"` ([7eb6b2d](https://github.com/wintercounter/mhy/commit/7eb6b2d))
+
+
+
 <a name="1.9.11"></a>
 ## [1.9.11](https://github.com/wintercounter/mhy/compare/v1.9.10...v1.9.11) (2019-02-22)
 
