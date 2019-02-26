@@ -17,7 +17,7 @@ const defaults = {
         sourceType: 'module'
     },
     parser: 'babel-eslint',
-    plugins: ['react', 'jest'],
+    plugins: ['react', 'react-hooks', 'jest'],
     extends: ['airbnb', 'prettier', 'prettier/react', 'plugin:jest/recommended'],
     rules: {
         'jsx-a11y/media-has-caption': 0,
