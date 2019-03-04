@@ -1,0 +1,34 @@
+@import '~phrame2/core';
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background: #369;
+	padding: 10px 15px;
+	text-align: center;
+
+	a {
+		padding: 10px 15px;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 10px;
+		display: inline-block;
+		margin-right: 5px;
+
+		&:hover {
+			background: rgba(#000, 0.3);
+		}
+
+		@include _on('tablet', 'down') {
+			color: #000;
+		}
+
+		&.active {
+			background: #000;
+			color: #fff;
+		}
+	}
+}

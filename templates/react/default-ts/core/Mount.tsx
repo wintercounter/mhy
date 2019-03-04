@@ -4,7 +4,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
-
 import { Shell, Store } from '@/core'
 
 const Mount = (el, initialState) => {
