@@ -28,10 +28,13 @@ export const loadProcess = (module, env = process.env.NODE_ENV) => {
     )
     const processLocalExists = fs.existsSync(processLocal)
     const processMhy = path.join(__dirname, 'ecosystem', env, `${module}.js`)
+    const processMhyRoot = path.join(__dirname, 'ecosystem', 'root', `${module}.js`)
     const processMhyExists = fs.existsSync(processMhy)
+    const processMhyRootExists = fs.existsSync(processMhyRoot)
 
     if (processLocalExists) return require(processLocal)
     else if (processMhyExists) return require(processMhy)
+    else if (processMhyRootExists) return require(processMhyRoot)
     else {
         console.error(`Unknown process '${module}' for the environment of '${env}'!`)
         process.exit(0)
