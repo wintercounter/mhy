@@ -1,5 +1,4 @@
 import path from 'path'
-import fs from 'fs'
 
 import { loadConfig } from '@/utils'
 import mhyConfig from '@/configs/mhy'
@@ -21,6 +20,7 @@ const tsconfig = loadConfig('typescript', {
         noImplicitAny: false,
         declaration: true,
         baseUrl: path.resolve(process.cwd(), mhyConfig.srcFolder),
+        skipLibCheck: true,
         paths: Object.entries(mhyConfig.defaultAliases).reduce(
             function(acc, [k]) {
                 let folder = k.replace('@', ``)
@@ -32,30 +32,11 @@ const tsconfig = loadConfig('typescript', {
             {
                 '*': [path.resolve(process.cwd(), 'node_modules', '*'), path.resolve(_globalTypes, '../', '*')]
             }
-        )
+        ),
+        typeRoots: [_globalTypes, _cwdTypes]
     },
     include: [path.resolve(process.cwd(), `${mhyConfig.srcFolder}/**/*`)],
     files: [path.resolve(__dirname, './mhy.d.ts')]
 })
-
-// Setup @types
-const isDirectory = source => dir => fs.lstatSync(path.join(source, dir)).isDirectory()
-const getDirectories = source => fs.readdirSync(source).filter(isDirectory(source))
-
-// Set fixed types from mhy
-getDirectories(_globalTypes).forEach(dir => {
-    tsconfig.compilerOptions.paths[dir] = [path.resolve(_globalTypes, dir)]
-})
-
-// Local @types exists
-if (fs.existsSync(_cwdTypes)) {
-    // Set local types
-    getDirectories(_cwdTypes).forEach(dir => {
-        tsconfig.compilerOptions.paths[dir] = [path.resolve(_cwdTypes, dir)]
-    })
-
-    // Set local as typeRoots
-    tsconfig.compilerOptions.typeRoots = [_cwdTypes]
-}
 
 export default tsconfig
