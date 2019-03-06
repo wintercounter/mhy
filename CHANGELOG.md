@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.11.0"></a>
+# [1.11.0](https://github.com/wintercounter/mhy/compare/v1.10.1...v1.11.0) (2019-03-06)
+
+
+### Features
+
+* **dependencies:** add PouchDB to the supported tools ([493132a](https://github.com/wintercounter/mhy/commit/493132a))
+* **node:** add support for custom entry points ([93b8601](https://github.com/wintercounter/mhy/commit/93b8601))
+* **process:** add `node` process with out-of-the-box TS/ES7/Alias support ([403e542](https://github.com/wintercounter/mhy/commit/403e542))
+* **template:** add `default-ts` version of `express` ([e3ca919](https://github.com/wintercounter/mhy/commit/e3ca919))
+* **template:** add `default-ts` version of `react/default` ([e201f37](https://github.com/wintercounter/mhy/commit/e201f37))
+
+
+### Performance Improvements
+
+* **typescript:** improve performance with skipping unnecessary lib checks ([ec967c9](https://github.com/wintercounter/mhy/commit/ec967c9))
+
+
+
 <a name="1.10.1"></a>
 ## [1.10.1](https://github.com/wintercounter/mhy/compare/v1.10.0...v1.10.1) (2019-02-26)
 
