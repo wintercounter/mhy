@@ -20,6 +20,7 @@
   * [babel](processes/babel.md)
   * [eslint](processes/eslint.md)
   * [jest](processes/jest.md)
+  * [node (NEW)](processes/node.md)
   * [prettier](processes/prettier.md)
   * [storybook-start](processes/storybook-start.md)
   * [tsc](processes/tsc.md)

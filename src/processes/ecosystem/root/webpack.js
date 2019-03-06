@@ -1,4 +1,4 @@
-import Process from 'src/processes'
+import Process from '@/processes'
 
 const getCmdWebpackCLI = flags => [
     'node',
