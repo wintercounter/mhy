@@ -1,6 +1,5 @@
 # webpack
 
-- Environment: `production`
 - Alias: `wp`
 - Usually ony used for generation production build. For development use `webpack-dev-server`.
 
@@ -16,6 +15,13 @@ https://webpack.js.org/api/cli/
 
 ### Default CLI
 ```bash
+mhy webpack
+# or
+mhy wp
+```
+
+### In `production` mode
+```bash
 mhy webpack --mhy-prod
 # or
 NODE_ENV=production mhy webpack
@@ -23,6 +29,8 @@ NODE_ENV=production mhy webpack
 
 ### With watcher
 ```bash
-mhy webpack --mhy-prod -w
+mhy webpack -w
+# or
+mhy wp --watch
 ```
 
