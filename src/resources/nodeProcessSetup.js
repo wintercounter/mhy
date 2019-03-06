@@ -18,4 +18,6 @@ register(babelConfig)
 addPath(path.resolve(process.cwd(), 'node_modules'))
 addPath(path.resolve(__dirname, '../../node_modules'))
 
-require(path.resolve(process.cwd(), 'src/index'))
+const scriptIndex = process.argv.findIndex(v => v === '--mhy-script')
+
+require(path.resolve(process.cwd(), process.argv[scriptIndex + 1]))

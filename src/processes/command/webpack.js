@@ -1,6 +1,6 @@
 import yargs from 'yargs'
 
-import { loadProcess, buildMhyArgv } from 'src/processes'
+import { loadProcess, buildMhyArgv } from '@/processes'
 
 const commandHandler = argv => {
     const WP = loadProcess('webpack')()
