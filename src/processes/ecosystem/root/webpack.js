@@ -1,12 +1,29 @@
-import yargs from 'yargs'
+import Process from 'src/processes'
 
-import { loadProcess, buildMhyArgv } from 'src/processes'
+const getCmdWebpackCLI = flags => [
+    'node',
+    require.resolve('webpack-cli/bin/cli.js'),
+    '--config',
+    require.resolve('@/configs/webpack'),
+    ...flags
+]
 
-const commandHandler = argv => {
-    const WP = loadProcess('webpack')()
-    new WP(buildMhyArgv(argv))
+class Webpack extends Process {
+    constructor(args) {
+        const { props: { defaultAction = 'start' } = {}, ...rest } = args
+        super(args)
+        this.run(defaultAction, { ...rest })
+    }
+
+    onStart = ({ name }, { flags = [] }) => this.spawn(name, getCmdWebpackCLI(flags))
+
+    actions = [
+        {
+            name: 'start',
+            enabled: true,
+            onRun: this.onStart
+        }
+    ]
 }
 
-export default () => {
-    yargs.command(['webpack', 'wp'], 'compile src using Webpack', () => {}, commandHandler)
-}
+export default () => Webpack
