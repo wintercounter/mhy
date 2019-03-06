@@ -1,9 +1,10 @@
 # node
 
 Run scripts in Node.JS.
-- Babel + TypeScript support
-- Support for aliases
+- Babel + TypeScript support.
+- Support for aliases.
 - Default: `./src`
+- Resolve both `.js` and `.ts` files.
 
 ## Default command
 ```bash
@@ -22,7 +23,7 @@ mhy node
 
 ### Run a specific file
 ```bash
-mhy node file.ts
+mhy node file
 ```
 
 
