@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.12.0"></a>
+# [1.12.0](https://github.com/wintercounter/mhy/compare/v1.11.1...v1.12.0) (2019-03-15)
+
+
+### Bug Fixes
+
+* **node:** remove regenerator plugin ([57b96f2](https://github.com/wintercounter/mhy/commit/57b96f2))
+* **webpack:** `publicPath` for manifest files ([6b5952c](https://github.com/wintercounter/mhy/commit/6b5952c))
+
+
+### Features
+
+* introduce new supported dependencies ([a746b48](https://github.com/wintercounter/mhy/commit/a746b48))
+* **debug:** add support for `SpeedMeasurePlugin` for `Webpack` behind the `--mhy-debug` flag ([aa36c4e](https://github.com/wintercounter/mhy/commit/aa36c4e))
+* **packages:** add `node-fetch` ([2eb6359](https://github.com/wintercounter/mhy/commit/2eb6359))
+* **packages:** add `node-gzip` ([15c176d](https://github.com/wintercounter/mhy/commit/15c176d))
+* **storybook:** support static building of standalone storybooks `sb-build` ([aa0e8ef](https://github.com/wintercounter/mhy/commit/aa0e8ef))
+* **wds:** disable dot rule ([0dc8517](https://github.com/wintercounter/mhy/commit/0dc8517))
+
+
+
 <a name="1.11.1"></a>
 ## [1.11.1](https://github.com/wintercounter/mhy/compare/v1.11.0...v1.11.1) (2019-03-07)
 
