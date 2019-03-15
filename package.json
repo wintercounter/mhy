@@ -316,6 +316,7 @@
     "style-loader": "0.23.1",
     "styled-components": "^4.1.3",
     "svg-react-loader": "^0.4.6",
+    "symlink-dir": "^3.0.0",
     "tree-kill": "^1.2.1",
     "true-case-path": "^1.0.3",
     "typescript": "^3.3.3333",

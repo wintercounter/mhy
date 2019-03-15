@@ -1,13 +1,14 @@
 import mhyWP from '@/configs/webpack'
 
-export default (baseConfig, env, defaultConfig) => {
-    mhyWP.resolve.modules = [...defaultConfig.resolve.modules, ...mhyWP.resolve.modules]
+export default ({ config }) => {
+    mhyWP.resolve.modules = [...config.resolve.modules, ...mhyWP.resolve.modules]
     mhyWP.resolve.alias = {
         ...mhyWP.resolve.alias,
-        ...defaultConfig.resolve.alias
+        ...config.resolve.alias
     }
-    defaultConfig.resolve = mhyWP.resolve
-    defaultConfig.module = mhyWP.module
+    config.resolve = mhyWP.resolve
+    config.module = mhyWP.module
+    config.mode = 'development'
 
-    return defaultConfig
+    return config
 }

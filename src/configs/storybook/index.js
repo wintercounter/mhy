@@ -21,5 +21,10 @@ export default loadConfig('storybook', {
         host: 'localhost',
         'static-dir': null,
         'config-dir': path.resolve(__dirname, '.storybook')
+    },
+    build: {
+        'static-dir': null,
+        'config-dir': path.resolve(__dirname, '.storybook'),
+        'output-dir': path.resolve(process.cwd(), '.sb')
     }
 })
