@@ -14,7 +14,9 @@ https://storybook.js.org/configurations/cli-options/
 
 ### Example
 ```bash
-mhy storybook
+mhy sb-start
+# or
+mhy storybook-start
 ```
 
 
