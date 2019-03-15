@@ -1,8 +1,8 @@
-# webpack
+# webpack-dev-server
 
 - Environment: `development`
 - Alias: `wds`
-- Usually ony used for generation development. For production builds use `webpack`.
+- Usually ony used for  development. For production builds use `webpack`.
 
 ## Default command
 ```bash
@@ -17,13 +17,22 @@ webpack-sev-server --config mhy/configs/webpack
 
 ### Default CLI
 ```bash
-mhy webpack --mhy-prod
+mhy wds
 # or
-NODE_ENV=production mhy webpack
+mhy webpack-dev-server
 ```
 
-### With watcher
-```bash
-mhy webpack --mhy-prod -w
+## Debug performance
+
+`SpeedMeasurePlugin` is being supported out-of-the-box which is giving
+statistics for you about the time being spent on different stages of
+the build process to make it easier to track down build performance
+issues.
+
+### Usage
+You just need to pass the `--mhy-debug` flag to your command.
+
+```sh
+mhy wds --mhy-debug
 ```
 
