@@ -322,6 +322,7 @@
     "typescript": "^3.3.3333",
     "url-loader": "^1.1.2",
     "url-search-params-polyfill": "^5.0.0",
+    "use-react-router": "^1.0.4",
     "weakmap-polyfill": "^2.0.0",
     "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.1.0",
