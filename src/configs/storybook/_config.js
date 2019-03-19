@@ -1,9 +1,16 @@
 import 'babel-polyfill'
 import '@storybook/components'
-import { configure, addDecorator } from '@storybook/react'
+import { configure, addDecorator, addParameters } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-react-router'
+
+// Config
+addParameters({
+    options: {
+        panelPosition: 'right'
+    }
+})
 
 // Decorators
 addDecorator(withInfo)
