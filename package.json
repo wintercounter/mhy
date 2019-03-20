@@ -129,6 +129,7 @@
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.0.0",
+    "@hot-loader/react-dom": "^16.8.4",
     "@storybook/addon-a11y": "^5.0.3",
     "@storybook/addon-actions": "^5.0.3",
     "@storybook/addon-backgrounds": "^5.0.3",
