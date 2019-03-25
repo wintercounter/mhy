@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.13.0"></a>
+# [1.13.0](https://github.com/wintercounter/mhy/compare/v1.12.0...v1.13.0) (2019-03-25)
+
+
+### Bug Fixes
+
+* **storybook:** eslint removal ([766f37e](https://github.com/wintercounter/mhy/commit/766f37e))
+* **wds:** remove hot loader warning message ([2ef67c6](https://github.com/wintercounter/mhy/commit/2ef67c6))
+
+
+### Features
+
+* add `socket.io` ([8974485](https://github.com/wintercounter/mhy/commit/8974485))
+* add `use-react-router` ([80a7b5e](https://github.com/wintercounter/mhy/commit/80a7b5e))
+* module resolution for absolutely linked config files ([f87fc9c](https://github.com/wintercounter/mhy/commit/f87fc9c))
+* **storybook:** place panel on the right by default ([73a2d2b](https://github.com/wintercounter/mhy/commit/73a2d2b))
+
+
+### Performance Improvements
+
+* **storybook:** improve performance by removing eslint check ([1c4a87a](https://github.com/wintercounter/mhy/commit/1c4a87a))
+
+
+
 <a name="1.12.0"></a>
 # [1.12.0](https://github.com/wintercounter/mhy/compare/v1.11.1...v1.12.0) (2019-03-15)
 
