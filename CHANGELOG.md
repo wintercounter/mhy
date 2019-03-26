@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.14.1"></a>
+## [1.14.1](https://github.com/wintercounter/mhy/compare/v1.14.0...v1.14.1) (2019-03-26)
+
+
+### Bug Fixes
+
+* **webpack-eslint:** only set options for prod if rule exists ([71f883e](https://github.com/wintercounter/mhy/commit/71f883e))
+
+
+
 <a name="1.14.0"></a>
 # [1.14.0](https://github.com/wintercounter/mhy/compare/v1.13.0...v1.14.0) (2019-03-25)
 
