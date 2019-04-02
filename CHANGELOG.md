@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/wintercounter/mhy/compare/v1.14.1...v1.15.0) (2019-04-02)
+
+
+### Features
+
+* **typescript:** make alias resolve more reliable ([944662d](https://github.com/wintercounter/mhy/commit/944662d))
+
+
+
 <a name="1.14.1"></a>
 ## [1.14.1](https://github.com/wintercounter/mhy/compare/v1.14.0...v1.14.1) (2019-03-26)
 
