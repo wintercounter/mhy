@@ -1,3 +1,4 @@
+import fs from 'fs'
 import path from 'path'
 
 import { loadConfig } from '@/utils'
@@ -5,6 +6,8 @@ import mhyConfig from '@/configs/mhy'
 
 const _globalTypes = path.resolve(__dirname, '../../../node_modules', '@types')
 const _cwdTypes = path.join(process.cwd(), 'node_modules', '@types')
+
+const baseUrl = path.resolve(process.cwd(), mhyConfig.srcFolder)
 
 const tsconfig = loadConfig('typescript', {
     compilerOptions: {
@@ -19,14 +22,16 @@ const tsconfig = loadConfig('typescript', {
         esModuleInterop: true,
         noImplicitAny: false,
         declaration: true,
-        baseUrl: path.resolve(process.cwd(), mhyConfig.srcFolder),
+        baseUrl,
         skipLibCheck: true,
         paths: Object.entries(mhyConfig.defaultAliases).reduce(
-            function(acc, [k]) {
-                let folder = k.replace('@', ``)
-                folder = folder ? `${folder}/` : ''
-                acc[k] = [`${folder}index`]
-                acc[`${k}/*`] = [`${folder}*`]
+            function(acc, [k, p]) {
+                // It's already a path
+                if (!fs.existsSync(p)) {
+                    p = path.resolve(baseUrl, p)
+                }
+                acc[k] = [path.join(p, 'index')]
+                acc[`${k}/*`] = [path.join(p, '*')]
                 return acc
             },
             {
