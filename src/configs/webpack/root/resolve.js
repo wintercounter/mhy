@@ -4,10 +4,12 @@ import path from 'path'
 import mhyConfig from '@/configs/mhy'
 
 const alias = { ...mhyConfig.defaultAliases }
-for (const [key, entry] of Object.values(alias)) {
-    const p = path.resolve(process.cwd(), entry)
-    if (fs.existsSync(p)) {
-        alias[key] = p
+for (const [key, entry] of Object.entries(alias)) {
+    if (!fs.existsSync(entry)) {
+        alias[key] = path.resolve(process.cwd(), entry)
+    } else {
+        // Make sure it's a resolved path indeed
+        alias[key] = path.resolve(entry)
     }
 }
 

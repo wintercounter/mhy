@@ -7,8 +7,6 @@ import mhyConfig from '@/configs/mhy'
 const _globalTypes = path.resolve(__dirname, '../../../node_modules', '@types')
 const _cwdTypes = path.join(process.cwd(), 'node_modules', '@types')
 
-const baseUrl = path.resolve(process.cwd(), mhyConfig.srcFolder)
-
 const tsconfig = loadConfig('typescript', {
     compilerOptions: {
         module: 'esNext',
@@ -22,13 +20,16 @@ const tsconfig = loadConfig('typescript', {
         esModuleInterop: true,
         noImplicitAny: false,
         declaration: true,
-        baseUrl,
+        baseUrl: path.resolve(process.cwd(), mhyConfig.srcFolder),
         skipLibCheck: true,
         paths: Object.entries(mhyConfig.defaultAliases).reduce(
             function(acc, [k, p]) {
                 // It's already a path
                 if (!fs.existsSync(p)) {
-                    p = path.resolve(baseUrl, p)
+                    p = path.resolve(process.cwd(), p)
+                } else {
+                    // Make sure it's a resolved path indeed
+                    p = path.resolve(p)
                 }
                 acc[k] = [path.join(p, 'index')]
                 acc[`${k}/*`] = [path.join(p, '*')]
