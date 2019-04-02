@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/wintercounter/mhy/compare/v1.15.0...v1.16.0) (2019-04-02)
+
+
+### Features
+
+* **ts+webpack:** apply same alias resolving mechanism ([70e6dfd](https://github.com/wintercounter/mhy/commit/70e6dfd))
+* **webpack:** make alias resolve more reliable ([300e2de](https://github.com/wintercounter/mhy/commit/300e2de))
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/wintercounter/mhy/compare/v1.14.1...v1.15.0) (2019-04-02)
 
