@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.17.0"></a>
+# [1.17.0](https://github.com/wintercounter/mhy/compare/v1.16.0...v1.17.0) (2019-04-02)
+
+
+### Features
+
+* **babel+node:** apply same alias resolving mechanism ([eb9adce](https://github.com/wintercounter/mhy/commit/eb9adce))
+
+
+
 <a name="1.16.0"></a>
 # [1.16.0](https://github.com/wintercounter/mhy/compare/v1.15.0...v1.16.0) (2019-04-02)
 
