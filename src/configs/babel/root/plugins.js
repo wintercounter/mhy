@@ -1,3 +1,5 @@
+import path from 'path'
+
 import mhyConfig from '@/configs/mhy'
 
 export default (defaults = []) => {
@@ -21,19 +23,25 @@ export default (defaults = []) => {
         require.resolve('@babel/plugin-proposal-export-namespace-from')
     ]
     // Webpack is resolving modules on it's own (storybook uses Webpack also)
-    if (!process.argv.some(v => !!v.match(/(webpack|storybook)/))) {
+    // Node process will use `module-resolve`
+    if (!process.argv.some(v => !!v.match(/(webpack|storybook|nodeProcessSetup)/))) {
+        const isBabel = process.argv.some(v => v.includes('babel'))
+        const alias = Object.entries(mhyConfig.defaultAliases).reduce(function(acc, [key, entry]) {
+            // Leave alone every path which is outside cwd
+            const e = path.resolve(entry)
+            if (!e.includes(process.cwd())) {
+                acc[key] = entry
+                return acc
+            }
+            entry = isBabel ? entry.replace(mhyConfig.srcFolder, mhyConfig.distFolder) : entry
+            acc[key] = `./${path.relative(process.cwd(), path.resolve(entry))}`
+            return acc
+        }, {})
         r.push([
             require.resolve('babel-plugin-module-resolver'),
             {
                 root: [],
-                alias: Object.entries(mhyConfig.defaultAliases).reduce(function(acc, [k]) {
-                    // If it's compiled directly with babel, use dist folder
-                    acc[k] = k.replace(
-                        '@',
-                        `./${process.argv.some(v => v.includes('babel')) ? mhyConfig.distFolder : mhyConfig.srcFolder}/`
-                    )
-                    return acc
-                }, {})
+                alias
             }
         ])
     }
