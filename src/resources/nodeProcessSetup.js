@@ -33,6 +33,10 @@ for (const [key, entry] of Object.entries(alias)) {
 }
 addAliases(alias)
 
-const scriptIndex = process.argv.findIndex(v => v === '--mhy-script')
+const scriptKey = '--mhy-script'
+const scriptIndex = process.argv.findIndex(v => v.includes(scriptKey))
+const scriptValue = process.argv[scriptIndex]
+const src =
+    scriptValue.length === scriptKey.length ? process.argv[scriptIndex + 1] : scriptValue.replace(`${scriptKey}=`, '')
 
-require(path.resolve(process.cwd(), process.argv[scriptIndex + 1]))
+require(path.resolve(process.cwd(), src))

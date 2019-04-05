@@ -272,6 +272,7 @@
     "node-fetch": "^2.3.0",
     "node-gzip": "^1.1.2",
     "node-sass": "4.11.0",
+    "nodemon": "^1.18.10",
     "normalizr": "^3.3.0",
     "null-loader": "0.1.1",
     "path-to-regexp": "^3.0.0",
