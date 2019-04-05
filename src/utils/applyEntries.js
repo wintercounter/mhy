@@ -21,14 +21,14 @@ const applyEntries = (o, basePath, globPattern = '') => {
                 tmp[v] = tmp[v] || {}
 
                 if (Array.isArray(tmp[v])) {
-                    tmp[v] = tmp = require(entry)(tmp[v])
+                    tmp[v] = tmp = require(entry)(tmp[v], o)
                 } else {
                     tmp = tmp[v]
                 }
             } else {
                 // It's last item, require and execute default
                 v = v.replace('.js', '')
-                tmp[v] = require(entry)(tmp[v])
+                tmp[v] = require(entry)(tmp[v], o)
             }
         })
     }
