@@ -2,6 +2,8 @@
 
 Using `json-merger`'s syntax you have powerful ways to customize configs without _JavaScript_ directly in your `package.json` files. There can be some really exotic cases tho. This is a place to collect some of these solutions.
 
+All samples should be placed inside `{ "mhy": { HERE } }` in your `package.json` file.
+
 ## Extend `.npmignore` with custom file names
 
 ```json
@@ -16,7 +18,7 @@ Using `json-merger`'s syntax you have powerful ways to customize configs without
 }
 ```
 
-## Customize `babel`'s configuration deeply
+## `babel`: Deep customization
 
 1. Change `preset-env` to produce `commonjs` modules
 2. Add `module.exports` statements to each module for default exports (from Babel v7 it is not being added anymore by default)
@@ -66,7 +68,7 @@ Using `json-merger`'s syntax you have powerful ways to customize configs without
 }
 ```
 
-## Some Webpack customization
+## `Webpack`: Some customization
 
 1. Generate `index.php` file instead of `index.html` (in this case `html-webpack-plugin` is the first in the plugins array).
 2. Change regex for ignored modules from watch. This exact example is useful when working with locally linked npm modules and you want to recompile on it's changes also.
@@ -88,9 +90,9 @@ Using `json-merger`'s syntax you have powerful ways to customize configs without
 }
 ```
 
-## Removing `tsc` from the _UI Ecosystem_
+## `UI`: Remove `tsc` from the _UI Ecosystem_
 
-The default ecosystem has the `tsc` process included, but without _TypeScript_ it's unnecessary. This is what `mhy` uses now, even tho a query to the string `tsc` would be more accurate :)
+The default ecosystem has the `tsc` process included, but without using _TypeScript_ it's unnecessary. This is what `mhy` uses now, even tho a query to the string `tsc` would be more accurate :)
 
 ```json
 "mhy": {
@@ -105,6 +107,19 @@ The default ecosystem has the `tsc` process included, but without _TypeScript_ i
         }
       }
     ]
+  }
+}
+```
+
+## `Jest`: Load extra environment setup file
+```json
+"jest": {
+  "development": {
+    "setupFilesAfterEnv": {
+      "$concat": [
+        "./test-setup.js"
+      ]
+    }
   }
 }
 ```
