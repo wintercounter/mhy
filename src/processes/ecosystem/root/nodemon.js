@@ -1,16 +1,15 @@
-import path from 'path'
 import Process from '@/processes'
 
 const getCmdNodemonCLI = ({ mhyArgv: { _ }, flags }) => {
-    const script = _[1] || 'src'
+    const script = _[1] || './src'
     return [
         'node',
         require.resolve('nodemon/bin/nodemon.js'),
+        '--exec',
+        `mhy node`,
         '-e',
         'js,jsx,ts,tsx,json,md',
-        ...flags,
-        path.resolve(__dirname, '../../../resources/nodeProcessSetup'),
-        `--mhy-script=${script}`
+        ...flags
     ]
 }
 
