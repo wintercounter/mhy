@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.18.1"></a>
+## [1.18.1](https://github.com/wintercounter/mhy/compare/v1.18.0...v1.18.1) (2019-04-05)
+
+
+### Bug Fixes
+
+* **nodemon:** exec `mhy node` directly instead ([8f474a6](https://github.com/wintercounter/mhy/commit/8f474a6))
+
+
+
 <a name="1.18.0"></a>
 # [1.18.0](https://github.com/wintercounter/mhy/compare/v1.17.0...v1.18.0) (2019-04-05)
 
