@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.19.0"></a>
+# [1.19.0](https://github.com/wintercounter/mhy/compare/v1.18.3...v1.19.0) (2019-04-12)
+
+
+### Features
+
+* **ignore:** add `.tsbuildinfo` ([a8b6166](https://github.com/wintercounter/mhy/commit/a8b6166))
+* **ignore:** ignore should not run only for / ([742f0f1](https://github.com/wintercounter/mhy/commit/742f0f1))
+* **typescript:** enable incremental caching to speed up cold runs ([f81d844](https://github.com/wintercounter/mhy/commit/f81d844))
+* **webpack:** use `raw-loader` for files with `*.raw.*` name ([a2b074c](https://github.com/wintercounter/mhy/commit/a2b074c))
+* **webpack/eslint:** enable caching for faster first build ([9ec96a5](https://github.com/wintercounter/mhy/commit/9ec96a5))
+
+
+
 <a name="1.18.3"></a>
 ## [1.18.3](https://github.com/wintercounter/mhy/compare/v1.18.2...v1.18.3) (2019-04-10)
 
