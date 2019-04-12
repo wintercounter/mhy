@@ -47,7 +47,8 @@ const mhyConfig = loadConfig('mhy', {
         'jest.config.js',
         '.eslintrc',
         'tsconfig.json',
-        'webpack.config.js'
+        'webpack.config.js',
+        '.tsbuildinfo'
     ],
     get defaultAliases() {
         const pr = path.resolve
