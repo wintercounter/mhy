@@ -1,4 +1,4 @@
-FROM node:10-stretch
+FROM node:11-stretch-slim
 
 RUN apt-get update && apt-get install -y libtool automake autoconf nasm libpng-dev pkg-config
 
