@@ -1,6 +1,6 @@
 FROM node:11-stretch-slim
 
-RUN apt-get update && apt-get install -y libtool automake autoconf nasm libpng-dev pkg-config
+RUN apt-get update && apt-get install -y libtool automake autoconf nasm libpng-dev pkg-config python2.7 python-pip
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
