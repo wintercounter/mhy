@@ -13,7 +13,7 @@ const mhyConfig = loadConfig('mhy', {
     distFolder: 'dist',
     buildFolder: 'build',
     defaultIgnoreList: [
-        '/logs',
+        'logs',
         '*.log',
         'npm-debug.log*',
         'yarn-debug.log*',
@@ -41,13 +41,13 @@ const mhyConfig = loadConfig('mhy', {
         '.idea',
         '.vscode',
         'node_modules',
-        '/.babelrc',
-        '/prettier.json',
-        '/.prettierrc',
-        '/jest.config.js',
-        '/.eslintrc',
-        '/tsconfig.json',
-        '/webpack.config.js'
+        '.babelrc',
+        'prettier.json',
+        '.prettierrc',
+        'jest.config.js',
+        '.eslintrc',
+        'tsconfig.json',
+        'webpack.config.js'
     ],
     get defaultAliases() {
         const pr = path.resolve
