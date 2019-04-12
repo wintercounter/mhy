@@ -1,21 +1,51 @@
 declare module '*.css' {
-    const content1: any
-    export default content1
+    const content: any
+    export default content
 }
 
 declare module '*.scss' {
-    const content2: any
-    export default content2
+    const content: any
+    export default content
 }
 
 declare module '*.svg' {
-    const content3: any
-    export default content3
+    const content: any
+    export default content
 }
 
 declare module '*.svgx' {
-    const content4: any
-    export default content4
+    const content: any
+    export default content
+}
+
+declare module '*.md' {
+    const content: any
+    export default content
+}
+
+declare module '*.txt' {
+    const content: any
+    export default content
+}
+
+declare module '*.html' {
+    const content: any
+    export default content
+}
+
+declare module '*.jpg' {
+    const content: any
+    export default content
+}
+
+declare module '*.gif' {
+    const content: any
+    export default content
+}
+
+declare module '*.png' {
+    const content: any
+    export default content
 }
 
 declare const shallow: any
