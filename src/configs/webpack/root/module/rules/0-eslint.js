@@ -13,8 +13,10 @@ const getRules = rules => {
             loader: require.resolve('eslint-loader'),
             include: /src/,
             exclude: /node_modules|dist|build/,
-            options: { configFile },
-            cache: true
+            options: {
+                configFile,
+                cache: true
+            }
         }
     ]
 }
