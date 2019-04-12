@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.21.0"></a>
+# [1.21.0](https://github.com/wintercounter/mhy/compare/v1.20.0...v1.21.0) (2019-04-12)
+
+
+### Bug Fixes
+
+* **webpack/eslint:** wrong value placement ([0bff53e](https://github.com/wintercounter/mhy/commit/0bff53e))
+
+
+### Features
+
+* **docker:** use latest node version with slim image ([9fd0e26](https://github.com/wintercounter/mhy/commit/9fd0e26))
+
+
+
 <a name="1.20.0"></a>
 # [1.20.0](https://github.com/wintercounter/mhy/compare/v1.19.0...v1.20.0) (2019-04-12)
 
