@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.20.0"></a>
+# [1.20.0](https://github.com/wintercounter/mhy/compare/v1.19.0...v1.20.0) (2019-04-12)
+
+
+### Features
+
+* **typescript:** extend declarations for more non-js module types ([fbe4459](https://github.com/wintercounter/mhy/commit/fbe4459))
+
+
+
 <a name="1.19.0"></a>
 # [1.19.0](https://github.com/wintercounter/mhy/compare/v1.18.3...v1.19.0) (2019-04-12)
 
