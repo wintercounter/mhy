@@ -22,6 +22,7 @@ const tsconfig = loadConfig('typescript', {
         declaration: true,
         baseUrl: path.resolve(process.cwd(), mhyConfig.srcFolder),
         skipLibCheck: true,
+        incremental: true,
         paths: Object.entries(mhyConfig.defaultAliases).reduce(
             function(acc, [k, p]) {
                 // It's already a path
