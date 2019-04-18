@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.21.4"></a>
+## [1.21.4](https://github.com/wintercounter/mhy/compare/v1.21.3...v1.21.4) (2019-04-18)
+
+
+### Bug Fixes
+
+* **docker:** include `git` inside container ([bfb15cf](https://github.com/wintercounter/mhy/commit/bfb15cf))
+
+
+
 <a name="1.21.3"></a>
 ## [1.21.3](https://github.com/wintercounter/mhy/compare/v1.21.2...v1.21.3) (2019-04-17)
 
