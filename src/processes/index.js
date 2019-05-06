@@ -101,7 +101,7 @@ export default class Process extends EventEmitter {
         instances.add(this)
     }
 
-    spawn(id, [bin, ...cmd], stdio) {
+    spawn(id, [bin, ...cmd], stdio, exitOnExit) {
         stdio = stdio || (process.env.MHY_ENV === 'ui' ? 'pipe' : 'inherit')
 
         if (process.env.MHY_VERBOSE) {
@@ -122,7 +122,7 @@ export default class Process extends EventEmitter {
         p.on && p.on('error', this[_onError])
 
         if (process.env.MHY_ENV === 'cli') {
-            p.on && signUpForExit(p)
+            p.on && signUpForExit(p, exitOnExit)
         }
 
         if (process.env.MHY_ENV === 'cli' && stdio === 'pipe') {
@@ -197,9 +197,9 @@ const exit = async (err, isErr = false) => {
     }
 }
 
-const signUpForExit = p => {
+const signUpForExit = (p, exitOnExit = true) => {
     //do something when app is closing
-    p.on('exit', exit)
+    exitOnExit && p.on('exit', exit)
 
     //catches ctrl+c event
     p.on('SIGINT', exit)
