@@ -1,6 +1,21 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.22.0](https://github.com/wintercounter/mhy/compare/v1.21.5...v1.22.0) (2019-05-06)
+
+
+### Bug Fixes
+
+* **ci:** node version to be able to compile old `leveldown` dependency ([0111a8f](https://github.com/wintercounter/mhy/commit/0111a8f))
+* **template:** wrong import ([1b638f9](https://github.com/wintercounter/mhy/commit/1b638f9))
+
+
+### Features
+
+* **webpack-bundle-analyzer:** add new process ([a3af5f6](https://github.com/wintercounter/mhy/commit/a3af5f6))
+
+
 
 <a name="1.21.5"></a>
 ## [1.21.5](https://github.com/wintercounter/mhy/compare/v1.21.4...v1.21.5) (2019-05-02)
