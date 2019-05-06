@@ -45,10 +45,8 @@ class Babel extends Process {
 const handleCompileSuccess = line => {
     if (!line.includes('Successfully')) return
 
-    copyDir.sync(
-        path.resolve(process.cwd(), mhyConfig.srcFolder),
-        path.resolve(process.cwd(), mhyConfig.distFolder),
-        function(stat, filepath, filename) {
+    copyDir.sync(path.resolve(process.cwd(), mhyConfig.srcFolder), path.resolve(process.cwd(), mhyConfig.distFolder), {
+        filter: function(stat, filepath, filename) {
             if (stat === 'file') {
                 if (filename.endsWith('.d.ts')) {
                     return true
@@ -65,7 +63,7 @@ const handleCompileSuccess = line => {
             }
             return true
         }
-    )
+    })
 }
 
 const getBabel = () => Babel
