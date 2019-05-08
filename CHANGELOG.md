@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.2](https://github.com/wintercounter/mhy/compare/v1.22.1...v1.22.2) (2019-05-08)
+
+
+### Bug Fixes
+
+* **babel:** overwriting dist files ([c9cf0fe](https://github.com/wintercounter/mhy/commit/c9cf0fe))
+
+
+
 ### [1.22.1](https://github.com/wintercounter/mhy/compare/v1.22.0...v1.22.1) (2019-05-08)
 
 
