@@ -6,5 +6,5 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 USER node
 RUN mkdir ~/.npm-global
-RUN npm i mhy@latest -g
+RUN npm i mhy@1.20.0 -g
 RUN chmod 0777 -R ~/.npm-global
