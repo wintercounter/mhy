@@ -14,8 +14,7 @@ const getRules = rules => {
             include: /src/,
             exclude: /node_modules|dist|build/,
             options: {
-                configFile,
-                cache: true
+                configFile
             }
         }
     ]
