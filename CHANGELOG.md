@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.6](https://github.com/wintercounter/mhy/compare/v1.22.3...v1.22.6) (2019-05-15)
+
+
+### Bug Fixes
+
+* **babel:** overwriting dist files ([242b7e3](https://github.com/wintercounter/mhy/commit/242b7e3))
+* **babel:** overwriting dist files ([835bbbe](https://github.com/wintercounter/mhy/commit/835bbbe))
+* **babel:** overwriting dist files ([55c3c15](https://github.com/wintercounter/mhy/commit/55c3c15))
+* **webapack eslint:** remove caching as it's having more issues than benefits ([de3dda0](https://github.com/wintercounter/mhy/commit/de3dda0))
+
+
+
 ### [1.22.3](https://github.com/wintercounter/mhy/compare/v1.22.2...v1.22.3) (2019-05-08)
 
 
