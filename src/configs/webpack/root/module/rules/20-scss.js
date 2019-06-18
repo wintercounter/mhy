@@ -9,9 +9,10 @@ const getUse = (isModules = true) => [
         loader: require.resolve('css-loader'),
         options: {
             importLoaders: 2,
-            localIdentName: '[local]__[hash:base64:5]',
             sourceMap: true,
-            modules: isModules,
+            modules: !isModules ? false : {
+                localIdentName: '[local]__[hash:base64:5]'
+            },
             camelCase: true
         }
     },
