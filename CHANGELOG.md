@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/wintercounter/mhy/compare/v1.22.12...v1.23.0) (2019-06-19)
+
+
+### Features
+
+* **dependency:** add `cookie` package ([506fe73](https://github.com/wintercounter/mhy/commit/506fe73))
+
+
+
 ### [1.22.12](https://github.com/wintercounter/mhy/compare/v1.22.10...v1.22.12) (2019-06-19)
 
 
