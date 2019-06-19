@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.23.1](https://github.com/wintercounter/mhy/compare/v1.23.0...v1.23.1) (2019-06-19)
+
+
+### Bug Fixes
+
+* **css-loader:** not exporting both style of CSS variable names ([d09042a](https://github.com/wintercounter/mhy/commit/d09042a))
+
+
+
 ## [1.23.0](https://github.com/wintercounter/mhy/compare/v1.22.12...v1.23.0) (2019-06-19)
 
 
