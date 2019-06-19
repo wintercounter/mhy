@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.12](https://github.com/wintercounter/mhy/compare/v1.22.10...v1.22.12) (2019-06-19)
+
+
+### Bug Fixes
+
+* **docker:** failing install ([f2b8866](https://github.com/wintercounter/mhy/commit/f2b8866))
+* **docker:** failing install ([36dc06c](https://github.com/wintercounter/mhy/commit/36dc06c))
+
+
+
 ### [1.22.10](https://github.com/wintercounter/mhy/compare/v1.22.9...v1.22.10) (2019-06-18)
 
 
