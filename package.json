@@ -283,7 +283,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.6.0",
     "pouch-redux-middleware": "^1.2.0",
-    "pouchdb": "github:pouchdb/pouchdb#master",
+    "pouchdb": "^7.1.1",
     "prettier": "^1.18.2",
     "prettier-loader": "^2.1.1",
     "promisify-child-process": "^3.1.0",
