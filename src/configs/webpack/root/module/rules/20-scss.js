@@ -12,7 +12,8 @@ const getUse = (isModules = true) => [
             sourceMap: true,
             modules: !isModules ? false : {
                 localIdentName: '[local]__[hash:base64:5]'
-            }
+            },
+            localsConvention: 'camelCase'
         }
     },
     {
