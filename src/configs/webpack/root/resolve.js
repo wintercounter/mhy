@@ -13,6 +13,10 @@ for (const [key, entry] of Object.entries(alias)) {
     }
 }
 
+if (process.env.WEBPACK_DEV_SERVER) {
+    alias['react-dom'] = '@hot-loader/react-dom'
+}
+
 export default () => ({
     extensions: ['.js', '.mjs', '.jsx', '.css', '.scss', '.ts', '.tsx', '.json'],
     modules: Array.from(

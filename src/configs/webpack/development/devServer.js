@@ -3,7 +3,6 @@ export default (d, o) => ({
     host: 'localhost',
     port: 3000,
     hot: true,
-    inline: true,
     progress: process.env.MHY_ENV !== 'ui',
     historyApiFallback: {
         disableDotRule: true
