@@ -1,362 +1,362 @@
 {
-  "name": "mhy",
-  "version": "1.24.0",
-  "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
-  "main": "dist/bin/index.js",
-  "scripts": {
-    "test": "mhy jest",
-    "start": "node ./dist",
-    "pub": "npm publish --access=public",
-    "build": "mhy babel --mhy-prod",
-    "prepare": "npm run build",
-    "docker-build-image": "docker build --no-cache -t mhy ./docker",
-    "docker-rm-image": "docker image rm mhy",
-    "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
-    "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
-    "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
-    "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
-    "deploy": "npm pub && npm run docker",
-    "release": "standard-version && conventional-github-releaser -t",
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wintercounter/mhy.git"
-  },
-  "author": "wintercounter <wintercounter+mhy@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wintercounter/mhy/issues"
-  },
-  "homepage": "https://github.com/wintercounter/mhy#readme",
-  "bin": {
-    "mhy": "dist/bin/index.js"
-  },
-  "mhy": {
+    "name": "mhy",
+    "version": "1.24.0",
+    "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
+    "main": "dist/bin/index.js",
+    "scripts": {
+        "test": "mhy jest",
+        "start": "node ./dist",
+        "pub": "npm publish --access=public",
+        "build": "mhy babel --mhy-prod",
+        "prepare": "npm run build",
+        "docker-build-image": "docker build --no-cache -t mhy ./docker",
+        "docker-rm-image": "docker image rm mhy",
+        "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
+        "docker-run:win": "docker run -it -v %CD%/test:/app -w /app mhy npm run build",
+        "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
+        "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
+        "deploy": "npm pub && npm run docker",
+        "release": "standard-version && conventional-github-releaser -t",
+        "contributors:add": "all-contributors add",
+        "contributors:generate": "all-contributors generate"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wintercounter/mhy.git"
+    },
+    "author": "wintercounter <wintercounter+mhy@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/wintercounter/mhy/issues"
+    },
+    "homepage": "https://github.com/wintercounter/mhy#readme",
+    "bin": {
+        "mhy": "dist/bin/index.js"
+    },
     "mhy": {
-      "root": {
-        "ecosystem": [
-          {
-            "$match": {
-              "index": 1,
-              "value": {
-                "$remove": true
-              }
-            }
-          }
-        ]
-      }
-    },
-    "jest": {
-      "root": {
-        "roots": {
-          "$concat": [
-            "<rootDir>/test"
-          ]
-        },
-        "setupFiles": [
-          "<rootDir>/test/setup.js"
-        ]
-      }
-    },
-    "npmignore": {
-      "root": {
-        "$concat": [
-          "/test",
-          "/ci.sh",
-          "/.gitbook"
-        ]
-      }
-    },
-    "babel": {
-      "production": {
-        "presets": [
-          {
-            "$match": {
-              "query": "$[?(@[0].includes('preset-env'))]",
-              "value": [
-                {
-                  "$match": {
-                    "index": 1,
-                    "value": {
-                      "modules": "commonjs",
-                      "targets": {
-                        "node": true,
-                        "browsers": false,
-                        "esmodules": true
-                      }
+        "mhy": {
+            "root": {
+                "ecosystem": [
+                    {
+                        "$match": {
+                            "index": 1,
+                            "value": {
+                                "$remove": true
+                            }
+                        }
                     }
-                  }
-                }
-              ]
+                ]
             }
-          }
-        ],
-        "plugins": [
-          {
-            "$prepend": {
-              "$expression": "$params.require.resolve('babel-plugin-add-module-exports')"
+        },
+        "jest": {
+            "root": {
+                "roots": {
+                    "$concat": [
+                        "<rootDir>/test"
+                    ]
+                },
+                "setupFiles": [
+                    "<rootDir>/test/setup.js"
+                ]
             }
-          },
-          {
-            "$match": {
-              "query": "$[?(@.includes('regenerator'))]",
-              "value": {
-                "$remove": true
-              }
+        },
+        "npmignore": {
+            "root": {
+                "$concat": [
+                    "/test",
+                    "/ci.sh",
+                    "/.gitbook"
+                ]
             }
-          }
-        ]
-      }
+        },
+        "babel": {
+            "production": {
+                "presets": [
+                    {
+                        "$match": {
+                            "query": "$[?(@[0].includes('preset-env'))]",
+                            "value": [
+                                {
+                                    "$match": {
+                                        "index": 1,
+                                        "value": {
+                                            "modules": "commonjs",
+                                            "targets": {
+                                                "node": true,
+                                                "browsers": false,
+                                                "esmodules": true
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "plugins": [
+                    {
+                        "$prepend": {
+                            "$expression": "$params.require.resolve('babel-plugin-add-module-exports')"
+                        }
+                    },
+                    {
+                        "$match": {
+                            "query": "$[?(@.includes('regenerator'))]",
+                            "value": {
+                                "$remove": true
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "dependencies": {
+        "@babel/cli": "^7.5.0",
+        "@babel/core": "^7.5.0",
+        "@babel/node": "^7.5.0",
+        "@babel/plugin-proposal-class-properties": "^7.5.0",
+        "@babel/plugin-proposal-export-default-from": "^7.5.2",
+        "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
+        "@babel/plugin-syntax-decorators": "^7.2.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+        "@babel/plugin-transform-object-assign": "^7.2.0",
+        "@babel/plugin-transform-regenerator": "^7.4.5",
+        "@babel/preset-env": "^7.5.2",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/preset-stage-0": "^7.0.0",
+        "@babel/preset-typescript": "^7.3.3",
+        "@babel/register": "^7.4.4",
+        "@hot-loader/react-dom": "^16.8.6",
+        "@storybook/addon-a11y": "^5.1.9",
+        "@storybook/addon-actions": "^5.1.9",
+        "@storybook/addon-backgrounds": "^5.1.9",
+        "@storybook/addon-centered": "^5.1.9",
+        "@storybook/addon-events": "^5.1.9",
+        "@storybook/addon-graphql": "^5.1.9",
+        "@storybook/addon-info": "^5.1.9",
+        "@storybook/addon-jest": "^5.1.9",
+        "@storybook/addon-knobs": "^5.1.9",
+        "@storybook/addon-links": "^5.1.9",
+        "@storybook/addon-notes": "^5.1.9",
+        "@storybook/addon-options": "^5.1.9",
+        "@storybook/addon-storyshots": "^5.1.9",
+        "@storybook/addon-storysource": "^5.1.9",
+        "@storybook/addon-viewport": "^5.1.9",
+        "@storybook/addons": "^5.1.9",
+        "@storybook/cli": "^5.1.9",
+        "@storybook/core": "^5.1.9",
+        "@storybook/react": "^5.1.9",
+        "@types/autoprefixer": "^9.5.0",
+        "@types/babel-core": "^6.25.6",
+        "@types/blessed": "^0.1.11",
+        "@types/cookie": "^0.3.3",
+        "@types/enzyme": "^3.10.1",
+        "@types/enzyme-adapter-react-16": "^1.0.5",
+        "@types/enzyme-to-json": "^1.5.3",
+        "@types/eslint": "^4.16.6",
+        "@types/faker": "^4.1.5",
+        "@types/fs-extra": "^8.0.0",
+        "@types/graphql": "^14.2.2",
+        "@types/history": "^4.7.2",
+        "@types/html-webpack-plugin": "^3.2.0",
+        "@types/jest": "^24.0.15",
+        "@types/jest-cli": "^23.6.0",
+        "@types/js-cookie": "^2.2.2",
+        "@types/loader-utils": "^1.1.3",
+        "@types/moment-range": "^3.1.2",
+        "@types/moment-timezone": "^0.5.12",
+        "@types/node": "^12.6.1",
+        "@types/node-sass": "^4.11.0",
+        "@types/pouchdb": "^6.4.0",
+        "@types/prettier": "^1.16.4",
+        "@types/prop-types": "^15.7.1",
+        "@types/qs": "^6.5.3",
+        "@types/react": "^16.8.23",
+        "@types/react-blessed": "^0.3.1",
+        "@types/react-dom": "^16.8.4",
+        "@types/react-hot-loader": "^4.1.0",
+        "@types/react-intl": "^2.3.18",
+        "@types/react-router": "^5.0.3",
+        "@types/react-router-dom": "^4.3.4",
+        "@types/react-test-renderer": "^16.8.2",
+        "@types/redux-action": "^1.2.5",
+        "@types/redux-form": "^8.1.4",
+        "@types/redux-logger": "^3.0.7",
+        "@types/socket.io-client": "^1.4.32",
+        "@types/storybook__react": "^4.0.2",
+        "@types/styled-components": "^4.1.16",
+        "@types/webpack": "^4.4.34",
+        "@types/webpack-bundle-analyzer": "^2.13.1",
+        "@types/webpack-dev-server": "^3.1.6",
+        "@types/webpack-manifest-plugin": "^2.0.0",
+        "@types/webpack-serve": "^2.0.1",
+        "@types/ws": "^6.0.1",
+        "@types/yargs": "^13.0.0",
+        "@typescript-eslint/eslint-plugin": "^1.11.0",
+        "@typescript-eslint/parser": "^1.11.0",
+        "acorn": "^6.2.0",
+        "animejs": "^3.0.1",
+        "apollo-cache-inmemory": "^1.6.2",
+        "apollo-client": "^2.6.3",
+        "apollo-link": "^1.2.12",
+        "apollo-link-http": "^1.5.15",
+        "apollo-link-rest": "^0.7.3",
+        "autoprefixer": "^9.6.1",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-eslint": "10.0.2",
+        "babel-jest": "^24.8.0",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-add-module-exports": "^1.0.2",
+        "babel-plugin-dynamic-import-node": "^2.3.0",
+        "babel-plugin-macros": "^2.6.1",
+        "babel-plugin-module-resolver": "^3.2.0",
+        "babel-plugin-syntax-async-functions": "6.13.0",
+        "babel-plugin-transform-function-bind": "6.22.0",
+        "babel-plugin-transform-remove-strict-mode": "0.0.2",
+        "babel-tape-runner": "^3.0.0",
+        "blessed": "^0.1.81",
+        "blessed-contrib": "^4.8.16",
+        "browserslist": "^4.6.4",
+        "chalk": "^2.4.2",
+        "chokidar-cli": "^1.2.2",
+        "concurrently": "^4.1.1",
+        "connected-react-router": "^6.5.0",
+        "cookie": "^0.4.0",
+        "copy-dir": "^1.1.0",
+        "cross-env": "^5.2.0",
+        "css-loader": "3.0.0",
+        "date-fns": "^2.0.0-alpha.35",
+        "dayjs": "^1.8.15",
+        "decompress": "^4.2.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "enzyme-to-json": "^3.3.5",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.1",
+        "eslint-config-prettier": "^6.0.0",
+        "eslint-loader": "2.2.1",
+        "eslint-plugin-babel": "5.3.0",
+        "eslint-plugin-import": "^2.18.0",
+        "eslint-plugin-jest": "^22.7.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "7.14.2",
+        "eslint-plugin-react-hooks": "^1.6.1",
+        "express-http-proxy": "^1.5.1",
+        "faker": "4.1.0",
+        "figures": "^3.0.0",
+        "file-loader": "4.0.0",
+        "formdata-polyfill": "^3.0.18",
+        "fs-extra": "^8.1.0",
+        "glob": "^7.1.4",
+        "graphql": "^14.4.2",
+        "graphql-anywhere": "^4.2.4",
+        "graphql-code-generator": "^0.18.2",
+        "grommet": "^2.7.3",
+        "grommet-icons": "^4.2.0",
+        "history": "^4.9.0",
+        "html-webpack-plugin": "^4.0.0-beta.5",
+        "http-proxy-middleware": "^0.19.1",
+        "i": "^0.3.6",
+        "identity-obj-proxy": "^3.0.0",
+        "image-webpack-loader": "5.0.0",
+        "immer": "^3.1.3",
+        "jest": "^24.8.0",
+        "jest-canvas-mock": "^2.1.0",
+        "jest-cli": "^24.8.0",
+        "jest-date-mock": "^1.0.7",
+        "jest-enzyme": "^7.0.2",
+        "jest-fetch-mock": "^2.1.2",
+        "jest-styled-components": "^6.3.3",
+        "jimp": "^0.6.4",
+        "js-cookie": "2.2.0",
+        "json-colorizer": "^2.2.1",
+        "json-merger": "^1.1.1",
+        "leveldown": "^5.1.1",
+        "loader-utils": "1.2.3",
+        "module-alias": "^2.2.0",
+        "moment": "^2.24.0",
+        "moment-range": "4.0.2",
+        "moment-timezone": "0.5.26",
+        "node-fetch": "^2.6.0",
+        "node-gzip": "^1.1.2",
+        "node-sass": "4.12.0",
+        "nodemon": "^1.19.1",
+        "normalizr": "^3.4.0",
+        "null-loader": "3.0.0",
+        "path-to-regexp": "^3.0.0",
+        "phrame2": "^1.1.3",
+        "postcss": "7.0.17",
+        "postcss-import": "^12.0.1",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "^6.7.0",
+        "pouch-redux-middleware": "^1.2.0",
+        "pouchdb": "^7.1.1",
+        "prettier": "^1.18.2",
+        "prettier-loader": "^2.1.1",
+        "promisify-child-process": "^3.1.0",
+        "prop-types": "^15.7.2",
+        "qs": "^6.7.0",
+        "react": "^16.8.6",
+        "react-apollo-hooks": "^0.4.5",
+        "react-blessed": "^0.6.1",
+        "react-dev-utils": "^9.0.1",
+        "react-devtools-core": "^3.6.1",
+        "react-dom": "^16.8.6",
+        "react-hot-loader": "^4.12.5",
+        "react-intl": "^2.9.0",
+        "react-redux": "7.1.0",
+        "react-router": "^5.0.1",
+        "react-router-dom": "^5.0.1",
+        "react-router-prop-types": "^1.0.4",
+        "react-test-renderer": "^16.8.6",
+        "redux": "^4.0.2",
+        "redux-action": "^1.2.2",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-form": "^8.2.4",
+        "redux-form-validators": "^3.3.2",
+        "redux-logger": "^3.0.6",
+        "redux-persist": "^5.10.0",
+        "redux-react-hook": "^3.3.2",
+        "redux-saga": "^1.0.5",
+        "redux-thunk": "^2.3.0",
+        "request": "^2.88.0",
+        "rimraf": "^2.6.3",
+        "sass-loader": "7.1.0",
+        "socket.io": "^2.2.0",
+        "socket.io-client": "2.2.0",
+        "speed-measure-webpack-plugin": "^1.3.1",
+        "storybook-react-router": "^1.0.5",
+        "style-loader": "0.23.1",
+        "styled-components": "^4.3.2",
+        "svg-react-loader": "^0.4.6",
+        "symlink-dir": "^3.1.0",
+        "tree-kill": "^1.2.1",
+        "true-case-path": "^2.0.0",
+        "typescript": "^3.5.3",
+        "url-loader": "^2.0.1",
+        "url-search-params-polyfill": "^7.0.0",
+        "use-react-router": "^1.0.7",
+        "weakmap-polyfill": "^2.0.0",
+        "webpack": "^4.35.3",
+        "webpack-bundle-analyzer": "^3.3.2",
+        "webpack-cli": "^3.3.5",
+        "webpack-dev-server": "^3.7.2",
+        "webpack-dev-server-status-bar": "^1.1.1",
+        "webpack-manifest-plugin": "^2.0.4",
+        "webpack-pwa-manifest": "^4.0.0",
+        "webpack-strip-block": "0.2.0",
+        "whatwg-fetch": "^3.0.0",
+        "workbox-webpack-plugin": "^4.3.1",
+        "worker-loader": "^2.0.0",
+        "write-file-webpack-plugin": "4.5.0",
+        "ws": "^7.1.0",
+        "yargs": "^13.2.4"
+    },
+    "devDependencies": {
+        "all-contributors-cli": "^6.7.0",
+        "conventional-github-releaser": "^3.1.3",
+        "standard-version": "^6.0.1"
     }
-  },
-  "dependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.0",
-    "@babel/node": "^7.5.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.0",
-    "@babel/plugin-proposal-export-default-from": "^7.5.2",
-    "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
-    "@babel/plugin-syntax-decorators": "^7.2.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
-    "@babel/plugin-transform-object-assign": "^7.2.0",
-    "@babel/plugin-transform-regenerator": "^7.4.5",
-    "@babel/preset-env": "^7.5.2",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-stage-0": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
-    "@babel/register": "^7.4.4",
-    "@hot-loader/react-dom": "^16.8.6",
-    "@storybook/addon-a11y": "^5.1.9",
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-backgrounds": "^5.1.9",
-    "@storybook/addon-centered": "^5.1.9",
-    "@storybook/addon-events": "^5.1.9",
-    "@storybook/addon-graphql": "^5.1.9",
-    "@storybook/addon-info": "^5.1.9",
-    "@storybook/addon-jest": "^5.1.9",
-    "@storybook/addon-knobs": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/addon-notes": "^5.1.9",
-    "@storybook/addon-options": "^5.1.9",
-    "@storybook/addon-storyshots": "^5.1.9",
-    "@storybook/addon-storysource": "^5.1.9",
-    "@storybook/addon-viewport": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/cli": "^5.1.9",
-    "@storybook/core": "^5.1.9",
-    "@storybook/react": "^5.1.9",
-    "@types/autoprefixer": "^9.5.0",
-    "@types/babel-core": "^6.25.6",
-    "@types/blessed": "^0.1.11",
-    "@types/cookie": "^0.3.3",
-    "@types/enzyme": "^3.10.1",
-    "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/enzyme-to-json": "^1.5.3",
-    "@types/eslint": "^4.16.6",
-    "@types/faker": "^4.1.5",
-    "@types/fs-extra": "^8.0.0",
-    "@types/graphql": "^14.2.2",
-    "@types/history": "^4.7.2",
-    "@types/html-webpack-plugin": "^3.2.0",
-    "@types/jest": "^24.0.15",
-    "@types/jest-cli": "^23.6.0",
-    "@types/js-cookie": "^2.2.2",
-    "@types/loader-utils": "^1.1.3",
-    "@types/moment-range": "^3.1.2",
-    "@types/moment-timezone": "^0.5.12",
-    "@types/node": "^12.6.1",
-    "@types/node-sass": "^4.11.0",
-    "@types/pouchdb": "^6.4.0",
-    "@types/prettier": "^1.16.4",
-    "@types/prop-types": "^15.7.1",
-    "@types/qs": "^6.5.3",
-    "@types/react": "^16.8.23",
-    "@types/react-blessed": "^0.3.1",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-hot-loader": "^4.1.0",
-    "@types/react-intl": "^2.3.18",
-    "@types/react-router": "^5.0.3",
-    "@types/react-router-dom": "^4.3.4",
-    "@types/react-test-renderer": "^16.8.2",
-    "@types/redux-action": "^1.2.5",
-    "@types/redux-form": "^8.1.4",
-    "@types/redux-logger": "^3.0.7",
-    "@types/socket.io-client": "^1.4.32",
-    "@types/storybook__react": "^4.0.2",
-    "@types/styled-components": "^4.1.16",
-    "@types/webpack": "^4.4.34",
-    "@types/webpack-bundle-analyzer": "^2.13.1",
-    "@types/webpack-dev-server": "^3.1.6",
-    "@types/webpack-manifest-plugin": "^2.0.0",
-    "@types/webpack-serve": "^2.0.1",
-    "@types/ws": "^6.0.1",
-    "@types/yargs": "^13.0.0",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "acorn": "^6.2.0",
-    "animejs": "^3.0.1",
-    "apollo-cache-inmemory": "^1.6.2",
-    "apollo-client": "^2.6.3",
-    "apollo-link": "^1.2.12",
-    "apollo-link-http": "^1.5.15",
-    "apollo-link-rest": "^0.7.3",
-    "autoprefixer": "^9.6.1",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "10.0.2",
-    "babel-jest": "^24.8.0",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-dynamic-import-node": "^2.3.0",
-    "babel-plugin-macros": "^2.6.1",
-    "babel-plugin-module-resolver": "^3.2.0",
-    "babel-plugin-syntax-async-functions": "6.13.0",
-    "babel-plugin-transform-function-bind": "6.22.0",
-    "babel-plugin-transform-remove-strict-mode": "0.0.2",
-    "babel-tape-runner": "^3.0.0",
-    "blessed": "^0.1.81",
-    "blessed-contrib": "^4.8.16",
-    "browserslist": "^4.6.4",
-    "chalk": "^2.4.2",
-    "chokidar-cli": "^1.2.2",
-    "concurrently": "^4.1.1",
-    "connected-react-router": "^6.5.0",
-    "cookie": "^0.4.0",
-    "copy-dir": "^1.1.0",
-    "cross-env": "^5.2.0",
-    "css-loader": "3.0.0",
-    "date-fns": "^2.0.0-alpha.35",
-    "dayjs": "^1.8.15",
-    "decompress": "^4.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
-    "eslint": "6.0.1",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-loader": "2.2.1",
-    "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "7.14.2",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "express-http-proxy": "^1.5.1",
-    "faker": "4.1.0",
-    "figures": "^3.0.0",
-    "file-loader": "4.0.0",
-    "formdata-polyfill": "^3.0.18",
-    "fs-extra": "^8.1.0",
-    "glob": "^7.1.4",
-    "graphql": "^14.4.2",
-    "graphql-anywhere": "^4.2.4",
-    "graphql-code-generator": "^0.18.2",
-    "grommet": "^2.7.3",
-    "grommet-icons": "^4.2.0",
-    "history": "^4.9.0",
-    "html-webpack-plugin": "^4.0.0-beta.5",
-    "http-proxy-middleware": "^0.19.1",
-    "i": "^0.3.6",
-    "identity-obj-proxy": "^3.0.0",
-    "image-webpack-loader": "5.0.0",
-    "immer": "^3.1.3",
-    "jest": "^24.8.0",
-    "jest-canvas-mock": "^2.1.0",
-    "jest-cli": "^24.8.0",
-    "jest-date-mock": "^1.0.7",
-    "jest-enzyme": "^7.0.2",
-    "jest-fetch-mock": "^2.1.2",
-    "jest-styled-components": "^6.3.3",
-    "jimp": "^0.6.4",
-    "js-cookie": "2.2.0",
-    "json-colorizer": "^2.2.1",
-    "json-merger": "^1.1.1",
-    "leveldown": "^5.1.1",
-    "loader-utils": "1.2.3",
-    "module-alias": "^2.2.0",
-    "moment": "^2.24.0",
-    "moment-range": "4.0.2",
-    "moment-timezone": "0.5.26",
-    "node-fetch": "^2.6.0",
-    "node-gzip": "^1.1.2",
-    "node-sass": "4.12.0",
-    "nodemon": "^1.19.1",
-    "normalizr": "^3.4.0",
-    "null-loader": "3.0.0",
-    "path-to-regexp": "^3.0.0",
-    "phrame2": "^1.1.3",
-    "postcss": "7.0.17",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "pouch-redux-middleware": "^1.2.0",
-    "pouchdb": "^7.1.1",
-    "prettier": "^1.18.2",
-    "prettier-loader": "^2.1.1",
-    "promisify-child-process": "^3.1.0",
-    "prop-types": "^15.7.2",
-    "qs": "^6.7.0",
-    "react": "^16.8.6",
-    "react-apollo-hooks": "^0.4.5",
-    "react-blessed": "^0.6.1",
-    "react-dev-utils": "^9.0.1",
-    "react-devtools-core": "^3.6.1",
-    "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.12.5",
-    "react-intl": "^2.9.0",
-    "react-redux": "7.1.0",
-    "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1",
-    "react-router-prop-types": "^1.0.4",
-    "react-test-renderer": "^16.8.6",
-    "redux": "^4.0.2",
-    "redux-action": "^1.2.2",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-form": "^8.2.4",
-    "redux-form-validators": "^3.3.2",
-    "redux-logger": "^3.0.6",
-    "redux-persist": "^5.10.0",
-    "redux-react-hook": "^3.3.2",
-    "redux-saga": "^1.0.5",
-    "redux-thunk": "^2.3.0",
-    "request": "^2.88.0",
-    "rimraf": "^2.6.3",
-    "sass-loader": "7.1.0",
-    "socket.io": "^2.2.0",
-    "socket.io-client": "2.2.0",
-    "speed-measure-webpack-plugin": "^1.3.1",
-    "storybook-react-router": "^1.0.5",
-    "style-loader": "0.23.1",
-    "styled-components": "^4.3.2",
-    "svg-react-loader": "^0.4.6",
-    "symlink-dir": "^3.1.0",
-    "tree-kill": "^1.2.1",
-    "true-case-path": "^2.0.0",
-    "typescript": "^3.5.3",
-    "url-loader": "^2.0.1",
-    "url-search-params-polyfill": "^7.0.0",
-    "use-react-router": "^1.0.7",
-    "weakmap-polyfill": "^2.0.0",
-    "webpack": "^4.35.3",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2",
-    "webpack-dev-server-status-bar": "^1.1.1",
-    "webpack-manifest-plugin": "^2.0.4",
-    "webpack-pwa-manifest": "^4.0.0",
-    "webpack-strip-block": "0.2.0",
-    "whatwg-fetch": "^3.0.0",
-    "workbox-webpack-plugin": "^4.3.1",
-    "worker-loader": "^2.0.0",
-    "write-file-webpack-plugin": "4.5.0",
-    "ws": "^7.1.0",
-    "yargs": "^13.2.4"
-  },
-  "devDependencies": {
-    "all-contributors-cli": "^6.7.0",
-    "conventional-github-releaser": "^3.1.3",
-    "standard-version": "^6.0.1"
-  }
 }
