@@ -32,7 +32,14 @@ export default (defaults = []) => {
                 acc[key] = entry
                 return acc
             }
-            entry = isBabel ? entry.replace(mhyConfig.srcFolder, mhyConfig.distFolder) : entry
+
+            // Search for last occurrence of src folder and replace it to dist
+            if (isBabel) {
+                const entrySegements = entry.split(path.delimiter).reverse()
+                const srcIndex = entrySegements.findIndex(_ => _ === mhyConfig.srcFolder)
+                entrySegements[srcIndex] = mhyConfig.distFolder
+                entry = entrySegements.reverse().join(path.delimiter)
+            }
             acc[key] = `./${path.relative(process.cwd(), path.resolve(entry))}`
             return acc
         }, {})
