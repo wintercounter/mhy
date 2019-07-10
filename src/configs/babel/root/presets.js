@@ -4,8 +4,8 @@ export default (defaults = []) => [
         require.resolve('@babel/preset-env'),
         {
             targets: {
-                "chrome": 78,
-                "edge": 18,
+                chrome: 78,
+                edge: 18,
                 esmodules: false
             },
             modules: false
