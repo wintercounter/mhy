@@ -81,31 +81,6 @@ Create a production ready bundle for you website/app using pre-configured **Webp
 mhy webpack --mhy-prod
 ```
 
-### ESLint VSCode integration
-
-Since `mhy` will run ESLint for you, VSCode should understand where it should use ESLint from. Basically, all you have to do is:
-
-1. Find where `mhy` is installed on your machine;
-1. Update your VSCode Settings.json file to use ESLint from `mhy` directory.
-
-Open your terminal and execute the following:
-
-```bash
-npm config get prefix # will return something like /User/MachineName/.../node/...
-```
-
-Get the output from the command above and append `/lib/node_modules/mhy/node_modules` to it (it should be something like `/User/MachineName/.../node/.../lib/node_modules/mhy/node_modules`). Open `Settings.json` file on your VSCode and add the following:
-
-```json
-{
-  ...
-  "eslint.nodePath": "your path to mhy comes here",
-  ...
-}
-```
-
-You're done! That's it.
-
 ### Start the default ecosystem
 
 It'll run Jest, Webpack Dev Server, TypeScript compiler, Storybook at once in a single Terminal UI (TUI).
