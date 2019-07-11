@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import '@storybook/components'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
@@ -8,7 +7,7 @@ import StoryRouter from 'storybook-react-router'
 // Config
 addParameters({
     options: {
-        panelPosition: 'right'
+        //panelPosition: 'right'
     }
 })
 
