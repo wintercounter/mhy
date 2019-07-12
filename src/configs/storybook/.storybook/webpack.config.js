@@ -8,6 +8,15 @@ export default ({ config }) => {
     }
     config.resolve = mhyWP.resolve
     config.module = mhyWP.module
+
+    // Transpile css from anywhere
+    config.module.rules.forEach(rule => {
+        if (test.toString().includes('css')) {
+            rule.include = /./
+        }
+    })
+
+    // No need to do eslint here...
     const eslint = config.module.rules.find(({ loader }) => loader && loader.includes('eslint'))
     if (eslint) {
         config.module.rules.splice(config.module.rules.indexOf(eslint), 1)

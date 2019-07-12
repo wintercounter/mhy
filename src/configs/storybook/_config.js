@@ -1,6 +1,5 @@
 import '@storybook/components'
 import { configure, addDecorator, addParameters } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-react-router'
 
@@ -12,7 +11,6 @@ addParameters({
 })
 
 // Decorators
-addDecorator(withInfo)
 addDecorator(withKnobs)
 addDecorator(StoryRouter())
 
