@@ -21,40 +21,44 @@
 ## Summary
 
 It's really hard to define what `mhy` \(my\) is, because it tries to create a unified developer experience for any stage of your project:
-* a pre-configured **development environment** to not waste time with the set-up when starting a new project or just need a quick playground.
-* a pre-configured **production environment** to help you reach production faster compiling/building your code without any necessary setup.
-* an **ecosystem** to be able to run different task together at once, connected together perfectly.
-* a **toolbox** help your work with the most common tasks.
-* a **solution for littering** your machine with the same npm package over and over again.
-* a **config management** tool to make necessary changes faster at a single place.
-* an **interoperable environment** to be shared across multiple projects and ensure they are being build on the same principles/stack.
+
+- a pre-configured **development environment** to not waste time with the set-up when starting a new project or just need a quick playground.
+- a pre-configured **production environment** to help you reach production faster compiling/building your code without any necessary setup.
+- an **ecosystem** to be able to run different task together at once, connected together perfectly.
+- a **toolbox** help your work with the most common tasks.
+- a **solution for littering** your machine with the same npm package over and over again.
+- a **config management** tool to make necessary changes faster at a single place.
+- an **interoperable environment** to be shared across multiple projects and ensure they are being build on the same principles/stack.
 
 > `mhy` helps you to be able to focus on your code again rather then the tech behind it.
 
 ## Using `mhy` you'll have
 
-* a **zero-configuration** environment **out-of-the-box**.
-* a **portable** codebase without any `npm install`.
-* **simple customization** if you don't favor the default settings.
-* **package.json based customization** for any configs value `mhy` provides.
-* **boot templates** for easy setup.
-* **most common packages** provided to your work.
-* a **single command TUI** to run a full ecosystem.
-* **less boilerplate**.
-* configs/tools **well-playing** together _(webpack+babel, jest+babel, storybook+webpack, webpack+typescript, etc.)_.
-* **pre-built and public Docker images** for faster CI.
+- a **zero-configuration** environment **out-of-the-box**.
+- a **portable** codebase without any `npm install`.
+- **simple customization** if you don't favor the default settings.
+- **package.json based customization** for any configs value `mhy` provides.
+- **boot templates** for easy setup.
+- **most common packages** provided to your work.
+- a **single command TUI** to run a full ecosystem.
+- **less boilerplate**.
+- configs/tools **well-playing** together _(webpack+babel, jest+babel, storybook+webpack, webpack+typescript, etc.)_.
+- **pre-built and public Docker images** for faster CI.
 
 > Note that `mhy`'s focus is on client side currently, but server side features are about to come.
 
 ## Setup
 
 ### Install
+
 ```bash
 npm install mhy -g
 ```
 
 ### Start a new project
+
 Creates an empty project with a single `index.js` file that is being served using `webpack-dev-server` _(wds)_ pre-configured with **Babel** and **React**.
+
 ```bash
 mkdir src
 echo "console.log('Hello mhy!')" > src/index.js
@@ -62,23 +66,31 @@ mhy wds
 ```
 
 ### Compile library
+
 Create a production ready library. From the `src` folder it creates a complied `dist` folder.
+
 ```bash
 mhy babel --mhy-prod
 ```
 
 ### Build bundle
+
 Create a production ready bundle for you website/app using pre-configured **Webpack**. From the `src` folder it creates a `build` folder with your bundle ready to be served supporting many popular features/loaders.
+
 ```bash
 mhy webpack --mhy-prod
 ```
 
 ### Start the default ecosystem
+
 It'll run Jest, Webpack Dev Server, TypeScript compiler, Storybook at once in a single Terminal UI (TUI).
+
 ```bash
 mhy
 ```
+
 ### That's not all
+
 > These are only a few examples from all the possibilities `mhy` provides. Start exploring on https://mhy.js.org
 
 ## Supported packages
@@ -89,7 +101,7 @@ mhy
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="http://andy1210.com"><img src="https://avatars0.githubusercontent.com/u/964291?v=4" width="100px;" alt="Andy1210"/><br /><sub><b>Andy1210</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/issues?q=author%3AAndy1210" title="Bug reports">🐛</a> <a href="https://github.com/wintercounter/mhy/commits?author=Andy1210" title="Tests">⚠️</a></td></tr></table>
+<table><tr><td align="center"><a href="http://andy1210.com"><img src="https://avatars0.githubusercontent.com/u/964291?v=4" width="100px;" alt="Andy1210"/><br /><sub><b>Andy1210</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/issues?q=author%3AAndy1210" title="Bug reports">🐛</a> <a href="https://github.com/wintercounter/mhy/commits?author=Andy1210" title="Tests">⚠️</a></td><td align="center"><a href="https://github.com/pablohpsilva"><img src="https://avatars3.githubusercontent.com/u/2090635?s=460&v=4" width="100px;" alt="pablohpsilva"/><br /><sub><b>pablohpsilva</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=pablohpsilva" title="Documentation">📖</a></td></tr></table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ❤ Thank you all! ❤
