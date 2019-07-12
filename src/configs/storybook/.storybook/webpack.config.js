@@ -11,7 +11,7 @@ export default ({ config }) => {
 
     // Transpile css from anywhere
     config.module.rules.forEach(rule => {
-        if (test.toString().includes('css')) {
+        if (rule.test.toString().includes('css')) {
             rule.include = /./
         }
     })
