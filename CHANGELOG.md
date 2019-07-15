@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.4](https://github.com/wintercounter/mhy/compare/v2.2.3...v2.2.4) (2019-07-15)
+
+
+### Bug Fixes
+
+* add missing core-js dep ([e96ddaf](https://github.com/wintercounter/mhy/commit/e96ddaf))
+
+
+
 ### [2.2.3](https://github.com/wintercounter/mhy/compare/v2.2.2...v2.2.3) (2019-07-12)
 
 
