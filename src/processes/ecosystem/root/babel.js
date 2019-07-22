@@ -1,6 +1,6 @@
 import path from 'path'
 import copyDir from 'copy-dir'
-import Process from '@/processes'
+import Process from '@/processes/index'
 import mhyConfig from '@/configs/mhy'
 
 const getCmdBabelCLI = (flags = []) => [
