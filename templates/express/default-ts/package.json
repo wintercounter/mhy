@@ -1,0 +1,12 @@
+{
+  "name": "mhy-boot-express-default-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "mhy jest",
+    "start": "mhy node"
+  },
+  "author": "",
+  "license": "MIT"
+}
