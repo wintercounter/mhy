@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -16,7 +16,7 @@
         "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
         "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
         "deploy": "npm pub && npm run docker",
-        "release": "standard-version && conventional-github-releaser -t",
+        "release": "mhyd sv && conventional-github-releaser -t",
         "contributors:add": "all-contributors add",
         "contributors:generate": "all-contributors generate"
     },

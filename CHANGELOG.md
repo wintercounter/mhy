@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/wintercounter/mhy/compare/v2.4.0...v2.5.0) (2019-07-30)
+
+
+### Features
+
+* **deps:** add `@apollo/react-hooks` ([086077c](https://github.com/wintercounter/mhy/commit/086077c))
+* **standard-version:** add new process ([9d4f010](https://github.com/wintercounter/mhy/commit/9d4f010))
+
 ## [2.4.0](https://github.com/wintercounter/mhy/compare/v2.3.0...v2.4.0) (2019-07-23)
 
 
