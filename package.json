@@ -98,14 +98,6 @@
                         "$prepend": {
                             "$expression": "$params.require.resolve('babel-plugin-add-module-exports')"
                         }
-                    },
-                    {
-                        "$match": {
-                            "query": "$[?(@.includes('regenerator'))]",
-                            "value": {
-                                "$remove": true
-                            }
-                        }
                     }
                 ]
             }
