@@ -24,6 +24,7 @@
   - [node](processes/node.md)
   - [nodemon](processes/nodemon.md)
   - [prettier](processes/prettier.md)
+  - [standard-version](processes/standard-version.md)
   - [storybook-start](processes/storybook-start.md)
   - [storybook-build](processes/storybook-build.md)
   - [tsc](processes/tsc.md)
