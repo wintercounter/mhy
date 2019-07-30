@@ -16,7 +16,7 @@
         "docker-publish": "docker login&& docker tag mhy wintercounter/mhy:1.0.3&& docker push wintercounter/mhy:1.0.3&& docker tag mhy wintercounter/mhy:latest&& docker push wintercounter/mhy:latest",
         "docker": "npm run docker-rm-image && npm run docker-build-image && npm run docker-publish",
         "deploy": "npm pub && npm run docker",
-        "release": "mhyd sv && conventional-github-releaser -t",
+        "release": "mhy sv && conventional-github-releaser -t",
         "contributors:add": "all-contributors add",
         "contributors:generate": "all-contributors generate"
     },

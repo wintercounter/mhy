@@ -4,7 +4,7 @@
 
 ```bash
 # Print config to console
-mhy eslint babel
+mhy config eslint
 
 # Write .eslintrc
 mhy config eslint -i
