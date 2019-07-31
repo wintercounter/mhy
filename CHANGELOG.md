@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/wintercounter/mhy/compare/v2.5.0...v2.6.0) (2019-07-31)
+
+
+### Features
+
+* **webpack:** use Terser plugin for minification ([2d0e5a4](https://github.com/wintercounter/mhy/commit/2d0e5a4))
+
 ## [2.5.0](https://github.com/wintercounter/mhy/compare/v2.4.0...v2.5.0) (2019-07-30)
 
 
