@@ -48,16 +48,16 @@ const handleCompileSuccess = line => {
     copyDir.sync(path.resolve(process.cwd(), mhyConfig.srcFolder), path.resolve(process.cwd(), mhyConfig.distFolder), {
         cover: false,
         mode: true,
-        filter: function(stat, filepath, filename) {
+        filter: function(stat, filepath) {
             if (stat === 'file') {
-                if (filename.endsWith('.d.ts')) {
+                if (filepath.endsWith('.d.ts')) {
                     return true
                 }
                 if (
-                    filename.endsWith('ts') ||
-                    filename.endsWith('tsx') ||
-                    filename.endsWith('js') ||
-                    filename.endsWith('jsx')
+                    filepath.endsWith('ts') ||
+                    filepath.endsWith('tsx') ||
+                    filepath.endsWith('js') ||
+                    filepath.endsWith('jsx')
                 ) {
                     return false
                 }
