@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/wintercounter/mhy/compare/v2.6.2...v2.7.0) (2019-08-06)
+
+
+### Features
+
+* add `apollo-link-state` ([e1377a1](https://github.com/wintercounter/mhy/commit/e1377a1))
+
 ### [2.6.2](https://github.com/wintercounter/mhy/compare/v2.6.1...v2.6.2) (2019-08-06)
 
 
