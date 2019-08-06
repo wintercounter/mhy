@@ -196,6 +196,7 @@
         "apollo-link": "^1.2.12",
         "apollo-link-http": "^1.5.15",
         "apollo-link-rest": "^0.7.3",
+        "apollo-link-state": "^0.4.2",
         "autoprefixer": "^9.6.1",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "10.0.2",
