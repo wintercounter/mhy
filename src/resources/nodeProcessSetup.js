@@ -13,8 +13,6 @@ babelConfig.presets.find(p => p[0].includes('preset-env'))[1] = {
         esmodules: true
     }
 }
-const regeneratorIndex = babelConfig.plugins.findIndex(p => p.includes && p.includes('regenerator'))
-babelConfig.plugins.splice(regeneratorIndex, 1)
 babelConfig.extensions = ['.es6', '.es', '.jsx', '.js', '.mjs', '.ts', '.tsx']
 babelConfig.cache = false
 
