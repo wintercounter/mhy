@@ -37,4 +37,7 @@ const scriptValue = process.argv[scriptIndex]
 const src =
     scriptValue.length === scriptKey.length ? process.argv[scriptIndex + 1] : scriptValue.replace(`${scriptKey}=`, '')
 
+// Remove them
+process.argv.splice(scriptIndex, 2)
+
 require(path.resolve(process.cwd(), src))
