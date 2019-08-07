@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/wintercounter/mhy/compare/v2.8.0...v2.9.0) (2019-08-07)
+
+
+### Bug Fixes
+
+* **node:** remove the removal of regenerator, we don't have it anymore ([a0bd86e](https://github.com/wintercounter/mhy/commit/a0bd86e))
+
+
+### Features
+
+* **babel:** add temporary solution to be able to load macros outside `process.cwd()`; see: https://github.com/kentcdodds/babel-plugin-macros/issues/87 ([873cef3](https://github.com/wintercounter/mhy/commit/873cef3))
+* **node:** remove `--mhy-script` args to not to be passed to argument validation of sub-processes ([f05c0e3](https://github.com/wintercounter/mhy/commit/f05c0e3))
+
 ## [2.8.0](https://github.com/wintercounter/mhy/compare/v2.7.1...v2.8.0) (2019-08-07)
 
 
