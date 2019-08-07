@@ -1,6 +1,24 @@
 import path from 'path'
+import fs from 'fs'
 
 import mhyConfig from '@/configs/mhy'
+
+// Temporary ugly hack! Babel plugin macro can only resolve from process.cwd() as root.
+// We just simply patching the sourcecode until there's a better option for this.
+const macrosPluginPath = require.resolve('babel-plugin-macros')
+fs.readFile(macrosPluginPath, 'utf8', function(err, data) {
+    fs.writeFile(
+        macrosPluginPath,
+        data.replace(
+            'return resolve.sync(source, {',
+            `return resolve.sync(source, {
+                 paths: [p.resolve(__dirname, '../../'), p.resolve(process.cwd(), 'node_modules')],
+            `
+        ),
+        'utf8',
+        () => {}
+    )
+})
 
 export default (defaults = []) => {
     const r = [
