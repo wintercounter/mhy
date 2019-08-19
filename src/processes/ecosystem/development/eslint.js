@@ -6,7 +6,6 @@ const getEslintCLICmd = args => {
         flags,
         argv: { pattern = [] }
     } = args
-    console.log(path.resolve(__dirname, '../../../../node_modules'))
 
     // It's a file/path, use that
     if (!pattern.length) {
