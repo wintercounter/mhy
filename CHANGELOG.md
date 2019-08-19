@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/wintercounter/mhy/compare/v2.9.0...v2.10.0) (2019-08-19)
+
+
+### Bug Fixes
+
+* **eslint:** glob pattern ignoring files in root folder ([aa95da8](https://github.com/wintercounter/mhy/commit/aa95da8))
+* **gitignore:** wrong `tsbuildinfo` pattern ([724c14e](https://github.com/wintercounter/mhy/commit/724c14e))
+
+
+### Features
+
+* **eslint:** add support for latest ESLint v6 ([e84af1f](https://github.com/wintercounter/mhy/commit/e84af1f))
+* add `@w11r/use-breakpoint` ([39bc536](https://github.com/wintercounter/mhy/commit/39bc536))
+
 ## [2.9.0](https://github.com/wintercounter/mhy/compare/v2.8.0...v2.9.0) (2019-08-07)
 
 
