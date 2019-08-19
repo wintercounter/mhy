@@ -29,6 +29,7 @@
   - [storybook-build](processes/storybook-build.md)
   - [tsc](processes/tsc.md)
   - [webpack](processes/webpack.md)
+  - [webpack-bundle-analyzer](processes/webpack-bundle-analyzer.md)
   - [webpack-dev-server](processes/webpack-dev-server.md)
 - [Configs]()
   - [babel](configs/babel.md)
