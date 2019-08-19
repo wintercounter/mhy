@@ -188,6 +188,7 @@
         "@types/yargs": "^13.0.2",
         "@typescript-eslint/eslint-plugin": "^1.13.0",
         "@typescript-eslint/parser": "^1.13.0",
+        "@w11r/use-breakpoint": "^1.0.0",
         "acorn": "^6.2.1",
         "animejs": "^3.1.0",
         "apollo-cache-inmemory": "^1.6.2",
