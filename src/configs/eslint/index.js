@@ -19,7 +19,10 @@ const defaults = {
     },
     parser: 'babel-eslint',
     plugins: ['react', 'react-hooks', 'jest'],
-    extends: ['airbnb', 'prettier', 'prettier/react', 'plugin:jest/recommended'],
+    extends: [
+        ...['eslint-config-airbnb', 'eslint-config-prettier', 'eslint-config-prettier/react'].map(require.resolve),
+        'plugin:jest/recommended'
+    ],
     rules: {
         'jsx-a11y/media-has-caption': 0,
         'jsx-a11y/click-events-have-key-events': 0,
@@ -39,6 +42,7 @@ const defaults = {
         'react/no-did-update-set-state': 0,
         'react/forbid-foreign-prop-types': 0,
         'react-hooks/rules-of-hooks': 'error',
+        'react/jsx-props-no-spreading': 0,
 
         'import/no-unresolved': 0,
         'import/no-extraneous-dependencies': 0,
@@ -206,11 +210,11 @@ const defaults = {
 
 const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
 if (fs.existsSync(tsconfigPath)) {
-    defaults.parser = '@typescript-eslint/parser'
+    defaults.parser = require.resolve('@typescript-eslint/parser')
     defaults.parserOptions.project = tsconfigPath
     defaults.plugins.push('@typescript-eslint')
     defaults.extends.push('plugin:@typescript-eslint/recommended')
-    defaults.extends.push('prettier/@typescript-eslint')
+    defaults.extends.push(require.resolve('eslint-config-prettier/@typescript-eslint'))
     defaults.rules = {
         ...defaults.rules,
 
