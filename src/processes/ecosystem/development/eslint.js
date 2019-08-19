@@ -10,7 +10,7 @@ const getEslintCLICmd = args => {
 
     // It's a file/path, use that
     if (!pattern.length) {
-        pattern.push(`"${path.resolve(process.cwd(), 'src/**/*/!(*d).{js,jsx,ts,tsx}')}"`)
+        pattern.push(`"${path.resolve(process.cwd(), 'src/**/!(*d).{js,jsx,ts,tsx}')}"`)
     }
     return [
         'node',
