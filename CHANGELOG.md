@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.11.0](https://github.com/wintercounter/mhy/compare/v2.10.0...v2.11.0) (2019-08-20)
+
+
+### Features
+
+* **eslint:** revert back to v5 for now, but keep updated plugins where possible ([6ef8961](https://github.com/wintercounter/mhy/commit/6ef8961))
+
 ## [2.10.0](https://github.com/wintercounter/mhy/compare/v2.9.0...v2.10.0) (2019-08-19)
 
 
