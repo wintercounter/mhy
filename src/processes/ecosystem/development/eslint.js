@@ -14,8 +14,6 @@ const getEslintCLICmd = args => {
     return [
         'node',
         require.resolve('eslint/bin/eslint.js'),
-        '--resolve-plugins-relative-to',
-        path.resolve(__dirname, '../../../../node_modules/eslint'),
         ...flags,
         ...pattern
     ]

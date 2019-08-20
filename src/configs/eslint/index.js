@@ -23,6 +23,11 @@ const defaults = {
         ...['eslint-config-airbnb', 'eslint-config-prettier', 'eslint-config-prettier/react'].map(require.resolve),
         'plugin:jest/recommended'
     ],
+    settings: {
+        react: {
+            version: 'latest'
+        }
+    },
     rules: {
         'jsx-a11y/media-has-caption': 0,
         'jsx-a11y/click-events-have-key-events': 0,
