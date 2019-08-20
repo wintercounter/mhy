@@ -25,7 +25,7 @@ const defaults = {
     ],
     settings: {
         react: {
-            version: 'latest'
+            version: require('react/package.json').version
         }
     },
     rules: {
