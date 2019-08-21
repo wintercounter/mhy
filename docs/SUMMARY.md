@@ -15,6 +15,7 @@
 - [Built-ins]()
   - [boot](built-ins/boot.md)
   - [config](built-ins/config.md)
+  - [dep](built-ins/dep.md)
   - [options](built-ins/options.md)
   - [ui](built-ins/ui.md)
 - [Processes]()
