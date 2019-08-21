@@ -1,7 +1,6 @@
 # boot
----
-description: This tool will let you initialize codebase from a template.
----
+
+This tool will let you initialize codebase from a template.
 
 ## Usage
 

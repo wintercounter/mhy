@@ -226,6 +226,7 @@
         "date-fns": "^2.0.0-beta.3",
         "dayjs": "^1.8.15",
         "decompress": "^4.2.0",
+        "depcheck": "^0.8.3",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
         "enzyme-to-json": "^3.4.0",
@@ -244,6 +245,7 @@
         "figures": "^3.0.0",
         "file-loader": "4.2.0",
         "formdata-polyfill": "^3.0.19",
+        "framer-motion": "^1.6.3",
         "fs-extra": "^8.1.0",
         "glob": "^7.1.4",
         "graphql": "^14.4.2",
@@ -355,6 +357,7 @@
         "workbox-webpack-plugin": "^4.3.1",
         "worker-loader": "^2.0.0",
         "write-file-webpack-plugin": "4.5.1",
+        "write-pkg": "^4.0.0",
         "ws": "^7.1.2",
         "yargs": "^13.3.0"
     },
