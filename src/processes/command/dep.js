@@ -20,7 +20,7 @@ const commandHandler = async ({ tool, prop, ...argv }) => {
         case 'collect': {
             const { dependencies: _dependencies } = require(path.resolve(__dirname, '../../../package.json'))
             const packageJSON = require(path.resolve(process.cwd(), 'package.json'))
-            const { dependencies } = packageJSON
+            const { dependencies = {} } = packageJSON
             const { defaultIgnoreList, buildFolder, distFolder } = require('@/configs/mhy')
             const options = {
                 ignoreDirs: [...defaultIgnoreList, buildFolder, distFolder]
