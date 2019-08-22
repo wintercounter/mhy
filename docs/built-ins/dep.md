@@ -3,6 +3,8 @@
 This is a built-in CLI process used to manage dependencies
 whether using mhy's dependencies or not.
 
+- Alias: `deps`
+
 ## Tools
 
 - `search`

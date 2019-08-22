@@ -74,7 +74,7 @@ const commandHandler = async ({ tool, prop, ...argv }) => {
 
 export default () => {
     yargs.command(
-        'dep [tool] [prop]',
+        ['dep [tool] [prop]', 'deps [tool] [prop]'],
         'dependency management tool',
         y => {
             y.positional('tool', {
