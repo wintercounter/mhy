@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.14.0](https://github.com/wintercounter/mhy/compare/v2.13.0...v2.14.0) (2019-08-23)
+
+
+### Features
+
+* introduce new dependencies (emotion, final-form, reach-router) ([0e20e11](https://github.com/wintercounter/mhy/commit/0e20e11))
+
 ## [2.13.0](https://github.com/wintercounter/mhy/compare/v2.12.0...v2.13.0) (2019-08-22)
 
 
