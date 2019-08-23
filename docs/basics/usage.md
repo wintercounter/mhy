@@ -37,7 +37,10 @@ With each version of `mhy` we're also releasing a Docker image containing the co
 
 ```bash
 docker pull wintercounter/mhy
-docker run -it -v $(pwd):/app -w /app mhy mhy jest
+docker run -it -v $(pwd):/app -w /app wintercounter/mhy mhy jest
+
+# On Windows (different CWD syntax)
+docker run -it -v %CD%:/app -w /app wintercounter/mhy mhy jest
 ```
 
 ### Docker Hub repository & versions
