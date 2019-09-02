@@ -6,6 +6,14 @@ let SETUP_DONE = false
 ;(() => {
     if (SETUP_DONE) return
 
+    // Let's save us from the work ASAP
+    const [, ...mhyIfStr] = (process.argv.find(a => a.startsWith('--mhy-if')) || '').split('=')
+
+    if (!eval(mhyIfStr.join('='))) {
+        console.info(`Skipping command due to falsy expression: ${mhyIfStr.join('=')}`)
+        process.exit(0)
+    }
+
     // Register dist with alias and mhy's node_modules as module source so custom JS files can use it loaded through mhy
     addAlias('@/mhy', path.resolve(__dirname, '../'))
     addPath(path.resolve(__dirname, '../../node_modules'))
