@@ -70,7 +70,7 @@ mhy wds
 Create a production ready library. From the `src` folder it creates a complied `dist` folder.
 
 ```bash
-mhy babel --mhy-prod
+mhy babel --mhy-env=prod
 ```
 
 ### Build bundle
@@ -78,7 +78,7 @@ mhy babel --mhy-prod
 Create a production ready bundle for you website/app using pre-configured **Webpack**. From the `src` folder it creates a `build` folder with your bundle ready to be served supporting many popular features/loaders.
 
 ```bash
-mhy webpack --mhy-prod
+mhy webpack --mhy-env=prod
 ```
 
 ### Start the default ecosystem

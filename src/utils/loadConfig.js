@@ -2,27 +2,18 @@ import path from 'path'
 import { applyJson, applyEntries } from '@/utils'
 
 const loadConfig = (module, defaults = {}) => {
-    // 1. MHY root
-    applyEntries(defaults, path.join(__dirname, '../configs', module, 'root'), '**/*.js')
+    const envs = ['root', ...process.env.MHY_ENVS.split(',')]
 
-    // 2. LOCAL root
-    applyEntries(defaults, path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'configs', module, 'root'), '**/*.js')
+    for (const env of envs) {
+        // 1. from MHY
+        applyEntries(defaults, path.join(__dirname, '../configs', module, env), '**/*.js')
 
-    // 3. JSON root
-    defaults = applyJson(module, 'root', defaults)
+        // 2. from process.cwd()
+        applyEntries(defaults, path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'configs', module, env), '**/*.js')
 
-    // 4. MHY env
-    applyEntries(defaults, path.join(__dirname, '../configs', module, process.env.NODE_ENV), '**/*.js')
-
-    // 5. LOCAL env
-    applyEntries(
-        defaults,
-        path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'configs', module, process.env.NODE_ENV),
-        '**/*.js'
-    )
-
-    // 6. JSON env
-    defaults = applyJson(module, process.env.NODE_ENV, defaults)
+        // 3. from JSON
+        defaults = applyJson(module, env, defaults)
+    }
 
     return defaults
 }

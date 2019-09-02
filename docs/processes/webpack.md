@@ -22,7 +22,7 @@ mhy wp
 
 ### In `production` mode
 ```bash
-mhy webpack --mhy-prod
+mhy webpack --mhy-env=prod
 # or
 NODE_ENV=production mhy webpack
 ```

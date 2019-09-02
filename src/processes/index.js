@@ -17,28 +17,37 @@ export const loadEcosystem = (env = '') => {
     return processes
 }
 
-export const loadProcess = (module, env = process.env.NODE_ENV) => {
-    const processLocal = path.join(
-        process.cwd(),
-        process.env.MHY_LOCAL_DIR,
-        'processes',
-        'ecosystem',
-        env,
-        `${module}.js`
-    )
-    const processLocalExists = fs.existsSync(processLocal)
-    const processMhy = path.join(__dirname, 'ecosystem', env, `${module}.js`)
-    const processMhyRoot = path.join(__dirname, 'ecosystem', 'root', `${module}.js`)
-    const processMhyExists = fs.existsSync(processMhy)
-    const processMhyRootExists = fs.existsSync(processMhyRoot)
+export const loadProcess = module => {
+    const envs = ['root', ...process.env.MHY_ENVS.split(',')].reverse()
+    let proc
 
-    if (processLocalExists) return require(processLocal)
-    else if (processMhyExists) return require(processMhy)
-    else if (processMhyRootExists) return require(processMhyRoot)
-    else {
-        console.error(`Unknown process '${module}' for the environment of '${env}'!`)
-        process.exit(0)
+    for (const env of envs) {
+        const processMhyPath = path.join(__dirname, 'ecosystem', env, `${module}.js`)
+        const processLocalPath = path.join(
+            process.cwd(),
+            process.env.MHY_LOCAL_DIR,
+            'processes',
+            'ecosystem',
+            env,
+            `${module}.js`
+        )
+        const processMhyExists = fs.existsSync(processMhyPath)
+        const processLocalExists = fs.existsSync(processLocalPath)
+
+        if (processLocalExists) {
+            proc = require(processLocalPath)
+            break
+        } else if (processMhyExists) {
+            proc = require(processMhyPath)
+            break
+        }
     }
+
+    if (proc) {
+        return proc
+    }
+
+    console.error(`Unknown process '${module}' for the environment of '${process.env.MHY_ENVS.replace(/,/g, ':')}'!`)
 }
 
 export const loadCommands = () => {
@@ -46,7 +55,7 @@ export const loadCommands = () => {
     applyEntries({}, path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'processes', 'command'), '**/*.js')
 }
 
-const mhyArgvList = ['$0', '_', 'mhy-verbose', 'mhy-debug', 'mhy-prod']
+const mhyArgvList = ['$0', '_', 'mhy-verbose', 'mhy-debug', 'mhy-prod', 'mhy-env']
 
 export const buildMhyArgv = (argv, noFlags = []) => {
     argv = { ...argv }

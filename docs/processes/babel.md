@@ -25,26 +25,26 @@ https://babeljs.io/docs/en/babel-cli
 
 ### Default CLI
 ```bash
-mhy babel --mhy-prod
+mhy babel --mhy-env=prod
 # or
 NODE_ENV=production mhy bb
 ```
 
 ### mhy UI
 ```bash
-mhy ui babel --mhy-prod
+mhy ui babel --mhy-env=prod
 ```
 
 ### Start with watcher
 ```bash
-mhy babel --watch --mhy-prod
+mhy babel --watch --mhy-env=prod
 ```
 
 ### Only transform one file
 ```bash
-mhy babel script.js --mhy-prod
-mhy babel script.js --mhy-prod --out-file script-compiled.js
-mhy babel script.js --mhy-prod --out-file script-compiled.js --source-maps
+mhy babel script.js --mhy-env=prod
+mhy babel script.js --mhy-env=prod --out-file script-compiled.js
+mhy babel script.js --mhy-env=prod --out-file script-compiled.js --source-maps
 ```
 > Alternatively you can use `NODE_ENV=production mhy babel`
 

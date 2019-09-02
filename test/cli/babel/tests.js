@@ -7,7 +7,7 @@ describe('babel compilation', async () => {
 
     beforeAll(async () => {
         rimraf.sync(dist)
-        let { stdout: s } = await spawn(['bb', '--mhy-prod'], cwd)
+        let { stdout: s } = await spawn(['bb', '--mhy-env=prod'], cwd)
         results = s
     })
 

@@ -22,7 +22,7 @@ mhy wba
 
 ### Analyze `production` bundle instead
 ```bash
-mhy webpack-bundle-analyzer --mhy-prod
+mhy webpack-bundle-analyzer --mhy-env=prod
 # or
 NODE_ENV=production mhy webpack-bundle-analyzer
 ```
