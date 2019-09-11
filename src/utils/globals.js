@@ -9,7 +9,7 @@ let SETUP_DONE = false
     // Let's save us from the work ASAP
     const [, ...mhyIfStr] = (process.argv.find(a => a.startsWith('--mhy-if')) || '').split('=')
 
-    if (!eval(mhyIfStr.join('='))) {
+    if (mhyIfStr.length && !eval(mhyIfStr.join('='))) {
         console.info(`Skipping command due to falsy expression: ${mhyIfStr.join('=')}`)
         process.exit(0)
     }
