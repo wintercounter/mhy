@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.15.0](https://github.com/wintercounter/mhy/compare/v2.14.0...v2.15.0) (2019-09-11)
+
+
+### Bug Fixes
+
+* **--mhy-if:** empty command should not run ([31f8300](https://github.com/wintercounter/mhy/commit/31f8300))
+* **babel-plugin-macro:** only apply patch if it wasn't patched before ([783f7af](https://github.com/wintercounter/mhy/commit/783f7af))
+
+
+### Features
+
+* `--mhy-if` flag ([e12a4cd](https://github.com/wintercounter/mhy/commit/e12a4cd))
+* add support for secondary environments ([25bf828](https://github.com/wintercounter/mhy/commit/25bf828))
+
 ## [2.14.0](https://github.com/wintercounter/mhy/compare/v2.13.0...v2.14.0) (2019-08-23)
 
 
