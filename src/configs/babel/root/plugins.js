@@ -11,7 +11,7 @@ fs.readFile(macrosPluginPath, 'utf8', function(err, data) {
         macrosPluginPath,
         data.replace(
             'return resolve.sync(source, {',
-            `return resolve.sync(source, {
+            `return resolve.sync(source,{
                  paths: [p.resolve(__dirname, '../../'), p.resolve(process.cwd(), 'node_modules')],
             `
         ),
