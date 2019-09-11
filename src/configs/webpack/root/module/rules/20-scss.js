@@ -10,9 +10,11 @@ const getUse = (isModules = true) => [
         options: {
             importLoaders: 2,
             sourceMap: true,
-            modules: !isModules ? false : {
-                localIdentName: '[local]__[hash:base64:5]'
-            },
+            modules: !isModules
+                ? false
+                : {
+                      localIdentName: '[local]__[hash:base64:5]'
+                  },
             localsConvention: 'camelCase'
         }
     },
@@ -32,13 +34,15 @@ const getUse = (isModules = true) => [
         loader: require.resolve('sass-loader'),
         options: {
             sourceMap: true,
-            includePaths: Array.from(
-                new Set([
-                    path.resolve(__dirname, '../../../../../../node_modules'),
-                    path.resolve(process.cwd(), 'node_modules'),
-                    path.resolve(process.cwd(), mhyConfig.srcFolder)
-                ])
-            )
+            sassOptions: {
+                includePaths: Array.from(
+                    new Set([
+                        path.resolve(__dirname, '../../../../../../node_modules'),
+                        path.resolve(process.cwd(), 'node_modules'),
+                        path.resolve(process.cwd(), mhyConfig.srcFolder)
+                    ])
+                )
+            }
         }
     }
 ]
