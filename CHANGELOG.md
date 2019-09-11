@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.1](https://github.com/wintercounter/mhy/compare/v2.15.0...v2.15.1) (2019-09-11)
+
+
+### Bug Fixes
+
+* **sass-loader:** move `sourceMap` option to the correct place ([a40388d](https://github.com/wintercounter/mhy/commit/a40388d))
+
 ## [2.15.0](https://github.com/wintercounter/mhy/compare/v2.14.0...v2.15.0) (2019-09-11)
 
 
