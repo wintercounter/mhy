@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.2](https://github.com/wintercounter/mhy/compare/v2.15.1...v2.15.2) (2019-09-12)
+
+
+### Bug Fixes
+
+* **s-c:** update jest tool ([14737de](https://github.com/wintercounter/mhy/commit/14737de))
+
 ### [2.15.1](https://github.com/wintercounter/mhy/compare/v2.15.0...v2.15.1) (2019-09-11)
 
 
