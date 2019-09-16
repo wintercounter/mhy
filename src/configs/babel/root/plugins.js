@@ -1,11 +1,18 @@
 import path from 'path'
+import fs from 'fs'
 
 import mhyConfig from '@/configs/mhy'
+
+// Hack...
+fs.copyFileSync(
+    path.resolve(__dirname, '../../../resources/babelPluginMacros.js'),
+    require.resolve('babel-plugin-macros')
+)
 
 export default (defaults = []) => {
     const r = [
         ...defaults,
-        require.resolve('./babelPluginMacros'),
+        require.resolve('babel-plugin-macros'),
         require.resolve('@babel/plugin-syntax-dynamic-import'),
         require.resolve('babel-plugin-transform-remove-strict-mode'),
         require.resolve('@babel/plugin-proposal-class-properties'),
