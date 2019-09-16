@@ -5,7 +5,7 @@ import mhyConfig from '@/configs/mhy'
 export default (defaults = []) => {
     const r = [
         ...defaults,
-        require.resolve('babel-plugin-macros'),
+        require.resolve('./babelPluginMacros'),
         require.resolve('@babel/plugin-syntax-dynamic-import'),
         require.resolve('babel-plugin-transform-remove-strict-mode'),
         require.resolve('@babel/plugin-proposal-class-properties'),

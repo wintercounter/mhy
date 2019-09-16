@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "2.15.9",
+    "version": "2.15.10",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -207,7 +207,7 @@
         "babel-loader": "^8.0.6",
         "babel-plugin-add-module-exports": "^1.0.2",
         "babel-plugin-dynamic-import-node": "^2.3.0",
-        "babel-plugin-macros": "file:./babel-plugin-macros",
+        "babel-plugin-macros": "^2.6.1",
         "babel-plugin-module-resolver": "^3.2.0",
         "babel-plugin-syntax-async-functions": "6.13.0",
         "babel-plugin-transform-function-bind": "6.22.0",
