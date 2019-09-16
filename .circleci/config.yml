@@ -23,7 +23,7 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            whoami && sudo whoami && npm i --unsafe-perm=true cross-env -g && npm i --unsafe-perm=true mhy@2.14.0 -g
+            whoami && sudo whoami && npm i --unsafe-perm=true cross-env -g && npm i --unsafe-perm=true mhy@latest -g
 
       - deploy:
           name: Trigger deployment
