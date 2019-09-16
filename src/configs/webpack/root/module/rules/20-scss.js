@@ -33,6 +33,7 @@ const getUse = (isModules = true) => [
     {
         loader: require.resolve('sass-loader'),
         options: {
+            sourceMap: true,
             sassOptions: {
                 sourceMap: true,
                 includePaths: Array.from(
