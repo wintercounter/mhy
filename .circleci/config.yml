@@ -11,8 +11,7 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/node:12
-      environment:
-        NPM_CONFIG_PREFIX=/home/circleci/.npm-global
+      user: root
 
     working_directory: ~/repo
 
@@ -24,7 +23,7 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            npm i cross-env -g && npm i mhy@latest -g
+            npm i --unsafe-perm=true cross-env -g && npm i --unsafe-perm=true mhy@latest -g
 
       - deploy:
           name: Trigger deployment
