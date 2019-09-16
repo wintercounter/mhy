@@ -13,19 +13,12 @@ jobs:
     - image: circleci/node:12
       environment:
         NPM_CONFIG_PREFIX=/home/circleci/.npm-global
-        PATH=$PATH:/home/circleci/.npm-global/bin
 
     working_directory: ~/repo
 
     steps:
       - setup_remote_docker
       - checkout
-
-      - run:
-          name: Set stuff
-          working_directory: ~/repo
-          command: |
-            npm i cross-env -g && npm i mhy@latest -g
 
       - run:
           name: Install dependencies
