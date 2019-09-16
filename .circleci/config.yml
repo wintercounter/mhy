@@ -11,7 +11,6 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/node:12
-      user: root
 
     working_directory: ~/repo
 
@@ -23,7 +22,7 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            npm i --unsafe-perm=true cross-env -g && npm i --unsafe-perm=true mhy@2.14.0 -g
+            sudo npm i --unsafe-perm=true cross-env -g && sudo npm i --unsafe-perm=true mhy@2.14.0 -g
 
       - deploy:
           name: Trigger deployment
