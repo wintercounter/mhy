@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.3](https://github.com/wintercounter/mhy/compare/v2.15.2...v2.15.3) (2019-09-16)
+
+
+### Bug Fixes
+
+* wrong css loader option key on prod builds ([ad589d0](https://github.com/wintercounter/mhy/commit/ad589d0))
+
 ### [2.15.2](https://github.com/wintercounter/mhy/compare/v2.15.1...v2.15.2) (2019-09-12)
 
 
