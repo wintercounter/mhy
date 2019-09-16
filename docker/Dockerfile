@@ -1,4 +1,4 @@
-FROM node:11-stretch-slim
+FROM node:12-stretch-slim
 
 RUN apt-get update && apt-get install -y libtool automake autoconf nasm libpng-dev pkg-config python2.7 python-pip procps git
 
