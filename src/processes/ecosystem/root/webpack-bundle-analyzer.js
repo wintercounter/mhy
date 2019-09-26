@@ -32,11 +32,29 @@ class WebpackBundleAnalyzer extends Process {
         const jsonPath = path.resolve(__dirname, 'stats.json')
         const bundlePath = path.resolve(process.cwd(), mhyConfig.buildFolder)
         let json = ''
+        let all = ''
+        let started = false
 
-        this.on('data', d => (json += d))
+        this.on('data', d => {
+            all = all + d
+            if (!started && d.includes('{\n')) {
+                const [, ...trimmed] = d.split('{\n')
+                d = `{${trimmed.join('{\n')}`
+                started = true
+            }
+            if (started) {
+                json += d
+            }
+        })
 
         p.on('exit', () => {
+            if (json.length === 0) {
+                console.log(all)
+                return
+            }
             fs.writeFileSync(jsonPath, json)
+            fs.writeFileSync(jsonPath + '.out.txt', all)
+
             console.log('Stats gathered successfully, analyzing...')
             this.run('start', { ...this.rest, flags: [...flags, jsonPath, bundlePath] })
         })
