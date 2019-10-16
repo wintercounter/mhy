@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.16.1](https://github.com/wintercounter/mhy/compare/v2.15.4...v2.16.1) (2019-10-16)
+
+
+### Bug Fixes
+
+* **webpack-bundle-analyzer:** prevent corrupted `stats.json` creation ([dfda7fd](https://github.com/wintercounter/mhy/commit/dfda7fd))
+
 ### [2.15.4](https://github.com/wintercounter/mhy/compare/v2.15.3...v2.15.4) (2019-09-16)
 
 
