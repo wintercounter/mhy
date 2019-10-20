@@ -5,7 +5,7 @@
 
 ```bash
 # Print config to console
-mhy config typscript
+mhy config typescript
 
 # Write tsconfig.json
 mhy config typescript -i
