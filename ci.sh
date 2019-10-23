@@ -18,6 +18,9 @@ then
     exit 0
 fi
 
+# check babel config
+mhy config babel
+
 npm pub
 check $?
 
