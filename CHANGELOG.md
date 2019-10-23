@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.17.0](https://github.com/wintercounter/mhy/compare/v2.16.1...v2.17.0) (2019-10-23)
+
+
+### Features
+
+* **eslint:** remove TS version warning ([bab3b31](https://github.com/wintercounter/mhy/commit/bab3b31))
+* **eslint:** v6 support ([af273e1](https://github.com/wintercounter/mhy/commit/af273e1))
+
 ### [2.16.1](https://github.com/wintercounter/mhy/compare/v2.15.4...v2.16.1) (2019-10-16)
 
 
