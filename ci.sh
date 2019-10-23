@@ -19,7 +19,7 @@ then
 fi
 
 # check babel config
-mhy config babel
+mhy config babel -f json
 
 npm pub
 check $?
