@@ -19,7 +19,8 @@ then
 fi
 
 # check babel config
-mhy config babel -f json
+echo "mhy config babel -f json --mhy-env=prod"
+mhy config babel -f json --mhy-env=prod
 
 npm pub
 check $?

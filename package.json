@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "2.17.2",
+    "version": "2.17.3",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -82,9 +82,11 @@
                                         "value": {
                                             "modules": "commonjs",
                                             "targets": {
-                                                "node": true,
-                                                "browsers": false,
-                                                "esmodules": true
+                                                "$replace": {
+                                                    "node": true,
+                                                    "browsers": false,
+                                                    "esmodules": true
+                                                }
                                             }
                                         }
                                     }
