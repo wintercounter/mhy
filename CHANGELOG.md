@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.18.0](https://github.com/wintercounter/mhy/compare/v2.17.0...v2.18.0) (2019-11-07)
+
+
+### Bug Fixes
+
+* **tsconfig:** define `exclude` to make sure checking is running correctly ([6e4901b](https://github.com/wintercounter/mhy/commit/6e4901b))
+* typo ([8bdf642](https://github.com/wintercounter/mhy/commit/8bdf642))
+
+
+### Features
+
+* **webpack:** better `splitChunk` options for production ([9a13acf](https://github.com/wintercounter/mhy/commit/9a13acf))
+* add support for `optional-chaining` and `nullish-coalescing-operator` ([08b96ee](https://github.com/wintercounter/mhy/commit/08b96ee))
+
 ## [2.17.0](https://github.com/wintercounter/mhy/compare/v2.16.1...v2.17.0) (2019-10-23)
 
 
