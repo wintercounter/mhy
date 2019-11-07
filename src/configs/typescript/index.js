@@ -44,6 +44,7 @@ const tsconfig = loadConfig('typescript', {
         typeRoots: [_globalTypes, _cwdTypes]
     },
     include: [path.resolve(process.cwd(), `${mhyConfig.srcFolder}/**/*`)],
+    exclude: ['node_modules'],
     files: [path.resolve(__dirname, './mhy.d.ts')]
 })
 
