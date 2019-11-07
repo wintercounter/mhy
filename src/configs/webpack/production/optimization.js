@@ -1,7 +1,13 @@
-const TerserPlugin = require('terser-webpack-plugin')
+import TerserPlugin from 'terser-webpack-plugin'
 
 export default (opts = {}) => ({
     ...opts,
+    splitChunks: {
+        chunks: 'all',
+        maxInitialRequests: 25,
+        minSize: 20000,
+        maxSize: 200000
+    },
     minimizer: [
         new TerserPlugin({
             parallel: true,
