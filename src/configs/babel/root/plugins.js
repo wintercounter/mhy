@@ -26,7 +26,9 @@ export default (defaults = []) => {
         require.resolve('babel-plugin-syntax-async-functions'),
         require.resolve('babel-plugin-transform-function-bind'),
         require.resolve('@babel/plugin-proposal-export-default-from'),
-        require.resolve('@babel/plugin-proposal-export-namespace-from')
+        require.resolve('@babel/plugin-proposal-export-namespace-from'),
+        require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
+        require.resolve('@babel/plugin-proposal-optional-chaining')
     ]
     // Webpack is resolving modules on it's own (storybook uses Webpack also)
     // Node process will use `module-resolve`
