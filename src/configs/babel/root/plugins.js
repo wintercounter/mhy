@@ -4,6 +4,7 @@ import fs from 'fs'
 import mhyConfig from '@/configs/mhy'
 
 // Hack...
+console.log('COPYING')
 fs.copyFileSync(
     path.resolve(__dirname, '../../../resources/babelPluginMacros.js'),
     require.resolve('babel-plugin-macros')
