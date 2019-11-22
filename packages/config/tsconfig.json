@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "module": "esNext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "baseUrl": "C:\\Work\\Repos\\mhy\\packages\\core\\src",
+    "skipLibCheck": true,
+    "incremental": true,
+    "outDir": "src",
+    "paths": {
+      "*": [
+        "C:\\Work\\Repos\\mhy\\packages\\core\\node_modules\\*",
+        "C:\\Work\\nodejs\\node_modules\\mhy\\node_modules\\*"
+      ],
+      "@": [
+        "C:\\Work\\Repos\\mhy\\packages\\core\\src\\index"
+      ],
+      "@/*": [
+        "C:\\Work\\Repos\\mhy\\packages\\core\\src\\*"
+      ],
+      "@/mhy": [
+        "C:\\Work\\nodejs\\node_modules\\mhy\\dist\\index"
+      ],
+      "@/mhy/*": [
+        "C:\\Work\\nodejs\\node_modules\\mhy\\dist\\*"
+      ]
+    },
+    "typeRoots": [
+      "C:\\Work\\nodejs\\node_modules\\mhy\\node_modules\\@types",
+      "C:\\Work\\Repos\\mhy\\packages\\core\\node_modules\\@types"
+    ]
+  },
+  "include": [
+    "C:\\Work\\Repos\\mhy\\packages\\core\\src\\**\\*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "C:\\Work\\nodejs\\node_modules\\mhy\\dist\\configs\\typescript\\mhy.d.ts"
+  ]
+}

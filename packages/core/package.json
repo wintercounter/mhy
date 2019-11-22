@@ -1,0 +1,25 @@
+{
+    "name": "@mhy/core",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/index.js",
+    "scripts": {
+        "test": "npm run config && mhy tsc && mhy jest",
+        "start": "mhy jest -w",
+        "build": "mhy bb --mhy-env=prod",
+        "config": "mhy config typescript -io && mhy config eslint webpack prettier -io"
+    },
+    "author": "",
+    "license": "MIT",
+    "mhy": {
+        "mhy": {
+            "root": {
+                "ecosystem": {
+                    "$replace": [
+                        "jest"
+                    ]
+                }
+            }
+        }
+    }
+}
