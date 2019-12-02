@@ -2,6 +2,7 @@ import TerserPlugin from 'terser-webpack-plugin'
 
 export default (opts = {}) => ({
     ...opts,
+    runtimeChunk: 'single',
     splitChunks: {
         chunks: 'all',
         maxInitialRequests: 25,
