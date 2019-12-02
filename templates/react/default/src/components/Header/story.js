@@ -14,6 +14,7 @@ components.add('Header1', () => <Header />)
 
 components.add('div2', () => (
     <button
+        aria-label="Icon"
         type="button"
         content={text('Content', 'exampleIcon')}
         active={boolean('Active', false)}

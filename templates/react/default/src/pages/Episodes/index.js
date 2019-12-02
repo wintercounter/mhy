@@ -1,13 +1,5 @@
 import React, { PureComponent } from 'react'
-import {
-    func,
-    object,
-    arrayOf,
-    objectOf,
-    number,
-    shape,
-    bool
-} from 'prop-types'
+import { func, object, arrayOf, objectOf, number, shape, bool } from 'prop-types'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
@@ -30,17 +22,6 @@ const Li = styled.li`
 `
 
 export class Episodes extends PureComponent {
-    static propTypes = {
-        getEpisodes: func.isRequired,
-        episodes: shape({
-            allIds: arrayOf(number),
-            byId: objectOf(object),
-            page: number,
-            hasMore: bool,
-            isLoading: bool
-        }).isRequired
-    }
-
     componentDidMount() {
         this.fetch()
     }
@@ -83,6 +64,17 @@ export class Episodes extends PureComponent {
     }
 }
 
+Episodes.propTypes = {
+    getEpisodes: func.isRequired,
+    episodes: shape({
+        allIds: arrayOf(number),
+        byId: objectOf(object),
+        page: number,
+        hasMore: bool,
+        isLoading: bool
+    }).isRequired
+}
+
 export const mapStateToProps = ({ episodes }) => ({
     episodes
 })
@@ -91,7 +83,4 @@ const mapDispatchToProps = dispatch => ({
     getEpisodes: EpisodesEntity.get(dispatch)
 })
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Episodes)
+export default connect(mapStateToProps, mapDispatchToProps)(Episodes)

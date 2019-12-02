@@ -29,18 +29,8 @@ const WithHotLayout = hot(module)(WithLayout)
 const Router = ({ history }) => (
     <ConnectedRouter history={history}>
         <Switch>
-            <WithHotLayout
-                layout={Main}
-                path="/"
-                exact
-                component={Characters}
-            />
-            <WithHotLayout
-                layout={Main}
-                path="/episodes"
-                exact
-                component={Episodes}
-            />
+            <WithHotLayout layout={Main} path="/" exact component={Characters} />
+            <WithHotLayout layout={Main} path="/episodes" exact component={Episodes} />
         </Switch>
     </ConnectedRouter>
 )

@@ -6,4 +6,4 @@ import { Episode } from '@/components'
 // Sections
 const components = storiesOf('Episode', module)
 
-components.add('Episode', () => <Episode />)
+components.add('Episode', () => <Episode name="Title" airDate={12} episode={1}/>)

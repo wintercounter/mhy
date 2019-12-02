@@ -2,6 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import { loadConfig } from '@/utils'
 
+import 'eslint-global-patch'
+
 const defaults = {
     env: {
         node: true,

@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
 
 import { Header } from '@/components'
-import { main, content } from './styles.scss'
+import styles from './styles.scss'
 
 const Index = memo(({ children }) => (
-    <main className={main}>
+    <main className={styles.main}>
         <Header />
-        <section className={content}>{children}</section>
+        <section className={styles.content}>{children}</section>
         <Header />
         {/* FOOTER */}
     </main>

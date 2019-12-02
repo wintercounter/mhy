@@ -5,10 +5,12 @@ export default (defaults = []) => [
         {
             targets: {
                 chrome: 78,
-                edge: 18,
+                edge: 15,
                 esmodules: false
             },
-            modules: false
+            modules: false,
+            useBuiltIns: 'usage',
+            corejs: 3
         }
     ],
     [require.resolve('@babel/preset-react'), {}],

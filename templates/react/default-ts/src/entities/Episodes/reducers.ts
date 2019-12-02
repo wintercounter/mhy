@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import produce from 'immer'
 import { GET_PENDING, GET_SUCCESS } from '@/entities/Episodes'
 
@@ -9,10 +11,7 @@ const defaultState = {
     isLoading: false
 }
 
-const EpisodesReducer = (
-    state = defaultState,
-    { type, payload: { results, info } = {} }
-) =>
+const EpisodesReducer = (state = defaultState, { type, payload: { results, info } = {} }) =>
     produce(state, _d => {
         const draft = _d
         switch (type) {

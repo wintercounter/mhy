@@ -6,11 +6,12 @@ import { reducers as episodes } from '@/entities/Episodes'
 export * as Characters from '@/entities/Characters'
 export * as Episodes from '@/entities/Episodes'
 
-export const rootReducer = history => combineReducers({
-    characters,
-    episodes,
-    router: connectRouter(history)
-})
+export const rootReducer = history =>
+    combineReducers({
+        characters,
+        episodes,
+        router: connectRouter(history)
+    })
 
 export const rootSaga = function*() {
     yield Promise.resolve()

@@ -16,4 +16,4 @@ addDecorator(StoryRouter())
 
 // Require all *.story.js file
 const req = require.context('src', true, /\.?(story|stories|book)\.[jt]sx?$/)
-configure(() => req.keys().forEach(req), module)
+configure(req, module)

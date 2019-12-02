@@ -93,7 +93,4 @@ const mapDispatchToProps = dispatch => ({
     getCharacters: CharactersEntity.get(dispatch)
 })
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Characters)
+export default connect(mapStateToProps, mapDispatchToProps)(Characters)

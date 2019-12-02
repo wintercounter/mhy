@@ -6,4 +6,4 @@ import { Character } from '@/components'
 // Sections
 const components = storiesOf('Character', module)
 
-components.add('Character', () => <Character />)
+components.add('Character', () => <Character name="name" image="img" />)

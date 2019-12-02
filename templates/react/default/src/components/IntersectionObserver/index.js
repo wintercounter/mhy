@@ -4,18 +4,6 @@ import { func, node } from 'prop-types'
 const defaultCb = () => {}
 
 export class IntersectionObserver extends PureComponent {
-    static propTypes = {
-        onIn: func,
-        onOut: func,
-        children: node
-    }
-
-    static defaultProps = {
-        onIn: defaultCb,
-        onOut: defaultCb,
-        children: null
-    }
-
     indicator = React.createRef()
 
     componentDidMount() {
@@ -41,10 +29,7 @@ export class IntersectionObserver extends PureComponent {
         }
 
         this.observer = new window.IntersectionObserver(entries => {
-            entries.forEach(
-                ({ intersectionRatio }) =>
-                    intersectionRatio > 0 ? onIn(this) : onOut(this)
-            )
+            entries.forEach(({ intersectionRatio }) => (intersectionRatio > 0 ? onIn(this) : onOut(this)))
         })
         this.observer.observe(element)
     }
@@ -65,6 +50,18 @@ export class IntersectionObserver extends PureComponent {
             </>
         )
     }
+}
+
+IntersectionObserver.propTypes = {
+    onIn: func,
+    onOut: func,
+    children: node
+}
+
+IntersectionObserver.defaultProps = {
+    onIn: defaultCb,
+    onOut: defaultCb,
+    children: null
 }
 
 export default IntersectionObserver

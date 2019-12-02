@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { applyMiddleware, createStore, Store } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
@@ -14,9 +16,7 @@ const configureStore: TConfigureStore = (preloadedState, history) => {
     const store = createStore(
         rootReducer(history),
         preloadedState,
-        composeWithDevTools(
-            applyMiddleware(thunkMiddleware, sagaMiddleware, historyMiddleware)
-        )
+        composeWithDevTools(applyMiddleware(thunkMiddleware, sagaMiddleware, historyMiddleware))
     )
     sagaMiddleware.run(rootSaga)
     return store

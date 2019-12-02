@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { ConnectedRouter } from 'connected-react-router'

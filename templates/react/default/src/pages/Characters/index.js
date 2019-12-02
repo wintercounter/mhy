@@ -1,13 +1,5 @@
 import React, { PureComponent } from 'react'
-import {
-    func,
-    object,
-    arrayOf,
-    objectOf,
-    number,
-    shape,
-    bool
-} from 'prop-types'
+import { func, object, arrayOf, objectOf, number, shape, bool } from 'prop-types'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
@@ -33,17 +25,6 @@ const Li = styled.li`
 `
 
 export class Characters extends PureComponent {
-    static propTypes = {
-        getCharacters: func.isRequired,
-        characters: shape({
-            allIds: arrayOf(number),
-            byId: objectOf(object),
-            page: number,
-            hasMore: bool,
-            isLoading: bool
-        }).isRequired
-    }
-
     componentDidMount() {
         const {
             characters: {
@@ -94,6 +75,17 @@ export class Characters extends PureComponent {
     }
 }
 
+Characters.propTypes = {
+    getCharacters: func.isRequired,
+    characters: shape({
+        allIds: arrayOf(number),
+        byId: objectOf(object),
+        page: number,
+        hasMore: bool,
+        isLoading: bool
+    }).isRequired
+}
+
 export const mapStateToProps = ({ characters }) => ({
     characters
 })
@@ -102,7 +94,4 @@ const mapDispatchToProps = dispatch => ({
     getCharacters: CharactersEntity.get(dispatch)
 })
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Characters)
+export default connect(mapStateToProps, mapDispatchToProps)(Characters)

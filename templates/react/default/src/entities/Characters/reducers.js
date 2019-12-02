@@ -9,10 +9,7 @@ const defaultState = {
     isLoading: false
 }
 
-const CharactersReducer = (
-    state = defaultState,
-    { type, payload: { results, info } = {} }
-) =>
+const CharactersReducer = (state = defaultState, { type, payload: { results, info } = {} }) =>
     produce(state, _d => {
         const draft = _d
         switch (type) {

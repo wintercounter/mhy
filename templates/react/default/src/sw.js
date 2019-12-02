@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
 workbox.routing.registerRoute(

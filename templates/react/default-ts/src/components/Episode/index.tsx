@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, FC, ReactNode } from 'react'
 
 interface IEpisodeProps {
     name: string
@@ -6,7 +6,7 @@ interface IEpisodeProps {
     episode: number
 }
 
-const Episode = memo(({ name, airDate, episode }: IEpisodeProps) => (
+const Episode: FC<IEpisodeProps> = memo(({ name, airDate, episode }) => (
     <>
         <h1>{name}</h1>
         <time>{airDate}</time>

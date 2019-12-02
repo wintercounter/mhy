@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import '@/core/styles.global.scss'
 
 import React from 'react'
