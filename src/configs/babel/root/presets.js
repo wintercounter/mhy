@@ -8,9 +8,7 @@ export default (defaults = []) => [
                 edge: 15,
                 esmodules: false
             },
-            modules: false,
-            useBuiltIns: 'usage',
-            corejs: 3
+            modules: false
         }
     ],
     [require.resolve('@babel/preset-react'), {}],

@@ -8,7 +8,8 @@ export default rules => [
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
-                    name: '[name].[hash].[ext]'
+                    name: '[name].[hash].[ext]',
+                    esModule: false
                 }
             },
             {
