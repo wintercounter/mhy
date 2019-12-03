@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "2.18.6",
+    "version": "2.18.7",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -198,6 +198,7 @@
         "@typescript-eslint/eslint-plugin": "^2.10.0",
         "@typescript-eslint/parser": "^2.10.0",
         "@w11r/use-breakpoint": "^1.1.0",
+        "@welldone-software/why-did-you-render": "^3.3.9",
         "acorn": "^7.1.0",
         "animejs": "^3.1.0",
         "apollo-cache-inmemory": "^1.6.3",
