@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "2.18.7",
+    "version": "2.18.8",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -270,7 +270,7 @@
         "grommet": "^2.8.1",
         "grommet-icons": "^4.4.0",
         "history": "^4.10.1",
-        "html-webpack-plugin": "^4.0.0-beta.8",
+        "html-webpack-plugin": "4.0.0-beta.8",
         "http-proxy-middleware": "^0.20.0",
         "i": "^0.3.6",
         "identity-obj-proxy": "^3.0.0",
