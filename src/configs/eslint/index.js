@@ -62,6 +62,7 @@ const defaults = {
         'import/no-unresolved': 0,
         'import/no-extraneous-dependencies': 0,
         'import/no-named-as-default': 0,
+        'import/extensions': 0,
 
         'comma-dangle': [2, 'never'],
         'no-cond-assign': [0, 'always'],
@@ -237,6 +238,7 @@ if (fs.existsSync(tsconfigPath)) {
         '@typescript-eslint/interface-name-prefix': [1, 'always'],
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/ban-ts-ignore': 0,
+        '@typescript-eslint/no-empty-function': 0,
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 
         // Conflicting
