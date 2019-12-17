@@ -6,8 +6,8 @@ export default (opts = {}) => ({
     splitChunks: {
         chunks: 'all',
         maxInitialRequests: 25,
-        minSize: 20000,
-        maxSize: 200000
+        minSize: 100000,
+        maxSize: 800000
     },
     minimizer: [
         new TerserPlugin({
