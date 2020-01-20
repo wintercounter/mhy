@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.19.0](https://github.com/wintercounter/mhy/compare/v2.18.11...v2.19.0) (2020-01-20)
+
+
+### Features
+
+* updated packages ([b9aeac7](https://github.com/wintercounter/mhy/commit/b9aeac770d354c15a955eaf9ae7c44f0227f9b00))
+
 ### [2.18.11](https://github.com/wintercounter/mhy/compare/v2.18.10...v2.18.11) (2020-01-10)
 
 ### [2.18.10](https://github.com/wintercounter/mhy/compare/v2.18.9...v2.18.10) (2019-12-17)
