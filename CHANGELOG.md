@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.20.0](https://github.com/wintercounter/mhy/compare/v2.19.0...v2.20.0) (2020-02-11)
+
+
+### Features
+
+* added `[@cryptic-css](https://github.com/cryptic-css)` and `flickity` ([0a6a3ce](https://github.com/wintercounter/mhy/commit/0a6a3ceb200c86dd69a47d18bab7ed6c24b96636))
+
 ## [2.19.0](https://github.com/wintercounter/mhy/compare/v2.18.11...v2.19.0) (2020-01-20)
 
 
