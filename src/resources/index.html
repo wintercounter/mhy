@@ -5,16 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>mhy</title>
-    <script defer async>
-        // Check that service workers are registered
-        // Remove `false` to enable sw
-        if (false && 'serviceWorker' in navigator) {
-            // Use the window loadConfig event to keep the page loadConfig performant
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
-            });
-        }
-    </script>
     <style>
       body {
         margin: 0;

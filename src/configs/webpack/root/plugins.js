@@ -4,14 +4,9 @@ import path from 'path'
 import webpack from 'webpack'
 import WebpackManifestPlugin from 'webpack-manifest-plugin'
 import WebpackPwaManifestPlugin from 'webpack-pwa-manifest'
-import { GenerateSW, InjectManifest } from 'workbox-webpack-plugin'
 
 import manifest from '@/configs/manifest'
 import mhyConfig from '@/configs/mhy'
-
-const defaultSwPath = require.resolve('@/resources/sw')
-const projectSwPath = path.resolve(process.cwd(), 'src/sw.js')
-const swSrc = fs.existsSync(projectSwPath) ? projectSwPath : defaultSwPath
 
 export default (plugins = []) => {
     manifest.icons.map(icon => {
@@ -21,12 +16,6 @@ export default (plugins = []) => {
         }
         return icon
     })
-
-    plugins = plugins.concat(new GenerateSW())
-
-    if (fs.existsSync(swSrc)) {
-        plugins.push(new InjectManifest({ swSrc }))
-    }
 
     return plugins.concat([
         new WebpackPwaManifestPlugin(manifest),
