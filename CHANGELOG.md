@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/wintercounter/mhy/compare/v2.18.11...v3.0.0) (2020-02-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **dependencies:** many dependencies have been updated to a new major version so we're releasing this change as a breaking change also.
+
+Updated packages with major version:
+- jest
+- jest-cli
+- babel-jest
+- cross-env
+- downshift
+- http-proxy-middleware
+- react-use-gesture
+- url-search-params-polyfill
+
+### Features
+
+* **eslint:** remove eslint checking from dev builds ([434bc77](https://github.com/wintercounter/mhy/commit/434bc774e759f8567464fea939fedb824a10192a))
+* **sw:** remove workbox support ([a4963a1](https://github.com/wintercounter/mhy/commit/a4963a1594e27b03bbbbaafddb3b302dfe9eb70c))
+* added `[@cryptic-css](https://github.com/cryptic-css)` and `flickity` ([0a6a3ce](https://github.com/wintercounter/mhy/commit/0a6a3ceb200c86dd69a47d18bab7ed6c24b96636))
+* updated packages ([b9aeac7](https://github.com/wintercounter/mhy/commit/b9aeac770d354c15a955eaf9ae7c44f0227f9b00))
+
+
+### Bug Fixes
+
+* **mhy-env:** secondary environment not being passed to sub processes ([57c8cca](https://github.com/wintercounter/mhy/commit/57c8cca8774ecd420bbb24e8034b8dd5f4964e3f))
+
+
+* **dependencies:** update 19/02/20 ([9bd8abe](https://github.com/wintercounter/mhy/commit/9bd8abe9c99d00b119a610409514a09f4d537ef3))
+
 ## [2.20.0](https://github.com/wintercounter/mhy/compare/v2.19.0...v2.20.0) (2020-02-11)
 
 
