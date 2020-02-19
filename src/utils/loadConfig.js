@@ -2,7 +2,7 @@ import path from 'path'
 import { applyJson, applyEntries } from '@/utils'
 
 const loadConfig = (module, defaults = {}) => {
-    const envs = ['root', ...process.env.MHY_ENVS.split(',')]
+    const envs = ['root', ...process.env.MHY_ENVS.split(':')]
 
     for (const env of envs) {
         // 1. from MHY

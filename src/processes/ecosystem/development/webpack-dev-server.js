@@ -1,10 +1,11 @@
 import Process from '@/processes'
 
-const CmdWDSCLI = [
+const getCmdWDSCLI = (flags = []) => [
     'node',
     require.resolve('webpack-dev-server/bin/webpack-dev-server.js'),
     '--config',
-    require.resolve('@/configs/webpack')
+    require.resolve('@/configs/webpack'),
+    ...flags
 ]
 
 class WDS extends Process {
@@ -14,7 +15,9 @@ class WDS extends Process {
         this.run(defaultAction, { flags })
     }
 
-    onStart = ({ name }) => this.spawn(name, CmdWDSCLI)
+    onStart = ({ name }, { flags }) => {
+        return this.spawn(name, getCmdWDSCLI(flags))
+    }
 
     onRestart = async () => {
         await this.kill('start')

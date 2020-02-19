@@ -18,7 +18,7 @@ export const loadEcosystem = (env = '') => {
 }
 
 export const loadProcess = module => {
-    const envs = ['root', ...process.env.MHY_ENVS.split(',')].reverse()
+    const envs = ['root', ...process.env.MHY_ENVS.split(':')].reverse()
     let proc
 
     for (const env of envs) {
