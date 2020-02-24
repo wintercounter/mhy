@@ -4,6 +4,12 @@ import { addPath, addAliases } from 'module-alias'
 import mhyConfig from '@/configs/mhy'
 import babelConfig from '@/configs/babel'
 import register from '@babel/register'
+import BuiltinModule from 'module'
+
+// Guard against poorly mocked module constructors
+const Module = module.constructor.length > 1
+    ? module.constructor
+    : BuiltinModule
 
 babelConfig.presets.find(p => p[0].includes('preset-env'))[1] = {
     modules: 'commonjs',
@@ -19,6 +25,16 @@ babelConfig.cache = false
 register(babelConfig)
 addPath(path.resolve(process.cwd(), 'node_modules'))
 addPath(path.resolve(__dirname, '../../node_modules'))
+
+const oldResolveFilename = Module._resolveFilename
+
+Module._resolveFilename = function(request, parentModule, isMain, options) {
+    const nodeModulesPath = path.resolve(__dirname, '../')
+    if (!parentModule.paths.includes(nodeModulesPath)) {
+        parentModule.paths.push(nodeModulesPath)
+    }
+    return oldResolveFilename.call(this, request, parentModule, isMain, options)
+}
 
 const alias = { ...mhyConfig.defaultAliases }
 for (const [key, entry] of Object.entries(alias)) {
