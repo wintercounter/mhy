@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/wintercounter/mhy/compare/v4.0.0...v5.0.0) (2020-02-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **css-loader:** This change will mimic the same logic what CRA follows. Files ending with `module.(s)css` will be treated as CSS Module, everything else is global. This change will help to maintain better compatibility with 3rd party resources.
+
+### Features
+
+* **babel:** add support for top-level await ([21c85b2](https://github.com/wintercounter/mhy/commit/21c85b2d6ffdb2a98e80dcae05704be9e73ec467))
+* **config:** add support for `-p, --path` to be able to print out a certain path only ([f4ab985](https://github.com/wintercounter/mhy/commit/f4ab985db82910b93778304e0a91240eb490f690))
+* **css-loader:** switch logic - `.module` instead of `.global` ([09f7af2](https://github.com/wintercounter/mhy/commit/09f7af2a15d9bf26091b1d78b85d398ef9d6e0ac))
+* **node:** better module resolution support ([0f90898](https://github.com/wintercounter/mhy/commit/0f90898f63b5d45fec42b0db54f46b00094b6d73))
+
 ## [4.0.0](https://github.com/wintercounter/mhy/compare/v3.0.0...v4.0.0) (2020-02-24)
 
 
