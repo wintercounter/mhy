@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "4.1.6",
+    "version": "4.1.7",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -257,6 +257,7 @@
         "eslint-config-airbnb": "^18.1.0",
         "eslint-config-prettier": "^6.10.0",
         "eslint-global-patch": "^1.0.4",
+        "eslint-loader": "^3.0.3",
         "eslint-plugin-babel": "5.3.0",
         "eslint-plugin-import": "^2.20.1",
         "eslint-plugin-jest": "^23.8.2",
