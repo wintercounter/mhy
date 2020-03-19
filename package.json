@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "4.1.8",
+    "version": "4.1.9",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -134,7 +134,7 @@
         "@cryptic-css/prop-mid": "3.0.2",
         "@cryptic-css/prop-mq": "3.0.2",
         "@cryptic-css/prop-scroll": "3.0.2",
-        "@cryptic-css/styled-components": "^1.0.2",
+        "@cryptic-css/styled": "^3.0.2",
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
         "@hot-loader/react-dom": "^16.13.0",
