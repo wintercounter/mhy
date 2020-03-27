@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/wintercounter/mhy/compare/v4.1.11...v4.2.0) (2020-03-27)
+
+
+### Features
+
+* **storybook:** add support for storybook setup files to make sure they are loaded first ([aa69568](https://github.com/wintercounter/mhy/commit/aa695687a1c6a26567f2edb065d7484a14568e5d))
+
 ### [4.1.11](https://github.com/wintercounter/mhy/compare/v4.1.10...v4.1.11) (2020-03-25)
 
 ### [4.1.10](https://github.com/wintercounter/mhy/compare/v4.1.8...v4.1.10) (2020-03-22)
