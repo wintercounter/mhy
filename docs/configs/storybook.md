@@ -1,6 +1,6 @@
 # storybook
 
-> Currently only `start` options are available. Support for standalone Storybook build will come soon\)\*\[\]:
+> Currently only `start` options are available. \*\[\]:
 
 [https://storybook.js.org/configurations/cli-options/](https://storybook.js.org/configurations/cli-options/)
 

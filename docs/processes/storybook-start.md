@@ -19,5 +19,9 @@ mhy sb-start
 mhy storybook-start
 ```
 
+### Customization
+
+To customize your Storybook you can create a `storybook.setup.ts` file in your `src` folder.
+
 
 
