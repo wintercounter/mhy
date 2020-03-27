@@ -7,7 +7,7 @@ import mhyConfig from '@/configs/mhy'
 const setSrcFolder = () => {
     const data = fs
         .readFileSync(path.resolve(__dirname, '_config.js'), 'utf8')
-        .replace("'src'", JSON.stringify(path.resolve(process.cwd(), mhyConfig.srcFolder)))
+        .replace(/'src'/g, JSON.stringify(path.resolve(process.cwd(), mhyConfig.srcFolder)))
     fs.writeFileSync(path.resolve(__dirname, '.storybook', 'config.js'), data, 'utf8')
 }
 
