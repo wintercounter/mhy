@@ -26,7 +26,7 @@ addPath(path.resolve(__dirname, '../../node_modules'))
 
 const oldResolveFilename = Module._resolveFilename
 
-Module._resolveFilename = function(request, parentModule, isMain, options) {
+Module._resolveFilename = function (request, parentModule, isMain, options) {
     const nodeModulesPath = path.resolve(__dirname, '../../')
     if (!parentModule.paths.includes(nodeModulesPath)) {
         parentModule.paths.push(nodeModulesPath)

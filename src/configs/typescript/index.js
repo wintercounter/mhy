@@ -25,7 +25,7 @@ const tsconfig = loadConfig('typescript', {
         incremental: true,
         outDir: mhyConfig.srcFolder,
         paths: Object.entries(mhyConfig.defaultAliases).reduce(
-            function(acc, [k, p]) {
+            function (acc, [k, p]) {
                 // It's already a path
                 if (!fs.existsSync(p)) {
                     p = path.resolve(process.cwd(), p)

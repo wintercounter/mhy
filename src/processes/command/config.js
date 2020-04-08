@@ -5,7 +5,7 @@ import FileTypes from '@/utils/fileTypes'
 import figures from 'figures'
 import chalk from 'chalk'
 
-const commandHandler = (args) => {
+const commandHandler = args => {
     const { config, init } = args
     if (
         !config.length || // default init
@@ -126,7 +126,8 @@ export default () => {
                 .option('path', {
                     alias: 'p',
                     default: undefined,
-                    description: 'You can narrow down the output to a given path. This only works while printing the output the console. Eg: loaders.0.use',
+                    description:
+                        'You can narrow down the output to a given path. This only works while printing the output the console. Eg: loaders.0.use',
                     type: 'string'
                 })
         },

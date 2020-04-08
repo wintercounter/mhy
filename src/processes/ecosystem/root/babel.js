@@ -48,7 +48,7 @@ const handleCompileSuccess = line => {
     copyDir.sync(path.resolve(process.cwd(), mhyConfig.srcFolder), path.resolve(process.cwd(), mhyConfig.distFolder), {
         cover: false,
         mode: true,
-        filter: function(stat, filepath) {
+        filter: function (stat, filepath) {
             if (stat === 'file') {
                 if (filepath.endsWith('.d.ts')) {
                     return true

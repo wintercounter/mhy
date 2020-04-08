@@ -33,7 +33,7 @@ class Tsc extends Process {
         this.spawn(name, getCmdTscCLI(flags), undefined, false).on('exit', () => {
             // use a Writable stream
             const customStream = new stream.Writable()
-            customStream._write = function(data) {
+            customStream._write = function (data) {
                 console.log('its data', data.toString())
             }
 
