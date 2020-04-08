@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/wintercounter/mhy/compare/v4.2.0...v5.0.0) (2020-04-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **dependencies:** This update contains the following packages with new major version:
+- prettier
+- graphql
+- react-popper
+- react-use
+
+### Features
+
+* **prettier:** add `arrowParens: 'avoid'` to mimic 1.x functionality. Please update your `.prettierrc` before running prettier! ([929d7e7](https://github.com/wintercounter/mhy/commit/929d7e72bcac9d155ead7ab3cb78ad5c12257542))
+* **storybook:** add support for storybook setup files to make sure they are loaded first ([aa69568](https://github.com/wintercounter/mhy/commit/aa695687a1c6a26567f2edb065d7484a14568e5d))
+
+
+* **dependencies:** update 08/04/2020 ([d41fb6a](https://github.com/wintercounter/mhy/commit/d41fb6af8ee53344d4528f1dcbef4f3b416fbd95))
+
 ## [4.2.0](https://github.com/wintercounter/mhy/compare/v4.1.11...v4.2.0) (2020-03-27)
 
 
