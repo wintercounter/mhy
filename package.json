@@ -139,6 +139,7 @@
         "@emotion/styled": "^10.0.27",
         "@hot-loader/react-dom": "^16.13.0",
         "@mdx-js/loader": "^1.5.8",
+        "@popperjs/core": "^2.2.1",
         "@reach/router": "^1.3.3",
         "@sentry/browser": "^5.15.4",
         "@storybook/addon-a11y": "^5.3.18",
