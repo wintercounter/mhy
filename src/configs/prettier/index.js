@@ -1,6 +1,7 @@
 import { loadConfig } from '@/utils'
 
 const prettierConfig = loadConfig('prettier', {
+    arrowParens: 'avoid', // It won't wrap single arrow function parameters.
     useTabs: false, // Indent lines with tabs instead of spaces.
     printWidth: 120, // Specify the length of line that the printer will wrap on.
     tabWidth: 4, // Specify the number of spaces per indentation-level.
