@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import Enzyme, { shallow, render, mount } from 'enzyme'
 import 'jest-enzyme'
 import Adapter from 'enzyme-adapter-react-16'
