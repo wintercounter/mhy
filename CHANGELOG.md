@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.1.0](https://github.com/wintercounter/mhy/compare/v6.0.3...v6.1.0) (2020-05-11)
+
+
+### Features
+
+* **alias:** add `mhy_modules` to be able to reference mhy's node_modules folder ([1e719e9](https://github.com/wintercounter/mhy/commit/1e719e97cd8458a612ee2edf810c0aeb48b16d82))
+
 ### [6.0.3](https://github.com/wintercounter/mhy/compare/v6.0.2...v6.0.3) (2020-05-04)
 
 ### [6.0.2](https://github.com/wintercounter/mhy/compare/v6.0.1...v6.0.2) (2020-04-17)
