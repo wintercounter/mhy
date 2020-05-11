@@ -56,7 +56,8 @@ const mhyConfig = loadConfig('mhy', {
         const cwd = process.cwd()
         return {
             '@': pr(cwd, `${src}/`),
-            '@/mhy': pr(__dirname, '../../') // dist
+            '@/mhy': pr(__dirname, '../../'), // dist
+            mhy_modules: pr(__dirname, '../../../node_modules')
         }
     },
     ecosystem: ['webpack-dev-server', 'tsc', 'jest', 'storybook-start']
