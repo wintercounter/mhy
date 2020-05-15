@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "6.1.1",
+    "version": "6.1.2",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -199,7 +199,7 @@
         "@types/yargs": "15.0.5",
         "@typescript-eslint/eslint-plugin": "2.33.0",
         "@typescript-eslint/parser": "2.33.0",
-        "@w11r/use-breakpoint": "1.4.2",
+        "@w11r/use-breakpoint": "1.4.3",
         "@welldone-software/why-did-you-render": "4.2.1",
         "acorn": "7.2.0",
         "animejs": "3.2.0",
@@ -290,7 +290,7 @@
         "jest-enzyme": "7.1.2",
         "jest-fetch-mock": "3.0.3",
         "jest-styled-components": "7.0.2",
-        "jimp": "0.10.3",
+        "jimp": "0.11.0",
         "js-cookie": "2.2.1",
         "json-colorizer": "2.2.2",
         "json-merger": "1.1.2",
