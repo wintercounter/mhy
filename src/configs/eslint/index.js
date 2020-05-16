@@ -32,6 +32,7 @@ const defaults = {
         }
     },
     rules: {
+        'react/jsx-pascal-case': 0,
         'jsx-a11y/media-has-caption': 0,
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-noninteractive-element-interactions': 0,
