@@ -106,6 +106,7 @@
         }
     },
     "dependencies": {
+        "@apollo/client": "^3.0.0-beta.54",
         "@apollo/react-ssr": "3.1.5",
         "@apollo/react-testing": "3.1.4",
         "@babel/cli": "7.8.4",
@@ -210,7 +211,7 @@
         "apollo-link-debounce": "2.1.0",
         "apollo-link-error": "1.1.13",
         "apollo-link-http": "1.5.17",
-        "apollo-link-rest": "0.7.3",
+        "apollo-link-rest": "^0.8.0-beta.0",
         "apollo-link-state": "0.4.2",
         "autoprefixer": "9.7.6",
         "babel-core": "7.0.0-bridge.0",
@@ -296,6 +297,7 @@
         "json-merger": "1.1.2",
         "leveldown": "5.6.0",
         "loader-utils": "2.0.0",
+        "lodash-es": "^4.17.15",
         "markdown-to-jsx": "6.11.1",
         "module-alias": "2.2.2",
         "moment": "2.25.3",
