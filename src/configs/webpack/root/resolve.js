@@ -3,24 +3,26 @@ import path from 'path'
 
 import mhyConfig from '@/configs/mhy'
 
-const alias = { ...mhyConfig.defaultAliases }
-for (const [key, entry] of Object.entries(alias)) {
+const defaultAliases = { ...mhyConfig.defaultAliases }
+for (const [key, entry] of Object.entries(defaultAliases)) {
     if (!fs.existsSync(entry)) {
-        alias[key] = path.resolve(process.cwd(), entry)
+        defaultAliases[key] = path.resolve(process.cwd(), entry)
     } else {
         // Make sure it's a resolved path indeed
-        alias[key] = path.resolve(entry)
+        defaultAliases[key] = path.resolve(entry)
     }
 }
 
 if (process.env.WEBPACK_DEV_SERVER) {
-    alias['react-dom'] = '@hot-loader/react-dom'
+    defaultAliases['react-dom'] = '@hot-loader/react-dom'
 }
 
-export default () => ({
-    extensions: ['.js', '.mjs', '.jsx', '.css', '.scss', '.ts', '.tsx', '.json'],
-    modules: Array.from(
-        new Set([path.resolve(__dirname, '../../../../node_modules'), path.resolve(process.cwd(), 'node_modules')])
-    ),
-    alias
-})
+export default ({ alias } = {}) => {
+    return {
+        extensions: ['.js', '.mjs', '.jsx', '.css', '.scss', '.ts', '.tsx', '.json'],
+        modules: Array.from(
+            new Set([path.resolve(__dirname, '../../../../node_modules'), path.resolve(process.cwd(), 'node_modules')])
+        ),
+        alias: { ...defaultAliases, ...alias }
+    }
+}
