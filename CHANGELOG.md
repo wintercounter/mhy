@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.2.0](https://github.com/wintercounter/mhy/compare/v6.1.3...v6.2.0) (2020-06-02)
+
+
+### Features
+
+* **apollo:** add v3 dependencies ([a5f961a](https://github.com/wintercounter/mhy/commit/a5f961aa257e26c1b4915fb9b497a46cab784a80))
+* update Apollo v3 related dependencies ([7c3edff](https://github.com/wintercounter/mhy/commit/7c3edff461542582d625067d651fa0e2872a0191))
+
+
+### Bug Fixes
+
+* disable `react/jsx-pascal-case` until issues fixed around it ([1fc11f8](https://github.com/wintercounter/mhy/commit/1fc11f8fb591fe72e13749997f826a24dc853774))
+
 ### [6.1.3](https://github.com/wintercounter/mhy/compare/v6.1.2...v6.1.3) (2020-05-16)
 
 
