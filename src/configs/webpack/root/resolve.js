@@ -3,7 +3,7 @@ import path from 'path'
 
 import mhyConfig from '@/configs/mhy'
 
-export default async () => {
+export default async ({ alias } = {}) => {
     const defaultAliases = { ...(await mhyConfig).defaultAliases }
     for (const [key, entry] of Object.entries(defaultAliases)) {
         if (!fs.existsSync(entry)) {
@@ -13,12 +13,10 @@ export default async () => {
             defaultAliases[key] = path.resolve(entry)
         }
     }
-
     if (process.env.WEBPACK_DEV_SERVER) {
         defaultAliases['react-dom'] = '@hot-loader/react-dom'
     }
 
-export default ({ alias } = {}) => {
     return {
         extensions: ['.js', '.mjs', '.jsx', '.css', '.scss', '.ts', '.tsx', '.json'],
         modules: Array.from(
