@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.3.0](https://github.com/wintercounter/mhy/compare/v6.2.0...v6.3.0) (2020-06-06)
+
+
+### Features
+
+* **Docker:** update to Node 14 ([bfeec57](https://github.com/wintercounter/mhy/commit/bfeec5701a408dbdabba91dec0146f0c6389240d))
+* add support for async config loading ([40797d2](https://github.com/wintercounter/mhy/commit/40797d26a0930ae0653c86e0b805ad685dedc105))
+
 ## [6.2.0](https://github.com/wintercounter/mhy/compare/v6.1.3...v6.2.0) (2020-06-02)
 
 
