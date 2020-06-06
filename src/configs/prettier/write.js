@@ -2,7 +2,7 @@ import FileTypes from '@/utils/fileTypes'
 import { writeFile } from '@/utils'
 import prettierConfig from '@/configs/prettier/index'
 
-const writeConfig = (dir = process.cwd(), format = FileTypes.JSON_NO_EXT, overwrite) => {
+const writeConfig = async (dir = process.cwd(), format = FileTypes.JSON_NO_EXT, overwrite) => {
     let filename
     switch (format) {
         case FileTypes.JS:
@@ -13,7 +13,7 @@ const writeConfig = (dir = process.cwd(), format = FileTypes.JSON_NO_EXT, overwr
         default:
             filename = '.prettierrc'
     }
-    return writeFile(dir, filename, prettierConfig, format, overwrite)
+    return writeFile(dir, filename, await prettierConfig, format, overwrite)
 }
 
 export default writeConfig

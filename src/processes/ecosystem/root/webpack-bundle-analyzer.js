@@ -26,11 +26,11 @@ class WebpackBundleAnalyzer extends Process {
         this.run(defaultAction, { ...rest })
     }
 
-    onGenerateStats = ({ name }, { flags = [] }) => {
+    onGenerateStats = async ({ name }, { flags = [] }) => {
         console.log('Gathering bundle stats')
         const p = this.spawn(name, getCmdWebpackCLI(flags), ['pipe'], false)
         const jsonPath = path.resolve(__dirname, 'stats.json')
-        const bundlePath = path.resolve(process.cwd(), mhyConfig.buildFolder)
+        const bundlePath = path.resolve(process.cwd(), (await mhyConfig).buildFolder)
         let json = ''
         let all = ''
         let started = false

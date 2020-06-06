@@ -1,8 +1,8 @@
 import path from 'path'
 import mhyConfig from '@/configs/mhy'
 
-export default rules => {
-    const options = require('@/configs/babel')
+export default async rules => {
+    const options = await require('@/configs/babel')
     if (process.env.WEBPACK_DEV_SERVER) {
         options.plugins.push(require.resolve('react-hot-loader/babel'))
     }
@@ -10,12 +10,12 @@ export default rules => {
         ...rules,
         {
             test: /\.[jt]sx?$/,
-            include: path.join(process.cwd(), mhyConfig.srcFolder),
+            include: path.join(process.cwd(), (await mhyConfig).srcFolder),
             exclude: /node_modules/,
             use: [
                 {
                     loader: require.resolve('babel-loader'),
-                    options: require('@/configs/babel')
+                    options
                 }
             ]
         }

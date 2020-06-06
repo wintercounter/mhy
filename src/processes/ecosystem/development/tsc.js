@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import stream from 'stream'
 import Process from '@/processes'
-import mhyConfig from '@/configs/mhy'
+import _mhyConfig from '@/configs/mhy'
 
 const getCmdTscCLI = flags => [
     'node',
@@ -30,10 +30,11 @@ class Tsc extends Process {
             flags.push('-w')
         }
 
-        this.spawn(name, getCmdTscCLI(flags), undefined, false).on('exit', () => {
+        this.spawn(name, getCmdTscCLI(flags), undefined, false).on('exit', async () => {
+            const mhyConfig = await _mhyConfig
             // use a Writable stream
             const customStream = new stream.Writable()
-            customStream._write = function (data) {
+            customStream._write = function(data) {
                 console.log('its data', data.toString())
             }
 

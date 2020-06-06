@@ -1,6 +1,7 @@
-import mhyWP from '@/configs/webpack'
+import _mhyWP from '@/configs/webpack'
 
-export default ({ config }) => {
+export default async ({ config }) => {
+    const mhyWP = await _mhyWP
     mhyWP.resolve.modules = [...config.resolve.modules, ...mhyWP.resolve.modules]
     mhyWP.resolve.alias = {
         ...mhyWP.resolve.alias,

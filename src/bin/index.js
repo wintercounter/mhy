@@ -27,11 +27,11 @@ yargs
 
 // Register commands
 try {
-    loadCommands()
+    loadCommands().then(() => {
+        // Initialize yargs
+        yargs.argv
+    })
 } catch (e) {
     console.error('FATAL: Could not register.', e)
     process.exit(1)
 }
-
-// Initialize yargs
-yargs.argv

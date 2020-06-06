@@ -18,12 +18,12 @@ const commandHandler = args => {
     }
 }
 
-const handleWrite = ({ config, dir, format, overwrite }) => {
+const handleWrite = async ({ config, dir, format, overwrite }) => {
     const m = fetchWriters(config)
-    const modules = m.map((module, i) => {
+    const modules = await Promise.all(m.map((module, i) => {
         process.stdout.write(`\rLoading configs ${i + 1}/${m.length}`)
         return require(module)
-    })
+    }))
 
     const results = []
 
@@ -66,8 +66,8 @@ const applyPath = (path, configObj) => {
     return path.split('.').reduce((acc, p) => acc[p], configObj)
 }
 
-const handlePrint = ({ config, format, path }) => {
-    const module = require(fetchConfigs(config)[0])
+const handlePrint = async ({ config, format, path }) => {
+    const module = await require(fetchConfigs(config)[0])
     const configObj = applyPath(path, module.default || module)
     let formatted = formatSource(configObj, format)
     if (format === FileTypes.JSON) {

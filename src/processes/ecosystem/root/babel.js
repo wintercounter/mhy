@@ -1,25 +1,28 @@
 import path from 'path'
 import copyDir from 'copy-dir'
 import Process from '@/processes/index'
-import mhyConfig from '@/configs/mhy'
+import _mhyConfig from '@/configs/mhy'
 
-const getCmdBabelCLI = (flags = []) => [
-    'node',
-    require.resolve('@babel/cli/bin/babel.js'),
-    path.resolve(process.cwd(), mhyConfig.srcFolder),
-    '--out-dir',
-    mhyConfig.distFolder,
-    '--config-file',
-    require.resolve('@/configs/babel'),
-    '--ignore',
-    ['node_modules', 'test', 'tests', 'temp', 'tmp', '**/*.d.ts', mhyConfig.distFolder, mhyConfig.buildFolder].join(
-        ','
-    ),
-    '--delete-dir-on-start',
-    '--extensions',
-    '.js,.jsx,.ts,.tsx',
-    ...flags
-]
+const getCmdBabelCLI = async (flags = []) => {
+    const mhyConfig = await _mhyConfig
+    return [
+        'node',
+        require.resolve('@babel/cli/bin/babel.js'),
+        path.resolve(process.cwd(), mhyConfig.srcFolder),
+        '--out-dir',
+        mhyConfig.distFolder,
+        '--config-file',
+        require.resolve('@/configs/babel'),
+        '--ignore',
+        ['node_modules', 'test', 'tests', 'temp', 'tmp', '**/*.d.ts', mhyConfig.distFolder, mhyConfig.buildFolder].join(
+            ','
+        ),
+        '--delete-dir-on-start',
+        '--extensions',
+        '.js,.jsx,.ts,.tsx',
+        ...flags
+    ]
+}
 
 class Babel extends Process {
     constructor(args) {
@@ -42,9 +45,10 @@ class Babel extends Process {
     ]
 }
 
-const handleCompileSuccess = line => {
+const handleCompileSuccess = async line => {
     if (!line.includes('Successfully')) return
 
+    const mhyConfig = await _mhyConfig
     copyDir.sync(path.resolve(process.cwd(), mhyConfig.srcFolder), path.resolve(process.cwd(), mhyConfig.distFolder), {
         cover: false,
         mode: true,
