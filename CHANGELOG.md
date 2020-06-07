@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.4.0](https://github.com/wintercounter/mhy/compare/v6.3.0...v6.4.0) (2020-06-07)
+
+
+### Features
+
+* **Concurrently:** add new process ([ae78828](https://github.com/wintercounter/mhy/commit/ae78828aea483cc26350045efc403a92f214954b))
+
+
+### Bug Fixes
+
+* **storybook:** async config loading ([ec4f7ea](https://github.com/wintercounter/mhy/commit/ec4f7ea47c4e37bd631a19ceeec7474e715910b0))
+
 ## [6.3.0](https://github.com/wintercounter/mhy/compare/v6.2.0...v6.3.0) (2020-06-06)
 
 
