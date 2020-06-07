@@ -6,14 +6,21 @@ const CmdStorybookStartCLI = ['node', require.resolve('@storybook/react/bin/inde
 
 class StorybookStart extends Process {
     constructor(args) {
+        super(args)
+
+        this.args = args
+        this.prepare()
+    }
+
+    async prepare() {
         const storybookConfigPath = require.resolve('@/configs/storybook')
-        const storybookConfig = require(storybookConfigPath)
+        const storybookConfig = await require(storybookConfigPath)
         const babelRcPath = path.resolve(
             storybookConfigPath.substring(0, storybookConfigPath.lastIndexOf(path.sep)),
             '.storybook'
         )
         if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {
-            require('@/configs/babel/write')(babelRcPath)
+            await require('@/configs/babel/write')(babelRcPath)
         }
 
         for (const [key, value] of Object.entries(storybookConfig.start)) {
@@ -23,8 +30,7 @@ class StorybookStart extends Process {
             }
         }
 
-        const { props: { defaultAction = 'start' } = {}, ...rest } = args
-        super(args)
+        const { props: { defaultAction = 'start' } = {}, ...rest } = this.args
 
         this.run(defaultAction, rest)
     }

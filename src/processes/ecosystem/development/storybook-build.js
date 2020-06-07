@@ -6,14 +6,23 @@ const CmdStorybookBuildCLI = ['node', require.resolve('@storybook/react/bin/buil
 
 class StorybookBuild extends Process {
     constructor(args) {
+        const { props: { defaultAction = 'start' } = {}, ...rest } = args
+        super(args)
+
+        this.defaultACtion = defaultAction
+        this.rest = rest
+        this.prepare()
+    }
+
+    async prepare() {
         const storybookConfigPath = require.resolve('@/configs/storybook')
-        const storybookConfig = require(storybookConfigPath)
+        const storybookConfig = await require(storybookConfigPath)
         const babelRcPath = path.resolve(
             storybookConfigPath.substring(0, storybookConfigPath.lastIndexOf(path.sep)),
             '.storybook'
         )
         if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {
-            require('@/configs/babel/write')(babelRcPath)
+            await require('@/configs/babel/write')(babelRcPath)
         }
 
         for (const [key, value] of Object.entries(storybookConfig.build)) {
@@ -23,10 +32,7 @@ class StorybookBuild extends Process {
             }
         }
 
-        const { props: { defaultAction = 'start' } = {}, ...rest } = args
-        super(args)
-
-        this.run(defaultAction, rest)
+        this.run(this.defaultAction, this.rest)
     }
 
     onStart = ({ name }, { flags = [] }) => this.spawn(name, [...CmdStorybookBuildCLI, ...flags])
