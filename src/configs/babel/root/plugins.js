@@ -1,9 +1,8 @@
 import path from 'path'
 
-import _mhyConfig from '@/configs/mhy'
+import mhyConfig from '@/configs/mhy'
 
-export default async (defaults = []) => {
-    const mhyConfig = await _mhyConfig
+export default (defaults = []) => {
     const r = [
         ...defaults,
         require.resolve('babel-plugin-macros'),
@@ -29,7 +28,7 @@ export default async (defaults = []) => {
     // Node process will use `module-resolve`
     if (!process.argv.some(v => !!v.match(/(webpack|storybook|nodeProcessSetup)/))) {
         const isBabel = process.argv.some(v => v.includes('babel'))
-        const alias = Object.entries(mhyConfig.defaultAliases).reduce(function(acc, [key, entry]) {
+        const alias = Object.entries(mhyConfig.defaultAliases).reduce(function (acc, [key, entry]) {
             // Leave alone every path which is outside cwd
             const e = path.resolve(entry)
             if (!e.includes(process.cwd())) {

@@ -11,9 +11,9 @@ const _onData = Symbol()
 const _onError = Symbol()
 const instances = new Set()
 
-export const loadEcosystem = async (env = '') => {
+export const loadEcosystem = (env = '') => {
     const processes = {}
-    await applyEntries(processes, path.join(__dirname, 'ecosystem', env), '**/*.{js,cjs}')
+    applyEntries(processes, path.join(__dirname, 'ecosystem', env), '**/*.js')
     return processes
 }
 
@@ -50,9 +50,9 @@ export const loadProcess = module => {
     console.error(`Unknown process '${module}' for the environment of '${process.env.MHY_ENVS.replace(/,/g, ':')}'!`)
 }
 
-export const loadCommands = async() => {
-    await applyEntries({}, path.join(__dirname, 'command'), '**/*.{js,cjs}')
-    await applyEntries({}, path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'processes', 'command'), '**/*.{js,cjs}')
+export const loadCommands = () => {
+    applyEntries({}, path.join(__dirname, 'command'), '**/*.js')
+    applyEntries({}, path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'processes', 'command'), '**/*.js')
 }
 
 const mhyArgvList = ['$0', '_', 'mhy-verbose', 'mhy-debug', 'mhy-prod', 'mhy-env']

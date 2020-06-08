@@ -1,16 +1,15 @@
 import path from 'path'
 import { applyJson, applyEntries } from '@/utils'
 
-const loadConfig = async (module, defaults = {}) => {
+const loadConfig = (module, defaults = {}) => {
     const envs = ['root', ...process.env.MHY_ENVS.split(':')]
-    defaults = typeof defaults === 'function' ? await defaults() : defaults
 
     for (const env of envs) {
         // 1. from MHY
-        await applyEntries(defaults, path.join(__dirname, '../configs', module, env), '**/*.{js,cjs}')
+        applyEntries(defaults, path.join(__dirname, '../configs', module, env), '**/*.{js,cjs}')
 
         // 2. from process.cwd()
-        await applyEntries(
+        applyEntries(
             defaults,
             path.join(process.cwd(), process.env.MHY_LOCAL_DIR, 'configs', module, env),
             '**/*.{js,cjs}',

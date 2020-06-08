@@ -1,7 +1,7 @@
 import path from 'path'
 import mhyConfig from '@/configs/mhy'
 
-const getUse = async (isModules = true) => [
+const getUse = (isModules = true) => [
     {
         loader: require.resolve('style-loader')
     },
@@ -40,7 +40,7 @@ const getUse = async (isModules = true) => [
                     new Set([
                         path.resolve(__dirname, '../../../../../../node_modules'),
                         path.resolve(process.cwd(), 'node_modules'),
-                        path.resolve(process.cwd(), (await mhyConfig).srcFolder)
+                        path.resolve(process.cwd(), mhyConfig.srcFolder)
                     ])
                 )
             }
@@ -48,14 +48,14 @@ const getUse = async (isModules = true) => [
     }
 ]
 
-export default async rules => [
+export default rules => [
     ...rules,
     {
         test: /^((?!module).)*.s?css$/,
-        use: await getUse(false)
+        use: getUse(false)
     },
     {
         test: /\.module\.s?css$/,
-        use: await getUse(true)
+        use: getUse(true)
     }
 ]

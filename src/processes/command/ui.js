@@ -3,7 +3,7 @@ import yargs from 'yargs'
 import { loadEcosystem, buildMhyArgv, loadProcess } from '@/processes'
 import mhyConfig from '@/configs/mhy'
 
-const commandHandler = async argv => {
+const commandHandler = argv => {
     process.env.MHY_ENV = 'ui'
     argv.process = argv.process || []
 
@@ -17,8 +17,8 @@ const commandHandler = async argv => {
 
     if (!argv.process.length) {
         processes = {
-            ...await loadEcosystem('root'),
-            ...await loadEcosystem(process.env.NODE_ENV)
+            ...loadEcosystem('root'),
+            ...loadEcosystem(process.env.NODE_ENV)
         }
         for (const name of Object.keys(processes)) {
             !mhyConfig.ecosystem.includes(name) && delete processes[name]

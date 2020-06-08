@@ -5,11 +5,10 @@ import webpack from 'webpack'
 import WebpackManifestPlugin from 'webpack-manifest-plugin'
 import WebpackPwaManifestPlugin from 'webpack-pwa-manifest'
 
-import _manifest from '@/configs/manifest'
+import manifest from '@/configs/manifest'
 import mhyConfig from '@/configs/mhy'
 
-export default async (plugins = []) => {
-    const manifest = await _manifest
+export default (plugins = []) => {
     manifest.icons.map(icon => {
         const inCwdPath = path.resolve(process.cwd(), icon.src)
         if (fs.existsSync(inCwdPath)) {
@@ -24,7 +23,7 @@ export default async (plugins = []) => {
             fileName: './manifest.webpack.json'
         }),
         new webpack.DefinePlugin({
-            mhy: JSON.stringify(await mhyConfig)
+            mhy: JSON.stringify(mhyConfig)
         })
     ])
 }

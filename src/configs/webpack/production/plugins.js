@@ -1,11 +1,11 @@
 import mhyConfig from '@/configs/mhy'
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-export default async (plugins = []) =>
+export default (plugins = []) =>
     [
         new HtmlWebpackPlugin({
             inject: true,
-            template: (await mhyConfig).indexHtml,
+            template: mhyConfig.indexHtml,
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
