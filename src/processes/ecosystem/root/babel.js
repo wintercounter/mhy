@@ -31,8 +31,8 @@ class Babel extends Process {
         this.run(defaultAction, { ...rest })
     }
 
-    onStart = ({ name }, { flags }) => {
-        this.spawn(name, getCmdBabelCLI(flags), 'pipe')
+    onStart = async ({ name }, { flags }) => {
+        this.spawn(name, await getCmdBabelCLI(flags), 'pipe')
         this.on('data', handleCompileSuccess)
     }
 
