@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.4.1](https://github.com/wintercounter/mhy/compare/v6.4.0...v6.4.1) (2020-06-08)
+
+
+### Bug Fixes
+
+* **babel:** wait for CLI getter to resolve ([fee5486](https://github.com/wintercounter/mhy/commit/fee5486126c93aece9d8ad16d5d4d8010de615a3))
+
 ## [6.4.0](https://github.com/wintercounter/mhy/compare/v6.3.0...v6.4.0) (2020-06-07)
 
 
