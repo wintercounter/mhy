@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "6.4.2",
+    "version": "6.4.3",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -127,7 +127,8 @@
         "@babel/preset-react": "7.10.1",
         "@babel/preset-stage-0": "7.8.3",
         "@babel/preset-typescript": "7.10.1",
-        "@babel/register": "7.10.1", "@cryptic-css/babel-plugin-styled": "^3.7.0",
+        "@babel/register": "7.10.1",
+        "@cryptic-css/babel-plugin-styled": "^3.7.0",
         "@cryptic-css/core": "3.7.0",
         "@cryptic-css/plugin-grid": "3.7.0",
         "@cryptic-css/plugin-gutter": "3.7.0",

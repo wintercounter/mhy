@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.4.3](https://github.com/wintercounter/mhy/compare/v6.4.2...v6.4.3) (2020-06-10)
+
 ### [6.4.2](https://github.com/wintercounter/mhy/compare/v6.4.1...v6.4.2) (2020-06-08)
 
 ### [6.4.1](https://github.com/wintercounter/mhy/compare/v6.4.0...v6.4.1) (2020-06-08)
