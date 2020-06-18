@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.5.0](https://github.com/wintercounter/mhy/compare/v6.4.5...v6.5.0) (2020-06-18)
+
+
+### Features
+
+* improve module resolution ([fc7f7fc](https://github.com/wintercounter/mhy/commit/fc7f7fc749040843e791cd3b4af7348f938ae966))
+* **webpack-css:** always allow importing CSS from anywhere ([7184b49](https://github.com/wintercounter/mhy/commit/7184b49c17f7e762c1fe230240cc0d72ddb554e6))
+
+
+### Bug Fixes
+
+* **webpack-css:** support string only loaders ([60f26ef](https://github.com/wintercounter/mhy/commit/60f26ef12cefb12801a225bc05dbd71e7054f234))
+
 ### [6.4.5](https://github.com/wintercounter/mhy/compare/v6.4.4...v6.4.5) (2020-06-12)
 
 ### [6.4.4](https://github.com/wintercounter/mhy/compare/v6.4.3...v6.4.4) (2020-06-11)
