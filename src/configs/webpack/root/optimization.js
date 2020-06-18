@@ -1,19 +1,20 @@
 export default () => ({
+    runtimeChunk: 'single',
     splitChunks: {
-        chunks: 'async',
-        minSize: 30000,
-        minChunks: 1,
-        maxAsyncRequests: 5,
-        maxInitialRequests: 3,
+        maxAsyncRequests: 25,
+        maxInitialRequests: 25,
         automaticNameDelimiter: '~',
+        maxSize: 800000,
         name: true,
         cacheGroups: {
             vendors: {
+                chunks: 'all',
                 test: /[\\/]node_modules[\\/]/,
-                priority: -10
+                priority: -10,
+                reuseExistingChunk: true
             },
             default: {
-                minChunks: 2,
+                chunks: 'all',
                 priority: -20,
                 reuseExistingChunk: true
             }
