@@ -48,14 +48,21 @@ const getUse = (isModules = true) => [
     }
 ]
 
+const includeExclude = {
+    include: () => true,
+    exclude: () => false
+}
+
 export default rules => [
     ...rules,
     {
-        test: /^((?!module).)*.s?css$/,
-        use: getUse(false)
+        test: /(?<!module)\.s?css$/,
+        use: getUse(false),
+        ...includeExclude
     },
     {
         test: /\.module\.s?css$/,
-        use: getUse(true)
+        use: getUse(true),
+        ...includeExclude
     }
 ]
