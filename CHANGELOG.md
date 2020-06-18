@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.6.0](https://github.com/wintercounter/mhy/compare/v6.5.0...v6.6.0) (2020-06-18)
+
+
+### Features
+
+* **webpack:** improve chunking ([f5d1043](https://github.com/wintercounter/mhy/commit/f5d1043e0c169346e6db269079df0bf3223b9abc))
+
 ## [6.5.0](https://github.com/wintercounter/mhy/compare/v6.4.5...v6.5.0) (2020-06-18)
 
 
