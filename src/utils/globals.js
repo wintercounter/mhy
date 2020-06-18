@@ -1,5 +1,6 @@
 import path from 'path'
 import { addPath, addAlias } from 'module-alias'
+import BuiltinModule from 'module'
 
 let SETUP_DONE = false
 
@@ -15,8 +16,32 @@ let SETUP_DONE = false
     }
 
     // Register dist with alias and mhy's node_modules as module source so custom JS files can use it loaded through mhy
+    // Guard against poorly mocked module constructors
+    const Module = module.constructor.length > 1 ? module.constructor : BuiltinModule
+
+    const nodeModulesPath = path.resolve(__dirname, '../../node_modules')
+
     addAlias('@/mhy', path.resolve(__dirname, '../'))
-    addPath(path.resolve(__dirname, '../../node_modules'))
+    addPath(nodeModulesPath)
+
+    const oldResolveFilename = Module._resolveFilename
+    Module._resolveFilename = function (request, parentModule, isMain, options) {
+        if (!parentModule.paths.includes(nodeModulesPath)) {
+            parentModule.paths.push(nodeModulesPath)
+        }
+        return oldResolveFilename.call(this, request, parentModule, isMain, options)
+    }
+
+    const oldNodeModulePaths = Module._nodeModulePaths
+    Module._nodeModulePaths = function (from) {
+        const paths = oldNodeModulePaths.call(this, from)
+
+        if (!paths.includes(nodeModulesPath)) {
+            paths.push(nodeModulesPath)
+        }
+
+        return paths
+    }
 
     process.env.NODE_ENV = process.env.NODE_ENV || 'development'
     process.env.MHY_ENV = 'cli'

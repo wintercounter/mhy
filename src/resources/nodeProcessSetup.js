@@ -22,16 +22,27 @@ babelConfig.cache = false
 
 register(babelConfig)
 addPath(path.resolve(process.cwd(), 'node_modules'))
-addPath(path.resolve(__dirname, '../../node_modules'))
+
+const nodeModulesPath = path.resolve(__dirname, '../../')
+addPath(nodeModulesPath)
 
 const oldResolveFilename = Module._resolveFilename
-
 Module._resolveFilename = function (request, parentModule, isMain, options) {
-    const nodeModulesPath = path.resolve(__dirname, '../../')
     if (!parentModule.paths.includes(nodeModulesPath)) {
         parentModule.paths.push(nodeModulesPath)
     }
     return oldResolveFilename.call(this, request, parentModule, isMain, options)
+}
+
+const oldNodeModulePaths = Module._nodeModulePaths
+Module._nodeModulePaths = function (from) {
+    const paths = oldNodeModulePaths.call(this, from)
+
+    if (!paths.includes(nodeModulesPath)) {
+        paths.push(nodeModulesPath)
+    }
+
+    return paths
 }
 
 const alias = { ...mhyConfig.defaultAliases }
