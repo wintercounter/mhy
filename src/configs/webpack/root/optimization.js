@@ -9,14 +9,14 @@ export default () => ({
         cacheGroups: {
             vendors: {
                 chunks: 'all',
-                test: /[\\/]node_modules[\\/]/,
+                test: /node_modules/,
                 priority: -10,
-                reuseExistingChunk: true
+                minSize: 100000
             },
             default: {
                 chunks: 'all',
                 priority: -20,
-                reuseExistingChunk: true
+                minSize: 100000
             }
         }
     }
