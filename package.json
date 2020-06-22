@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "6.6.1",
+    "version": "6.7.0",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -169,7 +169,6 @@
         "@types/enzyme": "3.10.5",
         "@types/enzyme-adapter-react-16": "1.0.6",
         "@types/enzyme-to-json": "1.5.3",
-        "@types/eslint": "7.2.0",
         "@types/faker": "4.1.12",
         "@types/fs-extra": "9.0.1",
         "@types/history": "4.7.6",
