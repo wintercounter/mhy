@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "6.7.0",
+    "version": "6.7.1",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -249,7 +249,7 @@
         "enzyme-adapter-react-16": "1.15.2",
         "enzyme-to-json": "3.5.0",
         "es-cookie": "1.3.2",
-        "eslint": "7.3.0",
+        "eslint": "7.2.0",
         "eslint-config-airbnb": "18.2.0",
         "eslint-config-prettier": "6.11.0",
         "eslint-global-patch": "^1.0.4",
