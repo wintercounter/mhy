@@ -39,6 +39,15 @@
       ]
     },
     {
+      "login": "FabianLauer",
+      "name": "Fabian Lauer",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2205595?v=4",
+      "profile": "https://github.com/FabianLauer",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "thomaswinckell",
       "name": "Thomas Winckell",
       "avatar_url": "https://avatars1.githubusercontent.com/u/5302702?v=4",
@@ -46,8 +55,7 @@
       "contributions": [
         "code",
         "doc"
-      ]
-    }
+     ]}
   ],
   "repoType": "github",
   "commitConvention": "none",
