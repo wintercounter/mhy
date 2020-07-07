@@ -1,5 +1,6 @@
 import path from 'path'
 import Process from '@/processes'
+import 'eslint-global-patch'
 
 const getEslintCLICmd = args => {
     const {
