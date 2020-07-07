@@ -46,7 +46,16 @@
       "contributions": [
         "code"
       ]
-    }
+    },
+    {
+      "login": "thomaswinckell",
+      "name": "Thomas Winckell",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5302702?v=4",
+      "profile": "http://winckell.com",
+      "contributions": [
+        "code",
+        "doc"
+     ]}
   ],
   "repoType": "github",
   "commitConvention": "none",
