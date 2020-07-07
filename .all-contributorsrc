@@ -28,8 +28,19 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gcofficial",
+      "name": "Eugen Guriev",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8502021?v=4",
+      "profile": "http://beagl.in",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "repoType": "github",
-  "commitConvention": "none"
+  "commitConvention": "none",
+  "repoHost": "https://github.com",
+  "skipCi": true
 }
