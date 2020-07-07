@@ -95,6 +95,7 @@ mhy
     <td align="center"><a href="http://beagl.in"><img src="https://avatars0.githubusercontent.com/u/8502021?v=4" width="100px;" alt=""/><br /><sub><b>Eugen Guriev</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=gcofficial" title="Code">💻</a></td>
     <td align="center"><a href="http://winckell.com"><img src="https://avatars1.githubusercontent.com/u/5302702?v=4" width="100px;" alt=""/><br /><sub><b>Thomas Winckell</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=thomaswinckell" title="Code">💻</a> <a href="https://github.com/wintercounter/mhy/commits?author=thomaswinckell" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/FabianLauer"><img src="https://avatars0.githubusercontent.com/u/2205595?v=4" width="100px;" alt=""/><br /><sub><b>Fabian Lauer</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=FabianLauer" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/stevenmitts"><img src="https://avatars1.githubusercontent.com/u/13355405?v=4" width="100px;" alt=""/><br /><sub><b>Steven Mitts</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=stevenmitts" title="Documentation">📖</a></td>
   </tr>
 </table>
 
