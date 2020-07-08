@@ -63,7 +63,17 @@
       "profile": "https://github.com/stevenmitts",
       "contributions": [
         "doc"
-      ]}
+      ]},
+      {
+            "login": "ZakharDolozhevskiy",
+            "name": "Zakhar",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/5322859?v=4",
+            "profile": "https://zakhardolozhevskiy.github.io/CV",
+            "contributions": [
+              "code",
+              "doc"
+            ]
+        }
   ],
   "repoType": "github",
   "commitConvention": "none",
