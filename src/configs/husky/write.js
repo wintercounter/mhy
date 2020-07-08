@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import FileTypes from '@/utils/fileTypes'
-import githooksConfig from '@/configs/githooks'
+import huskyConfig from '@/configs/husky'
 import { writeFile, createSymlink } from '@/utils'
 
 const GIT_HOOKS_DIR = path.resolve(__dirname, '../../../.git/hooks')
@@ -15,7 +15,7 @@ const writeConfig = (dir = process.cwd(), format = FileTypes.JSON_NO_EXT, overwr
         .filter(filename => filename.search('sample') === -1)
         .forEach(filename => createSymlink(dir, `.git/hooks/${filename}`))
 
-    return writeFile(dir, '.huskyrc', githooksConfig, format, overwrite)
+    return writeFile(dir, '.huskyrc', huskyConfig, format, overwrite)
 }
 
 export default writeConfig

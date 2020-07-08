@@ -6,6 +6,6 @@ const defaults = {
     }
 }
 
-const eslintConfig = loadConfig('githooks', defaults)
+const huskyConfig = loadConfig('husky', defaults)
 
-export default eslintConfig
+export default huskyConfig
