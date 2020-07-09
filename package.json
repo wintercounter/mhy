@@ -281,6 +281,7 @@
         "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
         "html-webpack-plugin": "4.3.0",
         "http-proxy-middleware": "1.0.4",
+        "husky": "^4.2.5",
         "identity-obj-proxy": "3.0.0",
         "image-webpack-loader": "6.0.0",
         "immer": "7.0.5",
