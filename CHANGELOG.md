@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.8.0](https://github.com/wintercounter/mhy/compare/v6.7.3...v6.8.0) (2020-07-09)
+
+
+### Features
+
+* sharable githooks powered by Husky ([e86d716](https://github.com/wintercounter/mhy/commit/e86d71610d44849f8e6beeefacd8011ef7790d98))
+* update documentation and mention Husky in tools naming ([c64c6d6](https://github.com/wintercounter/mhy/commit/c64c6d633de115ed1efb03c72942badc569dd4aa))
+
+
+### Bug Fixes
+
+* **typo:** `[@core](https://github.com/core)` to `@/core` ([f196e7b](https://github.com/wintercounter/mhy/commit/f196e7b97ee9a759f5729ef2d825f5a192911250))
+* the coe path fixing to make a storybook work from default template ([a8aed00](https://github.com/wintercounter/mhy/commit/a8aed0037aee3ec49dc1c86eca518793f84d2394))
+
 ### [6.7.3](https://github.com/wintercounter/mhy/compare/v6.7.2...v6.7.3) (2020-07-07)
 
 ### [6.7.2](https://github.com/wintercounter/mhy/compare/v6.7.0...v6.7.2) (2020-07-01)
