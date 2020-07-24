@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 import yargs from 'yargs'
 import '@/utils/globals'
+import asciiArt from '@/utils/asciiArt'
 import { loadCommands } from '@/processes'
+
+// Feel like a cool hacker (-_-)
+asciiArt()
 
 yargs
     .usage('\nUsage:\n  mhy [command (process)] [process args] [mhy options]')
