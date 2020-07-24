@@ -55,25 +55,36 @@
       "contributions": [
         "code",
         "doc"
-     ]},
-     {
-     "login": "stevenmitts",
+      ]
+    },
+    {
+      "login": "stevenmitts",
       "name": "Steven Mitts",
       "avatar_url": "https://avatars1.githubusercontent.com/u/13355405?v=4",
       "profile": "https://github.com/stevenmitts",
       "contributions": [
         "doc"
-      ]},
-      {
-            "login": "ZakharDolozhevskiy",
-            "name": "Zakhar",
-            "avatar_url": "https://avatars0.githubusercontent.com/u/5322859?v=4",
-            "profile": "https://zakhardolozhevskiy.github.io/CV",
-            "contributions": [
-              "code",
-              "doc"
-            ]
-        }
+      ]
+    },
+    {
+      "login": "ZakharDolozhevskiy",
+      "name": "Zakhar",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5322859?v=4",
+      "profile": "https://zakhardolozhevskiy.github.io/CV",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "bafxyz",
+      "name": "Andrei Bunulu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/892175?v=4",
+      "profile": "https://github.com/bafxyz",
+      "contributions": [
+        "code"
+      ]
+    }
   ],
   "repoType": "github",
   "commitConvention": "none",
