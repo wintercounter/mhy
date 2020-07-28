@@ -14,8 +14,10 @@ mhy config storybook
 {
     "mhy": {
         "storybook": {
-            "start": {
-                "port": 3500
+            "root" : {
+                "start": {
+                    "port": 3500
+                }
             }
         }
     }
