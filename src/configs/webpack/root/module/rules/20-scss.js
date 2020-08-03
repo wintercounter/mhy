@@ -14,7 +14,7 @@ const getUse = (isModules = true) => [
                 ? false
                 : {
                       localIdentName: '[local]__[hash:base64:5]',
-                      exportLocalsConvention: true
+                      exportLocalsConvention: 'camelCase'
                   }
         }
     },
