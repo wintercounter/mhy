@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.8.4](https://github.com/wintercounter/mhy/compare/v6.8.3...v6.8.4) (2020-08-03)
+
+
+### Bug Fixes
+
+* **storybook:** add env key to storybook documentation ([56f9cb6](https://github.com/wintercounter/mhy/commit/56f9cb6ff9e63a08ab0ad61048e0168525f515f0))
+
 ### [6.8.3](https://github.com/wintercounter/mhy/compare/v6.8.1...v6.8.3) (2020-07-24)
 
 ### [6.8.2](https://github.com/wintercounter/mhy/compare/v6.8.1...v6.8.2) (2020-07-24)
