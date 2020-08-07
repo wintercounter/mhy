@@ -21,7 +21,8 @@ mhy storybook-start
 
 ### Customization
 
-To customize your Storybook you can create a `storybook.setup.ts` file in your `src` folder.
+To customize your Storybook you can create a `storybook.preview.js` and/or `storybook.manager.js`
+file in your `src` folder.
 
 
 

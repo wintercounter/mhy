@@ -1,14 +1,15 @@
 import '@storybook/components'
-import { configure, addDecorator, addParameters } from '@storybook/react'
+import { configure, addDecorator } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-react-router'
 
-// Config
-addParameters({
+module._StorybookPreserveDecorators = true
+
+export const parameters = {
     options: {
-        //panelPosition: 'right'
+        showRoots: true
     }
-})
+}
 
 // Decorators
 addDecorator(withKnobs)
@@ -16,8 +17,8 @@ addDecorator(StoryRouter())
 
 // Import setup files
 const importAll = r => r.keys().forEach(r)
-importAll(require.context('src', true, /storybook\.setup\.[jt]sx?$/))
+importAll(require.context('@', true, /storybook\.preview\.[jt]sx?$/))
 
 // Require all *.story.js file
-const req = require.context('src', true, /\.?(story|stories|book)\.[jt]sx?$/)
+const req = require.context('@', true, /\.?(story|stories|book)\.([jt]sx?|mdx)$/)
 configure(req, module)

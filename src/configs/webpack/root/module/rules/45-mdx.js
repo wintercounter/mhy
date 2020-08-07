@@ -4,10 +4,11 @@ export default rules => [
         test: /\.mdx$/,
         use: [
             {
-                loader: 'babel-loader'
+                loader: require.resolve('babel-loader'),
+                options: require('@/configs/babel')
             },
             {
-                loader: '@mdx-js/loader'
+                loader: require.resolve('@mdx-js/loader')
             }
         ]
     }
