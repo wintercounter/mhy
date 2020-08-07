@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/wintercounter/mhy/compare/v6.8.4...v7.0.0) (2020-08-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **storybook:** from now on please use `storybook.preview.js` and/or `storybook.preview.js` files customize storybook.
+
+### Features
+
+* **storybook:** update to v6.0 ([970d64f](https://github.com/wintercounter/mhy/commit/970d64f50d94001fc1798437675324af50288613))
+
+
+### Bug Fixes
+
+* **ascii-art:** temporarily remove ([36bf426](https://github.com/wintercounter/mhy/commit/36bf426eddf6e463aa82e0ae8edfc59113d5c787))
+
 ### [6.8.6](https://github.com/wintercounter/mhy/compare/v6.8.4...v6.8.6) (2020-08-04)
 
 ### [6.8.4](https://github.com/wintercounter/mhy/compare/v6.8.3...v6.8.4) (2020-08-03)
