@@ -5,7 +5,8 @@ import asciiArt from '@/utils/asciiArt'
 import { loadCommands } from '@/processes'
 
 // Feel like a cool hacker (-_-)
-asciiArt()
+// asciiArt()
+// Temporarily disabled, it should be shown only on help page but yargs have no support for such.
 
 yargs
     .usage('\nUsage:\n  mhy [command (process)] [process args] [mhy options]')
