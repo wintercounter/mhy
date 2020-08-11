@@ -67,6 +67,7 @@ export default {
             options: {
                 configureJSX: false
             }
-        }
+        },
+        '@storybook/addon-controls'
     ]
 }
