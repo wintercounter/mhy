@@ -23,5 +23,12 @@ export default rules => [
                 }
             }
         ]
-    }
+    },
+    {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        issuer: {
+            test: /\.[jt]sx?$/
+        },
+        use: [require.resolve('babel-loader'), require.resolve('@svgr/webpack'), require.resolve('url-loader')]
+    },
 ]
