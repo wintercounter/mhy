@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { bool } from 'prop-types'
 import styled from 'styled-components'
 
-import Pacman from './pacman.svgx'
+import { ReactComponent as Pacman } from './pacman.svg'
 
 const Figure = styled.figure`
     display: flex;
