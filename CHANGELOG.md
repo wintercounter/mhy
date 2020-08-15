@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/wintercounter/mhy/compare/v7.0.0...v7.1.0) (2020-08-15)
+
+
+### Features
+
+* **node:** expose mhy config as global ([1840d7c](https://github.com/wintercounter/mhy/commit/1840d7c73d4957107c56db7b7081af063171ea09))
+* **storybook:** general improvements ([2fe578a](https://github.com/wintercounter/mhy/commit/2fe578a505fe033ae1efc619872555a7a82e2028))
+
+
+### Bug Fixes
+
+* **ascii-art:** now it will be shown only to the help page ([72d1ab2](https://github.com/wintercounter/mhy/commit/72d1ab2561de437753654067bc450fd95d5ef795))
+* **ASCIIArt:** fix ascii-art, now it will be shown only to the help page ([0422f5b](https://github.com/wintercounter/mhy/commit/0422f5b45f25f230118bb31bdf53752c7df7abd5))
+
 ## [7.0.0](https://github.com/wintercounter/mhy/compare/v6.8.4...v7.0.0) (2020-08-07)
 
 
