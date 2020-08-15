@@ -6,6 +6,9 @@ import babelConfig from '@/configs/babel'
 import register from '@babel/register'
 import BuiltinModule from 'module'
 
+// Expose mhy config as Global (just like with webpack)
+global.mhy = mhyConfig
+
 // Guard against poorly mocked module constructors
 const Module = module.constructor.length > 1 ? module.constructor : BuiltinModule
 
