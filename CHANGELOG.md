@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* **ascii-art:** now it will be shown only to the help page ([72d1ab2](https://github.com/wintercounter/mhy/commit/72d1ab2561de437753654067bc450fd95d5ef795))
+* **aASCIIArt:** now it will be shown only to the help page ([72d1ab2](https://github.com/wintercounter/mhy/commit/72d1ab2561de437753654067bc450fd95d5ef795))
 * **ASCIIArt:** fix ascii-art, now it will be shown only to the help page ([0422f5b](https://github.com/wintercounter/mhy/commit/0422f5b45f25f230118bb31bdf53752c7df7abd5))
 
 ## [7.0.0](https://github.com/wintercounter/mhy/compare/v6.8.4...v7.0.0) (2020-08-07)
