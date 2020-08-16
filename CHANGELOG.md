@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.2.0](https://github.com/wintercounter/mhy/compare/v7.1.0...v7.2.0) (2020-08-16)
+
+
+### Features
+
+* **storybook:** add ability to have custom main file ([e174af4](https://github.com/wintercounter/mhy/commit/e174af4c312c75c85af71a895a644e725a7c359e))
+* **storybook:** expose all storybook configuration APIs ([f30f8ec](https://github.com/wintercounter/mhy/commit/f30f8ec37b1b481de0f4d2a59e6933474a766c5b))
+
 ## [7.1.0](https://github.com/wintercounter/mhy/compare/v7.0.0...v7.1.0) (2020-08-15)
 
 
