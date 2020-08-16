@@ -1,6 +1,11 @@
-import { isFunction } from 'lodash-es'
+import path from 'path'
+import requireContext from 'node-require-context'
+import { isFunction } from 'lodash'
 import createCompiler from '@storybook/addon-docs/mdx-compiler-plugin'
 import mhyWP from '@/configs/webpack'
+import mhyConfig from '@/configs/mhy'
+
+const srcPath = path.join(process.cwd(), mhyConfig.srcFolder)
 
 const baseWebpackConfig = config => {
     mhyWP.resolve.modules = [...config.resolve.modules, ...mhyWP.resolve.modules, process.cwd()]
@@ -15,8 +20,9 @@ const baseWebpackConfig = config => {
     return config
 }
 
+const storiesGlob = `${srcPath.replace(/\\/g, '/')}/**/*@(story|stories|book).@(ts|tsx|js|jsx|mdx)`
 const defaults = {
-    //stories: [`**/story.tsx`],
+    stories: [storiesGlob],
     managerWebpack: baseWebpackConfig,
     webpackFinal: config => {
         config = baseWebpackConfig(config)
@@ -56,6 +62,6 @@ const importAll = r =>
             fn(defaults)
         }
     })
-importAll(require.context('@', true, /storybook\.main\.[jt]sx?$/))
+importAll(requireContext(srcPath, true, /storybook\.main\.[jt]sx?$/))
 
 export default defaults

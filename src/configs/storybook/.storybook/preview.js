@@ -1,24 +1,38 @@
 import '@storybook/components'
-import { configure, addDecorator } from '@storybook/react'
+import { addons } from '@storybook/addons'
 import { withKnobs } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-react-router'
+import { isFunction } from 'lodash'
 
 module._StorybookPreserveDecorators = true
 
-export const parameters = {
+export const parameters = {}
+
+addons.setConfig({
     options: {
         showRoots: true
     }
-}
+})
 
-// Decorators
-addDecorator(withKnobs)
-addDecorator(StoryRouter())
+export const decorators = [withKnobs, StoryRouter()]
+
+export const globalTypes = {}
 
 // Import setup files
-const importAll = r => r.keys().forEach(r)
-importAll(require.context('@', true, /storybook\.preview\.[jt]sx?$/))
+const importAll = r =>
+    r.keys().forEach(m => {
+        const mod = r(m)
 
-// Require all *.story.js file
-const req = require.context('@', true, /\.?(story|stories|book)\.([jt]sx?|mdx)$/)
-configure(req, module)
+        if (isFunction(mod.parameters)) {
+            mod.parameters(parameters)
+        }
+
+        if (isFunction(mod.decorators)) {
+            mod.decorators(decorators)
+        }
+
+        if (isFunction(mod.globalTypes)) {
+            mod.globalTypes(globalTypes)
+        }
+    })
+importAll(require.context('@', true, /storybook\.preview\.[jt]sx?$/))

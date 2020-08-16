@@ -306,6 +306,7 @@
         "moment-timezone": "0.5.31",
         "node-fetch": "2.6.0",
         "node-gzip": "1.1.2",
+        "node-require-context": "^1.0.0",
         "node-sass": "4.14.1",
         "nodemon": "2.0.4",
         "normalizr": "3.6.0",
