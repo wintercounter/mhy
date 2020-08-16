@@ -1,5 +1,6 @@
-import mhyWP from '@/configs/webpack'
+import { isFunction } from 'lodash-es'
 import createCompiler from '@storybook/addon-docs/mdx-compiler-plugin'
+import mhyWP from '@/configs/webpack'
 
 const baseWebpackConfig = config => {
     mhyWP.resolve.modules = [...config.resolve.modules, ...mhyWP.resolve.modules, process.cwd()]
@@ -14,7 +15,7 @@ const baseWebpackConfig = config => {
     return config
 }
 
-export default {
+const defaults = {
     //stories: [`**/story.tsx`],
     managerWebpack: baseWebpackConfig,
     webpackFinal: config => {
@@ -44,3 +45,17 @@ export default {
         '@storybook/addon-controls'
     ]
 }
+
+// Import setup files
+const importAll = r =>
+    r.keys().forEach(m => {
+        const d = r(m)
+        const fn = d.default || d
+
+        if (isFunction(fn)) {
+            fn(defaults)
+        }
+    })
+importAll(require.context('@', true, /storybook\.main\.[jt]sx?$/))
+
+export default defaults
