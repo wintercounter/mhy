@@ -24,11 +24,17 @@ export default rules => [
             }
         ]
     },
+    // Don't add issuer to this rule. Require.context will not work for this reason https://github.com/webpack/webpack/issues/9309
     {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        issuer: {
-            test: /\.[jt]sx?$/
-        },
-        use: [require.resolve('babel-loader'), require.resolve('@svgr/webpack'), require.resolve('url-loader')]
+        test: /\.svg$/,
+        use: [
+            {
+                loader: require.resolve('@svgr/webpack'),
+                options: {
+                    svgo: false, // Super important for sprites!
+                }
+            },
+            { loader: require.resolve('url-loader') },
+        ]
     },
 ]
