@@ -1,4 +1,5 @@
 import path from 'path'
+import requireContext from 'node-require-context'
 import { addPath, addAlias } from 'module-alias'
 import BuiltinModule from 'module'
 
@@ -83,6 +84,14 @@ let SETUP_DONE = false
     process.env.MHY_UI_ACTION_DATA = 'data'
     process.env.MHY_UI_ACTION_UPDATE = 'update'
     process.env.MHY_UI_ACTION_FUNCTION = 'function'
+
+    const { wrap } = module.constructor
+
+    global.requireContext = requireContext
+
+    module.constructor.wrap = function (script) {
+        return wrap(`${script.includes('require.context') ? 'require.context = global.requireContext;\n' : ''}${script}`)
+    }
 
     SETUP_DONE = true
 })()
