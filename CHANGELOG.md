@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.2.1](https://github.com/wintercounter/mhy/compare/v7.2.0...v7.2.1) (2020-08-17)
+
+
+### Bug Fixes
+
+* **config:** expose mhy config manually to avoid circular dependencies ([3554ef5](https://github.com/wintercounter/mhy/commit/3554ef501569e70eec5711f6a532216b7e653d4f))
+
 ## [7.2.0](https://github.com/wintercounter/mhy/compare/v7.1.0...v7.2.0) (2020-08-16)
 
 
