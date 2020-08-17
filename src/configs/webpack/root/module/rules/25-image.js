@@ -32,6 +32,7 @@ export default rules => [
                 loader: require.resolve('@svgr/webpack'),
                 options: {
                     svgo: false, // Super important for sprites!
+                    icon: true
                 }
             },
             { loader: require.resolve('url-loader') },
