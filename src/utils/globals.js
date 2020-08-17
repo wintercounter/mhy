@@ -1,5 +1,4 @@
 import path from 'path'
-import requireContext from 'node-require-context'
 import { addPath, addAlias } from 'module-alias'
 import BuiltinModule from 'module'
 
@@ -87,9 +86,7 @@ let SETUP_DONE = false
 
     const { wrap } = module.constructor
 
-    global.requireContext = requireContext
-
-    let requireContextResolver = function(directory, recursive, regExp) {
+    let requireContext = function(directory, recursive, regExp) {
         var dir = require('node-dir')
         var path = require('path')
   
@@ -130,7 +127,7 @@ let SETUP_DONE = false
     }
 
     module.constructor.wrap = function (script) {
-        return wrap.call(this, `${script.includes('require.context') ? `require.context = ${requireContextResolver.toString()};\n` : ''}${script}`)
+        return wrap.call(this, `${script.includes('require.context') ? `require.context = ${requireContext.toString()};\n` : ''}${script}`)
     }
 
     SETUP_DONE = true
