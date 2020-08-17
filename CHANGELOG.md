@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.3.0](https://github.com/wintercounter/mhy/compare/v7.2.1...v7.3.0) (2020-08-17)
+
+
+### Features
+
+* add support for `require.context` in any environment ([3995495](https://github.com/wintercounter/mhy/commit/3995495e43c163f6f5c931ab11599a76c7219dee))
+* add support for require.context in node ([794b9ce](https://github.com/wintercounter/mhy/commit/794b9ce15c6002d97a833f804fc88ef44873d0a4))
+* cleanup ([c054c40](https://github.com/wintercounter/mhy/commit/c054c40f01b08a643468c35eeff17a3c97b58c61))
+* tweak requireContext resolver to fix path ([8ee31a4](https://github.com/wintercounter/mhy/commit/8ee31a4bbef966ec815b0994c6608b22da45d731))
+
 ### [7.2.1](https://github.com/wintercounter/mhy/compare/v7.2.0...v7.2.1) (2020-08-17)
 
 
