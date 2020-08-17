@@ -63,4 +63,6 @@ const mhyConfig = loadConfig('mhy', {
     ecosystem: ['webpack-dev-server', 'tsc', 'jest', 'storybook-start']
 })
 
+global.mhy = mhyConfig
+
 export default mhyConfig
