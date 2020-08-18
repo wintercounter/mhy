@@ -32,10 +32,18 @@ export default rules => [
                 loader: require.resolve('@svgr/webpack'),
                 options: {
                     svgo: false, // Super important for sprites!
-                    icon: true
+                    icon: true // Replace SVG "width" and "height" value by "1em" to make SVG size inherits from text size.
                 }
             },
-            { loader: require.resolve('url-loader') },
+            {
+                loader: require.resolve('url-loader'),
+                options: {
+                    limit: 65000,	
+                    mimetype: 'image/svg+xml',	
+                    name: '[name].[ext]',	
+                    esModule: false
+                }
+            },
         ]
     },
 ]
