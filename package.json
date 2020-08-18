@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "7.3.2",
+    "version": "8.0.0",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -378,7 +378,6 @@
         "style-loader": "1.2.1",
         "styled-components": "5.1.1",
         "stylis": "^4.0.2",
-        "svg-react-loader": "0.4.6",
         "swiper": "^5.4.5",
         "symlink-dir": "4.1.0",
         "terser-webpack-plugin": "4.1.0",

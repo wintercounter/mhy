@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/wintercounter/mhy/compare/v7.3.2...v8.0.0) (2020-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* **webpack:** This eliminates the usage of the `.svgx` extension. You can import SVG as React component using `import { ReactComponent } from './foo.svg'` syntax from now on.
+
+### Features
+
+* **SVGXtoSVGR:** add icon=true to make default width and height = 1em DAS-66 ([2e11a4f](https://github.com/wintercounter/mhy/commit/2e11a4ffba96ee00881b0109e66461d173362132))
+* **SVGXtoSVGR:** add sprite support DAS-66 ([63d03b8](https://github.com/wintercounter/mhy/commit/63d03b8ee44077a5d7e3ec9b05af4f53cbc96038))
+* **SVGXtoSVGR:** fixing merging conflicts DAS-66 ([0048095](https://github.com/wintercounter/mhy/commit/00480954a5a0e64b24601cd4325a7820e300133c))
+* **SVGXtoSVGR:** recover options DAS-66 ([3e58b7e](https://github.com/wintercounter/mhy/commit/3e58b7e1780b8ad2d3fb184db43e897562bc6098))
+* **webpack:** switch from `svg-react-loader` to `@svgr/webpack` ([eae5005](https://github.com/wintercounter/mhy/commit/eae5005f6af24fde05945d0e14b3cf06ca4eb26f))
+
 ### [7.3.2](https://github.com/wintercounter/mhy/compare/v7.3.1...v7.3.2) (2020-08-18)
 
 ### [7.3.1](https://github.com/wintercounter/mhy/compare/v7.3.0...v7.3.1) (2020-08-18)
