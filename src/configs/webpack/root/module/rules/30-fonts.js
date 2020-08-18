@@ -1,18 +1,6 @@
 export default rules => [
     ...rules,
     {
-        test: /\.svg$/,
-        use: {
-            loader: require.resolve('url-loader'),
-            options: {
-                limit: 65000,
-                mimetype: 'image/svg+xml',
-                name: '[name].[ext]',
-                esModule: false
-            }
-        }
-    },
-    {
         test: /\.woff$/,
         use: {
             loader: require.resolve('url-loader'),
