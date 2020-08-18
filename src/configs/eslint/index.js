@@ -236,7 +236,6 @@ if (fs.existsSync(tsconfigPath)) {
         ...defaults.rules,
 
         // Extras
-        '@typescript-eslint/interface-name-prefix': [1, 'always'],
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/ban-ts-ignore': 0,
         '@typescript-eslint/no-empty-function': 0,
