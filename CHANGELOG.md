@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.3.1](https://github.com/wintercounter/mhy/compare/v7.3.0...v7.3.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* **eslint:** remove obsolete ``@typescript-eslint/interface-name-prefix` rule ([81dd503](https://github.com/wintercounter/mhy/commit/81dd5032932d7e9208e88f2062b63aa96bf9a968))
+
 ## [7.3.0](https://github.com/wintercounter/mhy/compare/v7.2.1...v7.3.0) (2020-08-17)
 
 
