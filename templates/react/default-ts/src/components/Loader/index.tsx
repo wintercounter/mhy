@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
 
-import Pacman from './pacman.svgx'
+import { ReactComponent as Pacman } from './pacman.svg'
 
 interface ILoaderProps {
     visible: boolean
