@@ -8,8 +8,11 @@ declare module '*.scss' {
     export default content
 }
 
+interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+
 declare module '*.svg' {
     const content: any
+    export const ReactComponent: SvgrComponent
     export default content
 }
 
