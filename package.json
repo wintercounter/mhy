@@ -345,7 +345,6 @@
         "react-intersection-observer": "8.27.0",
         "react-intl": "5.6.8",
         "react-popper": "2.2.3",
-        "react-popper-2": "npm:react-popper@^2.2.3",
         "react-redux": "7.2.1",
         "react-router": "5.2.0",
         "react-router-dom": "5.2.0",
