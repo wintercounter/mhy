@@ -203,7 +203,7 @@
         "apollo-cache-inmemory": "1.6.6",
         "apollo-client": "2.6.10",
         "apollo-link": "1.2.14",
-        "apollo-link-algolia": "0.0.5",
+        "apollo-link-algolia": "github:bafxyz/apollo-link-algolia#master",
         "apollo-link-debounce": "2.1.0",
         "apollo-link-error": "1.1.13",
         "apollo-link-http": "1.5.17",
