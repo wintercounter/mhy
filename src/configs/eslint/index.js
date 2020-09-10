@@ -29,6 +29,9 @@ const defaults = {
     settings: {
         react: {
             version: require('react/package.json').version
+        },
+        jest: {
+            version: require('jest/package.json').version
         }
     },
     rules: {
