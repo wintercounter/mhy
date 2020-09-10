@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.6](https://github.com/wintercounter/mhy/compare/v8.0.3...v8.0.6) (2020-09-10)
+
+
+### Bug Fixes
+
+* **eslint:** set correct jest version in eslint config ([7b0451f](https://github.com/wintercounter/mhy/commit/7b0451f457410846615186a61b8567ccacaa0fa3))
+
 ### [8.0.5](https://github.com/wintercounter/mhy/compare/v8.0.3...v8.0.5) (2020-09-10)
 
 ### [8.0.4](https://github.com/wintercounter/mhy/compare/v8.0.3...v8.0.4) (2020-09-04)

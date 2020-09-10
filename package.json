@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "8.0.5",
+    "version": "8.0.6",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
