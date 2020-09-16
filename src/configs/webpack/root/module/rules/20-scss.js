@@ -22,13 +22,15 @@ const getUse = (isModules = true) => [
         loader: require.resolve('postcss-loader'),
         options: {
             sourceMap: true,
-            plugins: [
-                require('postcss-import')(),
-                require('postcss-preset-env')({
-                    browsers: 'last 2 versions',
-                    autoprefixer: false
-                })
-            ]
+            postcssOptions: {
+                plugins: [
+                    require('postcss-import')(),
+                    require('postcss-preset-env')({
+                        browsers: 'last 2 versions',
+                        autoprefixer: false
+                    })
+                ]
+            }
         }
     },
     {
