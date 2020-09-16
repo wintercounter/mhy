@@ -11,12 +11,6 @@ const _onData = Symbol()
 const _onError = Symbol()
 const instances = new Set()
 
-export const loadEcosystem = (env = '') => {
-    const processes = {}
-    applyEntries(processes, path.join(__dirname, 'ecosystem', env), '**/*.js')
-    return processes
-}
-
 export const loadProcess = module => {
     const envs = ['root', ...process.env.MHY_ENVS.split(':')].reverse()
     let proc
@@ -111,7 +105,7 @@ export default class Process extends EventEmitter {
     }
 
     spawn(id, [bin, ...cmd], stdio, exitOnExit) {
-        stdio = stdio || (process.env.MHY_ENV === 'ui' ? 'pipe' : 'inherit')
+        stdio = stdio || 'inherit'
 
         if (process.env.MHY_VERBOSE) {
             console.log(`mhy verbose :: Command about to be run:`)
@@ -129,12 +123,9 @@ export default class Process extends EventEmitter {
         p.stderr && p.stderr.on('error', this[_onError])
         p.on && p.on('data', this[_onData])
         p.on && p.on('error', this[_onError])
+        p.on && signUpForExit(p, exitOnExit)
 
-        if (process.env.MHY_ENV === 'cli') {
-            p.on && signUpForExit(p, exitOnExit)
-        }
-
-        if (process.env.MHY_ENV === 'cli' && stdio === 'pipe') {
+        if (stdio === 'pipe') {
             this.on('data', d => console.log(d))
             this.on('err', d => console.error(d))
         }
@@ -155,25 +146,17 @@ export default class Process extends EventEmitter {
     }
 
     processLine(d) {
-        if (d.startsWith('mhy:ui:clear')) {
-            this.emit(process.env.MHY_UI_ACTION, process.env.MHY_UI_ACTION_CLEAR)
-            return ''
-        }
         return d
     }
 
     run(name, props = {}) {
         const action = this.actions.find(({ name: n }) => n === name)
-        this.emit(process.env.MHY_UI_ACTION, process.env.MHY_UI_ACTION_CLEAR)
-        this.log(`{blue-fg}Running action ${name}{/blue-fg}`)
         action.onRun(action, props)
     }
 
     async kill(name) {
         const { pid } = this.processes.get(name)
-        this.log(`{red-fg}Killing process ${name}{/red-fg}`)
         await new Promise(resolve => tk(pid, resolve))
-        this.log(`{green-fg}Action ${name} killed successfully{/green-fg}`)
     }
 
     async clean() {
@@ -183,7 +166,7 @@ export default class Process extends EventEmitter {
     }
 }
 
-// Cleanup handling (in case UI is used, it'll be caught there)
+// Cleanup handling
 const exit = async (err, isErr = false) => {
     err && isNaN(err) && console.log(err)
     process.stdin.resume()
@@ -192,17 +175,13 @@ const exit = async (err, isErr = false) => {
         await proc.clean()
     }
 
-    // If it's `ui` but it is not initalized yet then we need to catch
-    // initialization errors as CLI errors.
-    if (process.env.MHY_ENV === 'cli' || !process.env.MHY_UI_SUCCESS) {
-        if (!isNaN(err)) {
-            process.exit(err)
-        } else {
-            if (isErr) {
-                process.exit(1)
-            }
-            process.exit(0)
+    if (!isNaN(err)) {
+        process.exit(err)
+    } else {
+        if (isErr) {
+            process.exit(1)
         }
+        process.exit(0)
     }
 }
 

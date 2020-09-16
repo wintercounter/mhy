@@ -1,7 +1,6 @@
 # webpack-bundle-analyzer
 
 - Alias: `wba`
-- Environments: `root`
 
 ## Default command
 ```bash

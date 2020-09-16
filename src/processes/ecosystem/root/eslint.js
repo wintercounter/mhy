@@ -29,13 +29,6 @@ class Eslint extends Process {
             name: 'start',
             enabled: true,
             onRun: this.onStart
-        },
-        {
-            name: 'restart',
-            label: 'Restart',
-            shortcut: 'r',
-            enabled: true,
-            onRun: this.onRestart
         }
     ]
 }

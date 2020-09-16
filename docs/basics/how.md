@@ -10,8 +10,8 @@ supporting this method.
 
 1. Create an `src` folder in your project root.
 2. Create an `index.js` inside.
-3. Run the command: `mhy`
-4. Voila, you have `webpack-dev-server` \(and other tools\) running
+3. Run the command: `mhy wds`.
+4. Voila, you have `webpack-dev-server` running serving you file.
 
    without any `npm install` or dependency in your `package.json`
 

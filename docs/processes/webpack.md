@@ -1,7 +1,7 @@
 # webpack
 
 - Alias: `wp`
-- Usually ony used for generation production build. For development use `webpack-dev-server`.
+- Usually only used for generating production build. For development use `webpack-dev-server`.
 
 ## Default command
 ```bash

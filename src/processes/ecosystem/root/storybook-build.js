@@ -2,9 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import Process from '@/processes'
 
-const CmdStorybookStartCLI = ['node', require.resolve('@storybook/react/bin/index.js')]
+const CmdStorybookBuildCLI = ['node', require.resolve('@storybook/react/bin/build.js')]
 
-class StorybookStart extends Process {
+class StorybookBuild extends Process {
     constructor(args) {
         const storybookConfigPath = require.resolve('@/configs/storybook')
         const storybookConfig = require(storybookConfigPath)
@@ -13,13 +13,13 @@ class StorybookStart extends Process {
             '.storybook'
         )
         if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {
-            require('@/configs/babel/write')(babelRcPath)
+            require('@configs/babel/write')(babelRcPath)
         }
 
-        for (const [key, value] of Object.entries(storybookConfig.start)) {
+        for (const [key, value] of Object.entries(storybookConfig.build)) {
             if (value !== null) {
-                CmdStorybookStartCLI.push(`--${key}`)
-                CmdStorybookStartCLI.push(value)
+                CmdStorybookBuildCLI.push(`--${key}`)
+                CmdStorybookBuildCLI.push(value)
             }
         }
 
@@ -29,27 +29,15 @@ class StorybookStart extends Process {
         this.run(defaultAction, rest)
     }
 
-    onStart = ({ name }) => this.spawn(name, CmdStorybookStartCLI)
-
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
+    onStart = ({ name }, { flags = [] }) => this.spawn(name, [...CmdStorybookBuildCLI, ...flags])
 
     actions = [
         {
             name: 'start',
             enabled: true,
             onRun: this.onStart
-        },
-        {
-            name: 'restart',
-            label: 'Restart',
-            shortcut: 'r',
-            enabled: true,
-            onRun: this.onRestart
         }
     ]
 }
 
-export default () => StorybookStart
+export default () => StorybookBuild

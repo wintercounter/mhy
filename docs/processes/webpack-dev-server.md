@@ -1,8 +1,7 @@
 # webpack-dev-server
 
-- Environment: `development`
 - Alias: `wds`
-- Usually ony used for  development. For production builds use `webpack`.
+- Usually only used for development. For production builds use `webpack`.
 
 ## Default command
 ```bash

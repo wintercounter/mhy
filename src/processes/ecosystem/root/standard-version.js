@@ -13,11 +13,6 @@ class SV extends Process {
         this.spawn(name, getCmdSVCLI(flags))
     }
 
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
-
     actions = [
         {
             name: 'start',

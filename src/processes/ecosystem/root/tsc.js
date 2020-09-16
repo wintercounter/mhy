@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import stream from 'stream'
 import Process from '@/processes'
-import mhyConfig from '@/configs/mhy'
+import mhyConfig from '@configs/mhy'
 
 const getCmdTscCLI = flags => [
     'node',
@@ -17,7 +17,7 @@ const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
 class Tsc extends Process {
     constructor(args) {
         if (!fs.existsSync(tsconfigPath) || !require(tsconfigPath).outDir) {
-            require('@/configs/typescript/write')()
+            require('@configs/typescript/write')()
         }
 
         const { props: { defaultAction = 'start' } = {}, flags } = args
@@ -26,10 +26,6 @@ class Tsc extends Process {
     }
 
     onStart = ({ name }, { flags = [] }) => {
-        if (process.env.MHY_ENV === 'ui' && !flags.includes('-w') && !flags.includes('--watch')) {
-            flags.push('-w')
-        }
-
         this.spawn(name, getCmdTscCLI(flags), undefined, false).on('exit', () => {
             // use a Writable stream
             const customStream = new stream.Writable()
@@ -65,23 +61,11 @@ class Tsc extends Process {
         })
     }
 
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
-
     actions = [
         {
             name: 'start',
             enabled: true,
             onRun: this.onStart
-        },
-        {
-            name: 'restart',
-            label: 'Restart',
-            shortcut: 'r',
-            enabled: true,
-            onRun: this.onRestart
         }
     ]
 }

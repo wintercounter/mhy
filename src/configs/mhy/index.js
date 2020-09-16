@@ -59,8 +59,7 @@ const mhyConfig = loadConfig('mhy', {
             '@/mhy': pr(__dirname, '../../'), // dist
             mhy_modules: pr(__dirname, '../../../node_modules')
         }
-    },
-    ecosystem: ['webpack-dev-server', 'tsc', 'jest', 'storybook-start']
+    }
 })
 
 global.mhy = mhyConfig

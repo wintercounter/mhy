@@ -41,9 +41,4 @@ Example: `import Foo from '@/components/foo'`
 
 > Please note that previously aliases were provided for certain folders as `@components`. These are being **DEPRECATED** and should not be used. The new way is more flexible and avoids collision with NPM namespaces.
 
-### `ecosystem`
-
-The ecosystem you want to load when simply run `mhy` or `mhy ui`.
-
-Default: `['webpack-dev-server', 'tsc', 'jest', 'storybook-start']`
 

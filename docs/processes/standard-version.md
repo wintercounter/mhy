@@ -1,6 +1,5 @@
 # standard-version
 
-- Environment: `development`
 - Alias: `sv`
 
 ## Default command

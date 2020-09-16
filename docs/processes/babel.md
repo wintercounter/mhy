@@ -1,6 +1,5 @@
 # babel
 
-- Environment: `production`
 - Alias: `bb`
 - By default it uses the whole `src` directory.
 - By default it uses ES Modules (keeps import syntax) to enable better Webpack support and tree-shaking capabilities.

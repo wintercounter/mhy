@@ -9,7 +9,7 @@ const getPrettierCLICmd = args => {
 
     // It's a file/path, use that
     if (!pattern.length) {
-        pattern.push(`"${path.resolve(process.cwd(), 'src/**/*.{js,jsx,ts,tsx}')}"`)
+        pattern.push(`"${path.resolve(process.cwd(), 'src/**/*.{js,jsx,ts,tsx,css,scss,md,mdx}')}"`)
     }
     return [
         'node',
@@ -21,23 +21,9 @@ const getPrettierCLICmd = args => {
     ]
 }
 
-const getPrettierServeCLICmd = flags => [
-    'node',
-    require.resolve('chokidar-cli/index.js'),
-    `"src/**/*.js"`,
-    `"src/**/*.jsx"`,
-    `"src/**/*.ts"`,
-    `"src/**/*.tsx"`,
-    '-c',
-    `"${getPrettierCLICmd(flags, '{path}').join(' ')}"`,
-    '--initial',
-    '--ignore',
-    '"node_modules"'
-]
-
 class Prettier extends Process {
     get commandToUse() {
-        return process.env.MHY_ENV === 'ui' ? getPrettierServeCLICmd : getPrettierCLICmd
+        return getPrettierCLICmd
     }
 
     constructor(args) {
@@ -47,11 +33,6 @@ class Prettier extends Process {
     }
 
     onStart = ({ name }, args) => this.spawn(name, this.commandToUse(args))
-
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
 
     // Feature test only
     processLine(d) {
@@ -66,13 +47,6 @@ class Prettier extends Process {
             name: 'start',
             enabled: true,
             onRun: this.onStart
-        },
-        {
-            name: 'restart',
-            label: 'Restart',
-            shortcut: 'r',
-            enabled: true,
-            onRun: this.onRestart
         }
     ]
 }

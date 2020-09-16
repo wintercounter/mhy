@@ -19,23 +19,11 @@ class WDS extends Process {
         return this.spawn(name, getCmdWDSCLI(flags))
     }
 
-    onRestart = async () => {
-        await this.kill('start')
-        this.run('start')
-    }
-
     actions = [
         {
             name: 'start',
             enabled: true,
             onRun: this.onStart
-        },
-        {
-            name: 'restart',
-            label: 'Restart',
-            shortcut: 'r',
-            enabled: true,
-            onRun: this.onRestart
         }
     ]
 }

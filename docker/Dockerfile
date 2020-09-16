@@ -1,10 +1,11 @@
-FROM node:14-stretch-slim
+FROM node:14-alpine
 
-RUN apt-get update && apt-get install -y libtool automake autoconf nasm libpng-dev pkg-config python2.7 python-pip procps git
+RUN apk add --update libtool automake gcc autoconf nasm libpng-dev pkgconfig python2 py-pip procps git g++ libc6-compat libjpeg-turbo-dev make
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
+
 USER node
+
 RUN mkdir ~/.npm-global
 RUN npm i mhy@latest -g
-RUN chmod 0777 -R ~/.npm-global

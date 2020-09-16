@@ -1,8 +1,6 @@
 # eslint
 
-- Environment: `development`
-
-> Linting is done by Webpack also. You only need this process to manually run linting, or run it's `fix` command for example.
+> Linting is done by Webpack also in production mode. You only need this process to manually run linting, or run it's `fix` command for example.
 
 ## Default command
 ```bash
