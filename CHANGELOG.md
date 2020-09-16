@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.0](https://github.com/wintercounter/mhy/compare/v8.0.3...v9.0.0) (2020-09-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Docker:** this change results in smaller image file and removes and extra layer added by recursive CHMOD command
+* **ui+ecosystem:** these features are being removed because they're mostly unused and adds a lot of extra complexity; this is a first step to a major refactor cycle that's upcoming
+
+### Features
+
+* **Docker:** switch from base `stretch` to `alpine` ([5b23952](https://github.com/wintercounter/mhy/commit/5b23952ae23c527e8335d36ad723973e6ecb3d33))
+* **eslint:** make sure typescript config will be generated first in any case when necessary ([8fd73ad](https://github.com/wintercounter/mhy/commit/8fd73adc352c3721a0e2f9c192ef11558de759be))
+* **post-css:** make post-css loader configs compatible with latest postcss ([8c1e489](https://github.com/wintercounter/mhy/commit/8c1e48942322e43a30ca7ed9ee86da791b0d08a0))
+* **ui+ecosystem:** remove `ui` and `ecosystem` feature ([def3290](https://github.com/wintercounter/mhy/commit/def3290750f5b81f055494aa16c80343d654cecf))
+
+
+### Bug Fixes
+
+* **eslint:** set correct jest version in eslint config ([7b0451f](https://github.com/wintercounter/mhy/commit/7b0451f457410846615186a61b8567ccacaa0fa3))
+
 ### [8.0.6](https://github.com/wintercounter/mhy/compare/v8.0.3...v8.0.6) (2020-09-10)
 
 
