@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.0](https://github.com/wintercounter/mhy/compare/v9.0.0...v9.1.0) (2020-09-17)
+
+
+### Features
+
+* **Tooltip:** temporary react popper fix DAS-62 ([eb61cf5](https://github.com/wintercounter/mhy/commit/eb61cf57c20af3273650de8ff7cc8e73882bdf49))
+
+
+### Bug Fixes
+
+* proper type for SVG imports ([90311da](https://github.com/wintercounter/mhy/commit/90311dac32dbcb8ebbd33e5811d1efa02345953a))
+* remove old alias imports ([e890d03](https://github.com/wintercounter/mhy/commit/e890d03f036295f814a61764cd35afd09941555c))
+* svg types fix ([bdf2631](https://github.com/wintercounter/mhy/commit/bdf26317f24659393ae010865b2f609810cb79d2))
+
 ## [9.0.0](https://github.com/wintercounter/mhy/compare/v8.0.3...v9.0.0) (2020-09-16)
 
 
