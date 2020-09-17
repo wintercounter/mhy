@@ -13,7 +13,7 @@ const getJestCLICmd = flags => [
 class Jest extends Process {
     constructor(args) {
         const jestDir = path.dirname(require.resolve('@/configs/jest'))
-        require('@configs/babel/write')(jestDir)
+        require('@/configs/babel/write')(jestDir)
 
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

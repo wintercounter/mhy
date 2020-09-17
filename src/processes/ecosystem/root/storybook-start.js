@@ -13,7 +13,7 @@ class StorybookStart extends Process {
             '.storybook'
         )
         if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {
-            require('@configs/babel/write')(babelRcPath)
+            require('@/configs/babel/write')(babelRcPath)
         }
 
         for (const [key, value] of Object.entries(storybookConfig.start)) {

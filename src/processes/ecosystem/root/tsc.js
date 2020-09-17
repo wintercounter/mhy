@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import stream from 'stream'
 import Process from '@/processes'
-import mhyConfig from '@configs/mhy'
+import mhyConfig from '@/configs/mhy'
 
 const getCmdTscCLI = flags => [
     'node',
@@ -17,7 +17,7 @@ const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
 class Tsc extends Process {
     constructor(args) {
         if (!fs.existsSync(tsconfigPath) || !require(tsconfigPath).outDir) {
-            require('@configs/typescript/write')()
+            require('@/configs/typescript/write')()
         }
 
         const { props: { defaultAction = 'start' } = {}, flags } = args
