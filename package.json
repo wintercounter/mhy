@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "9.1.1",
+    "version": "9.1.2",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -336,7 +336,7 @@
         "react-helmet": "6.1.0",
         "react-hook-form": "^6.8.3",
         "react-hot-loader": "4.12.21",
-        "react-id-swiper": "^3.0.0",
+        "react-id-swiper": "^4.0.0",
         "react-intersection-observer": "8.28.5",
         "react-intl": "5.8.1",
         "react-popper": "2.2.3",
@@ -373,7 +373,7 @@
         "style-loader": "1.2.1",
         "styled-components": "5.2.0",
         "stylis": "^4.0.3",
-        "swiper": "^5.4.5",
+        "swiper": "^6.2.0",
         "symlink-dir": "4.1.0",
         "terser-webpack-plugin": "4.2.1",
         "tree-kill": "1.2.2",
