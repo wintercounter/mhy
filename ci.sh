@@ -25,6 +25,9 @@ mhy config babel -f json --mhy-env=prod
 npm pub
 check $?
 
+# Wait 2 minutes to make sure @latest is indeed the latest (npm caching is shit)
+sleep 120
+
 echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
 check $?
 
