@@ -8,7 +8,7 @@ declare module '*.scss' {
     export default content
 }
 
-interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+interface SvgrComponent extends React.FunctionComponent<React.SVGAttributes<SVGElement>> {}
 
 declare module '*.svg' {
     const content: any
@@ -54,3 +54,15 @@ declare module '*.png' {
 declare const shallow: any
 declare const render: any
 declare const mount: any
+
+declare const mhy: {
+    [key: string]: any
+    defaultIndexHtml: string
+    srcFolder: string
+    distFolder: string
+    buildFolder: string
+    defaultIgnoreList: string[]
+    defaultAliases: {
+        [key: string]: string
+    }
+}
