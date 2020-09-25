@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.1.4](https://github.com/wintercounter/mhy/compare/v9.1.0...v9.1.4) (2020-09-25)
+
+
+### Bug Fixes
+
+* **ci:** wait for correct version before creating docker image ([7077926](https://github.com/wintercounter/mhy/commit/70779261365490e5140b8f94513ece08b644f31e))
+* **storybook:** expose `mhy` config just like as normal Webpack does ([b636e27](https://github.com/wintercounter/mhy/commit/b636e27604d0c00a7a18490372b2304fd76e8c48))
+* **typescript:** add global type for exposed `mhy` config to avoid TS errors ([82c66d5](https://github.com/wintercounter/mhy/commit/82c66d557b40b75c1cfd078bb3f16e2db1703c39))
+
 ## [9.1.0](https://github.com/wintercounter/mhy/compare/v9.0.0...v9.1.0) (2020-09-17)
 
 
