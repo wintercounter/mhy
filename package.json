@@ -349,6 +349,8 @@
         "react-test-renderer": "16.13.1",
         "react-use": "15.3.4",
         "react-use-gesture": "7.0.16",
+        "react-query": "^2.23.0",
+        "react-query-devtools": "^2.5.0",
         "redux": "4.0.5",
         "redux-action": "1.2.2",
         "redux-devtools-extension": "2.13.8",
@@ -403,6 +405,7 @@
     },
     "devDependencies": {
         "all-contributors-cli": "6.17.4",
-        "conventional-github-releaser": "3.1.5"
+        "conventional-github-releaser": "3.1.5",
+        "miragejs": "^0.1.41"
     }
 }
