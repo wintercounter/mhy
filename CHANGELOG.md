@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.1.5](https://github.com/wintercounter/mhy/compare/v9.1.4...v9.1.5) (2020-10-06)
+
 ### [9.1.4](https://github.com/wintercounter/mhy/compare/v9.1.0...v9.1.4) (2020-09-25)
 
 
