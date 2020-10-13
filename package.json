@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "9.1.8",
+    "version": "9.1.9",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -266,7 +266,7 @@
         "fleg": "0.0.3",
         "flickity": "2.2.1",
         "formdata-polyfill": "3.0.20",
-        "framer-motion": "2.9.0",
+        "framer-motion": "2.9.1",
         "fs-extra": "9.0.1",
         "glob": "7.1.6",
         "graphql": "15.3.0",
