@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.2.0](https://github.com/wintercounter/mhy/compare/v9.1.9...v9.2.0) (2020-10-22)
+
+
+### Features
+
+* **subexports:** command to generate exports folders and files for sub packages ([be15e35](https://github.com/wintercounter/mhy/commit/be15e35eb064c1c605aa0d78e05bbae4605db323))
+
 ### [9.1.9](https://github.com/wintercounter/mhy/compare/v9.1.8...v9.1.9) (2020-10-13)
 
 ### [9.1.8](https://github.com/wintercounter/mhy/compare/v9.1.5...v9.1.8) (2020-10-12)
