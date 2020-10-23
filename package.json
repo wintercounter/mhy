@@ -1,5 +1,5 @@
 {
-    "name": "mhy",
+    "name": "mhyd",
     "version": "9.1.4",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
@@ -404,6 +404,8 @@
         "yargs": "16.0.3"
     },
     "devDependencies": {
+        "@types/algoliasearch": "^3.34.11",
+        "@types/react-query": "^1.1.2",
         "all-contributors-cli": "6.17.4",
         "conventional-github-releaser": "3.1.5",
         "miragejs": "^0.1.41"
