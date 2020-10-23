@@ -9,19 +9,13 @@ const commandHandler = () => {
 
     Object.entries(args)
         .filter(([pkg, options]) => {
-            const isExists = fse.existsSync(path.resolve(process.cwd(), options.main))
+            const isExists = fse.existsSync(path.resolve(process.cwd(), pkg, options.main))
             !isExists && console.error(`could not find dist for ${pkg} package`)
             return isExists
         })
         .forEach(([pkg, options]) => {
             const pkgFolder = path.resolve(process.cwd(), pkg)
-            const pkgSource = path.relative(pkgFolder, options.main)
-
-            const pkgExport = {
-                name: `${root}/${pkg}`,
-                main: pkgSource,
-                private: true
-            }
+            const pkgExport = { name: `${root}/${pkg}`, private: true, ...options }
 
             fse.ensureDirSync(pkgFolder)
             fse.writeJsonSync(path.join(pkgFolder, './package.json'), pkgExport)
