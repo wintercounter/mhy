@@ -1,10 +1,9 @@
 import path from 'path'
 import yargs from 'yargs'
 import fse from 'fs-extra'
-import { loadConfig } from '@/utils'
 
 const commandHandler = () => {
-    const args = loadConfig('subexports')
+    const args = require('@/configs/subexports')
     const root = fse.readJsonSync('./package.json').name
 
     Object.entries(args)
