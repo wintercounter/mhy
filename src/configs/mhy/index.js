@@ -3,7 +3,7 @@ import fs from 'fs'
 
 import { loadConfig } from '@/utils'
 
-const mhyConfig = loadConfig('mhy', {
+const defaults = {
     defaultIndexHtml: path.resolve(__dirname, '../..', 'resources', 'index.html'),
     get indexHtml() {
         const projectIndexHtml = path.resolve(process.cwd(), this.srcFolder, 'index.html')
@@ -57,10 +57,15 @@ const mhyConfig = loadConfig('mhy', {
         return {
             '@': pr(cwd, `${src}/`),
             '@/mhy': pr(__dirname, '../../'), // dist
-            mhy_modules: pr(__dirname, '../../../node_modules')
+            mhy_modules: pr(__dirname, '../../../node_modules'),
+            node_modules: pr(process.cwd(), '../../../node_modules')
         }
     }
-})
+}
+
+export const defaultKeys = Object.keys(defaults)
+
+const mhyConfig = loadConfig('mhy', defaults)
 
 global.mhy = mhyConfig
 

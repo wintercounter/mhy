@@ -1,12 +1,19 @@
 import Process from '@/processes'
 
-const getCmdWebpackCLI = flags => [
-    'node',
-    require.resolve('webpack-cli/bin/cli.js'),
-    '--config',
-    require.resolve('@/configs/webpack'),
-    ...flags
-]
+const getCmdWebpackCLI = _flags => {
+    const [tools, flags] = _flags.reduce((acc, flag) => {
+        acc[flag.startsWith('-') ? 1 : 0].push(flag)
+        return acc
+    } , [[], []])
+    return [
+        'node',
+        require.resolve('webpack-cli/bin/cli.js'),
+        ...tools,
+        '--config',
+        require.resolve('@/configs/webpack'),
+        ...flags
+    ]
+}
 
 class Webpack extends Process {
     constructor(args) {

@@ -9,9 +9,6 @@ export default rules => {
                     u.options.sassOptions.sourceMap = false
                     u.options.sourceMap = false
                 }
-                if (u.loader && u.loader.includes('postcss-loader')) {
-                    u.options.sourceMap = false
-                }
             })
     })
     return rules

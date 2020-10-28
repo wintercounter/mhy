@@ -2,13 +2,13 @@ export default rules => [
     ...rules,
     {
         test: /\.(gif|png|jpe?g)$/i,
-        loaders: [
+        use: [
             {
                 loader: require.resolve('file-loader'),
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
-                    name: '[name].[hash].[ext]',
+                    name: '[name].[contenthash].[ext]',
                     esModule: false
                 }
             },
@@ -38,12 +38,12 @@ export default rules => [
             {
                 loader: require.resolve('url-loader'),
                 options: {
-                    limit: 65000,	
-                    mimetype: 'image/svg+xml',	
-                    name: '[name].[ext]',	
+                    limit: 65000,
+                    mimetype: 'image/svg+xml',
+                    name: '[name].[ext]',
                     esModule: false
                 }
-            },
+            }
         ]
-    },
+    }
 ]

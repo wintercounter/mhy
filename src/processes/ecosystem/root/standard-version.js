@@ -1,8 +1,10 @@
 import Process from '@/processes'
 
-const getCmdSVCLI = flags => ['node', require.resolve('standard-version/bin/cli.js'), ...flags]
+const getCmdStandardVersionCLI = flags => {
+    return ['node', require.resolve('standard-version/bin/cli.js'), ...flags]
+}
 
-class SV extends Process {
+class StandardVersion extends Process {
     constructor(args) {
         const { props: { defaultAction = 'start' } = {}, flags } = args
         super(args)
@@ -10,7 +12,7 @@ class SV extends Process {
     }
 
     onStart = ({ name }, { flags = [] }) => {
-        this.spawn(name, getCmdSVCLI(flags))
+        this.spawn(name, getCmdStandardVersionCLI(flags))
     }
 
     actions = [
@@ -22,4 +24,4 @@ class SV extends Process {
     ]
 }
 
-export default () => SV
+export default () => StandardVersion

@@ -35,6 +35,10 @@ const defaults = {
         }
     },
     rules: {
+        // React v17+ rules
+        'react/jsx-uses-react': 0,
+        'react/react-in-jsx-scope': 0,
+
         'react/jsx-pascal-case': 0,
         'jsx-a11y/media-has-caption': 0,
         'jsx-a11y/click-events-have-key-events': 0,
@@ -53,7 +57,6 @@ const defaults = {
         'jest/no-identical-title': 'error',
         'jest/valid-expect': 'error',
 
-        'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -67,6 +70,7 @@ const defaults = {
         'import/no-extraneous-dependencies': 0,
         'import/no-named-as-default': 0,
         'import/extensions': 0,
+        'import/prefer-default-export': 0,
 
         'comma-dangle': [2, 'never'],
         'no-cond-assign': [0, 'always'],
@@ -242,6 +246,8 @@ if (fs.existsSync(tsconfigPath)) {
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/ban-ts-ignore': 0,
         '@typescript-eslint/no-empty-function': 0,
+        '@typescript-eslint/interface-name-prefix': 0,
+
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 
         // Conflicting

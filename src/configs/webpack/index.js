@@ -1,6 +1,8 @@
 import { loadConfig } from '@/utils'
 
-process.env.WEBPACK_DEV_SERVER = process.argv.find(v => v.includes('webpack-dev-server'))
+if (process.argv.find(v => v === 'serve')) {
+    process.env.WEBPACK_DEV_SERVER = 'yes'
+}
 
 let webpackConfig = loadConfig('webpack', {})
 

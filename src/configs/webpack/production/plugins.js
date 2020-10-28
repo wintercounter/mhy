@@ -1,5 +1,6 @@
 import mhyConfig from '@/configs/mhy'
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 
 export default (plugins = []) =>
     [
@@ -16,7 +17,9 @@ export default (plugins = []) =>
                 keepClosingSlash: true,
                 minifyJS: true,
                 minifyCSS: true,
-                minifyURLs: true
+                minifyURLs: true,
+                inlineSource: 'app\\.chunk[0|1]\\.|runtime|.css$'
             }
-        })
+        }),
+        new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin)
     ].concat(plugins)

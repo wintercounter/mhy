@@ -11,7 +11,12 @@ export default (defaults = []) => [
             modules: false
         }
     ],
-    [require.resolve('@babel/preset-react'), {}],
+    [
+        require.resolve('@babel/preset-react'),
+        {
+            runtime: 'automatic'
+        }
+    ],
     [
         require.resolve('@babel/preset-typescript'),
         {

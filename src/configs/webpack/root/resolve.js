@@ -19,7 +19,7 @@ if (process.env.WEBPACK_DEV_SERVER) {
 
 export default ({ alias } = {}) => {
     return {
-        extensions: ['.js', '.mjs', '.jsx', '.css', '.scss', '.ts', '.tsx', '.json'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.sass', '.json', '.mdx', '.mjs'],
         modules: Array.from(
             new Set([path.resolve(__dirname, '../../../../node_modules'), path.resolve(process.cwd(), 'node_modules')])
         ),
