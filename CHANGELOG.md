@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/wintercounter/mhy/compare/v9.1.9...v10.0.0) (2020-10-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Webpack 5 support required a lot of changes but it also enabled many improvements
+- `mhy wds` is removed, please use `mhy wp serve` from now on for devServer;
+- CSS extraction and minification will be done automatically from now on, it's turned on for development as well to avoid dev/production differences and help identify issues
+- `webpack-manifest-plugin` and `pwa-manifest-plugin` are temporarily disabled due to no WP5 support yet
+- React fast-refresh is supported out of the box, and it's amazing
+- Single runtime entries are currently not supported due to a mini-css-extract-plugin bug
+- using `auto: true` for CSS module detection allowed us to remove the use of 2 separate loader rules for CSS
+- automatic runtime (jsx helper) support for Babel React
+
+### Features
+
+* **subexports:** add new feature ([b7dc1a3](https://github.com/wintercounter/mhy/commit/b7dc1a3c991b4d9a436b7b57dea303b35ba0cf41))
+* reduce dependencies and simply file creation ([811d239](https://github.com/wintercounter/mhy/commit/811d23953bc0e390e901a8407d03ba64eeddc77a))
+* subexports config loading ([8525211](https://github.com/wintercounter/mhy/commit/8525211e00ea7ad036fb1508a8c5699afb9986c4))
+* Webpack 5 support ([ae1dafe](https://github.com/wintercounter/mhy/commit/ae1dafe9d353e05cdbb08ae50fa039f081a928ed))
+* **subexports:** command to generate exports folders and files for sub packages ([be15e35](https://github.com/wintercounter/mhy/commit/be15e35eb064c1c605aa0d78e05bbae4605db323))
+
+
+### Bug Fixes
+
+* **templates:** update them to work with latest changes ([0734c8b](https://github.com/wintercounter/mhy/commit/0734c8bdb624c7af590a4b70eddd209c523760ee))
+
 ## [9.2.0](https://github.com/wintercounter/mhy/compare/v9.1.9...v9.2.0) (2020-10-22)
 
 
