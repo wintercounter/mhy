@@ -1,18 +1,16 @@
 import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { header, active } from './styles.scss'
-
-const ACTIVE_CLASSNAME = active
+import styles from './styles.module.scss'
 
 const renderNavLink = (to, text) => (
-    <NavLink to={to} activeClassName={ACTIVE_CLASSNAME} exact>
+    <NavLink to={to} activeClassName={styles.active} exact>
         {text}
     </NavLink>
 )
 
 const Header = memo(() => (
-    <header className={header}>
+    <header className={styles.header}>
         {renderNavLink('/', 'Characters')}
         {renderNavLink('/episodes', 'Episodes')}
     </header>

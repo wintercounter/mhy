@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { Character, IntersectionObserver, Loader } from '@/components'
 import { Characters as CharactersEntity } from '@/entities'
-import { pageHeader } from './styles.scss'
+import styles from './styles.module.scss'
 
 const Ul = styled.ul`
     margin: 0;
@@ -65,7 +65,7 @@ export class Characters extends PureComponent {
         } = this.props
         return (
             <>
-                <h1 className={pageHeader}>Characters page</h1>
+                <h1 className={styles.pageHeader}>Characters page</h1>
                 <Ul>{allIds.map(this.renderCharacter)}</Ul>
                 <IntersectionObserver onIn={this.fetch}>
                     <Loader visible={isLoading} />

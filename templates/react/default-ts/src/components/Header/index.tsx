@@ -1,7 +1,7 @@
 import React, { memo, FC } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import styles from './styles.scss'
+import styles from './styles.module.scss'
 
 const renderNavLink = (to, text) => (
     <NavLink to={to} activeClassName={styles.active}>

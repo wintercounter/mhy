@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
 import { Header } from '@/components'
-import styles from './styles.scss'
+import styles from './styles.module.scss'
 
 const Index = memo(({ children }) => (
     <main className={styles.main}>

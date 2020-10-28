@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Episode, IntersectionObserver, Loader } from '@/components'
 import { Episodes as EpisodesEntity } from '@/entities'
-import styles from './styles.scss'
+import styles from './styles.module.scss'
 
 const Ul = styled.ul`
     margin: 0;

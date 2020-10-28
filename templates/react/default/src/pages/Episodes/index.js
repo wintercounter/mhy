@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { Episode, IntersectionObserver, Loader } from '@/components'
 import { Episodes as EpisodesEntity } from '@/entities'
-import { pageHeader } from './styles.scss'
+import styles from './styles.module.scss'
 
 const Ul = styled.ul`
     margin: 0;
@@ -54,7 +54,7 @@ export class Episodes extends PureComponent {
         } = this.props
         return (
             <>
-                <h1 className={pageHeader}>Episodes page</h1>
+                <h1 className={styles.pageHeader}>Episodes page</h1>
                 <Ul>{allIds.map(this.renderEpisode)}</Ul>
                 <IntersectionObserver onIn={this.fetch}>
                     <Loader visible={isLoading} />

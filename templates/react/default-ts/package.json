@@ -6,20 +6,8 @@
   "scripts": {
     "test": "mhy jest",
     "start": "mhy",
-    "build": "mhy wp --mhy-prod"
+    "build": "mhy wp --mhy-env=prod"
   },
   "author": "",
-  "license": "MIT",
-  "mhy": {
-    "mhy": {
-      "root": {
-        "ecosystem": {
-          "$replace": [
-            "webpack-dev-server",
-            "jest"
-          ]
-        }
-      }
-    }
-  }
+  "license": "MIT"
 }
