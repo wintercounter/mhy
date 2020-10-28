@@ -1,7 +1,7 @@
 # webpack
 
 - Alias: `wp`
-- Usually only used for generating production build. For development use `webpack-dev-server`.
+- For development use `mhy wp serve`
 
 ## Default command
 ```bash
@@ -18,6 +18,8 @@ https://webpack.js.org/api/cli/
 mhy webpack
 # or
 mhy wp
+# or dev server
+mhy wp serve
 ```
 
 ### In `production` mode
