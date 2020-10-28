@@ -248,6 +248,7 @@ if (fs.existsSync(tsconfigPath)) {
         '@typescript-eslint/no-empty-function': 0,
         '@typescript-eslint/interface-name-prefix': 0,
         '@typescript-eslint/ban-ts-comment': 0,
+        '@typescript-eslint/explicit-module-boundary-types': 0,
 
         'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
 

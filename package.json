@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "10.0.1",
+    "version": "10.0.2",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -239,7 +239,7 @@
         "eslint": "7.12.1",
         "eslint-config-airbnb": "18.2.0",
         "eslint-config-prettier": "6.15.0",
-        "eslint-global-patch": "1.0.4",
+        "eslint-global-patch": "^7.12.1",
         "eslint-loader": "4.0.2",
         "eslint-plugin-babel": "5.3.1",
         "eslint-plugin-import": "2.22.1",
@@ -372,7 +372,7 @@
         "stylis": "4.0.3",
         "swiper": "6.3.4",
         "symlink-dir": "4.1.0",
-        "terser-webpack-plugin": "5.0.2",
+        "terser-webpack-plugin": "5.0.3",
         "tree-kill": "1.2.2",
         "true-case-path": "2.2.1",
         "tscpaths": "0.0.9",
