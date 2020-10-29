@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "10.0.2",
+    "version": "10.0.3",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -317,13 +317,13 @@
         "promisify-child-process": "4.1.1",
         "prop-types": "15.7.2",
         "qs": "6.9.4",
-        "react": "17.0.1",
+        "react": "^16.13.1",
         "react-apollo": "3.1.5",
         "react-countdown": "2.3.1",
         "react-dev-utils": "11.0.0",
         "react-devtools-core": "4.9.0",
         "react-div-100vh": "^0.5.6",
-        "react-dom": "17.0.1",
+        "react-dom": "^16.13.1",
         "react-final-form": "6.5.2",
         "react-flickity-component": "3.5.0",
         "react-gtm-module": "2.0.11",

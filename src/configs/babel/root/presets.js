@@ -14,7 +14,7 @@ export default (defaults = []) => [
     [
         require.resolve('@babel/preset-react'),
         {
-            runtime: 'automatic'
+            // runtime: 'automatic'
         }
     ],
     [
