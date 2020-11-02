@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:15-alpine
 
 RUN apk add --update libtool automake gcc autoconf nasm libpng-dev pkgconfig python2 py-pip procps git g++ libc6-compat libjpeg-turbo-dev make
 
@@ -7,5 +7,4 @@ ENV PATH=$PATH:/home/node/.npm-global/bin
 
 USER node
 
-RUN mkdir ~/.npm-global
-RUN npm i mhy@latest -g
+RUN mkdir ~/.npm-global && mkdir ~/.npm-global/lib && npm i npm@latest -g && npm i mhy@latest -g --legacy-peer-deps
