@@ -32,6 +32,11 @@ const defaults = {
             compilers: [createCompiler({})]
         }
 
+        // Storybook doesnt need mini css extract
+        config.module.rules.find(({ test }) => test.toString().includes('css')).use[0].loader = require.resolve(
+            'style-loader'
+        )
+
         config.module.rules.push({
             test: /\.(stories|story|book)\.[tj]sx?$/,
             loader: require.resolve('@storybook/source-loader'),
