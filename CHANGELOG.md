@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.1.0](https://github.com/wintercounter/mhy/compare/v10.0.0...v10.1.0) (2020-11-02)
+
+
+### Features
+
+* **Docker:** Node v15 base ([b0e8884](https://github.com/wintercounter/mhy/commit/b0e88848c50f2ebd91c922440fd91e63afaaa1b1))
+
+
+### Bug Fixes
+
+* Storybook doesn't need MiniCSSExtractLoader ([48ef46e](https://github.com/wintercounter/mhy/commit/48ef46e5b9e6b696417695dbd8c53b95eaa736b7))
+* **eslint:** add missing `@typescript-eslint/ban-ts-comment` rule ([7315504](https://github.com/wintercounter/mhy/commit/7315504ced55f5ee766f55227c7836c60c9ef7a4))
+* **eslint:** update global-patch ([cef23a8](https://github.com/wintercounter/mhy/commit/cef23a8b7cb8ef7711d8f51b03115770af0ffbf7))
+
 ## [10.0.0](https://github.com/wintercounter/mhy/compare/v9.1.9...v10.0.0) (2020-10-28)
 
 
