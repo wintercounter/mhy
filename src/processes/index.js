@@ -138,7 +138,8 @@ export default class Process extends EventEmitter {
     }
 
     log(d, type = 'data') {
-        this.emit(type, this.processLine(d))
+        const line = this.processLine(d)
+        line && this.emit(type, this.processLine(line))
     }
 
     [_onError] = line => {

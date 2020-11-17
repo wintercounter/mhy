@@ -1,6 +1,7 @@
 import path from 'path'
+import fs from 'fs-extra'
 import copyDir from 'copy-dir'
-import Process from '@/processes/index'
+import Process from '@/processes'
 import mhyConfig from '@/configs/mhy'
 
 const getCmdBabelCLI = (flags = []) => [
@@ -30,7 +31,64 @@ class Babel extends Process {
 
     onStart = ({ name }, { flags }) => {
         this.spawn(name, getCmdBabelCLI(flags), 'pipe')
-        this.on('data', handleCompileSuccess)
+        this.on('data', line => {
+            if (!line.includes('Successfully')) return
+
+            copyDir.sync(path.resolve(process.cwd(), mhyConfig.srcFolder), path.resolve(process.cwd(), mhyConfig.distFolder), {
+                cover: false,
+                mode: true,
+                filter: function (stat, filepath) {
+                    if (stat === 'file') {
+                        if (filepath.endsWith('.d.ts')) {
+                            return true
+                        }
+                        if (
+                            filepath.endsWith('ts') ||
+                            filepath.endsWith('tsx') ||
+                            filepath.endsWith('js') ||
+                            filepath.endsWith('jsx')
+                        ) {
+                            return false
+                        }
+                        return true
+                    }
+                    return true
+                }
+            })
+
+            const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
+            if (!fs.existsSync(tsconfigPath)) {
+                return
+            }
+
+            // Fix tsc paths
+            const p = this.spawn(
+                'fix_tsc_path',
+                [
+                    'node',
+                    require.resolve('tscpaths/cjs/index.js'),
+                    '-p',
+                    tsconfigPath,
+                    '-s',
+                    mhyConfig.srcFolder,
+                    '-o',
+                    mhyConfig.distFolder
+                ],
+                ['pipe', 'pipe', 'pipe'],
+                false
+            )
+        })
+    }
+
+    processLine(line) {
+        if (
+            line &&
+            !line.includes('could not replace') &&
+            !line.includes('tscpaths') &&
+            !line.includes('Replaced 0 paths')
+        ) {
+            return line
+        }
     }
 
     actions = [
@@ -40,32 +98,6 @@ class Babel extends Process {
             onRun: this.onStart
         }
     ]
-}
-
-const handleCompileSuccess = line => {
-    if (!line.includes('Successfully')) return
-
-    copyDir.sync(path.resolve(process.cwd(), mhyConfig.srcFolder), path.resolve(process.cwd(), mhyConfig.distFolder), {
-        cover: false,
-        mode: true,
-        filter: function (stat, filepath) {
-            if (stat === 'file') {
-                if (filepath.endsWith('.d.ts')) {
-                    return true
-                }
-                if (
-                    filepath.endsWith('ts') ||
-                    filepath.endsWith('tsx') ||
-                    filepath.endsWith('js') ||
-                    filepath.endsWith('jsx')
-                ) {
-                    return false
-                }
-                return true
-            }
-            return true
-        }
-    })
 }
 
 const getBabel = () => Babel
