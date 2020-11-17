@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.2.0](https://github.com/wintercounter/mhy/compare/v10.1.0...v10.2.0) (2020-11-17)
+
+
+### Features
+
+* **babel+ts:** babel process will now resolve aliases in d.ts files inside dist folder ([86f44ae](https://github.com/wintercounter/mhy/commit/86f44ae5234aa24b2e31762bd50912aa35e124bb))
+
 ## [10.1.0](https://github.com/wintercounter/mhy/compare/v10.0.0...v10.1.0) (2020-11-02)
 
 
