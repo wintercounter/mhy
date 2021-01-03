@@ -30,7 +30,7 @@ class Babel extends Process {
     }
 
     onStart = ({ name }, { flags }) => {
-        this.spawn(name, getCmdBabelCLI(flags), 'pipe')
+        this.spawn(name, getCmdBabelCLI(flags), 'pipe', false)
         this.on('data', line => {
             if (!line.includes('Successfully')) return
 
