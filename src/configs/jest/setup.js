@@ -1,6 +1,6 @@
 import Enzyme, { shallow, render, mount } from 'enzyme'
 import 'jest-enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 import 'jest-canvas-mock'
 import 'jest-date-mock'
 import 'jest-styled-components'
