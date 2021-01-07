@@ -1,6 +1,6 @@
 import path from 'path'
 import yargs from 'yargs'
-import { buildMhyArgv, loadProcess } from '@/processes'
+import { loadProcess } from '@/processes'
 
 const filterDeps = d => !d.includes('eslint') && !d.includes('!')
 const printDependencyList = (list, emptyMsg = 'No results!') => {
@@ -15,13 +15,14 @@ const printDependencyList = (list, emptyMsg = 'No results!') => {
     }
 }
 
-const commandHandler = async ({ tool, prop, ...argv }) => {
+const commandHandler = async ({ tool, prop }) => {
     switch (tool) {
         case 'collect': {
             const { dependencies: _dependencies } = require(path.resolve(__dirname, '../../../package.json'))
             const packageJSON = require(path.resolve(process.cwd(), 'package.json'))
             const { dependencies = {} } = packageJSON
-            const { defaultIgnoreList, buildFolder, distFolder } = require('@/configs/mhy')
+            const r = require('@/configs/mhy')
+            const { defaultIgnoreList, buildFolder, distFolder } = r.default || r
             const options = {
                 ignoreDirs: [...defaultIgnoreList, buildFolder, distFolder]
             }
