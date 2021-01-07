@@ -39,6 +39,10 @@ const defaults = {
         'react/jsx-uses-react': 0,
         'react/react-in-jsx-scope': 0,
 
+        // Meh
+        'prefer-arrow-callback': 0,
+        'arrow-body-style': 0,
+
         'react/jsx-pascal-case': 0,
         'jsx-a11y/media-has-caption': 0,
         'jsx-a11y/click-events-have-key-events': 0,
