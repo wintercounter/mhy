@@ -9,7 +9,8 @@ const commandHandler = () => {
     Object.entries(args)
         .filter(([pkg, options]) => {
             const isExists = fse.existsSync(path.resolve(process.cwd(), pkg, options.main))
-            !isExists && console.error(`could not find dist for ${pkg} package`)
+            !isExists && console.error(`Could not find dist for ${pkg} package`)
+            process.exit(1)
             return isExists
         })
         .forEach(([pkg, options]) => {
