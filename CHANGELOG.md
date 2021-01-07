@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.3.0](https://github.com/wintercounter/mhy/compare/v10.2.3...v10.3.0) (2021-01-07)
+
+
+### Features
+
+* **subexports:** add support for `force` flag ([557b686](https://github.com/wintercounter/mhy/commit/557b686937847832bc8d78a2dcb34f6535c923c8))
+
+
+### Bug Fixes
+
+* **dep:** require interop ([e0bd0a8](https://github.com/wintercounter/mhy/commit/e0bd0a8343e8ad15e4d5615205b5cc8c1faff968))
+* **enzyme:** react 17 support ([9e5ed12](https://github.com/wintercounter/mhy/commit/9e5ed12457ddb22d77284964e90ffde517d0e279))
+* **eslint:** disable new arrow function rules ([3879f0b](https://github.com/wintercounter/mhy/commit/3879f0bf74066247b8b33535653bb7bc664446fd))
+* **subexports:** correct exit code when it couldn't find a file ([44dbdbd](https://github.com/wintercounter/mhy/commit/44dbdbddbc63c508f67aa466361e7936f8ea68f4))
+
 ### [10.2.3](https://github.com/wintercounter/mhy/compare/v10.2.2...v10.2.3) (2021-01-03)
 
 ### [10.2.2](https://github.com/wintercounter/mhy/compare/v10.2.1...v10.2.2) (2020-12-09)
