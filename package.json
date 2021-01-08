@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "10.3.1",
+    "version": "10.3.2",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -181,6 +181,7 @@
         "@w11r/use-breakpoint": "1.8.0",
         "@webpack-cli/serve": "^1.2.1",
         "@welldone-software/why-did-you-render": "6.0.5",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
         "acorn": "8.0.4",
         "algoliasearch": "4.8.3",
         "animejs": "3.2.1",
