@@ -352,6 +352,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 -   **dependencies:** This update contains the following packages with new major version:
 
+
 *   prettier
 *   graphql
 *   react-popper
