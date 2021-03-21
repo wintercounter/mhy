@@ -16,7 +16,6 @@ babelConfig.presets.find(p => p[0].includes('preset-env'))[1] = {
     modules: 'commonjs',
     targets: {
         node: true,
-        browsers: false,
         esmodules: true
     }
 }

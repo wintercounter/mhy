@@ -70,7 +70,6 @@
                                             "targets": {
                                                 "$replace": {
                                                     "node": true,
-                                                    "browsers": false,
                                                     "esmodules": true
                                                 }
                                             }

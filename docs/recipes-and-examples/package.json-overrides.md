@@ -39,7 +39,6 @@ All samples should be placed inside `{ "mhy": { HERE } }` in your `package.json`
                   "modules": "commonjs",
                   "targets": {
                     "node": true,
-                    "browsers": false,
                     "esmodules": true
                   }
                 }
