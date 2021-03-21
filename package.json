@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "11.0.0",
+    "version": "11.0.1",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -92,7 +92,6 @@
     },
     "dependencies": {
         "@apollo/client": "3.3.12",
-        "@apollo/react-ssr": "4.0.0",
         "@apollo/react-testing": "4.0.0",
         "@babel/cli": "7.13.10",
         "@babel/core": "7.13.10",
