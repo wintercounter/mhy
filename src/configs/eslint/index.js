@@ -23,7 +23,7 @@ const defaults = {
     parser: 'babel-eslint',
     plugins: ['react', 'react-hooks', 'jest'],
     extends: [
-        ...['eslint-config-airbnb', 'eslint-config-prettier', 'eslint-config-prettier/react'].map(require.resolve),
+        ...['eslint-config-airbnb', 'eslint-config-prettier'].map(require.resolve),
         'plugin:jest/recommended'
     ],
     settings: {
@@ -242,7 +242,6 @@ if (fs.existsSync(tsconfigPath)) {
     defaults.parserOptions.projects = [tsconfigPath]
     defaults.plugins.push('@typescript-eslint')
     defaults.extends.push('plugin:@typescript-eslint/recommended')
-    defaults.extends.push(require.resolve('eslint-config-prettier/@typescript-eslint'))
     defaults.rules = {
         ...defaults.rules,
 
