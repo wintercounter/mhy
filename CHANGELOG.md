@@ -8,18 +8,12 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * move to NPM v7 support ([fd84148](https://github.com/wintercounter/mhy/commit/fd8414814b8781848eed9f4c7e9465300b95ee61))
-* **subexports:** add support for `force` flag ([557b686](https://github.com/wintercounter/mhy/commit/557b686937847832bc8d78a2dcb34f6535c923c8))
-
 
 ### Bug Fixes
 
 * **eslint:** update to new `eslint-config-prettier` usage ([d05a412](https://github.com/wintercounter/mhy/commit/d05a4122eceaa17ff132f7b9b2998ff9e6ce184a))
 * remove obsolete dep `@apollo/react-ssr` ([da0eb8b](https://github.com/wintercounter/mhy/commit/da0eb8bcdc9a4d33fc098d21b4a0f4736207e71e))
 * **babel:** remove `browsers: false` from preset config as it's no longer valid ([c87f0f3](https://github.com/wintercounter/mhy/commit/c87f0f3088e4045bf870d6174c1a1260043a34ba))
-* **dep:** require interop ([e0bd0a8](https://github.com/wintercounter/mhy/commit/e0bd0a8343e8ad15e4d5615205b5cc8c1faff968))
-* **enzyme:** react 17 support ([9e5ed12](https://github.com/wintercounter/mhy/commit/9e5ed12457ddb22d77284964e90ffde517d0e279))
-* **eslint:** disable new arrow function rules ([3879f0b](https://github.com/wintercounter/mhy/commit/3879f0bf74066247b8b33535653bb7bc664446fd))
-* **subexports:** correct exit code when it couldn't find a file ([44dbdbd](https://github.com/wintercounter/mhy/commit/44dbdbddbc63c508f67aa466361e7936f8ea68f4))
 
 ## [10.3.0](https://github.com/wintercounter/mhy/compare/v10.2.3...v10.3.0) (2021-01-07)
 
