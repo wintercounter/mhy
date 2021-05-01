@@ -6,7 +6,6 @@ export default () => ({
     minimize: true,
     minimizer: [
         new CSSMinimizerWebpackPlugin({
-            sourceMap: true,
             test: /\.css$/g,
             minify: data => {
                 const [[filename, input]] = Object.entries(data)

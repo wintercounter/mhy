@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "11.1.1",
+    "version": "11.1.2",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -369,7 +369,9 @@
         "transformed": "^1.1.4",
         "tree-kill": "1.2.2",
         "true-case-path": "2.2.1",
+        "ts-invariant": "^0.5.0",
         "tscpaths": "0.0.9",
+        "tslib": "^2.1.0",
         "typescript": "4.2.4",
         "url-loader": "4.1.1",
         "url-search-params-polyfill": "8.1.1",
