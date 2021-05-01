@@ -12,9 +12,10 @@ export default () => ({
                 const [[filename, input]] = Object.entries(data)
                 // cssnano will remove duplicates
                 return (
-                    require('cssnano')
+                    require('cssnano')({
+                        preset: ['default', { discardComments: { removeAll: true } }],
+                    })
                         .process(input, {
-                            preset: ['default', { discardComments: { removeAll: true } }],
                             from: filename
                         })
                         // mqpacker will merge media queries and moves to the end
