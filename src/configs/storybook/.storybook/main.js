@@ -22,7 +22,11 @@ const baseWebpackConfig = config => {
 }
 
 const storiesGlob = `${srcPath.replace(/\\/g, '/')}/**/*@(story|stories|book).@(ts|tsx|js|jsx|mdx)`
+
 const defaults = {
+    core: {
+        builder: 'webpack5'
+    },
     stories: [storiesGlob],
     managerWebpack: baseWebpackConfig,
     webpackFinal: config => {
@@ -33,9 +37,8 @@ const defaults = {
         }
 
         // Storybook doesnt need mini css extract
-        config.module.rules.find(({ test }) => test.toString().includes('css')).use[0].loader = require.resolve(
-            'style-loader'
-        )
+        config.module.rules.find(({ test }) => test.toString().includes('css')).use[0].loader =
+            require.resolve('style-loader')
 
         config.module.rules.push({
             test: /\.(stories|story|book)\.[tj]sx?$/,
@@ -46,7 +49,6 @@ const defaults = {
         return config
     },
     addons: [
-        '@storybook/addon-notes',
         '@storybook/addon-viewport',
         {
             name: '@storybook/addon-docs',
@@ -59,9 +61,13 @@ const defaults = {
 }
 
 // Import setup files
+const LoadedModules = new WeakSet()
 const importAll = r =>
     r.keys().forEach(m => {
         const d = r(m)
+        if (LoadedModules.has(d)) return
+        LoadedModules.add(d)
+
         const fn = d.default || d
 
         if (isFunction(fn)) {

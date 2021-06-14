@@ -1,9 +1,7 @@
 // Addons commented out does not need to be registered
 import '@storybook/addon-knobs/register'
-// import '@storybook/addon-notes/register'
 import '@storybook/addon-actions/register'
 import '@storybook/addon-events/register'
-//import '@storybook/addon-graphql/register'
 import '@storybook/addon-links/register'
 
 import { themes } from '@storybook/theming/create'

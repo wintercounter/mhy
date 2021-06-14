@@ -9,7 +9,7 @@ module._StorybookPreserveDecorators = true
 export const parameters = {}
 
 addons.setConfig({
-    options: {
+    sidebar: {
         showRoots: true
     }
 })
@@ -19,8 +19,13 @@ export const decorators = [withKnobs, StoryRouter()]
 export const globalTypes = {}
 
 // Import setup files
+const LoadedModules = new WeakSet()
 const importAll = r =>
     r.keys().forEach(m => {
+        const d = r(m)
+        if (LoadedModules.has(d)) return
+        LoadedModules.add(d)
+
         const mod = r(m)
 
         if (isFunction(mod.parameters)) {
