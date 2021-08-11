@@ -26,9 +26,8 @@ export default () => ({
                         })
                         .then(result => {
                             return {
-                                css: result.css,
-                                map: result.map,
-                                warnings: result.warnings()
+                                code: result.css,
+                                map: result.map
                             }
                         })
                 )

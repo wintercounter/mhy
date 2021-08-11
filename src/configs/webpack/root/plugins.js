@@ -40,7 +40,10 @@ export default (plugins = []) => {
             fileName: './manifest.webpack.json'
         }),*/
         new webpack.DefinePlugin({
-            mhy: JSON.stringify(getMhyConfig())
+            mhy: JSON.stringify(getMhyConfig()),
+            'process.env': JSON.stringify({
+                NODE_ENV: process.env.NODE_ENV
+            })
         }),
         new MiniCssExtractPlugin({
             filename: process.env.NODE_ENV !== 'production' ? '[name].css' : '[name].[contenthash].css',

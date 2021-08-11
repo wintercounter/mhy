@@ -2,6 +2,8 @@ import path from 'path'
 import mhyConfig from '@/configs/mhy'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
+console.log('kakil')
+
 export default rules => [
     ...rules,
     {
@@ -17,7 +19,8 @@ export default rules => [
                     sourceMap: true,
                     modules: {
                         localIdentName: '[local]__[contenthash:base64:5]',
-                        auto: true
+                        auto: true,
+                        exportLocalsConvention: 'camelCase'
                     }
                 }
             },
@@ -25,6 +28,7 @@ export default rules => [
                 loader: require.resolve('sass-loader'),
                 options: {
                     sourceMap: true,
+                    implementation: require('node-sass'),
                     sassOptions: {
                         sourceMap: true,
                         includePaths: Array.from(
