@@ -2,8 +2,6 @@ import path from 'path'
 import mhyConfig from '@/configs/mhy'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
-console.log('kakil')
-
 export default rules => [
     ...rules,
     {
