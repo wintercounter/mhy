@@ -1,6 +1,6 @@
 {
-    "name": "mhyd",
-    "version": "11.1.3",
+    "name": "mhy",
+    "version": "11.1.4",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -31,7 +31,7 @@
     },
     "homepage": "https://github.com/wintercounter/mhy#readme",
     "bin": {
-        "mhyd": "dist/bin/index.js"
+        "mhy": "dist/bin/index.js"
     },
     "mhy": {
         "jest": {

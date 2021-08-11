@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.1.4](https://github.com/wintercounter/mhy/compare/v11.1.0...v11.1.4) (2021-08-11)
+
+
+### Bug Fixes
+
+* **storybook+webpack:** adopt to the `require.context` changes in Webpack ([de88c42](https://github.com/wintercounter/mhy/commit/de88c42b52709daa3d16468abaa0a31f781775d2))
+
 ### [11.1.3](https://github.com/wintercounter/mhy/compare/v11.1.0...v11.1.3) (2021-06-14)
 
 
