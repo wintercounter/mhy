@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.2.0](https://github.com/wintercounter/mhy/compare/v11.1.0...v11.2.0) (2021-08-12)
+
+
+### Features
+
+* **docker:** update node version ([8b05e31](https://github.com/wintercounter/mhy/commit/8b05e311dd7ee6cc5e97216c88de474a0738f65f))
+
+
+### Bug Fixes
+
+* **resolve:** jest revealed a node.js module resolution bug when using exports without specifying extension. This was adjusted everywhere now. ([901b667](https://github.com/wintercounter/mhy/commit/901b667a11010016eec7b259d6eb0d31f33dd5fa))
+* **storybook+webpack:** adopt to the `require.context` changes in Webpack ([de88c42](https://github.com/wintercounter/mhy/commit/de88c42b52709daa3d16468abaa0a31f781775d2))
+
 ### [11.1.4](https://github.com/wintercounter/mhy/compare/v11.1.0...v11.1.4) (2021-08-11)
 
 
