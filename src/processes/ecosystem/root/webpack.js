@@ -7,7 +7,7 @@ const getCmdWebpackCLI = _flags => {
     } , [[], []])
     return [
         'node',
-        require.resolve('webpack-cli/bin/cli.js'),
+        require.resolve('webpack-cli/bin/cli'),
         ...tools,
         '--config',
         require.resolve('@/configs/webpack'),

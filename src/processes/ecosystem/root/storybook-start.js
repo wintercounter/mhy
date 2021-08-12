@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import Process from '@/processes'
 
-const CmdStorybookStartCLI = ['node', require.resolve('@storybook/react/bin/index.js'), '--no-manager-cache']
+const CmdStorybookStartCLI = ['node', require.resolve('@storybook/react/bin'), '--no-manager-cache']
 
 class StorybookStart extends Process {
     constructor(args) {

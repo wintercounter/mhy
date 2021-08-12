@@ -5,7 +5,7 @@ const babelrc = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.babelrc'), 
 babelrc.presets.find(([name]) => name.includes('preset-env'))[1].modules = 'commonjs'
 babelrc.plugins.push(require.resolve('babel-plugin-dynamic-import-node'))
 babelrc.plugins.push(require.resolve('babel-plugin-add-module-exports'))
-const transformer = require('babel-jest').createTransformer(babelrc)
+const transformer = require('babel-jest').default.createTransformer(babelrc)
 const proc = transformer.process.bind(transformer)
 transformer.process = function (...args) {
     const [code, path] = args

@@ -1,7 +1,7 @@
 import Process from '@/processes'
 
 const getCmdStandardVersionCLI = flags => {
-    return ['node', require.resolve('standard-version/bin/cli.js'), ...flags]
+    return ['node', require.resolve('standard-version/bin/cli'), ...flags]
 }
 
 class StandardVersion extends Process {

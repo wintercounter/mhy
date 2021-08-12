@@ -4,7 +4,7 @@ const getCmdNodemonCLI = ({ mhyArgv: { _ }, flags }) => {
     const script = _[1] || './src'
     return [
         'node',
-        require.resolve('nodemon/bin/nodemon.js'),
+        require.resolve('nodemon/bin/nodemon'),
         '--exec',
         `mhy node`,
         '-e',

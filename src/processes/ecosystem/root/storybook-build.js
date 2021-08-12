@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import Process from '@/processes'
 
-const CmdStorybookBuildCLI = ['node', require.resolve('@storybook/react/bin/build.js')]
+const CmdStorybookBuildCLI = ['node', require.resolve('@storybook/react/bin/build')]
 
 class StorybookBuild extends Process {
     constructor(args) {

@@ -6,7 +6,7 @@ import mhyConfig from '@/configs/mhy'
 
 const getCmdTscCLI = flags => [
     'node',
-    require.resolve('typescript/lib/tsc.js'),
+    require.resolve('typescript/lib/tsc'),
     '--project',
     path.resolve(process.cwd(), 'tsconfig.json'),
     ...flags
@@ -33,7 +33,7 @@ class Tsc extends Process {
                 name,
                 [
                     'node',
-                    require.resolve('tscpaths/cjs/index.js'),
+                    require.resolve('tscpaths/cjs/index'),
                     '-p',
                     tsconfigPath,
                     '-s',

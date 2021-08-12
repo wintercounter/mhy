@@ -5,7 +5,7 @@ import mhyConfig from '@/configs/mhy'
 
 const getCmdWebpackCLI = () => [
     'node',
-    require.resolve('webpack-cli/bin/cli.js'),
+    require.resolve('webpack-cli/bin/cli'),
     '--config',
     require.resolve('@/configs/webpack'),
     '--profile',
@@ -14,7 +14,7 @@ const getCmdWebpackCLI = () => [
 
 const getCmdWebpackBundleAnalyzerCLI = flags => [
     'node',
-    require.resolve('webpack-bundle-analyzer/lib/bin/analyzer.js'),
+    require.resolve('webpack-bundle-analyzer/lib/bin/analyzer'),
     ...flags
 ]
 

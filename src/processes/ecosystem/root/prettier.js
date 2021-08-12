@@ -13,7 +13,7 @@ const getPrettierCLICmd = args => {
     }
     return [
         'node',
-        require.resolve('prettier/bin-prettier.js'),
+        require.resolve('prettier/bin-prettier'),
         `--config=${require.resolve('@/configs/prettier')}`,
         '--write',
         ...flags,

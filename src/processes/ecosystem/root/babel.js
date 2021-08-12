@@ -6,7 +6,7 @@ import mhyConfig from '@/configs/mhy'
 
 const getCmdBabelCLI = (flags = []) => [
     'node',
-    require.resolve('@babel/cli/bin/babel.js'),
+    require.resolve('@babel/cli/bin/babel'),
     path.resolve(process.cwd(), mhyConfig.srcFolder),
     '--out-dir',
     mhyConfig.distFolder,
@@ -66,7 +66,7 @@ class Babel extends Process {
                 'fix_tsc_path',
                 [
                     'node',
-                    require.resolve('tscpaths/cjs/index.js'),
+                    require.resolve('tscpaths/cjs'),
                     '-p',
                     tsconfigPath,
                     '-s',

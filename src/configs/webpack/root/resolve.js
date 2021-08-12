@@ -13,13 +13,9 @@ for (const [key, entry] of Object.entries(defaultAliases)) {
     }
 }
 
-if (process.env.WEBPACK_DEV_SERVER) {
-    defaultAliases['react-dom'] = '@hot-loader/react-dom'
-}
-
 export default ({ alias } = {}) => {
     return {
-        extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.sass', '.json', '.mdx', '.mjs'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.mjs'],
         modules: Array.from(
             new Set([path.resolve(__dirname, '../../../../node_modules'), path.resolve(process.cwd(), 'node_modules')])
         ),

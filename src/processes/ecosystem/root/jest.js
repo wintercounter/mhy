@@ -3,7 +3,7 @@ import Process from '@/processes'
 
 const getJestCLICmd = flags => [
     'node',
-    require.resolve('jest-cli/bin/jest.js'),
+    require.resolve('jest-cli/bin/jest'),
     '--passWithNoTests',
     '--colors',
     `--config=${require.resolve('@/configs/jest')}`,
