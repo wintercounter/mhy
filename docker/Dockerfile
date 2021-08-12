@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 RUN apk add --update libtool automake gcc autoconf nasm libpng-dev pkgconfig python2 py-pip procps git g++ libc6-compat libjpeg-turbo-dev make
 

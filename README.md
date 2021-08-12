@@ -55,9 +55,18 @@ It's really hard to define what `mhy` \(my\) is, because it tries to create a un
 npm install mhy -g
 ```
 
-### Start a new project
 
-Creates an empty project with a single `index.js` file that is being served using `webpack-dev-server` _(wds)_ pre-configured with **Babel** and **React**.
+From `npm@7.0.0` peer dependencies are automatically being installed. `mhy` uses some dependencies that are not prepared
+yet for this new mechanism. We cannot do anything, but wait for updates. You need to install `mhy` using the
+`--legacy-peer-deps` or `--force` flag.
+```bash
+npm install mhy -g --legacy-peer-deps
+```
+
+### Start a new Webpack project
+
+Create an empty project with a single `index.js` file that is being served using `webpack-dev-server` _(wds)_
+pre-configured with **Babel**, **React** and **React Fast-Refresh**.
 
 ```bash
 mkdir src
