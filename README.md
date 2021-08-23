@@ -124,6 +124,7 @@ mhy
   <tr>
     <td align="center"><a href="http://andor.cool"><img src="https://avatars3.githubusercontent.com/u/747365?v=4" width="100px;" alt=""/><br /><sub><b>Andor Polgar</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=andormade" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/bafxyz"><img src="https://avatars1.githubusercontent.com/u/892175?v=4" width="100px;" alt=""/><br /><sub><b>Andrei Bunulu</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=bafxyz" title="Code">💻</a></td>
+    <td align="center"><a href="https://zakhardolozhevskiy.github.io/CV"><img src="https://avatars0.githubusercontent.com/u/5322859?v=4" width="100px;" alt=""/><br /><sub><b>Zakhar</b></sub></a><br /><a href="https://github.com/wintercounter/mhy/commits?author=ZakharDolozhevskiy" title="Code">💻</a> <a href="https://github.com/wintercounter/mhy/commits?author=ZakharDolozhevskiy" title="Documentation">📖</a></td>
   </tr>
 </table>
 
