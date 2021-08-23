@@ -1,6 +1,7 @@
 {
     "name": "mhy",
     "version": "11.2.2",
+    "version": "11.2.3",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -247,7 +248,7 @@
         "express-http-proxy": "1.6.2",
         "faker": "5.5.3",
         "fast-glob": "3.2.7",
-        "figures": "4.0.0",
+        "figures": "3.2.0",
         "file-loader": "6.2.0",
         "final-form": "4.20.2",
         "fleg": "0.0.3",
