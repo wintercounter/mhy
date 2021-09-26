@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.4.0](https://github.com/wintercounter/mhy/compare/v11.2.1...v11.4.0) (2021-09-26)
+
+
+### Features
+
+* provide support for custom jest configuration files ([3d9fa32](https://github.com/wintercounter/mhy/commit/3d9fa32fc1905dc41a06b414d27489756c0f5bd5))
+
 ### [11.2.1](https://github.com/wintercounter/mhy/compare/v11.2.0...v11.2.1) (2021-08-12)
 
 ## [11.2.0](https://github.com/wintercounter/mhy/compare/v11.1.0...v11.2.0) (2021-08-12)
