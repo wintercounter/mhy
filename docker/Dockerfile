@@ -1,4 +1,10 @@
+FROM denismakogon/ffmpeg-alpine:4.0-buildstage as build-stage
 FROM node:16-alpine
+
+COPY --from=build-stage /tmp/fakeroot/bin /usr/local/bin
+COPY --from=build-stage /tmp/fakeroot/share /usr/local/share
+COPY --from=build-stage /tmp/fakeroot/include /usr/local/include
+COPY --from=build-stage /tmp/fakeroot/lib /usr/local/lib
 
 RUN apk add --update libtool automake gcc autoconf nasm libpng-dev pkgconfig python2 py-pip procps git g++ libc6-compat libjpeg-turbo-dev make
 
