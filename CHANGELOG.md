@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.5.0](https://github.com/wintercounter/mhy/compare/v11.4.1...v11.5.0) (2021-10-09)
+
+
+### Features
+
+* **docker:** add `ffmpeg` and `ffprobe` support to base image ([21b16ac](https://github.com/wintercounter/mhy/commit/21b16acc90050672806ad63d2f99a4eca57dc2ac))
+* **storybook:** remove `@storybook/addon-knobs` in favor of `@storybook/addon-controls`; if you use `knobs`, you need to remove them. ([6908253](https://github.com/wintercounter/mhy/commit/6908253e2253771168bb374eba6dfa0e7ad64b93))
+
+
+### Bug Fixes
+
+* **webpack:** remove `devServer.watchOptions` as it's no longer needed, it automatically inherits global `watchOptions` now ([624d5b2](https://github.com/wintercounter/mhy/commit/624d5b28d3306fa84983d32995b94f9b0f254b80))
+
 ### [11.4.1](https://github.com/wintercounter/mhy/compare/v11.4.0...v11.4.1) (2021-09-26)
 
 ## [11.4.0](https://github.com/wintercounter/mhy/compare/v11.2.1...v11.4.0) (2021-09-26)
