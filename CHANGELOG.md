@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.5.1](https://github.com/wintercounter/mhy/compare/v11.5.0...v11.5.1) (2021-10-09)
+
+
+### Bug Fixes
+
+* **storybook:** now really remove knobs :) ([3a3e82f](https://github.com/wintercounter/mhy/commit/3a3e82f4daff51c8e2c543eedee9f448cc54c8c0))
+* **webpack:** remove more deprecated config options ([d52a03d](https://github.com/wintercounter/mhy/commit/d52a03dc7a940f0de179ab0047ab3c38dac325ab))
+
 ## [11.5.0](https://github.com/wintercounter/mhy/compare/v11.4.1...v11.5.0) (2021-10-09)
 
 
