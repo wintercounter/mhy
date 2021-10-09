@@ -1,5 +1,5 @@
 export default (d, o) => ({
-    contentBase: '/',
+    static: '/',
     host: 'localhost',
     port: 3000,
     hot: true,
@@ -8,5 +8,5 @@ export default (d, o) => ({
     historyApiFallback: {
         disableDotRule: true
     },
-    disableHostCheck: true,
+    allowedHosts: 'all'
 })
