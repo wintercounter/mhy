@@ -134,7 +134,6 @@
         "@storybook/addon-docs": "6.3.10",
         "@storybook/addon-events": "6.3.0-alpha.21",
         "@storybook/addon-graphql": "6.3.0-alpha.21",
-        "@storybook/addon-knobs": "6.3.1",
         "@storybook/addon-links": "6.3.10",
         "@storybook/addon-storysource": "6.3.10",
         "@storybook/addon-viewport": "6.3.10",
