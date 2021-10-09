@@ -1,6 +1,5 @@
 import '@storybook/components'
 import { addons } from '@storybook/addons'
-import { withKnobs } from '@storybook/addon-knobs'
 import StoryRouter from 'storybook-react-router'
 import { isFunction } from 'lodash'
 
@@ -14,7 +13,7 @@ addons.setConfig({
     }
 })
 
-export const decorators = [withKnobs, StoryRouter()]
+export const decorators = [StoryRouter()]
 
 export const globalTypes = {}
 
