@@ -9,8 +9,4 @@ export default (d, o) => ({
         disableDotRule: true
     },
     disableHostCheck: true,
-    // Inherit the same watchOptions
-    get watchOptions() {
-        return o.watchOptions || {}
-    }
 })
