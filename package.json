@@ -1,6 +1,6 @@
 {
     "name": "mhy",
-    "version": "11.5.1",
+    "version": "11.5.2",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -292,7 +292,7 @@
         "moment-range": "4.0.2",
         "moment-timezone": "0.5.33",
         "mqpacker": "7.0.0",
-        "node-fetch": "3.0.0",
+        "node-fetch": "2.6.1",
         "node-gzip": "1.1.2",
         "node-require-context": "1.0.0",
         "node-sass": "6.0.1",

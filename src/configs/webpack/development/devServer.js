@@ -3,7 +3,9 @@ export default (d, o) => ({
     host: 'localhost',
     port: 3000,
     hot: true,
-    progress: true,
+    client: {
+        progress: true
+    },
     compress: false,
     historyApiFallback: {
         disableDotRule: true
