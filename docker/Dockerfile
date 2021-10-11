@@ -1,10 +1,8 @@
-FROM denismakogon/ffmpeg-alpine:4.0-buildstage as build-stage
 FROM node:16-alpine
 
-COPY --from=build-stage /tmp/fakeroot/bin /usr/local/bin
-COPY --from=build-stage /tmp/fakeroot/share /usr/local/share
-COPY --from=build-stage /tmp/fakeroot/include /usr/local/include
-COPY --from=build-stage /tmp/fakeroot/lib /usr/local/lib
+COPY --from=mwader/static-ffmpeg:4.4.0 /ffmpeg /usr/local/bin/
+COPY --from=mwader/static-ffmpeg:4.4.0 /ffprobe /usr/local/bin/
+COPY --from=mwader/static-ffmpeg:4.4.0 /qt-faststart /usr/local/bin/
 
 RUN apk add --update libtool automake gcc autoconf nasm libpng-dev pkgconfig python2 py-pip procps git g++ libc6-compat libjpeg-turbo-dev make
 
