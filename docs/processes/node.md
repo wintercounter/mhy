@@ -1,10 +1,11 @@
 # node
 
 Run scripts in Node.JS.
-- Babel + TypeScript support.
+- TypeScript support.
+- Uses `swc-register`
 - Support for aliases.
 - Default: `./src`
-- Resolve both `.js` and `.ts` files.
+- Resolves `.js`, `.jsx`, `.ts` and `.tsx` files.
 
 ## Default command
 ```bash
@@ -21,7 +22,7 @@ https://nodejs.org/api/cli.html
 mhy node
 ```
 
-### Run a specific file
+### Run a specific file/folder
 ```bash
 mhy node file
 ```

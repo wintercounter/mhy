@@ -29,11 +29,6 @@ mhy babel --mhy-env=prod
 NODE_ENV=production mhy bb
 ```
 
-### mhy UI
-```bash
-mhy ui babel --mhy-env=prod
-```
-
 ### Start with watcher
 ```bash
 mhy babel --watch --mhy-env=prod

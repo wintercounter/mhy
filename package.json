@@ -146,6 +146,7 @@
         "@svgr/webpack": "5.5.0",
         "@swc/cli": "0.1.52",
         "@swc/core": "1.2.117",
+        "@swc/register": "0.1.7",
         "@testing-library/react-hooks": "7.0.2",
         "@types/cookie": "0.4.1",
         "@types/enzyme": "3.10.10",

@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import { addPath, addAliases } from 'module-alias'
 import mhyConfig from '@/configs/mhy'
-import babelConfig from '@/configs/babel'
-import register from '@babel/register'
+import swcConfig from '@/configs/swc'
+import register from '@swc/register'
 import BuiltinModule from 'module'
 
 // Expose mhy config as Global (just like with webpack)
@@ -12,17 +12,12 @@ global.mhy = mhyConfig
 // Guard against poorly mocked module constructors
 const Module = module.constructor.length > 1 ? module.constructor : BuiltinModule
 
-babelConfig.presets.find(p => p[0].includes('preset-env'))[1] = {
-    modules: 'commonjs',
-    targets: {
-        node: true,
-        esmodules: true
-    }
+swcConfig.extensions = ['.es6', '.es', '.jsx', '.js', '.mjs', '.ts', '.tsx']
+swcConfig.module = {
+    type: 'commonjs'
 }
-babelConfig.extensions = ['.es6', '.es', '.jsx', '.js', '.mjs', '.ts', '.tsx']
-babelConfig.cache = false
 
-register(babelConfig)
+register(swcConfig)
 addPath(path.resolve(process.cwd(), 'node_modules'))
 
 const nodeModulesPath = path.resolve(__dirname, '../../')

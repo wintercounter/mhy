@@ -89,27 +89,6 @@ All samples should be placed inside `{ "mhy": { HERE } }` in your `package.json`
 }
 ```
 
-## `UI`: Remove `tsc` from the _UI Ecosystem_
-
-The default ecosystem has the `tsc` process included, but without using _TypeScript_ it's unnecessary. This is what `mhy` uses now, even tho a query to the string `tsc` would be more accurate :)
-
-```json
-"mhy": {
-  "root": {
-    "ecosystem": [
-      {
-        "$match": {
-          "index": 1,
-          "value": {
-            "$remove": true
-          }
-        }
-      }
-    ]
-  }
-}
-```
-
 ## `Jest`: Load extra environment setup file
 ```json
 "jest": {
