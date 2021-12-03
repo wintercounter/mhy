@@ -12,7 +12,6 @@ global.mhy = mhyConfig
 // Guard against poorly mocked module constructors
 const Module = module.constructor.length > 1 ? module.constructor : BuiltinModule
 
-swcConfig.extensions = ['.es6', '.es', '.jsx', '.js', '.mjs', '.ts', '.tsx']
 swcConfig.module = {
     type: 'commonjs'
 }

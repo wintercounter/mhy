@@ -1,5 +1,6 @@
 import path from 'path'
 import Process from '@/processes'
+import FileTypes from '@/utils/fileTypes'
 
 const getJestCLICmd = flags => [
     'node',
@@ -13,7 +14,7 @@ const getJestCLICmd = flags => [
 class Jest extends Process {
     constructor(args) {
         const jestDir = path.dirname(require.resolve('@/configs/jest'))
-        require('@/configs/babel/write')(jestDir)
+        require('@/configs/swc/write')(jestDir, FileTypes.JSON_NO_EXT, true)
 
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

@@ -13,12 +13,13 @@ const swcConfig = loadConfig('swc', {
         paths: tsConfig.paths,
         baseUrl: tsConfig.baseUrl,
         transform: null,
-        target: 'es2016',
+        target: 'es2021',
         loose: false,
         externalHelpers: false,
         // Requires v1.2.50 or upper and requires target to be es2016 or upper.
         keepClassNames: false
-    }
+    },
+    test: ['es6', 'es', 'jsx', 'js', 'mjs', 'ts', 'tsx', 'esm'].map(ext => `.*.${ext}$`)
 })
 
 export default swcConfig

@@ -19,9 +19,6 @@ const getCmdSWCCLI = (flags = []) => [
     ['node_modules', 'test', 'tests', 'temp', 'tmp', '**/*.d.ts', mhyConfig.distFolder, mhyConfig.buildFolder].join(
         ','
     ),
-    '--delete-dir-on-start',
-    '--extensions',
-    '.js,.jsx,.ts,.tsx',
     ...flags
 ]
 
