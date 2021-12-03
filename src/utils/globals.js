@@ -4,6 +4,9 @@ import BuiltinModule from 'module'
 
 let SETUP_DONE = false
 
+// to use V8's code cache to speed up instantiation time
+require("v8-compile-cache");
+
 ;(() => {
     if (SETUP_DONE) return
 

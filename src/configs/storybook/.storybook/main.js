@@ -1,6 +1,6 @@
 import path from 'path'
 import requireContext from 'node-require-context'
-import { isFunction } from 'lodash'
+import { isFunction, merge } from 'lodash'
 import createCompiler from '@storybook/addon-docs/mdx-compiler-plugin'
 import mhyWP from '@/configs/webpack'
 import mhyConfig from '@/configs/mhy'
@@ -9,11 +9,7 @@ const srcPath = path.join(process.cwd(), mhyConfig.srcFolder)
 
 const baseWebpackConfig = config => {
     mhyWP.resolve.modules = [...config.resolve.modules, ...mhyWP.resolve.modules, process.cwd()]
-    mhyWP.resolve.alias = {
-        ...mhyWP.resolve.alias,
-        ...config.resolve.alias
-    }
-    config.resolve = mhyWP.resolve
+    config.resolve = merge(mhyWP.resolve, config.resolve)
     config.resolveLoader = mhyWP.resolveLoader
     config.module = mhyWP.module
     config.plugins.push(mhyWP.plugins.find(plg => /define/i.test(plg.constructor.name)))
