@@ -12,7 +12,10 @@ const baseWebpackConfig = config => {
     config.resolve = merge(mhyWP.resolve, config.resolve)
     config.resolveLoader = mhyWP.resolveLoader
     config.module = mhyWP.module
-    config.plugins.push(mhyWP.plugins.find(plg => /define/i.test(plg.constructor.name)))
+    merge(
+        config.plugins.find(plg => /define/i.test(plg.constructor.name)),
+        mhyWP.plugins.find(plg => /define/i.test(plg.constructor.name))
+    )
 
     return config
 }

@@ -6,6 +6,7 @@ export default (opts = {}) => ({
         ...opts.minimizer,
         new TerserPlugin({
             parallel: true,
+            minify: TerserPlugin.swcMinify,
             terserOptions: {
                 safari10: true
             }
