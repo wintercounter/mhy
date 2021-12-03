@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.1.0](https://github.com/wintercounter/mhy/compare/v12.0.0...v12.1.0) (2021-12-03)
+
+
+### Features
+
+* **eslint:** support ESM ([cb00056](https://github.com/wintercounter/mhy/commit/cb00056db5c6513dc7dfca0d972917fb9dadbe40))
+
+
+### Bug Fixes
+
+* **storybook:** dev server detection ([f905d17](https://github.com/wintercounter/mhy/commit/f905d17dd6887cb7fc189d66a3cadf3ed6ee7d24))
+
 ## [12.0.0](https://github.com/wintercounter/mhy/compare/v11.5.4...v12.0.0) (2021-12-03)
 
 
