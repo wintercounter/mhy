@@ -65,11 +65,13 @@ class SWC extends Process {
                     }
                 }
             )
+            const configPaths = [
+                path.resolve(process.cwd(), 'tsconfig.json'),
+                path.resolve(process.cwd(), 'jsconfig.json')
+            ]
+            const configPath = configPaths.find(p => fs.existsSync(p))
 
-            const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
-            if (!fs.existsSync(tsconfigPath)) {
-                return
-            }
+            if (!configPath) return
 
             // Fix tsc paths
             const p = this.spawn(

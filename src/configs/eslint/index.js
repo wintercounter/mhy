@@ -16,16 +16,15 @@ const defaults = {
         ecmaFeatures: {
             jsx: true
         },
-        ecmaVersion: 2018,
+        ecmaVersion: 'latest',
         sourceType: 'module',
         warnOnUnsupportedTypeScriptVersion: false
     },
-    parser: 'babel-eslint',
+    globals: {
+        Ui: 'readonly'
+    },
     plugins: ['react', 'react-hooks', 'jest'],
-    extends: [
-        ...['eslint-config-airbnb', 'eslint-config-prettier'].map(require.resolve),
-        'plugin:jest/recommended'
-    ],
+    extends: [...['eslint-config-airbnb', 'eslint-config-prettier'].map(require.resolve), 'plugin:jest/recommended'],
     settings: {
         react: {
             version: require('react/package.json').version
@@ -38,10 +37,22 @@ const defaults = {
         // React v17+ rules
         'react/jsx-uses-react': 0,
         'react/react-in-jsx-scope': 0,
+        'arrow-body-style': 0,
+        'react/jsx-curly-brace-presence': 0,
+        'no-param-reassign': 0,
+        'react/destructuring-assignment': 0,
+        'no-await-in-loop': 0,
+        semi: 0,
+        'func-style': 0,
+        'react/jsx-no-undef': [
+            2,
+            {
+                allowGlobals: true
+            }
+        ],
 
         // Meh
         'prefer-arrow-callback': 0,
-        'arrow-body-style': 0,
 
         'react/jsx-pascal-case': 0,
         'jsx-a11y/media-has-caption': 0,
@@ -162,13 +173,6 @@ const defaults = {
         'no-undefined': 0,
         'no-unused-vars': 1,
         'no-use-before-define': 0,
-        'no-param-reassign': [
-            'error',
-            {
-                props: true,
-                ignorePropertyModificationsFor: ['draft', 'draftState'] // added to support immer
-            }
-        ],
 
         'handle-callback-err': 1,
         'no-mixed-requires': 0,
@@ -185,7 +189,6 @@ const defaults = {
         'consistent-this': [2, 'self'],
         'eol-last': 0,
         'func-names': 0,
-        'func-style': [2, 'expression'],
         'key-spacing': [
             1,
             {
@@ -215,7 +218,6 @@ const defaults = {
         'padded-blocks': 0,
         'quote-props': [2, 'as-needed'],
         quotes: ['error', 'single', { allowTemplateLiterals: true }],
-        semi: [2, 'never'],
         'sort-vars': 0,
         'keyword-spacing': [2, { before: true, after: true }],
         'space-before-blocks': [1, 'always'],
