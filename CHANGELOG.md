@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/wintercounter/mhy/compare/v11.5.4...v12.0.0) (2021-12-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **webpack:** The whole mhy ecosystem has been moved to SWC. The `babel` process is still available for legacy purposes, but from now on `webpack`, `node`, `jest` and `storybook` will use `swc` instead. By default, this should cause any problems, but this change is being released as breaking to avoid unforeseen problems.
+
+### Features
+
+* **jest:** replace `babel-jest` with `@swc/jest` for significantly improved performance ([656bee6](https://github.com/wintercounter/mhy/commit/656bee6cbd3e3cc309a32c622aa8adf4429c6697))
+* **node:** replace `babel-register` with `swc-register` for significantly improved startup performance ([196b3e9](https://github.com/wintercounter/mhy/commit/196b3e92b17f078b06d67971b809183e1f52b47f))
+* **swc:** add `swc` config support ([4d051ce](https://github.com/wintercounter/mhy/commit/4d051ced51e3e4f38e8b3b247396b9c899d86237))
+* **swc:** add `swc` process to compile files ([a460546](https://github.com/wintercounter/mhy/commit/a460546387a2d69408e3409103a36a64b1e19179))
+* **webpack:** replace `babel-loader` with `swc-loader` for significantly improved startup performance ([5f42089](https://github.com/wintercounter/mhy/commit/5f42089b98347855cc29d6377c17f1b59234346b))
+
 ### [11.5.4](https://github.com/wintercounter/mhy/compare/v11.5.1...v11.5.4) (2021-12-03)
 
 ### [11.5.1](https://github.com/wintercounter/mhy/compare/v11.5.0...v11.5.1) (2021-10-09)
