@@ -1,6 +1,6 @@
 import { loadConfig } from '@/utils'
 
-if (process.argv.find(v => v === 'serve')) {
+if (process.argv.find(v => v === 'serve' || /@storybook.react.bin.index\.js/.test(v))) {
     process.env.WEBPACK_DEV_SERVER = 'yes'
 }
 

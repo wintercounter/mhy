@@ -40,7 +40,6 @@ It's really hard to define what `mhy` \(my\) is, because it tries to create a un
 - **package.json based customization** for any configs value `mhy` provides.
 - **boot templates** for easy setup.
 - **most common packages** provided to your work.
-- a **single command TUI** to run a full ecosystem.
 - **less boilerplate**.
 - configs/tools **well-playing** together _(webpack+babel, jest+babel, storybook+webpack, webpack+typescript, etc.)_.
 - **pre-built and public Docker images** for faster CI.

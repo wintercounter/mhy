@@ -16,6 +16,11 @@ const baseWebpackConfig = config => {
         config.plugins.find(plg => /define/i.test(plg.constructor.name)),
         mhyWP.plugins.find(plg => /define/i.test(plg.constructor.name))
     )
+    mhyWP.plugins.forEach(mp => {
+        if (!config.plugins.find(op => op.constructor.name === mp.constructor.name)) {
+            config.plugins.push(mp)
+        }
+    })
 
     return config
 }
