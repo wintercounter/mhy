@@ -80,7 +80,7 @@ class SWC extends Process {
                     'node',
                     require.resolve('tscpaths/cjs'),
                     '-p',
-                    tsconfigPath,
+                    configPath,
                     '-s',
                     mhyConfig.srcFolder,
                     '-o',
