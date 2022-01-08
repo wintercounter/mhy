@@ -9,7 +9,7 @@ export default rules => {
             transform: {
                 react: {
                     development: isDevelopment,
-                    refresh: isDevelopment
+                    refresh: !!process.env.WEBPACK_DEV_SERVER
                 }
             }
         }
