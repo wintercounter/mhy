@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.1.2](https://github.com/wintercounter/mhy/compare/v12.1.0...v12.1.2) (2022-01-08)
+
+
+### Bug Fixes
+
+* **swc:** missing variable ([ecbfb23](https://github.com/wintercounter/mhy/commit/ecbfb239899b0e1738ca095c3088dfa1ed921d38))
+* **swc:** missing variable ([e22696a](https://github.com/wintercounter/mhy/commit/e22696aa320b3a4c6f2f29c17312ed469cf69ca2))
+* **webpack+swc:** only transform refresh when using devServer ([bed80f9](https://github.com/wintercounter/mhy/commit/bed80f97a86ce6f1a3cc65499ac4ad1d1ad3fe39))
+
 ## [12.1.0](https://github.com/wintercounter/mhy/compare/v12.0.0...v12.1.0) (2021-12-03)
 
 
