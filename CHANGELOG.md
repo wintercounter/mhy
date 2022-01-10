@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.1.3](https://github.com/wintercounter/mhy/compare/v12.1.2...v12.1.3) (2022-01-10)
+
+
+### Bug Fixes
+
+* **storybook:** color.js downgrade ([b44f3a4](https://github.com/wintercounter/mhy/commit/b44f3a40308108e3cf210b591576d2684eb54385))
+
 ### [12.1.2](https://github.com/wintercounter/mhy/compare/v12.1.0...v12.1.2) (2022-01-08)
 
 
