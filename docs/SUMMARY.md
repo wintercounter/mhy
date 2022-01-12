@@ -12,13 +12,13 @@
 
 ## Tools
 
-- [Built-ins]()
+- Built-ins
   - [boot](built-ins/boot.md)
   - [config](built-ins/config.md)
   - [dep](built-ins/dep.md)
   - [options](built-ins/options.md)
   - [ui](built-ins/ui.md)
-- [Processes]()
+- Processes
   - [babel](processes/babel.md)
   - [eslint](processes/eslint.md)
   - [jest](processes/jest.md)
@@ -32,7 +32,7 @@
   - [webpack](processes/webpack.md)
   - [webpack-bundle-analyzer](processes/webpack-bundle-analyzer.md)
   - [webpack-dev-server](processes/webpack-dev-server.md)
-- [Configs]()
+- Configs
   - [babel](configs/babel.md)
   - [eslint](configs/eslint.md)
   - [gitignore](configs/gitignore.md)
