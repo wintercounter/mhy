@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.2.0](https://github.com/wintercounter/mhy/compare/v12.1.3...v12.2.0) (2022-02-04)
+
+
+### Features
+
+* **babel:** remove obsolete plugins ([454ad95](https://github.com/wintercounter/mhy/commit/454ad9572bb7ea01042cbb9a11fb36d2c4a0e216))
+* **docker:** update environment ([a09020a](https://github.com/wintercounter/mhy/commit/a09020a802c2f99b3939c19162a613dab062ffc3))
+* **eslint:** remove `eslint-config-airbnb` due to its controversial set of rules ([fefd373](https://github.com/wintercounter/mhy/commit/fefd373ec1457023cf0f5dae53052df2365dee9e))
+
+
+### Bug Fixes
+
+* **node:** handle non-file argument passes correctly ([d043819](https://github.com/wintercounter/mhy/commit/d043819919a0ec39201eb4ba2d06d49b4591ea5a))
+
 ### [12.1.3](https://github.com/wintercounter/mhy/compare/v12.1.2...v12.1.3) (2022-01-10)
 
 
