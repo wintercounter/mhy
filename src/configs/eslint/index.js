@@ -24,7 +24,7 @@ const defaults = {
         Ui: 'readonly'
     },
     plugins: ['react', 'react-hooks', 'jest'],
-    extends: [...['eslint-config-airbnb', 'eslint-config-prettier'].map(require.resolve), 'plugin:jest/recommended'],
+    extends: [...['eslint-config-prettier'].map(require.resolve), 'plugin:jest/recommended'],
     settings: {
         react: {
             version: require('react/package.json').version
@@ -59,13 +59,6 @@ const defaults = {
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-noninteractive-element-interactions': 0,
         'jsx-a11y/no-static-element-interactions': 0,
-        'jsx-a11y/anchor-is-valid': [
-            'error',
-            {
-                // People not necessarily use react-router
-                components: []
-            }
-        ],
 
         'jest/no-disabled-tests': 'warn',
         'jest/no-focused-tests': 'error',
@@ -80,6 +73,7 @@ const defaults = {
         'react/forbid-foreign-prop-types': 0,
         'react-hooks/rules-of-hooks': 'error',
         'react/jsx-props-no-spreading': 0,
+        'react/function-component-definition': 0,
 
         'import/no-unresolved': 0,
         'import/no-extraneous-dependencies': 0,
@@ -183,7 +177,7 @@ const defaults = {
         'no-sync': 1,
 
         'brace-style': [1, '1tbs', { allowSingleLine: true }],
-        camelcase: 2,
+        camelcase: 0,
         'comma-spacing': [2, { before: false, after: true }],
         'comma-style': [2, 'last'],
         'consistent-this': [2, 'self'],
