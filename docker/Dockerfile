@@ -1,8 +1,8 @@
-FROM node:16-alpine
+FROM node:17-alpine
 
-COPY --from=mwader/static-ffmpeg:4.4.0 /ffmpeg /usr/local/bin/
-COPY --from=mwader/static-ffmpeg:4.4.0 /ffprobe /usr/local/bin/
-COPY --from=mwader/static-ffmpeg:4.4.0 /qt-faststart /usr/local/bin/
+COPY --from=mwader/static-ffmpeg:4.4.1 /ffmpeg /usr/local/bin/
+COPY --from=mwader/static-ffmpeg:4.4.1 /ffprobe /usr/local/bin/
+COPY --from=mwader/static-ffmpeg:4.4.1 /qt-faststart /usr/local/bin/
 
 RUN apk add --update libtool automake gcc autoconf nasm libpng-dev pkgconfig python2 py-pip procps git g++ libc6-compat libjpeg-turbo-dev make
 
