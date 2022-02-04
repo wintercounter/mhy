@@ -2,8 +2,16 @@ import path from 'path'
 import Process from '@/processes'
 
 const getCmdNodeCLI = ({ mhyArgv: { _ }, flags }) => {
-    const script = _[1] || 'src'
-    return ['node', path.resolve(__dirname, '../../../resources/nodeProcessSetup'), '--mhy-script', script, ...flags]
+    const [, ...args] = _
+    const script = args.pop() || 'src'
+    return [
+        'node',
+        ...args,
+        path.resolve(__dirname, '../../../resources/nodeProcessSetup'),
+        '--mhy-script',
+        script,
+        ...flags
+    ]
 }
 
 class Node extends Process {
