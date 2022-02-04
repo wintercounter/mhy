@@ -17,8 +17,6 @@ export default (defaults = []) => {
                 legacy: true
             }
         ],
-        require.resolve('babel-plugin-syntax-async-functions'),
-        require.resolve('babel-plugin-transform-function-bind'),
         require.resolve('@babel/plugin-proposal-export-default-from'),
         require.resolve('@babel/plugin-proposal-export-namespace-from'),
         require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
