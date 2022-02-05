@@ -53,9 +53,11 @@ Module._nodeModulePaths = function (from) {
 
 const alias = { ...mhyConfig.defaultAliases }
 for (const [key, entry] of Object.entries(alias)) {
-    if (tryResolve(entry)) {
+    // eslint-disable-next-line wrap-regex
+    const isModule = !/[/\\]/.test(entry)
+    if (isModule && tryResolve(entry)) {
         alias[key] = tryResolve(entry)
-    } else if (tryResolve(process.cwd(), 'node_modules', entry)) {
+    } else if (isModule && tryResolve(process.cwd(), 'node_modules', entry)) {
         alias[key] = tryResolve(process.cwd(), 'node_modules', entry)
     } else if (!fs.existsSync(entry)) {
         alias[key] = path.resolve(process.cwd(), entry)
