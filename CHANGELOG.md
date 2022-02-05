@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.2.1](https://github.com/wintercounter/mhy/compare/v12.2.0...v12.2.1) (2022-02-05)
+
+
+### Bug Fixes
+
+* **alias:** correctly resolve single package names ([8e2d614](https://github.com/wintercounter/mhy/commit/8e2d61405b446c095540b555015b03e2144b2de5))
+
 ## [12.2.0](https://github.com/wintercounter/mhy/compare/v12.1.3...v12.2.0) (2022-02-04)
 
 
