@@ -54,7 +54,7 @@ Module._nodeModulePaths = function (from) {
 const alias = { ...mhyConfig.defaultAliases }
 for (const [key, entry] of Object.entries(alias)) {
     // eslint-disable-next-line wrap-regex
-    const isModule = !/[/\\]/.test(entry)
+    const isModule = !/[/\\.]/.test(entry)
     if (isModule && tryResolve(entry)) {
         alias[key] = tryResolve(entry)
     } else if (isModule && tryResolve(process.cwd(), 'node_modules', entry)) {
