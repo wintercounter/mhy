@@ -5,14 +5,16 @@ import BuiltinModule from 'module'
 let SETUP_DONE = false
 
 // to use V8's code cache to speed up instantiation time
-require("v8-compile-cache");
+require('v8-compile-cache')
 
+// eslint-disable-next-line max-statements,complexity,no-extra-semi
 ;(() => {
     if (SETUP_DONE) return
 
     // Let's save us from the work ASAP
     const [, ...mhyIfStr] = (process.argv.find(a => a.startsWith('--mhy-if')) || '').split('=')
 
+    // eslint-disable-next-line no-eval
     if (mhyIfStr.length && !eval(mhyIfStr.join('='))) {
         console.info(`Skipping command due to falsy expression: ${mhyIfStr.join('=')}`)
         process.exit(0)
@@ -89,13 +91,13 @@ require("v8-compile-cache");
 
     const { wrap } = module.constructor
 
-    let requireContext = function(directory, recursive, regExp) {
+    let requireContext = function (directory, recursive, regExp) {
         var dir = require('node-dir')
         var path = require('path')
-  
+
         // Assume absolute path by default
         var basepath = directory
-  
+
         if (directory[0] === '.') {
             // Relative path
             basepath = path.join(__dirname, directory)
@@ -106,23 +108,22 @@ require("v8-compile-cache");
 
         var keys = dir
             .files(basepath, {
-            sync: true,
-            recursive: recursive || false
+                sync: true,
+                recursive: recursive || false
             })
-            .filter(function(file) {
-            return file.match(regExp || /\.(json|js|ts)$/)
+            .filter(function (file) {
+                return file.match(regExp || /\.(json|js|ts)$/)
             })
 
-
-        var context = function(key) {
+        var context = function (key) {
             return require(context.resolve(key))
         }
 
-        context.resolve = function(key) {
+        context.resolve = function (key) {
             return key
         }
 
-        context.keys = function() {
+        context.keys = function () {
             return keys
         }
 
@@ -130,7 +131,10 @@ require("v8-compile-cache");
     }
 
     module.constructor.wrap = function (script) {
-        return wrap.call(this, `${script.includes('require.context') ? `require.context = ${requireContext.toString()};\n` : ''}${script}`)
+        return wrap.call(
+            this,
+            `${script.includes('require.context') ? `require.context = ${requireContext.toString()};\n` : ''}${script}`
+        )
     }
 
     SETUP_DONE = true

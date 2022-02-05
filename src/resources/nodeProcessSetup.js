@@ -17,7 +17,17 @@ swcConfig.module = {
 }
 
 register(swcConfig)
-addPath(path.resolve(process.cwd(), 'node_modules'))
+
+const tryResolve = (...m) => {
+    try {
+        return require.resolve(...m)
+    } catch (e) {
+        return null
+    }
+}
+
+const localNodeModulesDir = path.resolve(process.cwd(), 'node_modules')
+addPath(localNodeModulesDir)
 
 const nodeModulesPath = path.resolve(__dirname, '../../')
 addPath(nodeModulesPath)
@@ -43,7 +53,11 @@ Module._nodeModulePaths = function (from) {
 
 const alias = { ...mhyConfig.defaultAliases }
 for (const [key, entry] of Object.entries(alias)) {
-    if (!fs.existsSync(entry)) {
+    if (tryResolve(entry)) {
+        alias[key] = tryResolve(entry)
+    } else if (tryResolve(process.cwd(), 'node_modules', entry)) {
+        alias[key] = tryResolve(process.cwd(), 'node_modules', entry)
+    } else if (!fs.existsSync(entry)) {
         alias[key] = path.resolve(process.cwd(), entry)
     } else {
         // Make sure it's a resolved path indeed
