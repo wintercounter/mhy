@@ -5,7 +5,7 @@ import mhyConfig from '@/configs/mhy'
 
 const tryResolve = (...m) => {
     try {
-        return require.resolve(...m)
+        return path.dirname(require.resolve(...m))
     } catch (e) {
         return null
     }
