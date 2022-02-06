@@ -65,6 +65,10 @@ for (const [key, entry] of Object.entries(alias)) {
         // Make sure it's a resolved path indeed
         alias[key] = path.resolve(entry)
     }
+    // Remove index.js to allow folders
+    if (alias[key].split(path.sep).pop().includes('index.')) {
+        alias[key] = path.dirname(alias[key])
+    }
 }
 addAliases(alias)
 
