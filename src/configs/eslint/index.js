@@ -222,7 +222,7 @@ const defaults = {
         'space-infix-ops': 2,
         'space-unary-ops': [2, { words: true, nonwords: false }],
         'spaced-comment': 0,
-        'wrap-regex': 2,
+        'wrap-regex': 0,
         'max-depth': [2, 3],
         'max-len': [2, { code: 120, ignoreUrls: true }],
         'max-params': [2, 6],
