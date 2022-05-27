@@ -33,7 +33,9 @@ const prettierConfig = loadConfig('prettier', {
      * - true - add a semicolon at the end of every line
      * - false - only add semicolons at the beginning of lines that may introduce ASI failures
      */
-    semi: false
+    semi: false,
+    // Wrap prose if it exceeds printWidth.
+    proseWrap: 'always',
 })
 
 export default prettierConfig
