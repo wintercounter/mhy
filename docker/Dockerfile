@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:18-alpine
 
 COPY --from=mwader/static-ffmpeg:4.4.1 /ffmpeg /usr/local/bin/
 COPY --from=mwader/static-ffmpeg:4.4.1 /ffprobe /usr/local/bin/
