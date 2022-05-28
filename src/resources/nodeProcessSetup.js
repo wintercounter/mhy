@@ -12,10 +12,6 @@ global.mhy = mhyConfig
 // Guard against poorly mocked module constructors
 const Module = module.constructor.length > 1 ? module.constructor : BuiltinModule
 
-swcConfig.module = {
-    type: 'commonjs'
-}
-
 swcConfig.module = swcConfig.module || {}
 swcConfig.module.type = swcConfig.module.type || 'commonjs'
 //swcConfig.module.ignoreDynamic = swcConfig.module.ignoreDynamic ?? true
