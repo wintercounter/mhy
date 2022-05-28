@@ -3,7 +3,7 @@
     "bin": {
         "mhy": "dist/bin/index.js"
     },
-    "version": "13.1.4",
+    "version": "13.1.5",
     "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
     "main": "dist/bin/index.js",
     "scripts": {
@@ -104,7 +104,14 @@
         "node_modules/hast-util-to-parse5",
         "node_modules/hast-to-hyperscript",
         "node_modules/zwitch",
-        "node_modules/html-void-elements"
+        "node_modules/html-void-elements",
+        [
+            "node_modules/parse5",
+            {
+                "exports": true,
+                "commonjs": false
+            }
+        ]
     ],
     "repository": {
         "type": "git",
@@ -294,7 +301,7 @@
         "ccss": "5.10.0",
         "chalk": "4.1.2",
         "chokidar-cli": "3.0.0",
-        "commonizer": "^1.0.0",
+        "commonizer": "^1.1.1",
         "concurrently": "7.2.1",
         "connected-react-router": "6.9.2",
         "console-feed": "3.3.0",
