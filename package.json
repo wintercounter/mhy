@@ -294,6 +294,7 @@
         "ccss": "5.10.0",
         "chalk": "4.1.2",
         "chokidar-cli": "3.0.0",
+        "commonizer": "^1.0.0",
         "concurrently": "7.2.1",
         "connected-react-router": "6.9.2",
         "console-feed": "3.3.0",
