@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.2.0](https://github.com/wintercounter/mhy/compare/v12.2.6...v13.2.0) (2022-07-06)
+
+
+### Features
+
+* move completely to React 18 ([df0894d](https://github.com/wintercounter/mhy/commit/df0894d08c090be8716b24b51b9e7cc89278892d))
+* **npm:** add `.npmrc` and `.nvmrc` ([6aaf4ed](https://github.com/wintercounter/mhy/commit/6aaf4edf5407d595987195fa18cd5b11ca9d52dc))
+* use `commonizer` to support ESM in CJS environments ([598d6ae](https://github.com/wintercounter/mhy/commit/598d6aee9f6ad5a16be3ca857e99b88e5be8d49e))
+
+
+### Bug Fixes
+
+* **docker:** update python to v3, v2 is not available anymore ([6d43b96](https://github.com/wintercounter/mhy/commit/6d43b96e97d703ffd84ef1de1d13262a1b081221))
+
 ### [12.2.6](https://github.com/wintercounter/mhy/compare/v12.2.1...v12.2.6) (2022-02-18)
 
 ### [12.2.1](https://github.com/wintercounter/mhy/compare/v12.2.0...v12.2.1) (2022-02-05)
