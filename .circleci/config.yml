@@ -10,7 +10,7 @@ jobs:
         - master
     docker:
     # specify the version you desire here
-    - image: circleci/node:18
+    - image: cimg/node:18.4.0
 
     working_directory: ~/repo
 
