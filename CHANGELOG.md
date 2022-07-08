@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/wintercounter/mhy/compare/v13.2.0...v14.0.0) (2022-07-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cleanup:** a lot of rarely used and outdated dependencies are being removed to make `mhy` lighter. ~70 packages were removed.
+* **babel:** for a long time now `mhy` uses `swc` under the hood everywhere instead of `babel`, it was kept for legacy reasons, now it's being removed
+* **node-sass:** `node-sass` is (or any other SASS implementations) are no longer supported
+
+### Features
+
+* **webpack:** use single runtime file again, since the bugs around got fixed ([58e94b0](https://github.com/wintercounter/mhy/commit/58e94b0400a0a8fadf182d18c8b9512e3584a8be))
+
+
+* **babel:** remove support for `babel` ([ad1accd](https://github.com/wintercounter/mhy/commit/ad1accd5ac6cc1ac9c37e36d5210f0218d7c3c8a))
+* **cleanup:** remove dependencies ([3598e77](https://github.com/wintercounter/mhy/commit/3598e77a3c65b015aa40c014079cb88d996fe03d))
+* **node-sass:** remove support for `node-sass` ([c9d2681](https://github.com/wintercounter/mhy/commit/c9d26816ecd909c56b3915602a76a259ec6fa19e))
+
 ## [13.2.0](https://github.com/wintercounter/mhy/compare/v12.2.6...v13.2.0) (2022-07-06)
 
 
