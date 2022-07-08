@@ -2,8 +2,9 @@ import path from 'path'
 import yargs from 'yargs'
 import fse from 'fs-extra'
 
-const commandHandler = (args) => {
-    const config = require('@/configs/subexports')
+const commandHandler = args => {
+    const subexports = require('@/configs/subexports')
+    const config = subexports.default || subexports
     const root = require(path.join(process.cwd(), './package.json')).name
 
     Object.entries(config)
@@ -21,17 +22,21 @@ const commandHandler = (args) => {
 
             fse.ensureDirSync(pkgFolder)
             fse.writeJsonSync(path.join(pkgFolder, './package.json'), pkgExport)
-    })
+        })
 }
 
 export default () => {
-    yargs
-        .command(['subexports', 'se'], 'exporting optional sub packages', (y) => {
+    yargs.command(
+        ['subexports', 'se'],
+        'exporting optional sub packages',
+        y => {
             return y.option('f', {
                 alias: 'force',
                 default: false,
                 describe: 'Forcing will skipp checking if dist file exists or not.',
                 type: 'boolean'
             })
-        }, commandHandler)
+        },
+        commandHandler
+    )
 }

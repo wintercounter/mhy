@@ -31,7 +31,7 @@ An array including the list of filenames needed to be excluded in general \(like
 
 ### `defaultAliases`
 
-Aliases provided for `Babel` and `TypeScript` imports.
+Aliases provided for `SWC` and `TypeScript` imports.
 
 Default: `{ '@': 'src' }`
 
@@ -40,5 +40,3 @@ With the default solution you can have aliases to all the folder in `src`.
 Example: `import Foo from '@/components/foo'`
 
 > Please note that previously aliases were provided for certain folders as `@components`. These are being **DEPRECATED** and should not be used. The new way is more flexible and avoids collision with NPM namespaces.
-
-

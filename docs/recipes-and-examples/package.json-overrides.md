@@ -20,6 +20,8 @@ All samples should be placed inside `{ "mhy": { HERE } }` in your `package.json`
 
 ## `babel`: Deep customization
 
+> Note: Babel support was replaced by SWC, but the example is still helpful.
+
 1. Change `preset-env` to produce `commonjs` modules
 2. Add `module.exports` statements to each module for default exports (from Babel v7 it is not being added anymore by default)
 3. Remove `regenerator-plugin`, it doesn't needed in `node`.
@@ -90,6 +92,7 @@ All samples should be placed inside `{ "mhy": { HERE } }` in your `package.json`
 ```
 
 ## `Jest`: Load extra environment setup file
+
 ```json
 "jest": {
   "development": {
@@ -101,4 +104,3 @@ All samples should be placed inside `{ "mhy": { HERE } }` in your `package.json`
   }
 }
 ```
-

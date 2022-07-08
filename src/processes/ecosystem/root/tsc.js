@@ -16,8 +16,12 @@ const tsconfigPath = path.resolve(process.cwd(), 'tsconfig.json')
 
 class Tsc extends Process {
     constructor(args) {
-        if (!fs.existsSync(tsconfigPath) || !require(tsconfigPath).outDir) {
-            require('@/configs/typescript/write')()
+        const tsConfig_ = require(tsconfigPath)
+        const tsConfig = tsConfig_.default || tsConfig_
+
+        if (!fs.existsSync(tsconfigPath) || !tsConfig.outDir) {
+            const fn = require('@/configs/typescript/write')
+            ;(fn.default || fn)()
         }
 
         const { props: { defaultAction = 'start' } = {}, flags } = args
@@ -27,7 +31,6 @@ class Tsc extends Process {
 
     onStart = ({ name }, { flags = [] }) => {
         this.spawn(name, getCmdTscCLI(flags), undefined, false).on('exit', () => {
-
             // Fix tsc paths
             const p = this.spawn(
                 name,

@@ -1,3 +1,5 @@
 import '@/utils/globals'
 
-export default from './loader'
+import loader from './loader'
+
+export default loader

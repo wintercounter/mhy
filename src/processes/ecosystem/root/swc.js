@@ -27,7 +27,9 @@ class SWC extends Process {
         try {
             fs.unlinkSync(path.resolve(process.cwd(), mhyConfig.distFolder))
         } catch {}
-        require('@/configs/swc/write')(__dirname, FileTypes.JSON_NO_EXT, true)
+        const fn = require('@/configs/swc/write')
+
+        ;(fn.default || fn)(__dirname, FileTypes.JSON_NO_EXT, true)
 
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

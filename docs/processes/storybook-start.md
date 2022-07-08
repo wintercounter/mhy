@@ -1,17 +1,20 @@
 # storybook-start
 
-- Alias: `sb-start`
-- Storybook is being setup to use `mhy`'s `Webpack` and `Babel` config.
+-   Alias: `sb-start`
+-   Storybook is being setup to use `mhy`'s `Webpack` and `SWC` config.
 
 ### Default command
+
 ```bash
 start-storybook
 ```
 
 ### CLI Options
+
 https://storybook.js.org/configurations/cli-options/
 
 ### Example
+
 ```bash
 mhy sb-start
 # or
@@ -33,6 +36,3 @@ export const parameters = (defaults) => {
 ```
 
 The above is also for for `main.js`'s default export where you can define `addons` for example.
-
-
-

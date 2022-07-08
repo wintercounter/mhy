@@ -18,9 +18,9 @@ then
     exit 0
 fi
 
-# check babel config
-echo "mhy config babel -f json --mhy-env=prod"
-mhy config babel -f json --mhy-env=prod
+# check swc config
+echo "mhy config swc -f json --mhy-env=prod"
+mhy config swc -f json --mhy-env=prod
 
 npm pub
 check $?

@@ -14,7 +14,8 @@ const getJestCLICmd = flags => [
 class Jest extends Process {
     constructor(args) {
         const jestDir = path.dirname(require.resolve('@/configs/jest'))
-        require('@/configs/swc/write')(jestDir, FileTypes.JSON_NO_EXT, true)
+        const fn = require('@/configs/swc/write')
+        ;(fn.default || fn)(jestDir, FileTypes.JSON_NO_EXT, true)
 
         const { props: { defaultAction = 'start' } = {}, ...rest } = args
         super(args)

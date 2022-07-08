@@ -1,5 +1,3 @@
-import fs from 'fs'
-import path from 'path'
 import Process from '@/processes'
 
 const CmdStorybookBuildCLI = ['node', require.resolve('@storybook/react/bin/build')]
@@ -7,14 +5,8 @@ const CmdStorybookBuildCLI = ['node', require.resolve('@storybook/react/bin/buil
 class StorybookBuild extends Process {
     constructor(args) {
         const storybookConfigPath = require.resolve('@/configs/storybook')
-        const storybookConfig = require(storybookConfigPath)
-        const babelRcPath = path.resolve(
-            storybookConfigPath.substring(0, storybookConfigPath.lastIndexOf(path.sep)),
-            '.storybook'
-        )
-        if (!fs.existsSync(path.resolve(babelRcPath, '.babelrc'))) {
-            require('@/configs/babel/write')(babelRcPath)
-        }
+        const sb = require(storybookConfigPath)
+        const storybookConfig = sb.default || sb
 
         for (const [key, value] of Object.entries(storybookConfig.build)) {
             if (value !== null) {

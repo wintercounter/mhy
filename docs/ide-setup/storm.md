@@ -57,7 +57,7 @@ While it's possible to add watchers without the `Prettier plugin`, the plugin si
 2. Go to `File > Settings > Language & Frameworks > TypeScript`
 3. For `TypeScript` set `GLOBAL_NODE_MODULES/mhy/node_modules/typescript`
 
-> Note that in `mhy` TypeScript is only being used to perform type-checks and to generate `.d.ts` files. You don't need to enable compilation, that is being done by Babel.
+> Note that in `mhy` TypeScript is only being used to perform type-checks and to generate `.d.ts` files. You don't need to enable compilation, that is being done by SWC.
 
 ## ESLint
 

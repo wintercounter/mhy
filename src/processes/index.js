@@ -30,9 +30,11 @@ export const loadProcess = module => {
 
         if (processLocalExists) {
             proc = require(processLocalPath)
+            proc = proc.default || proc
             break
         } else if (processMhyExists) {
             proc = require(processMhyPath)
+            proc = proc.default || proc
             break
         }
     }

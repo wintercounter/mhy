@@ -22,27 +22,27 @@
 
 It's really hard to define what `mhy` \(my\) is, because it tries to create a unified developer experience for any stage of your project:
 
-- a pre-configured **development environment** to not waste time with the set-up when starting a new project or just need a quick playground.
-- a pre-configured **production environment** to help you reach production faster compiling/building your code without any necessary setup.
-- an **ecosystem** to be able to run different task together at once, connected together perfectly.
-- a **toolbox** help your work with the most common tasks.
-- a **solution for littering** your machine with the same npm package over and over again.
-- a **config management** tool to make necessary changes faster at a single place.
-- an **interoperable environment** to be shared across multiple projects and ensure they are being build on the same principles/stack.
+-   a pre-configured **development environment** to not waste time with the set-up when starting a new project or just need a quick playground.
+-   a pre-configured **production environment** to help you reach production faster compiling/building your code without any necessary setup.
+-   an **ecosystem** to be able to run different task together at once, connected together perfectly.
+-   a **toolbox** help your work with the most common tasks.
+-   a **solution for littering** your machine with the same npm package over and over again.
+-   a **config management** tool to make necessary changes faster at a single place.
+-   an **interoperable environment** to be shared across multiple projects and ensure they are being build on the same principles/stack.
 
 > `mhy` helps you to be able to focus on your code again rather then the tech behind it.
 
 ## Using `mhy` you'll have
 
-- a **zero-configuration** environment **out-of-the-box**.
-- a **portable** codebase without any `npm install`.
-- **simple customization** if you don't favor the default settings.
-- **package.json based customization** for any configs value `mhy` provides.
-- **boot templates** for easy setup.
-- **most common packages** provided to your work.
-- **less boilerplate**.
-- configs/tools **well-playing** together _(webpack+babel, jest+babel, storybook+webpack, webpack+typescript, etc.)_.
-- **pre-built and public Docker images** for faster CI.
+-   a **zero-configuration** environment **out-of-the-box**.
+-   a **portable** codebase without any `npm install`.
+-   **simple customization** if you don't favor the default settings.
+-   **package.json based customization** for any configs value `mhy` provides.
+-   **boot templates** for easy setup.
+-   **most common packages** provided to your work.
+-   **less boilerplate**.
+-   configs/tools **well-playing** together _(webpack+swc, jest+swc, storybook+swc, webpack+typescript, etc.)_.
+-   **pre-built and public Docker images** for faster CI.
 
 > Note that `mhy`'s focus is on client side currently, but server side features are about to come.
 
@@ -54,10 +54,10 @@ It's really hard to define what `mhy` \(my\) is, because it tries to create a un
 npm install mhy -g
 ```
 
-
 From `npm@7.0.0` peer dependencies are automatically being installed. `mhy` uses some dependencies that are not prepared
 yet for this new mechanism. We cannot do anything, but wait for updates. You need to install `mhy` using the
 `--legacy-peer-deps` or `--force` flag.
+
 ```bash
 npm install mhy -g --legacy-peer-deps
 ```
@@ -129,6 +129,7 @@ mhy
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ❤ Thank you all! ❤

@@ -12,10 +12,8 @@ mhy config eslint -i
 
 ## Used by
 
-* `babel`
-* `eslint`
-* `jest`
-* `storybook-start (through webpack config)`
-* `webpack (config)`
-* `webpack-dev-server (through webpack config)`
-
+-   `eslint`
+-   `jest`
+-   `storybook-start (through webpack config)`
+-   `webpack (config)`
+-   `webpack-dev-server (through webpack config)`

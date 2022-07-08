@@ -11,7 +11,8 @@ const applyEntries = (o, basePath, globPattern = '', allowIndex = false) => {
         let tmp = o
         if (entry.endsWith('index.js') || entry.endsWith('index.cjs')) {
             if (allowIndex) {
-                require(entry)(o, o)
+                const fn = require(entry)
+                ;(fn.default || fn)(o, o)
             }
             continue
         }
@@ -26,14 +27,16 @@ const applyEntries = (o, basePath, globPattern = '', allowIndex = false) => {
                 tmp[v] = tmp[v] || {}
 
                 if (Array.isArray(tmp[v])) {
-                    tmp[v] = tmp = require(entry)(tmp[v], o)
+                    const fn = require(entry)
+                    tmp[v] = tmp = (fn.default || fn)(tmp[v], o)
                 } else {
                     tmp = tmp[v]
                 }
             } else {
                 // It's last item, require and execute default
                 v = v.replace(/\.(js|cjs)$/g, '')
-                tmp[v] = require(entry)(tmp[v], o)
+                const fn = require(entry)
+                tmp[v] = (fn.default || fn)(tmp[v], o)
             }
         }
     }

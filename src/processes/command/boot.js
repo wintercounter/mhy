@@ -26,7 +26,7 @@ const commandHandler = async ({ technology, template, output }) => {
     console.log(`Completed successfully into: ${destination}`)
 }
 
-export default () => {
+const handler = () => {
     yargs.command('boot', 'initialize a new codebase from a template').command(
         'boot [technology] [template]',
         'initialize a template',
@@ -52,3 +52,5 @@ export default () => {
         commandHandler
     )
 }
+
+export default handler

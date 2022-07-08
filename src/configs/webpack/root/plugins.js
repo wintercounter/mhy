@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import webpack, { HotModuleReplacementPlugin } from 'webpack'
-//import WebpackManifestPlugin from 'webpack-manifest-plugin'
+import { WebpackManifestPlugin } from 'webpack-manifest-plugin'
 //import WebpackPwaManifestPlugin from 'webpack-pwa-manifest'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -36,9 +36,31 @@ export default (plugins = []) => {
     return plugins.concat([
         // Disabled currently due to no WP5 support
         //new WebpackPwaManifestPlugin(manifest),
-        /*        new WebpackManifestPlugin({
-            fileName: './manifest.webpack.json'
-        }),*/
+        new WebpackManifestPlugin({
+            fileName: './manifest.webpack.json',
+            generate: (seed, files, e) => {
+                const entries = JSON.parse(JSON.stringify(e))
+                const output = {
+                    __all: files.map(({ chunk, isAsset, isChunk, isInitial, isModuleAsset, name, path }) => ({
+                        isAsset,
+                        isChunk,
+                        isInitial,
+                        isModuleAsset,
+                        name,
+                        path
+                    }))
+                }
+                for (const [key, chunks] of Object.entries(e)) {
+                    output[key] = chunks.map(entry => {
+                        const { isAsset, isChunk, isInitial, isModuleAsset, name, path } = files.find(({ path }) =>
+                            path.includes(entry)
+                        )
+                        return { isAsset, isChunk, isInitial, isModuleAsset, name, path }
+                    })
+                }
+                return output
+            }
+        }),
         new webpack.DefinePlugin({
             mhy: JSON.stringify(getMhyConfig()),
             'process.env': JSON.stringify({

@@ -41,7 +41,6 @@ const defaults = {
         '.idea',
         '.vscode',
         'node_modules',
-        '.babelrc',
         'prettier.json',
         '.prettierrc',
         'jest.config.js',

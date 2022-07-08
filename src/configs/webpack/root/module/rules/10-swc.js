@@ -1,10 +1,12 @@
 import path from 'path'
 import mhyConfig from '@/configs/mhy'
+import fn from '../../../index'
 
 export default rules => {
     const { merge } = require('lodash')
     const isDevelopment = process.env.NODE_ENV !== 'production'
-    const options = merge(require('@/configs/swc'), {
+    const obj = require('@/configs/swc')
+    const options = merge(obj.default || obj, {
         jsc: {
             transform: {
                 react: {

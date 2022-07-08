@@ -3,7 +3,7 @@
 This is a built-in CLI process used to retrieve final config objects in
 various formats OR initialize a single/environment configuration.
 
-- Alias: `c`
+-   Alias: `c`
 
 ## Initialize
 
@@ -52,10 +52,10 @@ mhy config webpack --format=mjs > webpack.config.mjs
 
 Available formats:
 
-* `js` plain JavaScript object `module.exports = module.exports.default = {}`
-* `mjs` plain JavaScript object `export default {}`
-* `json` plain JSON object
-* `raw` try to print out as is
+-   `js` plain JavaScript object `module.exports = module.exports.default = {}`
+-   `mjs` plain JavaScript object `export default {}`
+-   `json` plain JSON object
+-   `raw` try to print out as is
 
 ## Set
 
@@ -63,8 +63,8 @@ Setting configuration values can be done in multiple ways. Before showing those,
 
 ### Entities
 
-* `root` entities are being loaded always
-* `env` entities are being loaded if the current environment matches
+-   `root` entities are being loaded always
+-   `env` entities are being loaded if the current environment matches
 
 ### Directory structure
 
@@ -88,7 +88,7 @@ File names are becoming keys in the final object and folders are becoming arrays
 webpack
 |- root
    |- plugins
-      |- babel.js // returns {foo: 'bar'}
+      |- swc.js // returns {foo: 'bar'}
    |- resolve.js // returns 'Resolve value'
 |- development
 |- production
@@ -182,4 +182,3 @@ Please note that there will be no code transformations applied to your custom co
 ##### Local processes/commands
 
 Using this method you can have your own, local processes/commands as well. More info on this is about to come, stay tuned!
-
