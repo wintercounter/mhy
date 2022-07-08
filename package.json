@@ -3,15 +3,16 @@
   "bin": {
     "mhy": "dist/bin/index.js"
   },
-  "version": "14.0.2",
+  "version": "14.0.3",
   "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {
     "test": "mhy jest",
     "start": "node ./dist",
     "pub": "npm publish --access=public",
+    "config": "mhy config typescript -io",
     "build": "mhy swc --mhy-env=prod",
-    "prepare": "npm run build && npx commonizer",
+    "prepare": "npm run config && npm run build && npx commonizer",
     "docker-build-image": "docker build --no-cache -t mhy ./docker",
     "docker-rm-image": "docker image rm mhy -f",
     "docker-run": "docker run -it -v $(pwd)/test:/app -w /app mhy npm run build",
