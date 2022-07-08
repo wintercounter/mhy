@@ -23,11 +23,11 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            sudo npm i --unsafe-perm=true --legacy-peer-deps cross-env -g && sudo npm i --unsafe-perm=true --legacy-peer-deps mhy@latest -g
+            npm i --legacy-peer-deps mhy@latest -g
 
       - deploy:
           name: Trigger deployment
           working_directory: ~/repo
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
-            sudo sh ./ci.sh
+            sh ./ci.sh
