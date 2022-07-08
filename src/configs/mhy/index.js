@@ -51,7 +51,7 @@ const defaults = {
     ],
     get defaultAliases() {
         const pr = path.resolve
-        const src = this.srcFolder
+        const src = defaults.srcFolder
         const cwd = process.cwd()
         return {
             '@': pr(cwd, `${src}/`),
