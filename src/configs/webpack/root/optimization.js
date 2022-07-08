@@ -1,8 +1,7 @@
 import CSSMinimizerWebpackPlugin from 'css-minimizer-webpack-plugin'
 
 export default () => ({
-    // Temporarily disabled due to https://github.com/webpack-contrib/mini-css-extract-plugin/issues/610
-    //runtimeChunk: 'single',
+    runtimeChunk: 'single',
     minimize: true,
     minimizer: [
         new CSSMinimizerWebpackPlugin({
