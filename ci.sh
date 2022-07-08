@@ -22,6 +22,8 @@ fi
 echo "mhy config swc -f json --mhy-env=prod"
 mhy config swc -f json --mhy-env=prod
 
+chmod 0777 -R ./
+
 npm pub
 check $?
 
