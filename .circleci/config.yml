@@ -23,8 +23,8 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            npm i
             npm i --legacy-peer-deps mhy@13.2.0 -g
+            npm i
 
       - deploy:
           name: Trigger deployment
