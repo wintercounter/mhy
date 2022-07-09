@@ -3,7 +3,7 @@
   "bin": {
     "mhy": "dist/bin/index.js"
   },
-  "version": "14.0.8",
+  "version": "14.0.10",
   "description": "A zero-config out-of-the-box development environment how I like it. So it's m(h)y environment!",
   "main": "dist/bin/index.js",
   "scripts": {

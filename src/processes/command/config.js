@@ -21,10 +21,11 @@ const commandHandler = args => {
 const handleWrite = ({ config, dir, format, overwrite }) => {
     const m = fetchWriters(config)
     const modules = m
-        .sort((x,y) => x.includes('typescript') ? -1 : y.includes('typescript') ? 1 : 0)
+        .sort((x, y) => (x.includes('typescript') ? -1 : y.includes('typescript') ? 1 : 0))
         .map((module, i) => {
             process.stdout.write(`\rLoading configs ${i + 1}/${m.length}`)
-            return require(module)
+            const m = require(module)
+            return m.default || m
         })
 
     const results = []
