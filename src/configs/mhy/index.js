@@ -6,8 +6,8 @@ import { loadConfig } from '@/utils'
 const defaults = {
     defaultIndexHtml: path.resolve(__dirname, '../..', 'resources', 'index.html'),
     get indexHtml() {
-        const projectIndexHtml = path.resolve(process.cwd(), this.srcFolder, 'index.html')
-        return fs.existsSync(projectIndexHtml) ? projectIndexHtml : this.defaultIndexHtml
+        const projectIndexHtml = path.resolve(process.cwd(), defaults.srcFolder, 'index.html')
+        return fs.existsSync(projectIndexHtml) ? projectIndexHtml : defaults.defaultIndexHtml
     },
     srcFolder: 'src',
     distFolder: 'dist',
@@ -51,12 +51,10 @@ const defaults = {
     ],
     get defaultAliases() {
         const pr = path.resolve
-        //const src = defaults.srcFolder
+        const src = defaults.srcFolder
         const cwd = process.cwd()
         return {
-            // SWC transpiles differently, now it's temporarily hardcoded
-            // '@': pr(cwd, `${src}/`),
-            '@': pr(cwd, `src/`),
+            '@': pr(cwd, `${src}/`),
             '@/mhy': pr(__dirname, '../../'), // dist
             mhy_modules: pr(__dirname, '../../../node_modules'),
             node_modules: pr(process.cwd(), '../../../node_modules')
