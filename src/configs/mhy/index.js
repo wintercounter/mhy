@@ -51,7 +51,7 @@ const defaults = {
     ],
     get defaultAliases() {
         const pr = path.resolve
-        const src = defaults.srcFolder
+        //const src = defaults.srcFolder
         const cwd = process.cwd()
         return {
             // SWC transpiles differently, now it's temporarily hardcoded
