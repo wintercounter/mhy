@@ -24,8 +24,8 @@ const handleWrite = ({ config, dir, format, overwrite }) => {
         .sort((x, y) => (x.includes('typescript') ? -1 : y.includes('typescript') ? 1 : 0))
         .map((module, i) => {
             process.stdout.write(`\rLoading configs ${i + 1}/${m.length}`)
-            const m = require(module)
-            return m.default || m
+            const mod = require(module)
+            return mod.default || mod
         })
 
     const results = []
