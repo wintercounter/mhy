@@ -54,7 +54,9 @@ const defaults = {
         const src = defaults.srcFolder
         const cwd = process.cwd()
         return {
-            '@': pr(cwd, `${src}/`),
+            // SWC transpiles differently, now it's temporarily hardcoded
+            // '@': pr(cwd, `${src}/`),
+            '@': pr(cwd, `src/`),
             '@/mhy': pr(__dirname, '../../'), // dist
             mhy_modules: pr(__dirname, '../../../node_modules'),
             node_modules: pr(process.cwd(), '../../../node_modules')
