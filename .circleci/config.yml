@@ -23,7 +23,8 @@ jobs:
           name: Install dependencies
           working_directory: ~/repo
           command: |
-            npm i --legacy-peer-deps mhy@13.2.0 -g
+            npm i --legacy-peer-deps mhy@latest -g
+            mhy --mhy-version
             npm i
 
       - deploy:

@@ -77,10 +77,10 @@ class SWC extends Process {
 
             // Fix tsc paths
             const p = this.spawn(
-                'fix_tsc_path',
+                'resolve-tspaths',
                 [
                     'node',
-                    require.resolve('tscpaths/cjs'),
+                    require.resolve('resolve-tspaths/dist/main.js'),
                     '-p',
                     configPath,
                     '-s',
