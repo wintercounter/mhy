@@ -1,5 +1,7 @@
 export default (d, o) => ({
-    static: '/',
+    static: {
+        directory: process.cwd()
+    },
     host: 'localhost',
     port: 3000,
     hot: true,
