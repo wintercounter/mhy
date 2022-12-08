@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [14.0.16](https://github.com/wintercounter/mhy/compare/v14.0.0...v14.0.16) (2022-12-08)
+
+
+### Bug Fixes
+
+* remove unnecessary hot-loader when using devServer ([ff4fc7c](https://github.com/wintercounter/mhy/commit/ff4fc7c2977689b62abc5f10d7054efe26131618))
+* update `devServer.static` ([269e30c](https://github.com/wintercounter/mhy/commit/269e30cea0c98b71db049f136d37221cbd207293))
+
 ## [14.0.0](https://github.com/wintercounter/mhy/compare/v13.2.0...v14.0.0) (2022-07-08)
 
 
