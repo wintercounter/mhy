@@ -286,7 +286,7 @@
     "framer-motion": "6.4.3",
     "fs-extra": "10.1.0",
     "glob": "8.0.3",
-    "graphql": "16.5.0",
+    "graphql": "16.8.1",
     "graphql-anywhere": "4.2.7",
     "graphql-tag.macro": "2.0.1",
     "history": "4.10.1",
